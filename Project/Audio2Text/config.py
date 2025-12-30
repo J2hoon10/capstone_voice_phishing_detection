@@ -14,7 +14,6 @@ INPUT_FOLDERS = [
     "바로 이 목소리",
     "대출 사기형",
     "수사기관 사칭형",
-    # "일반 대화"  # 일반 대화 폴더도 포함
 ]
 
 # [수정] 결과물 저장 경로 (보이스피싱 전용 중간 산출물)
@@ -26,7 +25,7 @@ CSV_PATH = "./dataset_voice_phishing.csv" # 변경: 보이스피싱 데이터만
 # =========================================================
 
 # [신규] 일반 대화 데이터 경로 (KorCCVi_v2.csv)
-NORMAL_CSV_PATH = "../KorCCVi_v2.csv" 
+NORMAL_CSV_PATH = r"C:\Users\myhom\Jihoon\capstone_project\Project\data\KorCCVi_v2.csv" 
 
 # [신규] 최종 병합된 마스터 데이터셋 경로
 MASTER_CSV_PATH = "./dataset_master.csv"

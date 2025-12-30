@@ -51,15 +51,16 @@ class AudioEnhancer:
             if len(audio) < self.target_sr * 0.1:
                 return audio
 
-            # prop_decrease=0.75: 잡음의 75%만 제거하여 목소리 손상 방지
+            # [수정 1] n_jobs=-1 은 Windows에서 에러 발생 -> 1로 원상복구
+            # [수정 2] n_fft를 2048 -> 1024 (또는 512)로 줄여서 연산 속도 확보
             reduced_audio = nr.reduce_noise(
                 y=audio, 
                 sr=self.target_sr, 
                 prop_decrease=0.75,
-                n_fft=2048,
+                n_fft=1024,      # [속도 개선] 해상도를 약간 낮춰 속도 향상
                 stationary=True,
                 use_tqdm=False,
-                n_jobs=1
+                n_jobs=1         # [안정성] Windows 에러 방지를 위해 1로 설정
             )
             return reduced_audio
         except Exception as e:
@@ -109,19 +110,23 @@ class AudioEnhancer:
         normalized = audio * (target_rms / rms)
         return np.clip(normalized, -1.0, 1.0).astype(np.float32)
 
-    def enhance(self, input_path, output_path):
-        """전처리 파이프라인 실행: Load -> Bandpass -> NR -> VAD -> Normalize -> Save"""
+    # [수정] 파일 경로 대신 처리된 오디오 데이터(numpy array)를 직접 반환하도록 변경
+    # [속도 개선] Disk Write 작업을 제거하여 I/O 병목 해소
+    def enhance(self, input_path):
+        """전처리 파이프라인 실행: Load -> Bandpass -> NR -> VAD -> Normalize -> Return Array"""
         try:
+            # [참고] librosa.load는 느린 편입니다. 더 빠른 속도가 필요하면 soundfile.read 사용을 권장합니다.
+            # (단, soundfile은 리샘플링을 직접 구현해야 함)
             audio, _ = librosa.load(input_path, sr=self.target_sr, mono=True)
-            if len(audio) == 0: return False
+            if len(audio) == 0: return None
 
             audio = self.bandpass_filter(audio)
             audio = self.reduce_noise(audio)
             audio = self.vad_trim(audio)
             audio = self.normalize(audio)
 
-            sf.write(output_path, audio, self.target_sr)
-            return True
+            # sf.write(output_path, audio, self.target_sr) # [제거] 디스크 쓰기 생략
+            return audio # [추가] 메모리상의 데이터 반환
         except Exception as e:
             print(f"❌ Enhancement Error processing {input_path}: {e}")
-            return False
+            return None

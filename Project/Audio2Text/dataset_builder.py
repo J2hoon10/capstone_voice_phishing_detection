@@ -1,4 +1,3 @@
-# 데이터를 csv 파일로 저장하는 유틸리티 함수
 import os
 import re
 import csv
@@ -7,141 +6,139 @@ from tqdm import tqdm
 from audio_processor import AudioProcessor
 
 class DatasetBuilder:
-    """
-    오디오 -> 텍스트 -> CSV 실시간 저장
-    * Config 설정을 사용하여 경로 및 옵션을 관리합니다.
-    * Future-proof: 나중에 'class' 정보가 추가될 것을 대비해 검증 로직을 유연하게 설계했습니다.
-    """
     def __init__(self, config):
-        """
-        config.py의 설정을 받아 초기화합니다.
-        """
-        # 1. 경로 설정 (config.py에서 가져옴)
         self.base_dir = config.BASE_DIR
         self.input_folders = config.INPUT_FOLDERS
         self.output_dir = config.OUTPUT_DIR
         self.csv_path = config.CSV_PATH
-        
-        # 2. 라벨 및 클래스 매핑 규칙 (config.py에서 가져옴)
         self.folder_label_map = config.FOLDER_LABEL_MAP
         self.folder_class_map = config.FOLDER_CLASS_MAP
         
-        # 메타데이터/로그 저장용 폴더 생성
         os.makedirs(self.output_dir, exist_ok=True)
-        
-        # 3. AudioProcessor 초기화
-        # (AudioProcessor는 config에 정의된 모델 사이즈를 사용하도록 설정)
         self.processor = AudioProcessor(whisper_model_size=config.WHISPER_MODEL_SIZE)
 
     def get_existing_progress(self):
         """
-        CSV 마지막 행의 무결성을 검사하고 이어하기 지점을 반환합니다.
-        * 데이터가 불완전하면(쓰다가 끊김) 해당 행을 삭제하고 다시 작업합니다.
+        CSV를 읽어 다음 ID, 처리된 파일 목록, 그리고 [마지막 작업 폴더]를 반환합니다.
         """
         if not os.path.exists(self.csv_path):
-            return 1, set()
+            return 1, set(), None # 마지막 폴더 없음
 
         try:
             df = pd.read_csv(self.csv_path)
-            if df.empty:
-                return 1, set()
+            if df.empty: return 1, set(), None
 
             last_idx = df.index[-1]
             last_row = df.iloc[-1]
             
-            # [검증 로직] 필수 컬럼이 비어있는지 확인
-            # 현재는 ID, script, label만 확인하지만, 나중에 class가 필수라면 여기에 추가 가능
+            # --- 무결성 검사 (기존과 동일) ---
             required_cols = ['ID', 'script', 'label'] 
-
             is_complete = True
-            
-            # 1. 필수 컬럼 중 하나라도 비어있으면(NaN) 불완전으로 간주
             for col in required_cols:
                 if pd.isna(last_row[col]):
-                    print(f"⚠️ 데이터 불완전: {col} 값이 없습니다. (ID: {last_row['ID']})")
                     is_complete = False
                     break
             
-            # 2. script가 빈 문자열인지 추가 확인
             if is_complete and str(last_row['script']).strip() == "":
-                print(f"⚠️ 데이터 불완전: script 내용이 없습니다. (ID: {last_row['ID']})")
                 is_complete = False
 
-            # --- 불량 데이터 처리 ---
+            # 불완전한 마지막 행 삭제 로직
             if not is_complete:
-                print(f"🔄 마지막 행(ID: {last_row['ID']})을 삭제하고 해당 파일부터 다시 시작합니다.")
+                print(f"🔄 마지막 행(ID: {last_row['ID']}) 삭제 후 재시작")
                 df = df.drop(last_idx)
-                # 수정된 내용을 다시 저장 (utf-8-sig: 엑셀 한글 호환)
                 df.to_csv(self.csv_path, index=False, encoding='utf-8-sig')
                 
-                # 삭제 후 다시 마지막 번호 계산
-                if not df.empty:
-                    last_id_str = df['ID'].iloc[-1]
-                    next_index = int(last_id_str.split('_')[1]) + 1
-                else:
-                    next_index = 1
-            else:
-                # 정상이면 다음 번호 계산
-                next_index = int(last_row['ID'].split('_')[1]) + 1
-                print(f"✅ 이어하기: ID P_{next_index:04d} 부터 시작합니다.")
+                if df.empty:
+                    return 1, set(), None
+                
+                # 삭제 후 다시 마지막 행 정보 갱신
+                last_row = df.iloc[-1]
 
-            # 처리된 파일 목록 반환 (중복 작업 방지용)
+            # --- [핵심] 마지막 작업 폴더 추출 ---
+            last_id_str = last_row['ID']
+            next_index = int(last_id_str.split('_')[1]) + 1
+            
+            # filename 예시: "수사기관 사칭형/1.wav"
+            last_filename = str(last_row['filename'])
+            
+            # 경로 구분자(/ 또는 \)를 기준으로 폴더명 추출
+            # os.path.dirname을 쓰거나 split을 사용
+            last_folder = os.path.dirname(last_filename)
+            if not last_folder: # 혹시 폴더 경로 없이 파일명만 있는 경우 대비
+                last_folder = last_filename.split('/')[0] if '/' in last_filename else None
+
+            print(f"✅ 이어하기: ID P_{next_index:04d} 부터 시작 (마지막 폴더: {last_folder})")
+
             processed_files = set(df['filename'].astype(str).values)
-            return next_index, processed_files
+            
+            return next_index, processed_files, last_folder
 
         except Exception as e:
             print(f"⚠️ CSV 읽기 오류 (새로 시작): {e}")
-            return 1, set()
+            return 1, set(), None
 
     def build_dataset(self):
         print(f"🚀 데이터셋 구축 시작 (Output: {self.csv_path})")
         
-        # 1. 이어하기 정보 가져오기
-        global_index, processed_files = self.get_existing_progress()
+        # 1. 이어하기 정보 가져오기 (마지막 폴더 포함)
+        global_index, processed_files, last_processed_folder = self.get_existing_progress()
 
-        # 2. CSV 파일 열기 (Append 모드)
         file_exists = os.path.exists(self.csv_path)
         
-        # newline='' 옵션은 윈도우에서 줄바꿈이 두 번 되는 것을 방지
         with open(self.csv_path, 'a', newline='', encoding='utf-8-sig') as f:
             writer = csv.writer(f)
             
-            # 파일이 없거나 비어있으면 헤더 작성
             if not file_exists or os.path.getsize(self.csv_path) == 0:
-                # [확장성] class 컬럼은 미리 만들어둡니다.
                 writer.writerow(['ID', 'script', 'label', 'class', 'filename'])
 
+            # [핵심] 폴더 건너뛰기 로직을 위한 플래그
+            # last_processed_folder가 있으면 True(건너뛰기 모드), 없으면 False(처음부터 시작)
+            skip_mode = True if last_processed_folder else False
+
             for folder_name in self.input_folders:
+                
+                # --- [Folder Skip Logic] ---
+                if skip_mode:
+                    if folder_name == last_processed_folder:
+                        print(f"📍 마지막 작업 폴더 발견: {folder_name} (여기서부터 재개합니다)")
+                        skip_mode = False # 건너뛰기 해제, 이 폴더부터 처리 시작
+                    else:
+                        # 아직 마지막 폴더에 도달하지 못했으므로 통과
+                        # print(f"⏩ 건너뜀: {folder_name} (이미 완료됨)") 
+                        continue 
+                # ---------------------------
+
                 folder_path = os.path.join(self.base_dir, folder_name)
                 
                 if not os.path.exists(folder_path):
                     print(f"⚠️ 폴더 없음: {folder_name}")
                     continue
 
-                # 파일 리스트업 및 숫자 기준 정렬 (1.wav, 2.wav, 10.wav ...)
                 file_list = [f for f in os.listdir(folder_path) if f.lower().endswith((".mp3", ".wav"))]
+                # 파일 정렬 (1.wav, 2.wav ...)
                 file_list.sort(key=lambda x: [int(c) if c.isdigit() else c for c in re.split(r'(\d+)', x)])
 
-                # 라벨 및 클래스 결정 (config에 정의된 맵 사용)
                 current_label = self.folder_label_map.get(folder_name, 1)
-                
-                # 나중에 config.py의 FOLDER_CLASS_MAP을 채우면 자동으로 적용됨
                 current_class = self.folder_class_map.get(folder_name, None)
 
-                print(f"\n📂 Processing {folder_name} (Label: {current_label}, Class: {current_class})")
+                print(f"\n📂 Processing {folder_name} (Label: {current_label})")
 
                 for filename in tqdm(file_list, desc=folder_name):
+                    
+                    # 파일명 생성: "폴더명/파일명.wav"
+                    relative_filename = os.path.join(folder_name, filename).replace("\\", "/")
+
                     # 이미 처리된 파일이면 건너뜀
-                    if filename in processed_files:
+                    # (마지막 폴더 내부에서도, 이미 한 파일은 건너뛰어야 하므로 필요)
+                    if relative_filename in processed_files:
                         continue
 
                     audio_path = os.path.join(folder_path, filename)
                     
-                    # --- [핵심] STT 변환 및 전처리 ---
+                    # --- STT 변환 ---
                     sentences = self.processor.process_file(audio_path)
                     full_script = " ".join(sentences).strip()
                     
-                    # 유효한 스크립트가 있을 때만 저장
                     if full_script:
                         file_id = f"P_{global_index:04d}"
                         
@@ -149,17 +146,13 @@ class DatasetBuilder:
                             file_id,
                             full_script,
                             current_label,
-                            current_class, # 현재는 비어있음(None)
-                            filename
+                            current_class,
+                            relative_filename
                         ])
                         
-                        # [안전장치] 즉시 디스크에 쓰기 (전원 차단 대비)
                         f.flush()
-                        
                         global_index += 1
-                        
-                        # 현재 실행 중 중복 방지를 위해 추가
-                        processed_files.add(filename)
+                        processed_files.add(relative_filename)
 
         print(f"\n✅ [완료] 모든 작업이 끝났습니다.")
         print(f"   - 저장 경로: {os.path.abspath(self.csv_path)}")

@@ -6,7 +6,7 @@
 
 import os
 import re
-import tempfile
+# import tempfile # [제거] 임시 파일 생성 불필요
 import torch
 from faster_whisper import WhisperModel
 from audio_enhancer import AudioEnhancer
@@ -110,19 +110,24 @@ class AudioProcessor:
         if not os.path.exists(audio_path):
             return []
 
-        with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
-            enhanced_path = tmp.name
-
+        # [수정] 임시 파일 생성 로직(tempfile) 제거 -> 메모리 처리로 변경
         try:
-            success = self.enhancer.enhance(audio_path, enhanced_path)
-            target_path = enhanced_path if success else audio_path
+            # enhance 함수가 이제 경로가 아닌 numpy array를 반환함
+            enhanced_audio = self.enhancer.enhance(audio_path)
+            
+            # 전처리에 실패했거나 결과가 없으면 원본 사용을 위해 로드 시도 (혹은 건너뛰기)
+            if enhanced_audio is None:
+                # 원본 사용 시 로드 필요 (whisper는 경로도 받지만, 일관성을 위해 여기선 경로 전달)
+                target_input = audio_path
+            else:
+                target_input = enhanced_audio # Numpy Array 전달
             
             segments, _ = self.whisper.transcribe(
-                target_path,
-                beam_size=5,
+                target_input,
+                beam_size=1,    # [속도 개선] 5 -> 1 (Greedy Search). 속도 3~5배 향상, 정확도 저하 미미
                 language="ko",
                 condition_on_previous_text=False,
-                repetition_penalty=1.2, # Whisper 자체 반복 억제
+                repetition_penalty=1.2, 
                 vad_filter=False, 
                 temperature=0.0,
                 no_speech_threshold=0.6
@@ -133,10 +138,7 @@ class AudioProcessor:
             print(f"❌ STT Error {audio_path}: {e}")
             return []
             
-        finally:
-            if os.path.exists(enhanced_path):
-                try: os.remove(enhanced_path)
-                except: pass
+        # [제거] finally 블록의 임시 파일 삭제 로직 불필요
 
         cleaned = self.clean_text_basic(full_text)
         
