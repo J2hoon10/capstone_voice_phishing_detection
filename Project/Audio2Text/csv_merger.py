@@ -1,4 +1,4 @@
-# csv_merger.py (신규 생성)
+# csv_merger.py
 import pandas as pd
 import os
 import config as CONFIG
@@ -6,15 +6,15 @@ import config as CONFIG
 class CsvMerger:
     """
     [역할]
-    1. STT로 생성된 '보이스피싱 데이터셋' 로드
-    2. 외부에 존재하는 '일반 대화 데이터셋' 로드
-    3. 두 데이터를 규격(ID, script, label, class)에 맞춰 병합
+    1. STT로 생성된 'dataset_voice_phishing.csv' 로드
+    2. 외부 'KorCCVi_v2.csv' 로드 및 전처리 (label=0 필터링)
+    3. 두 데이터를 병합하여 'dataset_master.csv' 생성
     """
     def __init__(self):
-        self.phishing_path = CONFIG.CSV_PATH
-        self.normal_path = CONFIG.NORMAL_CSV_PATH
-        self.output_path = CONFIG.FINAL_DATASET_PATH
-        self.mapping = CONFIG.NORMAL_COLUMN_MAPPING
+        self.phishing_path = CONFIG.CSV_PATH         # 보이스피싱 데이터
+        self.normal_path = CONFIG.NORMAL_CSV_PATH    # KorCCVi_v2 데이터
+        self.output_path = CONFIG.MASTER_CSV_PATH    # 최종 저장 경로
+        self.mapping = CONFIG.NORMAL_COLUMN_MAPPING  # 컬럼 매핑 정보
 
     def merge(self):
         print(f"\n🧩 [Merger] 데이터 병합 시작...")
@@ -24,57 +24,84 @@ class CsvMerger:
             print(f"❌ [Merger] 보이스피싱 데이터가 없습니다: {self.phishing_path}")
             return
         
-        df_phishing = pd.read_csv(self.phishing_path, encoding='utf-8-sig')
-        print(f"    - 보이스피싱 데이터: {len(df_phishing)} 건 로드 완료")
-
-        # 2. 일반 대화 데이터 로드
-        if not os.path.exists(self.normal_path):
-            print(f"❌ [Merger] 일반 대화 데이터가 없습니다: {self.normal_path}")
-            # 일반 데이터가 없으면 보이스피싱 데이터만이라도 저장할지 결정 (여기선 중단)
+        try:
+            df_phishing = pd.read_csv(self.phishing_path, encoding='utf-8-sig')
+            print(f"    - 보이스피싱 데이터: {len(df_phishing)} 건 로드")
+        except Exception as e:
+            print(f"❌ [Merger] 보이스피싱 CSV 로드 실패: {e}")
             return
 
-        # 인코딩은 파일에 따라 cp949 혹은 utf-8 일 수 있음. 에러 시 try-except 처리 권장
+        # 2. 일반 대화 데이터(KorCCVi) 로드
+        if not os.path.exists(self.normal_path):
+            print(f"⚠️ [Merger] 일반 대화 데이터 파일을 찾을 수 없습니다: {self.normal_path}")
+            print("    -> 병합 없이 보이스피싱 데이터만 최종 저장합니다.")
+            df_phishing.to_csv(self.output_path, index=False, encoding='utf-8-sig')
+            return
+
         try:
-            df_normal_raw = pd.read_csv(self.normal_path, encoding='utf-8-sig')
-        except UnicodeDecodeError:
-            df_normal_raw = pd.read_csv(self.normal_path, encoding='cp949')
+            # KorCCVi_v2는 보통 utf-8 혹은 cp949 인코딩을 사용함
+            try:
+                df_normal_raw = pd.read_csv(self.normal_path, encoding='utf-8-sig')
+            except UnicodeDecodeError:
+                df_normal_raw = pd.read_csv(self.normal_path, encoding='cp949')
             
-        print(f"    - 일반 대화 데이터(Raw): {len(df_normal_raw)} 건 로드 완료")
+            print(f"    - KorCCVi 원본 데이터: {len(df_normal_raw)} 건 로드")
+            
+        except Exception as e:
+            print(f"❌ [Merger] 일반 대화 CSV 로드 실패: {e}")
+            return
 
         # 3. 일반 대화 데이터 전처리 (포맷 통일)
-        df_normal = self._preprocess_normal_data(df_normal_raw)
+        df_normal = self._preprocess_korccvi(df_normal_raw)
         
         # 4. 병합 (위: 보이스피싱, 아래: 일반)
-        df_final = pd.concat([df_phishing, df_normal], ignore_index=True)
-        
+        if not df_normal.empty:
+            df_final = pd.concat([df_phishing, df_normal], ignore_index=True)
+            print(f"    - 병합 완료: 일반 대화 {len(df_normal)} 건 추가됨")
+        else:
+            df_final = df_phishing
+            print("    ⚠️ 추가될 일반 대화 데이터가 없습니다.")
+
         # 5. 최종 저장
         df_final.to_csv(self.output_path, index=False, encoding='utf-8-sig')
-        print(f"🎉 [Merger] 최종 데이터셋 저장 완료: {self.output_path}")
-        print(f"    - 총 데이터: {len(df_final)} 건 (피싱: {len(df_phishing)} + 일반: {len(df_normal)})")
+        print(f"🎉 [Merger] 최종 데이터셋 저장 완료: {os.path.abspath(self.output_path)}")
+        print(f"    - 총 데이터 개수: {len(df_final)} (Phishing: {len(df_phishing)} + Normal: {len(df_normal)})")
 
-    def _preprocess_normal_data(self, df):
-        """일반 데이터를 우리 데이터셋 스키마(ID, script, label, class)에 맞춤"""
+    def _preprocess_korccvi(self, df):
+        """
+        KorCCVi_v2 데이터를 우리 데이터셋 스키마(ID, script, label, class)에 맞춤
+        """
+        # (1) Label 0 (일반 대화) 필터링
+        if 'label' in df.columns:
+            # 안전하게 문자열/숫자 모두 처리하기 위해 astype 사용 가능하나, 일단 조건 검색
+            df_filtered = df[df['label'] == 0].copy()
+        else:
+            print("⚠️ [Merger] KorCCVi 데이터에 'label' 컬럼이 없어 필터링을 건너뜁니다.")
+            df_filtered = df.copy()
+
         new_df = pd.DataFrame()
 
-        # (1) 스크립트 복사 (컬럼 매핑 이용)
-        source_col = self.mapping.get("text", "script") # config에 설정된 이름 혹은 기본값 'script'
-        if source_col in df.columns:
-            new_df['script'] = df[source_col]
+        # (2) Script 컬럼 매핑 (transcript -> script)
+        source_text_col = self.mapping.get("text", "transcript") # config에서 설정한 이름
+        if source_text_col in df_filtered.columns:
+            new_df['script'] = df_filtered[source_text_col]
         else:
-            print(f"⚠️ [Merger] 일반 데이터에 '{source_col}' 컬럼이 없습니다. 확인 필요!")
-            new_df['script'] = ""
+            print(f"⚠️ [Merger] '{source_text_col}' 컬럼을 찾을 수 없습니다.")
+            return pd.DataFrame() # 빈 데이터프레임 반환
 
-        # (2) 라벨링 (일반 대화 = 0)
-        new_df['label'] = 0
-
-        # (3) 클래스 (Normal)
-        new_df['class'] = "normal"
-
-        # (4) 파일명 (원본 파일명이 있다면 유지, 없으면 None)
-        new_df['filename'] = df['filename'] if 'filename' in df.columns else None
+        # (3) 필수 컬럼 생성
+        new_df['label'] = 0                # 일반 대화는 무조건 0
+        new_df['class'] = "normal"         # 클래스 명시
+        
+        # (4) Filename (KorCCVi에 파일명이 없다면 원본 ID나 빈값 사용)
+        source_id_col = self.mapping.get("id", "id")
+        if source_id_col in df_filtered.columns:
+            new_df['filename'] = df_filtered[source_id_col] # 추적을 위해 원본 ID를 filename에 저장
+        else:
+            new_df['filename'] = None
 
         # (5) ID 생성 (N_0001, N_0002 ...)
-        # 보이스피싱은 P_xxxx 였으므로 구분하기 쉽게 N_xxxx로 설정
+        # 보이스피싱(P_)과 구분하기 위해 N_ 접두사 사용
         ids = [f"N_{i+1:04d}" for i in range(len(new_df))]
         new_df.insert(0, 'ID', ids)
 
