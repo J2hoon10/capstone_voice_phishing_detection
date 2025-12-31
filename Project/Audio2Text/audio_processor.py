@@ -124,7 +124,7 @@ class AudioProcessor:
             
             segments, _ = self.whisper.transcribe(
                 target_input,
-                beam_size=1,    # [속도 개선] 5 -> 1 (Greedy Search). 속도 3~5배 향상, 정확도 저하 미미
+                beam_size=3,    # [속도 개선] 5 -> 1 (Greedy Search). 속도 3~5배 향상, 정확도 저하 미미
                 language="ko",
                 condition_on_previous_text=False,
                 repetition_penalty=1.2, 

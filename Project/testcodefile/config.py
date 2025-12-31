@@ -11,7 +11,7 @@ CONFIG = {
     'NUM_WORKERS': 0,          # 데이터 로더 워커 수 (Windows는 0, Linux는 4 추천)
     
     # 2. 경로 설정 (Path)
-    'MASTER_DATA_PATH': './master_dataset.csv',  # 전처리된 원본 데이터
+    'MASTER_DATA_PATH': './dataset_master.csv',  # 전처리된 원본 데이터
     'PROCESSED_DATA_DIR': './processed_data',    # 학습/테스트 분할 파일 저장소
     'OUTPUT_DIR': './checkpoints',               # 학습된 모델 저장소
     

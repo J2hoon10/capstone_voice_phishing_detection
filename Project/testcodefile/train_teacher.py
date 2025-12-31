@@ -9,7 +9,7 @@ from tqdm import tqdm  # 진행률 표시 바
 
 # 우리가 만든 모듈들
 from config import CONFIG
-from model import DistillableRoBERTaModel
+from architecture import DistillableRoBERTaModel
 from dataset import VoicePhishingDataset
 from utils import set_seed, prepare_data, get_logger, save_checkpoint
 
@@ -60,11 +60,13 @@ def main():
     if not os.path.exists(CONFIG['OUTPUT_DIR']):
         os.makedirs(CONFIG['OUTPUT_DIR'])
         
-    # 로그 CSV 생성
+    # 로그 CSV 생성 (이어하기 시에는 append 모드로 열어야 하지만, 
+    # 간단하게 헤더 중복 방지 처리를 하거나 파일이 없을 때만 생성하게 함)
     log_csv_path = os.path.join(CONFIG['OUTPUT_DIR'], 'training_log_teacher.csv')
-    with open(log_csv_path, 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['epoch', 'train_loss', 'val_loss', 'val_acc'])
+    if not os.path.exists(log_csv_path):
+        with open(log_csv_path, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['epoch', 'train_loss', 'val_loss', 'val_acc'])
 
     # 2. 데이터 준비
     train_path, test_path = prepare_data(CONFIG)
@@ -74,10 +76,7 @@ def main():
     train_dataset = VoicePhishingDataset(train_path, tokenizer, inference_mode=False)
     test_dataset = VoicePhishingDataset(test_path, tokenizer, inference_mode=True)
     
-    # GPU 사용 시 pin_memory=True 설정을 통해 데이터 전송 속도 향상
-    # Windows 사용자는 num_workers=0으로 설정
-    # Linux나 Colab 사용자는 num_workers를 2 또는 4로 설정
-    kwargs = {'num_workers': 0, 'pin_memory': True} if torch.cuda.is_available() else {}
+    kwargs = {'num_workers': CONFIG['NUM_WORKERS'], 'pin_memory': True} if torch.cuda.is_available() else {}
 
     train_loader = DataLoader(train_dataset, batch_size=CONFIG['BATCH_SIZE'], shuffle=True, **kwargs)
     test_loader = DataLoader(test_dataset, batch_size=CONFIG['BATCH_SIZE'], shuffle=False, **kwargs)
@@ -95,11 +94,35 @@ def main():
     criterion = nn.CrossEntropyLoss()
     
     best_acc = 0.0
-    
+    start_epoch = 0 # 기본 시작점 (처음부터)
+
+    # -------------------------------------------------------------------------
+    # [Resume Logic] 체크포인트가 있으면 불러오기
+    # -------------------------------------------------------------------------
+    last_ckpt_path = os.path.join(CONFIG['OUTPUT_DIR'], "teacher_last.pt")
+    if os.path.exists(last_ckpt_path):
+        logger.info(f"🔄 Found checkpoint at '{last_ckpt_path}'. Loading...")
+        try:
+            checkpoint = torch.load(last_ckpt_path)
+            
+            # 1) 가중치 복원
+            model.load_state_dict(checkpoint['model_state_dict'])
+            # 2) 옵티마이저 복원
+            optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+            # 3) 시작 에포크 복원 (저장된 에포크가 끝난 상태이므로 +1)
+            start_epoch = checkpoint['epoch'] + 1
+            
+            logger.info(f"✅ Successfully resumed training from Epoch {start_epoch + 1}")
+        except Exception as e:
+            logger.warning(f"⚠️ Failed to load checkpoint. Error: {e}")
+            logger.warning("   -> Starting from scratch (Epoch 1).")
+    else:
+        logger.info("🆕 No checkpoint found. Starting from scratch.")
+
     logger.info("Start Teacher Fine-tuning...")
     
-    # 5. 학습 루프
-    for epoch in range(CONFIG['EPOCHS']):
+    # 5. 학습 루프 (range 시작점 변경)
+    for epoch in range(start_epoch, CONFIG['EPOCHS']):
         model.train()
         total_loss = 0
         
