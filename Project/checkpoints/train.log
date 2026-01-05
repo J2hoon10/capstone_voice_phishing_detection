@@ -1,3 +1,38 @@
-2025-12-31 22:39:26 | --- [Teacher Training] Device: cuda ---
-2025-12-31 22:45:08 | Initializing Teacher Model (12 Layers)...
-2025-12-31 22:45:09 | Start Teacher Fine-tuning...
+2026-01-02 11:49:34 | --- [Teacher Training] Device: cuda ---
+2026-01-02 11:55:28 | Initializing Teacher Model (12 Layers)...
+2026-01-02 11:55:30 | Start Teacher Fine-tuning...
+2026-01-02 12:10:06 | Epoch 1 | Train Loss: 0.0788 | Val Acc: 99.62%
+2026-01-02 12:10:08 | �� New Best Teacher! Saved to ./checkpoints\teacher_best.pt
+2026-01-02 12:24:41 | Epoch 2 | Train Loss: 0.0104 | Val Acc: 99.86%
+2026-01-02 12:24:42 | �� New Best Teacher! Saved to ./checkpoints\teacher_best.pt
+2026-01-02 12:39:14 | Epoch 3 | Train Loss: 0.0066 | Val Acc: 99.91%
+2026-01-02 12:39:16 | �� New Best Teacher! Saved to ./checkpoints\teacher_best.pt
+2026-01-02 12:53:48 | Epoch 4 | Train Loss: 0.0022 | Val Acc: 99.92%
+2026-01-02 12:53:50 | �� New Best Teacher! Saved to ./checkpoints\teacher_best.pt
+2026-01-02 13:08:23 | Epoch 5 | Train Loss: 0.0015 | Val Acc: 99.93%
+2026-01-02 13:08:24 | �� New Best Teacher! Saved to ./checkpoints\teacher_best.pt
+2026-01-02 13:22:58 | Epoch 6 | Train Loss: 0.0010 | Val Acc: 99.88%
+2026-01-02 13:37:35 | Epoch 7 | Train Loss: 0.0002 | Val Acc: 99.81%
+2026-01-02 13:52:17 | Epoch 8 | Train Loss: 0.0012 | Val Acc: 99.92%
+2026-01-02 14:06:33 | Epoch 9 | Train Loss: 0.0001 | Val Acc: 99.93%
+2026-01-02 14:06:35 | �� New Best Teacher! Saved to ./checkpoints\teacher_best.pt
+2026-01-02 14:20:50 | Epoch 10 | Train Loss: 0.0000 | Val Acc: 99.92%
+2026-01-02 14:20:50 | Teacher Training Finished. Best Accuracy: 99.93%
+2026-01-02 14:36:36 | --- [Student Training] Device: cuda ---
+2026-01-02 14:36:36 | ⚡ AMP (Automatic Mixed Precision) Enabled.
+2026-01-02 14:42:09 | Initializing Models...
+2026-01-02 14:42:11 | ✅ Teacher model loaded.
+2026-01-02 14:42:24 | Start Training with Weighted Loss & AMP...
+2026-01-02 14:58:12 | Epoch 1 | Train Loss: 0.3493 | Val Acc: 99.89%
+2026-01-02 14:58:13 | ★ New Best Accuracy: 99.89%
+2026-01-02 15:13:59 | Epoch 2 | Train Loss: 0.0436 | Val Acc: 99.89%
+2026-01-02 15:13:59 | ★ New Best Accuracy: 99.89%
+2026-01-02 15:29:45 | Epoch 3 | Train Loss: 0.0332 | Val Acc: 99.88%
+2026-01-02 15:45:31 | Epoch 4 | Train Loss: 0.0246 | Val Acc: 99.88%
+2026-01-02 16:01:18 | Epoch 5 | Train Loss: 0.0247 | Val Acc: 99.87%
+2026-01-02 16:17:04 | Epoch 6 | Train Loss: 0.0215 | Val Acc: 99.88%
+2026-01-02 16:32:47 | Epoch 7 | Train Loss: 0.0186 | Val Acc: 99.88%
+2026-01-02 16:48:29 | Epoch 8 | Train Loss: 0.0192 | Val Acc: 99.88%
+2026-01-02 17:04:11 | Epoch 9 | Train Loss: 0.0175 | Val Acc: 99.89%
+2026-01-02 17:20:00 | Epoch 10 | Train Loss: 0.0172 | Val Acc: 99.88%
+2026-01-02 17:20:01 | Training Finished.

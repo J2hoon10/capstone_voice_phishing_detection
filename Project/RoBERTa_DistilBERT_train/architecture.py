@@ -3,19 +3,15 @@ import torch.nn as nn
 from transformers import AutoModel, AutoConfig
 
 class RiskLevelTaskHead(nn.Module):
-    """
-    [수정됨] 활성화 함수를 ReLU -> GELU로 변경
-    Transformer 계열(RoBERTa)과의 호환성 및 학습 안정성 향상 목적
-    """
     def __init__(self, input_dim, num_classes):
         super(RiskLevelTaskHead, self).__init__()
         
+        # 구조: [Linear] -> [Tanh/GELU] -> [Dropout] -> [Linear(Output)]
         self.classifier = nn.Sequential(
-            nn.Linear(input_dim, 256),
-            nn.BatchNorm1d(256),
-            nn.GELU(), 
-            nn.Dropout(0.3),
-            nn.Linear(256, num_classes)
+            nn.Linear(input_dim, input_dim), # 768 -> 768 (차원 유지하며 변환)
+            nn.GELU(),                       # 활성화 함수
+            nn.Dropout(0.1),                 # 과적합 방지 (보통 0.1 사용)
+            nn.Linear(input_dim, num_classes) # 768 -> 2
         )
 
     def forward(self, x):

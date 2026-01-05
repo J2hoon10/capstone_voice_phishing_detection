@@ -25,7 +25,6 @@ class VoicePhishingDataset(Dataset):
             print("[Dataset] Initializing KoEDA for text augmentation...")
             try:
                 # [수정 1] 초기화 시에는 'morpheme_analyzer'만 설정합니다.
-                # (alpha 값들을 여기서 설정하면 에러가 발생합니다)
                 self.eda = EDA(morpheme_analyzer="Okt")
             except Exception as e:
                 print(f"[Warning] KoEDA 초기화 실패 (Augmentation Off): {e}")
@@ -49,6 +48,15 @@ class VoicePhishingDataset(Dataset):
 
     def _prepare_samples(self, df, inference_mode):
         processed_data = []
+        
+        # [수정 3] ID(대화) 단위 랜덤 믹스 구현
+        # 학습 모드일 때만 데이터프레임의 행(Row, 즉 대화 1개 단위)을 무작위로 섞습니다.
+        # 이렇게 하면 대화의 순서는 섞이지만, 아래 for 문에서 처리되는 대화 내부의 문장 순서는 유지됩니다.
+        if not inference_mode:
+            print("[Dataset] Shuffling conversation order (ID-level mixing)...")
+            # frac=1: 전체 데이터, random_state: 재현성을 위한 시드값(필요시 변경 가능)
+            df = df.sample(frac=1, random_state=42).reset_index(drop=True)
+
         for idx, row in df.iterrows():
             script = row['script']
             
@@ -83,7 +91,6 @@ class VoicePhishingDataset(Dataset):
         # [수정 2] 실제 증강을 수행하는 시점에 alpha 값과 개수를 전달합니다.
         if not self.inference_mode and self.eda is not None and random.random() < 0.5:
             try:
-                # num_aug=1: 증강된 문장을 1개만 생성 (기본값은 9개라 리스트가 길어짐)
                 aug_text = self.eda(
                     text,
                     alpha_sr=0.1, 
@@ -93,14 +100,13 @@ class VoicePhishingDataset(Dataset):
                     num_aug=1 
                 )
                 
-                # KoEDA는 결과를 리스트로 반환하므로 문자열로 꺼내줍니다.
                 if isinstance(aug_text, list) or isinstance(aug_text, tuple):
                     text = aug_text[0]
                 else:
                     text = str(aug_text)
                     
             except Exception:
-                pass # 증강 실패 시 원본 사용
+                pass 
 
         encoding = self.tokenizer(
             text,

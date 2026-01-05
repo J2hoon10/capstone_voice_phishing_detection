@@ -28,7 +28,7 @@ CONFIG = {
     # 5. 학습 파라미터 (Training)
     'EPOCHS': 10,
     'BATCH_SIZE': 16,          # OOM(메모리 부족) 발생 시 8로 줄이세요
-    'LEARNING_RATE': 5e-5,     # 학습률
+    'LEARNING_RATE': 1e-5,     # 학습률
     'WEIGHT_DECAY': 0.01,      # 가중치 규제 (옵션)
     
     # 6. 증강 설정 (Augmentation - KoEDA)

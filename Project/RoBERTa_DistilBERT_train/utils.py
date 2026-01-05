@@ -58,8 +58,11 @@ def get_logger(output_dir):
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s | %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
-    # 파일 핸들러 (train.log에 저장)
-    file_handler = logging.FileHandler(os.path.join(output_dir, 'train.log'))
+    # -------------------------------------------------------------------------
+    # [수정] 파일 핸들러에 encoding='utf-8' 옵션 추가
+    # 윈도우(cp949) 환경에서도 이모지나 특수문자를 안전하게 파일에 저장하도록 설정
+    # -------------------------------------------------------------------------
+    file_handler = logging.FileHandler(os.path.join(output_dir, 'train.log'), encoding='utf-8')
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
@@ -70,11 +73,16 @@ def get_logger(output_dir):
 
     return logger
 
-def save_checkpoint(model, optimizer, epoch, loss, path):
-    """학습 중단 대비용 체크포인트 저장 (Last Checkpoint)"""
-    torch.save({
+def save_checkpoint(model, optimizer, epoch, loss, path, scheduler=None):
+    """학습 중단 대비용 체크포인트 저장"""
+    state = {
         'epoch': epoch,
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': optimizer.state_dict(),
         'loss': loss
-    }, path)
+    }
+    # 스케줄러가 들어오면 함께 저장
+    if scheduler is not None:
+        state['scheduler_state_dict'] = scheduler.state_dict()
+        
+    torch.save(state, path)
