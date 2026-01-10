@@ -111,52 +111,45 @@ Teacher와 Student 간의 차원 불일치를 해결하기 위해 **투영(Proje
 
 ## 5. Expected Computational Complexity (예상 연산 복잡도)
 
-본 연구에서 제안하는 Student 모델은 Teacher 모델 대비 Depth(깊이)와 Width(너비)가 모두 축소되었습니다. 이에 따른 이론적 가속 효과와 메모리 절감 효과를 분석한다.
+본 연구에서 사용하는 **Teacher 모델(ModernBERT-Base)**은 22개 레이어를 가지며 약 1.49억 개의 파라미터를 보유한다. 이를 기반으로 제안하는 **Student 모델**은 Depth(깊이)와 Width(너비)가 모두 50%씩 축소되었다.
 
 ### **A. 파라미터 수 (Model Size) 비교**
 
-Transformer 모델의 파라미터 수는 주로 **Hidden Size()의 제곱**에 비례한다.
-
-* **Teacher Model:**  (가정)
-* **Student Model:** 
-* **Transformer Block 파라미터 비율:**
-
-
-* *Note:* Embedding Layer는 에 비례()하므로, 전체 모델 크기는 **약 15%-20% 수준(약 1/5 - 1/6)**으로 대폭 감소할 것으로 예상된다. (약 40M-50M 파라미터 추정)
+* **Teacher Model:** ModernBERT-Base ()  **149M Params**
+* **Student Model:** Custom Small ()
+* **파라미터 감소 분석:**
+* **Non-Embedding Params:**  비례  약 **1/8**로 감소.
+* **Embedding Params:**  비례  **1/2**로 감소.
+* **예상 Student 크기:** **약 25M - 30M (2,500만 ~ 3,000만)** 수준의 초경량 모델.
 
 
 
 ### **B. 연산량 (FLOPs) 및 학습 속도**
 
-학습 및 추론 시의 연산량(FLOPs) 역시 $O(L \cdot H^2)$에 지배된다.
-
 * **Speed-up Factor:**
-위 파라미터 계산과 동일하게, 핵심 연산(Matrix Multiplication)에서 이론적으로 **약 8배의 FLOPs 감소**가 발생한다.
+* 핵심 행렬 연산(Matrix Multiplication)에서 이론적으로 **약 8배의 FLOPs 감소**가 발생한다.
+* 모델 사이즈가 MobileBERT(25M) 수준으로 작아지므로, CPU 환경이나 엣지 디바이스(모바일)에서도 실시간 추론이 가능하다.
+
+
 * **Unpadding & FlashAttention 효과:**
-* 기존 Attention 복잡도 $O(B \cdot S^2)$에서 Padding 연산을 제거하여, 유효 토큰 수()에 선형적인 $O(N_{valid})$에 가까운 효율을 보인다.
-* Student 모델은 Teacher 대비 Head 개수가 절반이므로, Attention 연산 자체도 물리적으로 2배 빠르다.
+* 패딩 연산 제거()와 FlashAttention의 결합으로, 짧은 문장이 많은 대화 데이터셋에서 기존 BERT 대비 압도적인 처리 속도를 보인다.
 
 
 
-### **C. Loss Calculation Overhead (Projection Layer)**
-
-Distillation을 위해 추가된 Projection Layer의 연산 비용은 전체 학습 파이프라인에서 무시할 수 있는 수준이다.
+### **C. Loss Calculation Overhead**
 
 * **Projection 연산:** 
-* **복잡도:** 
-* 이는 Transformer 내부의 FFN(Feed-Forward Network) 연산량의 일부에 불과하므로, 학습 속도 저하를 거의 유발하지 않는다.
-
-
+* **분석:** Projection Layer의 파라미터는 약 30만 개()로, 전체 학습 부하에 미치는 영향은 미미하다(Ignorable).
 
 ### **D. 요약 비교 (Summary Table)**
 
-| Metric | Teacher (Baseline) | Student (Proposed) | Reduction Ratio |
+| Metric | Teacher (Base) | Student (Ours) | Reduction Ratio |
 | --- | --- | --- | --- |
 | **Layers** | 22 | 11 | **50% (1/2)** |
-| **Hidden Size** |  (1024) |  (512) | **50% (1/2)** |
-| **Parameters** | ~300M+ (Est.) | ~50M (Est.) | **~16% (1/6)** |
+| **Hidden Size** | 768 | 384 | **50% (1/2)** |
+| **Parameters** | **~149M** | **~28M (Est.)** | **~81% Reduction** |
 | **Training FLOPs** |  |  | **~87% Reduction** |
-| **Inference Latency** | Baseline | Very Fast | **Max 8x Speedup** |
+| **Inference** | Fast | Extremely Fast | **Mobile-Ready** |
 
 ---
 
