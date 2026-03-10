@@ -1,8 +1,13 @@
 *.pt
 *.pth
+*.zip
+
+# Audio files
 *.wav
 *.mp3
-*.zip
+*.flac
+*.m4a
+*.ogg
 
 # Python
 __pycache__/

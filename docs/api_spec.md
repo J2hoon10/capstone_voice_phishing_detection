@@ -1,9 +1,13 @@
-# API Spec
+# API 명세
 
-## 1) Classifier Service
+## 1. Classifier 서비스 (담당자A)
+
+> 포트: `8001` | 디렉터리: `models/classifier/`
 
 ### `GET /health`
-- Response:
+
+서비스 상태 확인.
+
 ```json
 {
   "status": "ok|degraded",
@@ -15,28 +19,43 @@
 ```
 
 ### `POST /predict`
-- Content-Type: `multipart/form-data`
-- Fields:
-  - `audio`: audio file
-  - `threshold`: float (0~1, optional)
-- Success response:
+
+음성 파일을 받아 보이스피싱 여부를 판별.
+
+- **Content-Type**: `multipart/form-data`
+- **필드**:
+  - `audio`: 음성 파일 (wav, mp3 등)
+  - `threshold`: float (0~1, 선택)
+- **응답**:
+
 ```json
 {
   "status": "success",
   "is_phishing": true,
   "max_risk_score": 87.3,
-  "dangerous_segment": "...",
+  "dangerous_segment": "계좌 동결 처리를 위해...",
   "filename": "sample.wav"
 }
 ```
 
-## 2) Guidance Service
+---
+
+## 2. Guidance 서비스 (담당자B, C)
+
+> 포트: `8002` | 디렉터리: `models/guidance/`
 
 ### `GET /health`
-- Response: `{ "status": "ok" }`
+
+```json
+{ "status": "ok" }
+```
 
 ### `POST /guidance`
-- Body:
+
+위험 점수와 텍스트를 기반으로 대응 지침을 생성.
+
+- **요청**:
+
 ```json
 {
   "risk_score": 75,
@@ -44,7 +63,9 @@
   "text": "검찰에서 계좌 동결..."
 }
 ```
-- Response:
+
+- **응답**:
+
 ```json
 {
   "risk_score": 75,
@@ -54,24 +75,35 @@
     "matched_type": "impersonation_investigation",
     "matched_label": "수사기관 사칭형",
     "summary": "...",
-    "actions": ["..."],
-    "emergency_contacts": [{"name":"경찰청","phone":"112","description":"긴급 신고"}],
+    "actions": ["즉시 전화를 끊으세요", "..."],
+    "emergency_contacts": [
+      { "name": "경찰청", "phone": "112", "description": "긴급 신고" }
+    ],
     "banks_notice": "..."
   }
 }
 ```
 
-## 3) Backend Gateway
+---
+
+## 3. Backend 게이트웨이
+
+> 포트: `8000` | 디렉터리: `backend/`
 
 ### `GET /health`
-- Response: `{ "status": "ok" }`
+
+```json
+{ "status": "ok" }
+```
 
 ### `POST /api/detect`
-- Content-Type: `multipart/form-data`
-- Fields:
-  - `audio`: audio file
-  - `threshold`: float (optional)
-- Response:
+
+음성 파일 업로드 → classifier + guidance 통합 결과 반환.
+
+- **Content-Type**: `multipart/form-data`
+- **필드**: `audio`, `threshold` (선택)
+- **응답**:
+
 ```json
 {
   "status": "success",
@@ -79,20 +111,22 @@
   "max_risk_score": 83.4,
   "dangerous_segment": "...",
   "warning_level": "WARNING",
-  "guidance": { "...": "..." },
-  "raw": { "...": "classifier raw response" }
+  "guidance": { "..." },
+  "raw": { "classifier 원본 응답" }
 }
 ```
 
 ### `POST /api/guidance`
-- Body: guidance service request format
-- Response: guidance service response format
+
+guidance 서비스에 직접 요청 전달.
 
 ### `WS /ws/stream`
-- Client -> server:
-  - binary audio chunk (`audio/webm`)
-  - optional text JSON `{ "event": "reset" }`
-- Server -> client (`event=prediction`):
+
+실시간 마이크 스트리밍 엔드포인트.
+
+- **클라이언트 → 서버**: 바이너리 오디오 청크 (`audio/webm`) 또는 JSON `{ "event": "reset" }`
+- **서버 → 클라이언트** (`event=prediction`):
+
 ```json
 {
   "event": "prediction",
@@ -101,6 +135,6 @@
   "score": 70.0,
   "warning_level": "WARNING",
   "transcript": "...",
-  "guidance": { "...": "..." }
+  "guidance": { "..." }
 }
 ```
