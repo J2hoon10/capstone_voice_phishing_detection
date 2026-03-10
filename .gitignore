@@ -3,3 +3,21 @@
 *.wav
 *.mp3
 *.zip
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Model artifacts
+models/classifier/weights/*.pt
+models/classifier/weights/*.bin
+!models/classifier/weights/.gitkeep
+
+# Env
+.env

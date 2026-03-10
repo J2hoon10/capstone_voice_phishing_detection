@@ -1,0 +1,20 @@
+{
+  "default": [
+    {
+      "name": "경찰청",
+      "phone": "112",
+      "description": "긴급 신고"
+    },
+    {
+      "name": "금융감독원",
+      "phone": "1332",
+      "description": "금융사기 피해 상담"
+    },
+    {
+      "name": "인터넷진흥원(KISA) 118",
+      "phone": "118",
+      "description": "사이버범죄·스미싱 신고"
+    }
+  ],
+  "banks_notice": "송금 직후라면 거래 은행 고객센터에 즉시 지급정지 요청을 진행하세요."
+}
