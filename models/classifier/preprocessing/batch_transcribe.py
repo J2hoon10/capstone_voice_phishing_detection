@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import argparse
 import csv
 import numpy as np
+from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 
@@ -44,6 +45,13 @@ def _is_cuda_missing_error(err):
     return ("cublas64_12.dll" in msg) or ("CUDA" in msg and "not found" in msg)
 
 
+def _numeric_filename_key(filename):
+    stem, _ = os.path.splitext(filename)
+    if stem.isdigit():
+        return (0, int(stem))
+    return (1, stem.lower())
+
+
 def _init_pipeline(variant):
     whisper_model = WhisperModel(
         variant["model"],
@@ -57,21 +65,29 @@ def collect_audio_files(base_dir):
     """하위 폴더 재귀 탐색하여 오디오 파일 목록 수집"""
     files = []
     for root, _, filenames in os.walk(base_dir):
-        for f in sorted(filenames):
+        for f in sorted(filenames, key=_numeric_filename_key):
             if f.lower().endswith(AUDIO_EXTENSIONS):
                 files.append(os.path.join(root, f))
     return files
 
 
-def load_completed(csv_path):
-    """이미 처리된 파일명 집합 반환 (resume용)"""
-    completed = set()
+def load_completed_by_category(csv_path):
+    """이미 처리된 파일명 집합 반환 (resume용, category 기준 분리)"""
+    completed = defaultdict(set)
     if os.path.exists(csv_path):
         with open(csv_path, "r", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                completed.add(row["filename"])
+                completed[row["category"]].add(row["filename"])
     return completed
+
+
+def count_rows(csv_path):
+    """CSV 데이터 행 수 반환 (resume/summary 표시용)"""
+    if not os.path.exists(csv_path):
+        return 0
+    with open(csv_path, "r", encoding="utf-8-sig") as f:
+        return sum(1 for _ in csv.DictReader(f))
 
 
 def transcribe_category(state, enhancer, audio_files, label, category,
@@ -230,15 +246,15 @@ def main():
     normal_csv = os.path.join(output_dir, "normal.csv")
 
     # resume 모드: 기존 CSV에서 처리 완료된 파일 로드
-    completed_phishing = load_completed(phishing_csv) if args.resume else set()
-    completed_normal = load_completed(normal_csv) if args.resume else set()
+    completed_phishing = load_completed_by_category(phishing_csv) if args.resume else defaultdict(set)
+    completed_normal = load_completed_by_category(normal_csv) if args.resume else defaultdict(set)
 
     print(f"=== 일괄 STT 처리 (GPU 최적화) ===")
     print(f"Whisper: {variant['model']} ({variant['device']}, {variant['compute_type']})")
     print(f"배치 크기: {args.batch_size}")
     print(f"출력: {output_dir}")
     if args.resume:
-        print(f"Resume: 피싱 {len(completed_phishing)}건, 일반 {len(completed_normal)}건 완료됨")
+        print(f"Resume: 피싱 {count_rows(phishing_csv)}건, 일반 {count_rows(normal_csv)}건 완료됨")
     print()
     if args.no_progress or not tqdm:
         if not tqdm:
@@ -274,8 +290,9 @@ def main():
             cat_dir = os.path.join(PHISHING_DIR, cat)
             files = collect_audio_files(cat_dir)
             print(f"\n[피싱/{cat}] {len(files)}개 파일")
+            completed_set = completed_phishing[cat]
             transcribe_category(state, enhancer, files, "phishing", cat,
-                              phishing_csv, completed_phishing,
+                              phishing_csv, completed_set,
                               args.batch_size,
                               show_progress=not args.no_progress)
 
@@ -287,8 +304,9 @@ def main():
             cat_dir = os.path.join(NORMAL_DIR, cat)
             files = collect_audio_files(cat_dir)
             print(f"\n[일반/{cat}] {len(files)}개 파일")
+            completed_set = completed_normal[cat]
             transcribe_category(state, enhancer, files, "normal", cat,
-                              normal_csv, completed_normal,
+                              normal_csv, completed_set,
                               args.batch_size,
                               show_progress=not args.no_progress)
 
@@ -296,8 +314,8 @@ def main():
     merge_csvs(output_dir, [phishing_csv, normal_csv])
 
     # 요약
-    p_count = len(load_completed(phishing_csv))
-    n_count = len(load_completed(normal_csv))
+    p_count = count_rows(phishing_csv)
+    n_count = count_rows(normal_csv)
     print(f"\n=== 완료 ===")
     print(f"피싱: {p_count}건, 일반: {n_count}건, 총: {p_count + n_count}건")
     print(f"결과: {output_dir}")

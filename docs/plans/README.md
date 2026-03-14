@@ -4,7 +4,7 @@
 
 | 폴더 | 담당자 | 영역 |
 |------|--------|------|
-| [classifier/](classifier/) | 담당자A | Classifier 서비스 |
+| [classifier/](classifier-A/) | 담당자A | Classifier 서비스 |
 | [guidance-B/](guidance-B/) | 담당자B | Guidance 엔진 로직 |
 | [guidance-C/](guidance-C/) | 담당자C | Guidance Knowledge Base |
 

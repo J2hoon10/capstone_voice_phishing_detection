@@ -31,6 +31,7 @@
 | [architecture.md](architecture.md) | 서비스 아키텍처 및 담당 영역 |
 | [api_spec.md](api_spec.md) | API 엔드포인트 명세 |
 | [deployment_guide.md](deployment_guide.md) | Docker 배포 가이드 |
+| [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) | 프로젝트 파일 구조 설명 |
 
 ## 아카이브
 
@@ -39,3 +40,5 @@
 | [archive/SINARIO_v1.md](archive/SINARIO_v1.md) | 초기 모델 파이프라인 설계 |
 | [archive/SINARIO_v2.md](archive/SINARIO_v2.md) | ModernBERT TA 기반 증류 계획 |
 | [archive/SINARIO_v3.md](archive/SINARIO_v3.md) | 최종 증류 계획 (Unpadded ModernBERT) |
+
+> 이전에 작업했던 내용이자, 현재는 사용하지 않는 문서들을 기록으로 남기기 위해서 삭제하지 않고 아카이브에 저장합니다. 

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep -l \"batch\\\\|dataset\\\\|pipeline\")",
+      "Bash(sed 's/.*\\\\.//')",
+      "Bash(grep -h \"^import\\\\|^from\" /c/Users/myhom/Jihoon/capstone_project/capstone_voice_phishing_detection/models/classifier/*.py)"
+    ]
+  }
+}
