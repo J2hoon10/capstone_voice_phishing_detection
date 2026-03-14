@@ -19,17 +19,19 @@
 ```text
 main                          ← 안정 배포 브랜치 (직접 push 금지)
  └── dev/final                ← 통합 개발 브랜치 (PR 머지 대상)
-      ├── feature/classifier-* ← 담당자A 작업 브랜치
-      ├── feature/guidance-*   ← 담당자B, C 작업 브랜치
-      └── fix/*               ← 버그 수정 브랜치
+      ├── feature/classifier-A ← 담당자A 작업 브랜치
+      ├── feature/guidance-B   ← 담당자B 작업 브랜치
+      ├── feature/guidance-C   ← 담당자C 작업 브랜치
+      └── fix/*                ← 버그 수정 브랜치
 ```
 
 ### 브랜치 네이밍 규칙
 
 | 접두사 | 용도 | 예시 |
 |--------|------|------|
-| `feature/classifier-` | Classifier 기능 개발 | `feature/classifier-noise-reduction` |
-| `feature/guidance-` | Guidance 기능 개발 | `feature/guidance-new-phishing-type` |
+| `feature/classifier-A` | Classifier 기능 개발 (담당자A) | `feature/classifier-A` |
+| `feature/guidance-B` | Guidance 기능 개발 (담당자B) | `feature/guidance-B` |
+| `feature/guidance-C` | Guidance 기능 개발 (담당자C) | `feature/guidance-C` |
 | `fix/` | 버그 수정 | `fix/classifier-memory-leak` |
 | `docs/` | 문서 수정 | `docs/update-api-spec` |
 
@@ -40,8 +42,15 @@ main                          ← 안정 배포 브랜치 (직접 push 금지)
 git checkout dev/final
 git pull origin dev/final
 
-# 2. 작업 브랜치 생성
-git checkout -b feature/classifier-noise-reduction
+# 2. 작업 브랜치로 이동 (이미 생성되어 있음)
+# 담당자A
+git checkout feature/classifier-A
+
+# 담당자B
+git checkout feature/guidance-B
+
+# 담당자C
+git checkout feature/guidance-C
 ```
 
 ---
@@ -91,7 +100,7 @@ git checkout -b feature/classifier-noise-reduction
 ### 전체 흐름
 
 ```
-1. 브랜치 생성 (dev/final 기반)
+1. 원격 최신화 (git fetch origin → git rebase origin/dev/final)
        ↓
 2. 로컬에서 코드 작성 & 테스트
        ↓
@@ -105,35 +114,73 @@ git checkout -b feature/classifier-noise-reduction
        ↓
 7. 승인 후 Merge
        ↓
-8. 작업 브랜치 삭제
+8. 다음 작업을 위해 1번으로 돌아가기
 ```
 
 ### 상세 명령어
 
+> 아래 명령어는 **담당자A 기준**으로 작성되었습니다.
+> 담당자B는 `feature/classifier-A` → `feature/guidance-B`,
+> 담당자C는 `feature/classifier-A` → `feature/guidance-C` 로 바꿔서 동일하게 진행하세요.
+
 ```bash
-# === 1. 브랜치 생성 ===
-git checkout dev/final
-git pull origin dev/final
-git checkout -b feature/guidance-new-type
+# ================================================================
+# === 1. 작업 시작 전: 원격 최신 상태 반영 (매번 작업 시작 시 필수)
+# ================================================================
 
-# === 2~3. 작업 및 커밋 ===
-# (코드 수정 후)
-git add models/guidance/guidance_engine.py
-git commit -m "[guidance] 새로운 피싱 유형 매칭 로직 추가"
+# Step 1-1. 원격 저장소의 최신 변경 내역을 로컬로 가져옵니다.
+#           (코드는 아직 바뀌지 않고, 원격 상태 정보만 업데이트됩니다.)
+git fetch origin
 
-# === 4. Push ===
-git push -u origin feature/guidance-new-type
+# Step 1-2. 내 작업 브랜치로 이동합니다.
+git checkout feature/classifier-A
 
-# === 5. PR 생성 ===
-# GitHub 웹에서 Pull Request 생성
-# - base: dev/final
-# - compare: feature/guidance-new-type
-# - 리뷰어 지정
+# Step 1-3. 원격 dev/final의 최신 커밋을 기준으로 내 작업 브랜치를 재정렬합니다.
+#           (로컬 dev/final이 아니라 origin/dev/final을 직접 바라보므로 더 안전합니다.)
+git rebase origin/dev/final
 
-# === 7~8. 머지 후 정리 ===
-git checkout dev/final
-git pull origin dev/final
-git branch -d feature/guidance-new-type
+# ================================================================
+# === 2. 코드 작성 & 커밋
+# ================================================================
+
+# Step 2-1. 변경한 파일을 스테이징합니다.
+git add models/classifier/파일명.py
+
+# Step 2-2. 커밋 메시지 컨벤션에 맞게 커밋합니다.
+git commit -m "[classifier] 기능 추가 내용 요약"
+
+# ================================================================
+# === 3. 원격에 Push
+# ================================================================
+
+# Step 3-1. 작업 브랜치를 원격에 올립니다.
+#           (-u 옵션은 처음 push할 때만 필요합니다. 이후에는 git push 만으로 충분합니다.)
+git push -u origin feature/classifier-A
+
+# ※ rebase 후 push가 거부될 경우 (히스토리가 변경되었으므로 정상입니다.)
+git push --force-with-lease origin feature/classifier-A
+
+# ================================================================
+# === 4. Pull Request 생성 (GitHub 웹에서 진행)
+# ================================================================
+
+# - base(머지 대상): dev/final
+# - compare(내 브랜치): feature/classifier-A
+# - 리뷰어 지정 후 PR 생성
+
+# ================================================================
+# === 5. 머지 완료 후 (PR이 승인되어 dev/final에 머지된 후)
+# ================================================================
+
+# Step 5-1. 원격 최신 상태를 다시 가져옵니다.
+git fetch origin
+
+# Step 5-2. 다음 작업 사이클을 위해 Step 1-2부터 반복합니다.
+git checkout feature/classifier-A
+git rebase origin/dev/final
+
+# ※ 각 작업 브랜치(classifier-A, guidance-B, guidance-C)는
+#   삭제하지 않고 계속 재사용합니다.
 ```
 
 ---
@@ -182,7 +229,7 @@ git checkout dev/final
 git pull origin dev/final
 
 # 2. 작업 브랜치로 돌아가서 rebase
-git checkout feature/guidance-new-type
+git checkout feature/guidance-B  # 또는 feature/guidance-C
 git rebase dev/final
 
 # 3. 충돌 발생 시 수동 해결

@@ -30,25 +30,24 @@ Guidance 서비스는 2명이 함께 작업하므로 **파일 단위로 분담**
    - 작업 시작 전 Slack/카톡으로 "오늘 `guidance_engine.py` 수정합니다" 공유
 2. **소규모 커밋 + 자주 push**
    - 큰 변경을 한번에 하지 말고, 작은 단위로 나눠 커밋
-3. **작업 시작 전 항상 pull**
-   ```bash
-   git checkout dev/final
-   git pull origin dev/final
-   git checkout feature/guidance-<내작업>
-   git rebase dev/final
-   ```
 
-## 브랜치 네이밍
+## 작업 브랜치
 
+담당자B는 `feature/guidance-B`, 담당자C는 `feature/guidance-C`로 브랜치가 고정되어 있습니다. 새로 생성할 필요 없이 아래 명령어로 작업을 시작하세요.
+
+### 작업 시작 전 (매번 필수)
+
+```bash
+# Step 1. 원격 저장소의 최신 변경 내역을 가져옵니다.
+git fetch origin
+
+# Step 2. 내 작업 브랜치로 이동합니다.
+git checkout feature/guidance-B   # 담당자B
+git checkout feature/guidance-C   # 담당자C
+
+# Step 3. 원격 dev/final 최신 상태를 기준으로 재정렬합니다.
+git rebase origin/dev/final
 ```
-feature/guidance-<작업내용>
-```
-
-예시:
-- `feature/guidance-new-phishing-type` — 새 피싱 유형 추가
-- `feature/guidance-keyword-update` — 키워드 목록 업데이트
-- `feature/guidance-engine-refactor` — 엔진 로직 개선
-- `feature/guidance-emergency-contacts` — 긴급 연락처 수정
 
 ## 주요 파일별 역할
 
@@ -141,17 +140,23 @@ python -c "import json; json.load(open('knowledge_base/phishing_types.json', enc
 python -c "import json; json.load(open('knowledge_base/emergency_contacts.json', encoding='utf-8')); print('OK')"
 ```
 
-## 커밋 예시
+## 커밋 및 Push 예시
 
 ```bash
-# 담당자B: 엔진 로직 수정
+# 담당자B: 엔진 로직 수정 후 커밋 & push
 git add models/guidance/guidance_engine.py
 git commit -m "[guidance] 피싱 유형 매칭 시 복합 키워드 지원
 
 단일 키워드 매칭에서 AND/OR 조합 매칭으로 확장하여
 오탐률을 낮춤"
+git push -u origin feature/guidance-B
 
-# 담당자C: knowledge base 수정
+# 담당자C: knowledge base 수정 후 커밋 & push
 git add models/guidance/knowledge_base/phishing_types.json
 git commit -m "[guidance] 보험 사기 유형 키워드 추가"
+git push -u origin feature/guidance-C
+
+# rebase 후 push가 거부될 경우 (히스토리 변경으로 인한 정상 현상)
+git push --force-with-lease origin feature/guidance-B   # 담당자B
+git push --force-with-lease origin feature/guidance-C   # 담당자C
 ```

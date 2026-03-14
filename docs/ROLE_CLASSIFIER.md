@@ -16,16 +16,22 @@ models/classifier/
     └── student_best.pt
 ```
 
-## 브랜치 네이밍
+## 작업 브랜치
 
-```
-feature/classifier-<작업내용>
-```
+담당자A의 작업 브랜치는 `feature/classifier-A`로 고정되어 있습니다. 새로 생성할 필요 없이 아래 명령어로 작업을 시작하세요.
 
-예시:
-- `feature/classifier-noise-reduction` — 노이즈 제거 개선
-- `feature/classifier-vad-tuning` — VAD 파라미터 조정
-- `feature/classifier-risk-scoring` — 리스크 스코어링 로직 수정
+### 작업 시작 전 (매번 필수)
+
+```bash
+# Step 1. 원격 저장소의 최신 변경 내역을 가져옵니다.
+git fetch origin
+
+# Step 2. 작업 브랜치로 이동합니다.
+git checkout feature/classifier-A
+
+# Step 3. 원격 dev/final 최신 상태를 기준으로 재정렬합니다.
+git rebase origin/dev/final
+```
 
 ## 주요 파일별 역할
 
@@ -107,12 +113,19 @@ docker compose up --build classifier
 | `librosa` | 오디오 처리 |
 | `noisereduce` | 노이즈 제거 |
 
-## 커밋 예시
+## 커밋 및 Push 예시
 
 ```bash
+# 커밋
 git add models/classifier/audio_processor.py
 git commit -m "[classifier] VAD 감도 파라미터 조정
 
 기존 에너지 기반 VAD에서 오탐이 빈번하여
 최소 음성 길이 임계값을 300ms → 500ms로 조정"
+
+# Push (처음에는 -u 옵션, 이후에는 git push 만으로 충분)
+git push -u origin feature/classifier-A
+
+# rebase 후 push가 거부될 경우 (히스토리 변경으로 인한 정상 현상)
+git push --force-with-lease origin feature/classifier-A
 ```
