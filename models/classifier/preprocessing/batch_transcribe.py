@@ -17,10 +17,9 @@ import csv
 import numpy as np
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
 
 from pipeline_config import (
-    DATA_DIR, TRANSCRIPTION_DIR, AUDIO_EXTENSIONS,
+    TRANSCRIPTION_DIR, AUDIO_EXTENSIONS,
     WHISPER_VARIANTS, DEFAULT_VARIANT, CSV_COLUMNS,
     PHISHING_DIR, NORMAL_DIR,
     BATCH_SIZE,
@@ -50,6 +49,7 @@ def _numeric_filename_key(filename):
     if stem.isdigit():
         return (0, int(stem))
     return (1, stem.lower())
+
 
 
 def _init_pipeline(variant):
@@ -170,9 +170,14 @@ def transcribe_category(state, enhancer, audio_files, label, category,
                         language="ko",
                         batch_size=batch_size,
                         beam_size=1,
-                        temperature=0.0,
                         vad_filter=True,
-                        no_speech_threshold=0.6,
+                        no_speech_threshold=0.85,        # 0.6→0.85: 환각 반복 억제
+                        condition_on_previous_text=False, # 이전 텍스트 문맥 비사용: 반복 환각 방지
+                        repetition_penalty=1.2,
+                        no_repeat_ngram_size=3,
+                        compression_ratio_threshold=2.2,
+                        log_prob_threshold=-0.8,
+                        temperature=(0.0, 0.2, 0.4, 0.6),
                     )
                     # generator를 즉시 소비해야 CUDA 오류가 여기서 발생
                     return " ".join([seg.text for seg in segs])
@@ -264,7 +269,7 @@ def main():
 
     # AudioEnhancer 초기화 (GPU noisereduce 포함)
     print("AudioEnhancer 로딩 중...")
-    enhancer = AudioEnhancer()
+    enhancer = AudioEnhancer(enable_vad=False)
     print("AudioEnhancer 로딩 완료!\n")
 
     # Whisper + BatchedInferencePipeline 초기화
@@ -282,10 +287,13 @@ def main():
             raise
     print("Whisper 로딩 완료!\n")
 
+    _EXCLUDE_DIRS = {"GT"}
+
     # 피싱 데이터 처리
     if os.path.exists(PHISHING_DIR):
         categories = sorted([d for d in os.listdir(PHISHING_DIR)
-                            if os.path.isdir(os.path.join(PHISHING_DIR, d))])
+                            if os.path.isdir(os.path.join(PHISHING_DIR, d))
+                            and d not in _EXCLUDE_DIRS])
         for cat in categories:
             cat_dir = os.path.join(PHISHING_DIR, cat)
             files = collect_audio_files(cat_dir)
@@ -299,7 +307,8 @@ def main():
     # 일반 데이터 처리
     if os.path.exists(NORMAL_DIR):
         categories = sorted([d for d in os.listdir(NORMAL_DIR)
-                            if os.path.isdir(os.path.join(NORMAL_DIR, d))])
+                            if os.path.isdir(os.path.join(NORMAL_DIR, d))
+                            and d not in _EXCLUDE_DIRS])
         for cat in categories:
             cat_dir = os.path.join(NORMAL_DIR, cat)
             files = collect_audio_files(cat_dir)

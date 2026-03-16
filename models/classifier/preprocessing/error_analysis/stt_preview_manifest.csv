@@ -1,0 +1,21 @@
+﻿label,category,filepath
+phishing,대출 사기형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\대출 사기형\110.mp3
+phishing,대출 사기형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\대출 사기형\160.mp3
+phishing,대출 사기형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\대출 사기형\119.mp3
+phishing,대출 사기형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\대출 사기형\26.mp3
+phishing,바로 이 목소리,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\바로 이 목소리\40.wav
+phishing,바로 이 목소리,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\바로 이 목소리\21.wav
+phishing,바로 이 목소리,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\바로 이 목소리\13.wav
+phishing,수사기관 사칭형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\수사기관 사칭형\188.mp3
+phishing,수사기관 사칭형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\수사기관 사칭형\220-1.wav
+phishing,수사기관 사칭형,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\phishing\수사기관 사칭형\221-4.wav
+normal,상품 가입 및 해지,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\상품 가입 및 해지\[수정]20210202 120201.mp3
+normal,상품 가입 및 해지,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\상품 가입 및 해지\[수정]20210203 235700.mp3
+normal,상품 가입 및 해지,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\상품 가입 및 해지\[수정]20210202 141624.mp3
+normal,상품 가입 및 해지,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\상품 가입 및 해지\[수정]20210205 155539.mp3
+normal,이체 출금 대출서비스,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\이체 출금 대출서비스\[수정]20210130 170049.mp3
+normal,이체 출금 대출서비스,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\이체 출금 대출서비스\[수정]20210128 203022.mp3
+normal,이체 출금 대출서비스,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\이체 출금 대출서비스\[수정]20210126 152326.mp3
+normal,잔고 및 거래내역,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\잔고 및 거래내역\[수정]20210201 102432.mp3
+normal,잔고 및 거래내역,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\잔고 및 거래내역\[수정]20210203 145520.mp3
+normal,잔고 및 거래내역,C:\Users\myhom\Jihoon\capstone_project\capstone_voice_phishing_detection\models\classifier\data\normal\잔고 및 거래내역\[수정]20210203 201836.mp3

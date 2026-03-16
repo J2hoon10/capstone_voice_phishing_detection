@@ -13,7 +13,7 @@ class AudioProcessor:
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         compute_type = compute_type or ("float16" if self.device == "cuda" else "int8")
 
-        self.enhancer = AudioEnhancer()
+        self.enhancer = AudioEnhancer(enable_vad=False)
         print(f"[AudioProcessor] Loading Whisper '{whisper_model_size}'...")
         self.whisper = WhisperModel(whisper_model_size, device=self.device, compute_type=compute_type)
 
@@ -25,6 +25,13 @@ class AudioProcessor:
         text = re.sub(r'([?!.])\1+', r'\1', text)
         text = re.sub(r'\s+', ' ', text).strip()
         return text
+
+    def remove_repetitions(self, text: str) -> str:
+        """연속 반복되는 단어/구문 축약 (과도한 반복 루프 완화)"""
+        text = re.sub(r'(\S+)(\s+\1){2,}', r'\1', text)
+        text = re.sub(r'((\S+\s+\S+)\s+)\1+', r'\1', text)
+        text = re.sub(r'((\S+\s+\S+\s+\S+)\s+)\1+', r'\1', text)
+        return text.strip()
 
     def is_valid_sentence(self, text: str) -> bool:
         if len(text) < 2:
@@ -67,12 +74,16 @@ class AudioProcessor:
                 language="ko",
                 condition_on_previous_text=False,
                 repetition_penalty=1.2,
+                no_repeat_ngram_size=3,
+                compression_ratio_threshold=2.2,
+                log_prob_threshold=-0.8,
+                temperature=(0.0, 0.2, 0.4, 0.6),
                 vad_filter=True,
-                temperature=0.0,
                 no_speech_threshold=0.6
             )
 
             full_text = " ".join([seg.text for seg in segments])
+            full_text = self.remove_repetitions(full_text)
 
             t_whisper_end = time.time()
             print(f"   [Profile] Whisper STT: {(t_whisper_end - t_whisper_start):.4f}s")

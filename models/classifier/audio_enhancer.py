@@ -9,7 +9,7 @@ from scipy.signal import butter, sosfiltfilt
 
 class AudioEnhancer:
     def __init__(self, target_sr=16000, device=None, vad_device=None,
-                 enable_bandpass=True, enable_denoise=True, enable_vad=True, enable_normalize=True):
+                 enable_bandpass=True, enable_denoise=True, enable_vad=False, enable_normalize=True):
         self.target_sr = target_sr
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.vad_device = vad_device or self.device
@@ -76,11 +76,15 @@ class AudioEnhancer:
 
         return np.concatenate(segments).astype(np.float32) if segments else audio
 
-    def normalize(self, audio, target_rms=0.1):
-        """볼륨 크기 일정하게 맞추기"""
+    def normalize(self, audio, target_rms=0.1, min_rms=1e-4, peak=0.98):
+        """볼륨 크기 일정하게 맞추기 (저음량 증폭 제한 + 간단 리미터)"""
         rms = np.sqrt(np.mean(audio ** 2))
-        if rms < 1e-6: return audio
+        if rms < min_rms:
+            return audio
         normalized = audio * (target_rms / rms)
+        peak_val = np.max(np.abs(normalized))
+        if peak_val > peak:
+            normalized = normalized * (peak / peak_val)
         return np.clip(normalized, -1.0, 1.0).astype(np.float32)
 
     def enhance(self, input_data):
