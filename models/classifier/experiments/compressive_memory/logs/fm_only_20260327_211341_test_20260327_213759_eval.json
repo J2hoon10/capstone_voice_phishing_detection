@@ -1,0 +1,90 @@
+{
+  "basic_metrics": {
+    "subset_accuracy": 0.04285714285714286,
+    "micro_f1": 0.7540566337893733,
+    "macro_f1": 0.6733588741538137,
+    "hamming_loss": 0.2760714285714286,
+    "weighted_f1": 0.7614219630554869
+  },
+  "basic_metrics_optimal_threshold": {
+    "subset_accuracy": 0.05,
+    "micro_f1": 0.7950417987892765,
+    "macro_f1": 0.6936151732832478,
+    "hamming_loss": 0.25392857142857145
+  },
+  "optimal_thresholds": {
+    "anger": 0.25,
+    "disgust": 0.8,
+    "fear": 0.45,
+    "joy": 0.2,
+    "neutral": 0.2,
+    "sadness": 0.55,
+    "surprise": 0.2,
+    "positive": 0.2,
+    "negative": 0.2
+  },
+  "per_class_metrics": {
+    "anger": {
+      "f1": 0.7124183006535948,
+      "precision": 0.6449704142011834,
+      "recall": 0.7956204379562044,
+      "support": 137
+    },
+    "disgust": {
+      "f1": 0.39215686274509803,
+      "precision": 0.37037037037037035,
+      "recall": 0.4166666666666667,
+      "support": 48
+    },
+    "fear": {
+      "f1": 0.26506024096385544,
+      "precision": 0.275,
+      "recall": 0.2558139534883721,
+      "support": 43
+    },
+    "joy": {
+      "f1": 0.736231884057971,
+      "precision": 0.7055555555555556,
+      "recall": 0.7696969696969697,
+      "support": 165
+    },
+    "neutral": {
+      "f1": 0.8739495798319328,
+      "precision": 0.9585253456221198,
+      "recall": 0.803088803088803,
+      "support": 259
+    },
+    "sadness": {
+      "f1": 0.5491803278688525,
+      "precision": 0.4557823129251701,
+      "recall": 0.6907216494845361,
+      "support": 97
+    },
+    "surprise": {
+      "f1": 0.7238095238095238,
+      "precision": 0.7307692307692307,
+      "recall": 0.7169811320754716,
+      "support": 159
+    },
+    "positive": {
+      "f1": 0.7433155080213903,
+      "precision": 0.7164948453608248,
+      "recall": 0.7722222222222223,
+      "support": 180
+    },
+    "negative": {
+      "f1": 0.8717948717948718,
+      "precision": 0.8697674418604651,
+      "recall": 0.8738317757009346,
+      "support": 214
+    }
+  },
+  "streaming_metrics": {
+    "convergence_rate": 0.5218253968253967,
+    "first_correct_step": 2.5074626865671643,
+    "oscillation_count": 0.07462686567164178,
+    "num_streaming_samples": 67
+  },
+  "threshold_used": 0.5,
+  "optimal_threshold_source": "dev"
+}

@@ -1,0 +1,395 @@
+{
+  "experiment": "full",
+  "run_id": "20260327_175403",
+  "loss_strategy": "L3",
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\compressive_memory\\checkpoints\\full_20260327_175403_best.pt",
+  "config_snapshot": {
+    "experiment_name": "full",
+    "ablation_override": {
+      "FM_SIZE": 3,
+      "CM_SIZE": 4,
+      "description": "FM(r=3) + CM(k=4) + 1D Conv (메인 실험)"
+    },
+    "resolved": {
+      "encoder": {
+        "MODEL_NAME": "roberta-base",
+        "HIDDEN_SIZE": 768,
+        "PAD_TOKEN_ID": 1,
+        "FREEZE_ENCODER": false
+      },
+      "memory": {
+        "SLOT_DIM": 128,
+        "FM_SIZE": 3,
+        "CM_SIZE": 4,
+        "CONV_KERNEL_SIZE": 2,
+        "USE_LEARNABLE_INIT": true
+      },
+      "attention": {
+        "NUM_HEADS": 8,
+        "DROPOUT": 0.1
+      },
+      "head": {
+        "HIDDEN_DIM": 64,
+        "DROPOUT": 0.1
+      },
+      "train": {
+        "BATCH_SIZE": 8,
+        "EPOCHS": 20,
+        "SEED": 42,
+        "ENCODER_LR": 2e-05,
+        "UPPER_LR": 0.0005,
+        "WEIGHT_DECAY": 0.06,
+        "WARMUP_RATIO": 0.1,
+        "MIN_LR": 1e-06,
+        "PATIENCE": 7,
+        "MIN_DELTA": 0.0001,
+        "LOSS_STRATEGY": "L3",
+        "POS_WEIGHT_CLIP": 10.0,
+        "MAX_GRAD_NORM": 1.0,
+        "CM_DETACH_INTERVAL": 0
+      },
+      "gpu": {
+        "ENABLED": true,
+        "DTYPE": "bf16",
+        "TF32_MATMUL": true,
+        "TF32_CUDNN": true,
+        "TARGET_VRAM_GB": 14.0,
+        "GRADIENT_ACCUMULATION_STEPS": 2,
+        "EMPTY_CACHE_INTERVAL": 0,
+        "CUDNN_BENCHMARK": true,
+        "PIN_MEMORY": true,
+        "NUM_WORKERS": 2
+      },
+      "meld": {
+        "EMOTION_LABELS": [
+          "anger",
+          "disgust",
+          "fear",
+          "joy",
+          "neutral",
+          "sadness",
+          "surprise"
+        ],
+        "SENTIMENT_LABELS": [
+          "positive",
+          "negative",
+          "neutral"
+        ],
+        "NUM_LABELS": 10,
+        "SEG_SIZE": 200,
+        "SHIFT": 50,
+        "MAX_LENGTH": 512,
+        "UTTERANCE_FORMAT": "{speaker}: {utterance}",
+        "UTTERANCE_SEP": " "
+      },
+      "loss_strategy": "L3",
+      "effective_batch_size": 16,
+      "gradient_accumulation_steps": 2,
+      "amp_enabled": true,
+      "amp_dtype": "torch.bfloat16",
+      "steps_per_epoch": 65,
+      "total_steps": 1300
+    }
+  },
+  "gpu_config": {
+    "dtype": "bf16",
+    "gradient_accumulation": 2,
+    "effective_batch_size": 16
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6018648388294073,
+      "val_loss": 0.607547648747762,
+      "macro_f1": 0.6557777777777778,
+      "per_class_f1": {
+        "anger": 0.6509,
+        "disgust": 0.2595,
+        "fear": 0.3256,
+        "joy": 0.7386,
+        "neutral": 0.9268,
+        "sadness": 0.575,
+        "surprise": 0.7676,
+        "positive": 0.8085,
+        "negative": 0.8495
+      },
+      "encoder_lr": 1e-05,
+      "upper_lr": 0.00025,
+      "vram_gb": 1.44,
+      "time": 35.59407114982605
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5740744379850534,
+      "val_loss": 0.5769420941670735,
+      "macro_f1": 0.4532555555555555,
+      "per_class_f1": {
+        "anger": 0.5393,
+        "disgust": 0.2595,
+        "fear": 0.2667,
+        "joy": 0.375,
+        "neutral": 0.4593,
+        "sadness": 0.575,
+        "surprise": 0.7676,
+        "positive": 0.3925,
+        "negative": 0.4444
+      },
+      "encoder_lr": 2e-05,
+      "upper_lr": 0.0005,
+      "vram_gb": 1.44,
+      "time": 15.552655935287476
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5615992463552035,
+      "val_loss": 0.5458465615908304,
+      "macro_f1": 0.6506333333333333,
+      "per_class_f1": {
+        "anger": 0.6667,
+        "disgust": 0.3529,
+        "fear": 0.427,
+        "joy": 0.7059,
+        "neutral": 0.7746,
+        "sadness": 0.5913,
+        "surprise": 0.7714,
+        "positive": 0.7534,
+        "negative": 0.8125
+      },
+      "encoder_lr": 1.9848077530122083e-05,
+      "upper_lr": 0.000496201938253052,
+      "vram_gb": 1.44,
+      "time": 15.654614210128784
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.539131484581874,
+      "val_loss": 0.5585412244002025,
+      "macro_f1": 0.6868111111111111,
+      "per_class_f1": {
+        "anger": 0.7234,
+        "disgust": 0.3301,
+        "fear": 0.3962,
+        "joy": 0.7532,
+        "neutral": 0.8691,
+        "sadness": 0.6015,
+        "surprise": 0.8153,
+        "positive": 0.8049,
+        "negative": 0.8876
+      },
+      "encoder_lr": 1.9396926207859085e-05,
+      "upper_lr": 0.0004849231551964771,
+      "vram_gb": 1.44,
+      "time": 15.533593654632568
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5112547879035656,
+      "val_loss": 0.5314401666323344,
+      "macro_f1": 0.6292666666666666,
+      "per_class_f1": {
+        "anger": 0.6435,
+        "disgust": 0.3243,
+        "fear": 0.4737,
+        "joy": 0.6015,
+        "neutral": 0.7514,
+        "sadness": 0.6239,
+        "surprise": 0.7556,
+        "positive": 0.6667,
+        "negative": 0.8228
+      },
+      "encoder_lr": 1.866025403784439e-05,
+      "upper_lr": 0.00046650635094610973,
+      "vram_gb": 1.44,
+      "time": 15.516777038574219
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5039726777718617,
+      "val_loss": 0.538155734539032,
+      "macro_f1": 0.5912333333333333,
+      "per_class_f1": {
+        "anger": 0.5941,
+        "disgust": 0.2963,
+        "fear": 0.4,
+        "joy": 0.5538,
+        "neutral": 0.7337,
+        "sadness": 0.6078,
+        "surprise": 0.7328,
+        "positive": 0.6131,
+        "negative": 0.7895
+      },
+      "encoder_lr": 1.766044443118978e-05,
+      "upper_lr": 0.0004415111107797445,
+      "vram_gb": 1.44,
+      "time": 15.572914123535156
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.47974238097667693,
+      "val_loss": 0.5298046886920929,
+      "macro_f1": 0.7017555555555555,
+      "per_class_f1": {
+        "anger": 0.6866,
+        "disgust": 0.3571,
+        "fear": 0.4368,
+        "joy": 0.7636,
+        "neutral": 0.9109,
+        "sadness": 0.597,
+        "surprise": 0.8263,
+        "positive": 0.8391,
+        "negative": 0.8984
+      },
+      "encoder_lr": 1.6427876096865394e-05,
+      "upper_lr": 0.0004106969024216348,
+      "vram_gb": 1.44,
+      "time": 15.712023258209229
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4503566525303401,
+      "val_loss": 0.5349822819232941,
+      "macro_f1": 0.7026222222222223,
+      "per_class_f1": {
+        "anger": 0.6763,
+        "disgust": 0.3617,
+        "fear": 0.433,
+        "joy": 0.7778,
+        "neutral": 0.9146,
+        "sadness": 0.6165,
+        "surprise": 0.8171,
+        "positive": 0.8488,
+        "negative": 0.8778
+      },
+      "encoder_lr": 1.5000000000000002e-05,
+      "upper_lr": 0.000375,
+      "vram_gb": 1.44,
+      "time": 15.644940853118896
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4233007873480137,
+      "val_loss": 0.5376155912876129,
+      "macro_f1": 0.6960555555555555,
+      "per_class_f1": {
+        "anger": 0.6716,
+        "disgust": 0.3797,
+        "fear": 0.4578,
+        "joy": 0.7613,
+        "neutral": 0.8866,
+        "sadness": 0.6061,
+        "surprise": 0.8,
+        "positive": 0.8313,
+        "negative": 0.8701
+      },
+      "encoder_lr": 1.342020143325669e-05,
+      "upper_lr": 0.0003355050358314172,
+      "vram_gb": 1.44,
+      "time": 15.545828104019165
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.39661833265653024,
+      "val_loss": 0.5537643551826477,
+      "macro_f1": 0.7075777777777777,
+      "per_class_f1": {
+        "anger": 0.6619,
+        "disgust": 0.3768,
+        "fear": 0.4384,
+        "joy": 0.7901,
+        "neutral": 0.91,
+        "sadness": 0.626,
+        "surprise": 0.8272,
+        "positive": 0.8538,
+        "negative": 0.884
+      },
+      "encoder_lr": 1.1736481776669307e-05,
+      "upper_lr": 0.00029341204441673266,
+      "vram_gb": 1.44,
+      "time": 15.534494876861572
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.3797420634673192,
+      "val_loss": 0.6022144913673401,
+      "macro_f1": 0.715288888888889,
+      "per_class_f1": {
+        "anger": 0.6761,
+        "disgust": 0.4118,
+        "fear": 0.4286,
+        "joy": 0.7901,
+        "neutral": 0.9208,
+        "sadness": 0.6308,
+        "surprise": 0.8375,
+        "positive": 0.8457,
+        "negative": 0.8962
+      },
+      "encoder_lr": 1e-05,
+      "upper_lr": 0.00025,
+      "vram_gb": 1.44,
+      "time": 15.643726587295532
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3583483344087234,
+      "val_loss": 0.618021160364151,
+      "macro_f1": 0.6934888888888889,
+      "per_class_f1": {
+        "anger": 0.6308,
+        "disgust": 0.386,
+        "fear": 0.4667,
+        "joy": 0.7042,
+        "neutral": 0.8808,
+        "sadness": 0.6429,
+        "surprise": 0.8312,
+        "positive": 0.8148,
+        "negative": 0.884
+      },
+      "encoder_lr": 8.263518223330698e-06,
+      "upper_lr": 0.00020658795558326743,
+      "vram_gb": 1.44,
+      "time": 15.718067169189453
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.3397430537984921,
+      "val_loss": 0.5918914794921875,
+      "macro_f1": 0.6979777777777778,
+      "per_class_f1": {
+        "anger": 0.6667,
+        "disgust": 0.4068,
+        "fear": 0.4839,
+        "joy": 0.7153,
+        "neutral": 0.8821,
+        "sadness": 0.6607,
+        "surprise": 0.7724,
+        "positive": 0.7848,
+        "negative": 0.9091
+      },
+      "encoder_lr": 6.579798566743314e-06,
+      "upper_lr": 0.00016449496416858284,
+      "vram_gb": 1.44,
+      "time": 15.682064294815063
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.3253726852627901,
+      "val_loss": 0.5689191897710164,
+      "macro_f1": 0.6569777777777779,
+      "per_class_f1": {
+        "anger": 0.6519,
+        "disgust": 0.3889,
+        "fear": 0.4857,
+        "joy": 0.6087,
+        "neutral": 0.8737,
+        "sadness": 0.5714,
+        "surprise": 0.7519,
+        "positive": 0.6715,
+        "negative": 0.9091
+      },
+      "encoder_lr": 5.000000000000003e-06,
+      "upper_lr": 0.00012500000000000006,
+      "vram_gb": 1.44,
+      "time": 15.625543355941772
+    }
+  ]
+}

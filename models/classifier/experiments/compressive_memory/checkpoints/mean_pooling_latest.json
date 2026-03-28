@@ -1,0 +1,8 @@
+{
+  "experiment": "mean_pooling",
+  "run_id": "20260327_213858",
+  "loss_strategy": "L3",
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\compressive_memory\\checkpoints\\mean_pooling_20260327_213858_best.pt",
+  "train_log_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\compressive_memory\\logs\\mean_pooling_20260327_213858_train_log.json",
+  "timestamp": "20260327_213858"
+}
