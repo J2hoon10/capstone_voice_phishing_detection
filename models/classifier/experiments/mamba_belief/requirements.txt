@@ -1,0 +1,12 @@
+# compressive_memory 와 동일한 기본 의존성
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.14.0
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Mamba SSM (CUDA 환경 — Docker / WSL2 필요)
+# Windows 로컬에서는 ssm_fallback.py 의 MambaPyTorch 가 자동으로 사용됨
+mamba-ssm>=1.2.0
+causal-conv1d>=1.2.0
