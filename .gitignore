@@ -19,10 +19,27 @@ __pycache__/
 frontend/node_modules/
 frontend/dist/
 
-# Model artifacts
+# Model artifacts and weights
+*.ckpt
+*.safetensors
+*.onnx
+*.pb
+*.h5
+*.model
+*.weights
+*.pt
 models/classifier/weights/*.pt
 models/classifier/weights/*.bin
 !models/classifier/weights/.gitkeep
+
+# Experiment logs and metrics
+runs/
+tb_logs/
+wandb/
+*.log
+*.csv
+*eval.json
+*train_log.json
 
 # Env
 .env

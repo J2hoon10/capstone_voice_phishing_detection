@@ -1,39 +1,37 @@
 """
 Mamba Belief 모델 학습 모듈
 
-compressive_memory/train.py 와 동일한 학습 인프라를 사용한다:
+SNS 한국어 대화 데이터셋 (20-class single-label) 기반 학습:
+  - KoELECTRA 인코더 + Mamba SSM + Classification Head (softmax)
+  - CrossEntropyLoss with L3 temporal weighting
   - BF16 Mixed Precision
   - Gradient Accumulation
   - 차등 학습률 (인코더 2e-5 / Mamba+Head 5e-4)
   - Linear warmup + Cosine decay
-  - L3 Loss (시간 비례 가중치)
   - Early Stopping (macro_f1 기준)
-
-dataset / 전처리는 compressive_memory 모듈을 직접 임포트하여 재사용한다.
 """
 
+from __future__ import annotations
+
 import json
-import sys
 import time
 from pathlib import Path
 
 import numpy as np
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
+from sklearn.metrics import accuracy_score, f1_score
 from torch.amp import GradScaler, autocast
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
-from sklearn.metrics import f1_score
-
-# compressive_memory의 dataset 모듈 재사용
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "compressive_memory"))
-from dataset import create_dataloaders
 
 from config import (
     ABLATION_CONFIGS, DATA_DIR, CHECKPOINT_DIR, DEVICE,
     ENCODER_CONFIG, GPU_CONFIG, HEAD_CONFIG, LOG_DIR,
-    MAMBA_CONFIG, MELD_CONFIG, TRAIN_CONFIG,
+    MAMBA_CONFIG, SNS_CONFIG, TRAIN_CONFIG,
 )
+from dataset import create_dataloaders
 from model import build_mamba_model
 
 
@@ -57,7 +55,7 @@ def save_latest_run_metadata(
     loss_strategy: str,
     checkpoint_path: Path,
     train_log_path: Path,
-):
+) -> None:
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
     metadata = {
         "experiment": experiment_name,
@@ -96,7 +94,7 @@ def build_config_snapshot(
             "head": dict(HEAD_CONFIG),
             "train": dict(TRAIN_CONFIG),
             "gpu": dict(GPU_CONFIG),
-            "meld": dict(MELD_CONFIG),
+            "sns": dict(SNS_CONFIG),
             "loss_strategy": loss_strategy,
             "effective_batch_size": effective_batch,
             "gradient_accumulation_steps": accum_steps,
@@ -110,7 +108,7 @@ def build_config_snapshot(
 
 # ── GPU 초기화 ─────────────────────────────────────────────
 
-def init_gpu():
+def init_gpu() -> None:
     if not torch.cuda.is_available():
         print("[GPU] CUDA 사용 불가. CPU로 실행합니다.")
         return
@@ -132,14 +130,14 @@ def init_gpu():
 
 def get_vram_usage() -> dict:
     if not torch.cuda.is_available():
-        return {"allocated_gb": 0, "reserved_gb": 0, "free_gb": 0}
+        return {"allocated_gb": 0.0, "reserved_gb": 0.0, "free_gb": 0.0}
     allocated = torch.cuda.memory_allocated(0) / (1024 ** 3)
     reserved = torch.cuda.memory_reserved(0) / (1024 ** 3)
     total = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)
     return {
-        "allocated_gb": round(allocated, 2),
-        "reserved_gb": round(reserved, 2),
-        "free_gb": round(total - reserved, 2),
+        "allocated_gb": round(float(allocated), 2),
+        "reserved_gb": round(float(reserved), 2),
+        "free_gb": round(float(total - reserved), 2),
     }
 
 
@@ -149,7 +147,7 @@ def get_amp_dtype() -> torch.dtype:
 
 # ── 학습 유틸리티 ──────────────────────────────────────────
 
-def set_seed(seed: int):
+def set_seed(seed: int) -> None:
     import random
     random.seed(seed)
     np.random.seed(seed)
@@ -196,20 +194,6 @@ def build_scheduler(optimizer: AdamW, total_steps: int) -> LambdaLR:
     )
 
 
-def load_pos_weight() -> torch.Tensor:
-    pw_path = DATA_DIR / "pos_weight.json"
-    if pw_path.exists():
-        with open(pw_path, "r") as f:
-            data = json.load(f)
-        pw = torch.tensor(data["pos_weight"], dtype=torch.float)
-        pw = pw.clamp(max=TRAIN_CONFIG["POS_WEIGHT_CLIP"])
-        print(f"[pos_weight] 로드 완료: {pw_path}")
-    else:
-        print("[pos_weight] 파일 없음. 균등 가중치 사용")
-        pw = torch.ones(MELD_CONFIG["NUM_LABELS"])
-    return pw.to(DEVICE)
-
-
 def build_temporal_weights(num_segments: torch.Tensor, max_S: int) -> torch.Tensor:
     """L3: t번째 세그먼트 가중치 = t / T"""
     B = num_segments.shape[0]
@@ -217,33 +201,42 @@ def build_temporal_weights(num_segments: torch.Tensor, max_S: int) -> torch.Tens
     for b in range(B):
         n = num_segments[b].item()
         if n > 0:
-            weights[b, :n] = torch.arange(1, n + 1, dtype=torch.float, device=num_segments.device) / n
+            weights[b, :n] = torch.arange(
+                1, n + 1, dtype=torch.float, device=num_segments.device
+            ) / n
     return weights
 
 
 def compute_loss(
     all_logits: list[torch.Tensor],
-    labels: torch.Tensor,
+    labels: torch.Tensor,          # (B,) long — 클래스 인덱스
     num_segments: torch.Tensor,
     segment_mask: torch.Tensor,
-    criterion: nn.BCEWithLogitsLoss,
     loss_strategy: str = "L3",
 ) -> torch.Tensor:
+    """
+    단일 레이블 CrossEntropy 손실 계산.
+
+    L1: 마지막 세그먼트 logit만 사용
+    L2: 유효 세그먼트 손실의 균등 평균
+    L3: 시간 비례 가중 평균 (λ_t = t/T)
+    """
     B = labels.shape[0]
 
     if loss_strategy == "L1":
-        final_logits = torch.zeros_like(labels)
+        final_logits = all_logits[0].new_zeros(B, all_logits[0].shape[1])
         for b in range(B):
-            last_t = min(num_segments[b].item() - 1, len(all_logits) - 1)
+            last_t = min(int(num_segments[b].item()) - 1, len(all_logits) - 1)
             final_logits[b] = all_logits[last_t][b]
-        return criterion(final_logits, labels)
+        return F.cross_entropy(final_logits, labels)
 
     if loss_strategy == "L2":
-        total, count = torch.tensor(0.0, device=labels.device), 0
+        total = torch.tensor(0.0, device=labels.device)
+        count = 0
         for t, logits_t in enumerate(all_logits):
             valid = segment_mask[:, t]
             if valid.any():
-                total += criterion(logits_t[valid], labels[valid])
+                total = total + F.cross_entropy(logits_t[valid], labels[valid])
                 count += 1
         return total / max(count, 1)
 
@@ -256,16 +249,12 @@ def compute_loss(
     for t, logits_t in enumerate(all_logits):
         valid = segment_mask[:, t]
         if valid.any():
-            loss_per = nn.functional.binary_cross_entropy_with_logits(
-                logits_t, labels,
-                pos_weight=criterion.pos_weight,
-                reduction="none",
-            ).mean(dim=1)
+            loss_per = F.cross_entropy(logits_t, labels, reduction="none")  # (B,)
             w = temporal_w[:, t] * valid.float()
-            total += (loss_per * w).sum()
-            total_w += w.sum()
+            total = total + (loss_per * w).sum()
+            total_w = total_w + w.sum()
 
-    return total / max(total_w, 1e-8)
+    return total / total_w.clamp(min=1e-8)
 
 
 class EarlyStopping:
@@ -275,7 +264,6 @@ class EarlyStopping:
         self.checkpoint_path = checkpoint_path
         self.best_f1 = -1.0
         self.counter = 0
-        self.should_stop = False
 
     def step(self, macro_f1: float, model: nn.Module) -> bool:
         if macro_f1 > self.best_f1 + self.min_delta:
@@ -287,37 +275,42 @@ class EarlyStopping:
             return False
         self.counter += 1
         print(f"  [Early Stopping] {self.counter}/{self.patience}")
-        if self.counter >= self.patience:
-            self.should_stop = True
-            return True
-        return False
+        return self.counter >= self.patience
 
 
 # ── 학습 / 검증 루프 ──────────────────────────────────────
 
 def train_one_epoch(
-    model, loader, criterion, optimizer, scheduler,
-    scaler, loss_strategy, accum_steps, amp_enabled, amp_dtype,
+    model: nn.Module,
+    loader,
+    optimizer: AdamW,
+    scheduler: LambdaLR,
+    scaler: GradScaler | None,
+    loss_strategy: str,
+    accum_steps: int,
+    amp_enabled: bool,
+    amp_dtype: torch.dtype,
 ) -> float:
     model.train()
     total_loss, num_batches = 0.0, 0
+    device_type = "cuda" if torch.cuda.is_available() else "cpu"
     optimizer.zero_grad()
 
     for batch_idx, batch in enumerate(loader):
         input_ids = batch["input_ids"].to(DEVICE, non_blocking=True)
         attention_mask = batch["attention_mask"].to(DEVICE, non_blocking=True)
         segment_mask = batch["segment_mask"].to(DEVICE, non_blocking=True)
-        labels = batch["labels"].to(DEVICE, non_blocking=True)
+        labels = batch["labels"].to(DEVICE, non_blocking=True)         # (B,) long
         num_segments = batch["num_segments"].to(DEVICE, non_blocking=True)
 
-        with autocast(device_type="cuda", dtype=amp_dtype, enabled=amp_enabled):
+        with autocast(device_type=device_type, dtype=amp_dtype, enabled=amp_enabled):
             outputs = model(
                 input_ids=input_ids, attention_mask=attention_mask,
                 segment_mask=segment_mask, num_segments=num_segments,
             )
             loss = compute_loss(
                 outputs["all_logits"], labels, num_segments,
-                segment_mask, criterion, loss_strategy,
+                segment_mask, loss_strategy,
             ) / accum_steps
 
         if scaler is not None:
@@ -341,17 +334,25 @@ def train_one_epoch(
         num_batches += 1
 
         interval = GPU_CONFIG["EMPTY_CACHE_INTERVAL"]
-        if interval > 0 and (batch_idx + 1) % interval == 0:
+        if interval > 0 and torch.cuda.is_available() and (batch_idx + 1) % interval == 0:
             torch.cuda.empty_cache()
 
     return total_loss / max(num_batches, 1)
 
 
 @torch.no_grad()
-def validate(model, loader, criterion, loss_strategy, amp_enabled, amp_dtype):
+def validate(
+    model: nn.Module,
+    loader,
+    loss_strategy: str,
+    amp_enabled: bool,
+    amp_dtype: torch.dtype,
+) -> tuple[float, dict, float]:
     model.eval()
     total_loss, num_batches = 0.0, 0
-    all_probs, all_labels = [], []
+    y_true: list[int] = []
+    y_pred: list[int] = []
+    device_type = "cuda" if torch.cuda.is_available() else "cpu"
 
     for batch in loader:
         input_ids = batch["input_ids"].to(DEVICE, non_blocking=True)
@@ -360,38 +361,33 @@ def validate(model, loader, criterion, loss_strategy, amp_enabled, amp_dtype):
         labels = batch["labels"].to(DEVICE, non_blocking=True)
         num_segments = batch["num_segments"].to(DEVICE, non_blocking=True)
 
-        with autocast(device_type="cuda", dtype=amp_dtype, enabled=amp_enabled):
+        with autocast(device_type=device_type, dtype=amp_dtype, enabled=amp_enabled):
             outputs = model(
                 input_ids=input_ids, attention_mask=attention_mask,
                 segment_mask=segment_mask, num_segments=num_segments,
             )
             loss = compute_loss(
                 outputs["all_logits"], labels, num_segments,
-                segment_mask, criterion, loss_strategy,
+                segment_mask, loss_strategy,
             )
 
         total_loss += loss.item()
         num_batches += 1
-        all_probs.append(torch.sigmoid(outputs["logits"].float()).cpu().numpy())
-        all_labels.append(labels.cpu().numpy())
 
-    import numpy as np
-    y_probs = np.concatenate(all_probs, axis=0)
-    y_true = np.concatenate(all_labels, axis=0)
-    y_pred = (y_probs > 0.5).astype(int)
+        preds = outputs["logits"].argmax(dim=-1)  # (B,)
+        y_true.extend(labels.cpu().tolist())
+        y_pred.extend(preds.cpu().tolist())
 
-    class_names = MELD_CONFIG["EMOTION_LABELS"] + MELD_CONFIG["SENTIMENT_LABELS"]
+    labels_idx = list(range(SNS_CONFIG["NUM_LABELS"]))
+    per_class_arr = f1_score(y_true, y_pred, labels=labels_idx, average=None, zero_division=0)
     per_class_f1 = {
-        name: round(float(f1_score(y_true[:, i], y_pred[:, i], zero_division=0)), 4)
-        for i, name in enumerate(class_names)
+        name: round(float(per_class_arr[i]), 4)
+        for i, name in enumerate(SNS_CONFIG["LABELS"])
     }
-    support = y_true.sum(axis=0)
-    weighted_f1 = float(
-        sum(per_class_f1[n] * support[i] for i, n in enumerate(class_names))
-        / max(support.sum(), 1)
-    )
+    macro_f1 = float(np.mean(list(per_class_f1.values())))
+    accuracy = float(accuracy_score(y_true, y_pred))
 
-    return total_loss / max(num_batches, 1), per_class_f1, round(weighted_f1, 4)
+    return total_loss / max(num_batches, 1), per_class_f1, macro_f1, accuracy
 
 
 # ── 메인 학습 함수 ─────────────────────────────────────────
@@ -420,8 +416,10 @@ def train(experiment_name: str = "mamba_frozen", loss_strategy: str | None = Non
     print(f"{'='*60}\n")
 
     loaders = create_dataloaders(DATA_DIR, batch_size=TRAIN_CONFIG["BATCH_SIZE"])
-    if "train" not in loaders or "dev" not in loaders:
-        raise FileNotFoundError("train.json / dev.json 없음. compressive_memory 전처리 먼저 실행")
+    if "train" not in loaders or "val" not in loaders:
+        raise FileNotFoundError(
+            "train.json / val.json 없음. data_preprocessing.py 먼저 실행하세요."
+        )
 
     model = build_mamba_model(ablation_config).to(DEVICE)
 
@@ -431,8 +429,6 @@ def train(experiment_name: str = "mamba_frozen", loss_strategy: str | None = Non
     vram = get_vram_usage()
     print(f"[GPU] 모델 로드 후 VRAM: {vram['allocated_gb']:.2f}GB\n")
 
-    pos_weight = load_pos_weight()
-    criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     optimizer = build_optimizer(model)
     steps_per_epoch = (len(loaders["train"]) + accum_steps - 1) // accum_steps
     total_steps = TRAIN_CONFIG["EPOCHS"] * steps_per_epoch
@@ -456,32 +452,37 @@ def train(experiment_name: str = "mamba_frozen", loss_strategy: str | None = Non
     }
 
     for epoch in range(1, TRAIN_CONFIG["EPOCHS"] + 1):
-        t0 = time.time()
+        if hasattr(loaders["train"], "batch_sampler") and hasattr(
+            loaders["train"].batch_sampler, "set_epoch"
+        ):
+            loaders["train"].batch_sampler.set_epoch(epoch)
 
+        t0 = time.time()
         train_loss = train_one_epoch(
-            model, loaders["train"], criterion, optimizer, scheduler,
+            model, loaders["train"], optimizer, scheduler,
             scaler, _loss_strategy, accum_steps, amp_enabled, amp_dtype,
         )
-        val_loss, per_class_f1, weighted_f1 = validate(
-            model, loaders["dev"], criterion, _loss_strategy, amp_enabled, amp_dtype,
+        val_loss, per_class_f1, macro_f1, accuracy = validate(
+            model, loaders["val"], _loss_strategy, amp_enabled, amp_dtype,
         )
 
         elapsed = time.time() - t0
-        macro_f1 = float(np.mean(list(per_class_f1.values())))
         vram = get_vram_usage()
 
         print(
             f"[Epoch {epoch:02d}/{TRAIN_CONFIG['EPOCHS']}] "
             f"train={train_loss:.4f}  val={val_loss:.4f}  "
-            f"macro_f1={macro_f1:.4f}  weighted_f1={weighted_f1:.4f}  "
+            f"acc={accuracy:.4f}  macro_f1={macro_f1:.4f}  "
             f"VRAM={vram['allocated_gb']:.1f}GB  time={elapsed:.1f}s"
         )
         print("  F1: " + "  ".join(f"{n[:4]}={v:.3f}" for n, v in per_class_f1.items()))
 
         log["epochs"].append({
             "epoch": epoch,
-            "train_loss": train_loss, "val_loss": val_loss,
-            "macro_f1": macro_f1, "weighted_f1": weighted_f1,
+            "train_loss": train_loss,
+            "val_loss": val_loss,
+            "accuracy": accuracy,
+            "macro_f1": macro_f1,
             "per_class_f1": per_class_f1,
             "encoder_lr": optimizer.param_groups[0]["lr"],
             "upper_lr": optimizer.param_groups[1]["lr"],

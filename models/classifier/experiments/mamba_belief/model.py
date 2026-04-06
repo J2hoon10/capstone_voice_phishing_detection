@@ -1,15 +1,15 @@
 """
-BERT + Mamba SSM 스트리밍 분류 모델
+KoELECTRA + Mamba SSM 스트리밍 분류 모델
 
 전체 구조:
-  세그먼트 c_t → RoBERTa Encoder → H^(t) ∈ R^(L×768)
-  모든 세그먼트 concat → Mamba SSM (병렬 스캔) → 세그먼트별 split
-  → mean pool → Classification Head → multi-hot 출력
+  청크 c_t → KoELECTRA Encoder → H^(t) ∈ R^(L×768)
+  모든 청크 concat → Mamba SSM (병렬 스캔) → 청크별 split
+  → mean pool → Classification Head → 20-class softmax 출력
 
 핵심 설계:
-  - BERT: 청크 내부 의미 파악 (양방향 attention, 청크 독립 처리)
+  - KoELECTRA: 청크 내부 의미 파악 (양방향 attention, 청크 독립 처리)
   - Mamba SSM: 청크 간 Belief 누적 (선택적 상태 업데이트, O(L) 복잡도)
-  - 학습: 전체 세그먼트 concat → Mamba parallel scan (효율적)
+  - 학습: 전체 청크 concat → Mamba parallel scan (효율적)
   - 추론: Mamba recurrent step mode 사용 가능 (O(1) 메모리)
 
 mamba-ssm 패키지가 없는 환경(Windows)에서는 ssm_fallback.MambaPyTorch 를 사용한다.
@@ -20,7 +20,6 @@ from contextlib import redirect_stderr, redirect_stdout
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 from transformers import AutoModel
 
 try:
@@ -85,19 +84,19 @@ class ClassificationHead(nn.Module):
 
 class BERTMambaClassifier(nn.Module):
     """
-    RoBERTa + Mamba SSM 스트리밍 분류 모델.
+    KoELECTRA + Mamba SSM 스트리밍 분류 모델.
 
     forward() 인터페이스는 compressive_memory/model.py 와 동일하여
     train.py / evaluate.py 의 코드를 최소 변경으로 재사용 가능하다.
 
     Args:
-        encoder_name: HuggingFace 모델명 (예: "roberta-base")
-        d_model: BERT hidden size (768)
+        encoder_name: HuggingFace 모델명 (예: "monologg/koelectra-base-v3-discriminator")
+        d_model: KoELECTRA hidden size (768)
         d_state: Mamba SSM state 차원
         d_conv: Mamba Conv1d 커널 크기
         expand: Mamba inner projection 확장 비율
         num_mamba_layers: Mamba 레이어 수 (1 또는 2)
-        num_labels: 출력 레이블 수 (10)
+        num_labels: 출력 레이블 수 (20)
         head_hidden_dim: Head 중간 차원
         dropout: Head dropout
         freeze_encoder: 인코더 파라미터 고정 여부
@@ -106,13 +105,13 @@ class BERTMambaClassifier(nn.Module):
 
     def __init__(
         self,
-        encoder_name: str = "roberta-base",
+        encoder_name: str = "monologg/koelectra-base-v3-discriminator",
         d_model: int = 768,
         d_state: int = 16,
         d_conv: int = 4,
         expand: int = 2,
         num_mamba_layers: int = 1,
-        num_labels: int = 10,
+        num_labels: int = 20,
         head_hidden_dim: int = 64,
         dropout: float = 0.1,
         freeze_encoder: bool = True,
@@ -123,7 +122,7 @@ class BERTMambaClassifier(nn.Module):
         self.num_labels = num_labels
         self.skip_mamba = skip_mamba
 
-        # 1. RoBERTa 인코더
+        # 1. KoELECTRA 인코더
         self.encoder = load_encoder_backbone(encoder_name)
         if freeze_encoder:
             for param in self.encoder.parameters():
@@ -320,7 +319,7 @@ def build_mamba_model(ablation_config: dict) -> BERTMambaClassifier:
     Returns:
         BERTMambaClassifier 인스턴스
     """
-    from config import ENCODER_CONFIG, MAMBA_CONFIG, HEAD_CONFIG, MELD_CONFIG
+    from config import ENCODER_CONFIG, MAMBA_CONFIG, HEAD_CONFIG, SNS_CONFIG
 
     return BERTMambaClassifier(
         encoder_name=ENCODER_CONFIG["MODEL_NAME"],
@@ -329,7 +328,7 @@ def build_mamba_model(ablation_config: dict) -> BERTMambaClassifier:
         d_conv=MAMBA_CONFIG["D_CONV"],
         expand=MAMBA_CONFIG["EXPAND"],
         num_mamba_layers=ablation_config.get("NUM_LAYERS", MAMBA_CONFIG["NUM_LAYERS"]),
-        num_labels=MELD_CONFIG["NUM_LABELS"],
+        num_labels=SNS_CONFIG["NUM_LABELS"],
         head_hidden_dim=HEAD_CONFIG["HIDDEN_DIM"],
         dropout=HEAD_CONFIG["DROPOUT"],
         freeze_encoder=ablation_config.get("FREEZE_ENCODER", ENCODER_CONFIG["FREEZE_ENCODER"]),
