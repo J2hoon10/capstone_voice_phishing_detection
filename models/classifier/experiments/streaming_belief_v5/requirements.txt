@@ -1,0 +1,10 @@
+torch>=2.0.0
+transformers>=4.30.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+peft>=0.11.0
+
+# CUDA 환경에서 mamba-ssm 설치 가능
+# Windows 로컬에서는 ssm_fallback.py가 자동 fallback 동작
+mamba-ssm>=1.2.0
+causal-conv1d>=1.2.0
