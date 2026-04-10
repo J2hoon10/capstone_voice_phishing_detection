@@ -43,3 +43,6 @@ wandb/
 
 # Env
 .env
+
+# Experiment data folders
+models/classifier/experiments/*/data/
