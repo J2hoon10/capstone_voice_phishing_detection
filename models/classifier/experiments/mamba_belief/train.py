@@ -13,6 +13,9 @@ SNS 한국어 대화 데이터셋 (20-class single-label) 기반 학습:
 
 from __future__ import annotations
 
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false" #  토크나이저 병렬 처리 강제로 끔
+
 import json
 import time
 from pathlib import Path
@@ -297,6 +300,11 @@ def train_one_epoch(
     optimizer.zero_grad()
 
     for batch_idx, batch in enumerate(loader):
+        # --- (로그 확인을 위해 여기에 아래 두 줄 추가) ---
+        if batch_idx % 100 == 0:
+            print(f"  [진행중] {batch_idx}번째 배치 학습 중... (총 {len(loader)}개)")
+        # -------------------------------
+        
         input_ids = batch["input_ids"].to(DEVICE, non_blocking=True)
         attention_mask = batch["attention_mask"].to(DEVICE, non_blocking=True)
         segment_mask = batch["segment_mask"].to(DEVICE, non_blocking=True)

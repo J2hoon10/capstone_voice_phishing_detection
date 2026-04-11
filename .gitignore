@@ -46,3 +46,6 @@ wandb/
 
 # Experiment data folders
 models/classifier/experiments/*/data/
+
+models/classifier/experiments/mamba_belief/data/
+*.jsons

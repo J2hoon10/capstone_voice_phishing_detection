@@ -26,13 +26,13 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # ── GPU 최적화 설정 (RTX 4070 Ti Super, 16GB VRAM) ────────
 GPU_CONFIG = {
     "ENABLED": True,
-    "DTYPE": "bf16",
+    "DTYPE": "fp16",  # "bf16"에서 "fp16"으로 임시 변경
     "TF32_MATMUL": True,
     "TF32_CUDNN": True,
     "TARGET_VRAM_GB": 14.0,
     "GRADIENT_ACCUMULATION_STEPS": 2,
     "EMPTY_CACHE_INTERVAL": 0,
-    "CUDNN_BENCHMARK": True,
+    "CUDNN_BENCHMARK": False,
     "PIN_MEMORY": True,
     "NUM_WORKERS": 0,
 }
@@ -96,7 +96,7 @@ HEAD_CONFIG = {
 
 # ── 학습 설정 ──────────────────────────────────────────────
 TRAIN_CONFIG = {
-    "BATCH_SIZE": 8,
+    "BATCH_SIZE": 4,
     "EPOCHS": 5,
     "SEED": 42,
     "ENCODER_LR": 2e-5,
