@@ -1,0 +1,42 @@
+{
+  "config_name": "bf16_baseline",
+  "bits": 16,
+  "accuracy": 0.9074744484669081,
+  "macro_f1": 0.9074667848717595,
+  "weighted_f1": 0.9074725957296194,
+  "per_class": {
+    "negative": {
+      "precision": 0.908642175109241,
+      "recall": 0.9046161282526384,
+      "f1": 0.9066246820879253,
+      "support": 24826
+    },
+    "positive": {
+      "precision": 0.906332819113168,
+      "recall": 0.91029359183187,
+      "f1": 0.9083088876555935,
+      "support": 25171
+    }
+  },
+  "num_samples": 49997,
+  "latency": {
+    "total_samples": 49997,
+    "total_time_s": 22.251158100320026,
+    "ms_per_sample": 0.4450498649983004,
+    "samples_per_second": 2246.93922781848
+  },
+  "size": {
+    "size_bytes": 272606216.0,
+    "size_mb": 259.97754669189453,
+    "fp32_size_mb": 421.97754669189453,
+    "compression_ratio": 1.6231307359477085,
+    "quantized_params": 84934656,
+    "non_quantized_params": 25684226
+  },
+  "vram": {
+    "allocated_mb": 432.36083984375,
+    "reserved_mb": 874.0,
+    "peak_mb": 795.0205078125
+  },
+  "timestamp": "2026-04-11 19:25:47"
+}

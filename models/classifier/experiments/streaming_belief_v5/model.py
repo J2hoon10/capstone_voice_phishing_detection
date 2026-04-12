@@ -17,10 +17,7 @@ import torch
 import torch.nn as nn
 from transformers import AutoModel
 
-try:
-    from mamba_ssm import Mamba
-except ImportError:
-    from ssm_fallback import MambaPyTorch as Mamba
+from mamba_ssm import Mamba
 
 
 IGNORED_LOAD_REPORT_PREFIXES = (
