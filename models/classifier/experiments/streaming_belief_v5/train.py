@@ -299,6 +299,10 @@ def train_one_epoch(
     device_type = "cuda" if torch.cuda.is_available() else "cpu"
 
     for batch_idx, batch in enumerate(loader):
+        # 진행 상황 확인을 위한 코드 추가
+        if batch_idx % 100 == 0:
+            print(f"  [진행중] {batch_idx}번째 배치 학습 중... (총 {len(loader)}개)")
+            
         input_ids = batch["input_ids"].to(DEVICE, non_blocking=True)
         attention_mask = batch["attention_mask"].to(DEVICE, non_blocking=True)
         segment_mask = batch["segment_mask"].to(DEVICE, non_blocking=True)

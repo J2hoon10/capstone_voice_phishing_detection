@@ -368,6 +368,9 @@ def build_from_raw_data() -> None:
     )
 
     tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG["MODEL_NAME"])
+    
+    # Disable token indices sequence length warning since chunking is handled manually
+    tokenizer.model_max_length = int(1e9)
 
     print("\n[load] Training split preprocessing...")
     raw_training, train_info = load_split_dialogues(
