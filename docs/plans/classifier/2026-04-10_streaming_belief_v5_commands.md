@@ -11,6 +11,9 @@ python models/classifier/experiments/streaming_belief_v5/train.py --experiment v
 
 # 3. 평가
 python models/classifier/experiments/streaming_belief_v5/evaluate.py --experiment v5_default --split test
+
+# 4. 추론 속도 벤치마크 (FPS 측정)
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8
 ```
 
 ---
@@ -117,7 +120,77 @@ python models/classifier/experiments/streaming_belief_v5/evaluate.py --experimen
 
 ---
 
-## 4. Loss Function 설정
+## 4. 추론 속도 벤치마크 — `benchmark.py`
+
+**FPS = 총 처리 세그먼트 수 / 총 추론 시간 (세그먼트/초)**
+
+```bash
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment <실험명> [옵션]
+```
+
+### 기본 실행 (v5_lora_r8, test 셋, batch 모드)
+
+```bash
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8
+```
+
+### 모드별 예시
+
+```bash
+# batch 모드: DataLoader 배치 단위로 전체 처리량(FPS) 측정
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8 --mode batch
+
+# streaming 모드: 샘플 1개씩 세그먼트를 순차 추가하며 1-segment latency 측정
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8 --mode streaming
+
+# val 셋으로 측정
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8 --split val
+
+# warm-up 배치 수 조정
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8 --warmup-batches 5
+
+# streaming 모드에서 100개 샘플만 측정
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8 --mode streaming --max-samples 100
+
+# 배치 크기 직접 지정
+python models/classifier/experiments/streaming_belief_v5/benchmark.py --experiment v5_lora_r8 --batch-size 16
+```
+
+### 옵션 목록
+
+| 옵션 | 설명 |
+|---|---|
+| `--experiment` | 측정할 ablation 구성 (기본값: `v5_lora_r8`) |
+| `--split` | 데이터 split: `test` (기본) 또는 `val` |
+| `--mode` | `batch` (기본) 또는 `streaming` |
+| `--batch-size` | 배치 크기 (batch 모드, 기본: config BATCH_SIZE) |
+| `--warmup-batches` | GPU warm-up 배치 수 (batch 모드, 기본: 3) |
+| `--warmup-samples` | GPU warm-up 샘플 수 (streaming 모드, 기본: 5) |
+| `--max-samples` | 측정할 최대 샘플 수 (streaming 모드, 기본: 전체) |
+| `--run-id` | 특정 run-id 체크포인트 지정 |
+| `--num-workers` | DataLoader 워커 수 |
+
+### 출력 지표
+
+#### batch 모드
+| 지표 | 설명 |
+|---|---|
+| `avg_fps_segments_per_sec` | **평균 FPS** (세그먼트/초), 전체 시간 기준 |
+| `avg_samples_per_sec` | 샘플 처리량 (샘플/초) |
+| `batch_fps_mean/std/p50/p95` | 배치별 FPS 분포 |
+
+#### streaming 모드
+| 지표 | 설명 |
+|---|---|
+| `avg_fps_segments_per_sec` | **평균 FPS** (세그먼트/초), 1-segment latency 역수 |
+| `seg_latency_mean/p50/p95/p99_ms` | 세그먼트 1개 추가 시 latency 분포 (ms) |
+| `sample_latency_mean_ms` | 샘플 전체 처리 평균 시간 (ms) |
+
+결과는 `logs/` 아래 JSON으로 자동 저장된다.
+
+---
+
+## 5. Loss Function 설정
 
 ### 기본 구성: Temporal Weighted Focal Loss
 

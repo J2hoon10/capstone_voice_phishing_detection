@@ -1,0 +1,629 @@
+{
+  "config_name": "rtn_1bit",
+  "bits": 1,
+  "accuracy": 0.49654979298757923,
+  "macro_f1": 0.3317963727730778,
+  "weighted_f1": 0.32950684042900286,
+  "per_class": {
+    "negative": {
+      "precision": 0.49654979298757923,
+      "recall": 1.0,
+      "f1": 0.6635927455461555,
+      "support": 24826
+    },
+    "positive": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 25171
+    }
+  },
+  "num_samples": 49997,
+  "latency": {
+    "total_samples": 49997,
+    "total_time_s": 21.125887801405042,
+    "ms_per_sample": 0.42254310861461775,
+    "samples_per_second": 2366.6224335753027
+  },
+  "size": {
+    "size_bytes": 113353736.0,
+    "size_mb": 108.10254669189453,
+    "fp32_size_mb": 421.97754669189453,
+    "compression_ratio": 3.9034931146865772,
+    "quantized_params": 84934656,
+    "non_quantized_params": 25684226
+  },
+  "vram": {
+    "allocated_mb": 431.23583984375,
+    "reserved_mb": 866.0,
+    "peak_mb": 795.6455078125
+  },
+  "timestamp": "2026-04-11 19:26:47",
+  "quant_info": {
+    "layers": {
+      "bert.encoder.layer.0.attention.self.query": {
+        "scale": 0.03280896693468094,
+        "mse": 0.0004551985110797927,
+        "snr_db": 3.7378368377685547,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.0.attention.self.key": {
+        "scale": 0.03260275349020958,
+        "mse": 0.0004561873483164677,
+        "snr_db": 3.6736459732055664,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.0.attention.self.value": {
+        "scale": 0.02611576020717621,
+        "mse": 0.0002889043237162038,
+        "snr_db": 3.7305095195770264,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.0.attention.output.dense": {
+        "scale": 0.025677282363176346,
+        "mse": 0.00031632080813997137,
+        "snr_db": 3.1896986961364746,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.0.intermediate.dense": {
+        "scale": 0.03403468430042267,
+        "mse": 0.00048477645937751294,
+        "snr_db": 3.7831454277038574,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.0.output.dense": {
+        "scale": 0.029985051602125168,
+        "mse": 0.00039112214233154237,
+        "snr_db": 3.6149706840515137,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.1.attention.self.query": {
+        "scale": 0.034578703343868256,
+        "mse": 0.0004984906722025893,
+        "snr_db": 3.7995967864990234,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.1.attention.self.key": {
+        "scale": 0.03416318818926811,
+        "mse": 0.0004935334467242634,
+        "snr_db": 3.737994432449341,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.1.attention.self.value": {
+        "scale": 0.025658683851361275,
+        "mse": 0.00027570850951720815,
+        "snr_db": 3.7801859378814697,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.1.attention.output.dense": {
+        "scale": 0.025016285479068756,
+        "mse": 0.0002847773403900473,
+        "snr_db": 3.4193954467773438,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.1.intermediate.dense": {
+        "scale": 0.03604871407151222,
+        "mse": 0.0005444664910443955,
+        "snr_db": 3.778172016143799,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.1.output.dense": {
+        "scale": 0.032964326441287994,
+        "mse": 0.0004713798284516907,
+        "snr_db": 3.6271750926971436,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.2.attention.self.query": {
+        "scale": 0.03906048461794853,
+        "mse": 0.0006722090252314912,
+        "snr_db": 3.5597028732299805,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.2.attention.self.key": {
+        "scale": 0.0381239578127861,
+        "mse": 0.0006416166009602007,
+        "snr_db": 3.551196575164795,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.2.attention.self.value": {
+        "scale": 0.02649463713169098,
+        "mse": 0.00029383426485262245,
+        "snr_db": 3.7821338176727295,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.2.attention.output.dense": {
+        "scale": 0.025467731058597565,
+        "mse": 0.0002823231038907132,
+        "snr_db": 3.6123342514038086,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.2.intermediate.dense": {
+        "scale": 0.03799602761864662,
+        "mse": 0.0006056131742066371,
+        "snr_db": 3.7728142738342285,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.2.output.dense": {
+        "scale": 0.03538959473371506,
+        "mse": 0.000546024861387727,
+        "snr_db": 3.6053872108459473,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.3.attention.self.query": {
+        "scale": 0.03746066242456436,
+        "mse": 0.0005751182333027228,
+        "snr_db": 3.873931407928467,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.3.attention.self.key": {
+        "scale": 0.037192460149526596,
+        "mse": 0.0005701466030481804,
+        "snr_db": 3.8492255210876465,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.3.attention.self.value": {
+        "scale": 0.02791578322649002,
+        "mse": 0.0003268914062286492,
+        "snr_db": 3.7729592323303223,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.3.attention.output.dense": {
+        "scale": 0.02608618699014187,
+        "mse": 0.000293076574036343,
+        "snr_db": 3.6583950519561768,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.3.intermediate.dense": {
+        "scale": 0.037771426141262054,
+        "mse": 0.0005987267423946211,
+        "snr_db": 3.77103328704834,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.3.output.dense": {
+        "scale": 0.03576118126511574,
+        "mse": 0.0005656218625500396,
+        "snr_db": 3.542980194091797,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.4.attention.self.query": {
+        "scale": 0.04029165580868721,
+        "mse": 0.0007334952453744716,
+        "snr_db": 3.4503235816955566,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.4.attention.self.key": {
+        "scale": 0.039512526243925095,
+        "mse": 0.0006982000218579789,
+        "snr_db": 3.494891881942749,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.4.attention.self.value": {
+        "scale": 0.028568167239427567,
+        "mse": 0.00035010059870667446,
+        "snr_db": 3.6757121086120605,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.4.attention.output.dense": {
+        "scale": 0.02690485306084156,
+        "mse": 0.0003170333757614437,
+        "snr_db": 3.5855555534362793,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.4.intermediate.dense": {
+        "scale": 0.037329450249671936,
+        "mse": 0.00058814247591653,
+        "snr_db": 3.746299982070923,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.4.output.dense": {
+        "scale": 0.03557751327753067,
+        "mse": 0.0005598525945997834,
+        "snr_db": 3.5427751541137695,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.5.attention.self.query": {
+        "scale": 0.04244878143072128,
+        "mse": 0.0007903838389396592,
+        "snr_db": 3.5789198875427246,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.5.attention.self.key": {
+        "scale": 0.04170037433505058,
+        "mse": 0.0007588969003170765,
+        "snr_db": 3.600964307785034,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.5.attention.self.value": {
+        "scale": 0.029180148616433144,
+        "mse": 0.00036830988639898154,
+        "snr_db": 3.6396119594573975,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.5.attention.output.dense": {
+        "scale": 0.028111597523093224,
+        "mse": 0.0003484473144328901,
+        "snr_db": 3.556331157684326,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.5.intermediate.dense": {
+        "scale": 0.03765776753425598,
+        "mse": 0.0006006454878141264,
+        "snr_db": 3.730978488922119,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.5.output.dense": {
+        "scale": 0.03540673851966858,
+        "mse": 0.0005546201698952686,
+        "snr_db": 3.5417604446411133,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.6.attention.self.query": {
+        "scale": 0.04276188835501671,
+        "mse": 0.0007937313393498772,
+        "snr_db": 3.6243982315063477,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.6.attention.self.key": {
+        "scale": 0.042121440172195435,
+        "mse": 0.0007667017033191781,
+        "snr_db": 3.6437950134277344,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.6.attention.self.value": {
+        "scale": 0.03066590428352356,
+        "mse": 0.0004085728210202243,
+        "snr_db": 3.6204135417938232,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.6.attention.output.dense": {
+        "scale": 0.029824987053871155,
+        "mse": 0.00039149930275151,
+        "snr_db": 3.564288854598999,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.6.intermediate.dense": {
+        "scale": 0.03665417432785034,
+        "mse": 0.0005658384143354812,
+        "snr_db": 3.755618095397949,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.6.output.dense": {
+        "scale": 0.035018354654312134,
+        "mse": 0.0005367314058254987,
+        "snr_db": 3.5883429050445557,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.7.attention.self.query": {
+        "scale": 0.04096044600009918,
+        "mse": 0.0006939093275666669,
+        "snr_db": 3.8342628479003906,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.7.attention.self.key": {
+        "scale": 0.04076141491532326,
+        "mse": 0.000687901272932391,
+        "snr_db": 3.829716682434082,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.7.attention.self.value": {
+        "scale": 0.032348792999982834,
+        "mse": 0.00043563481309050276,
+        "snr_db": 3.805929183959961,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.7.attention.output.dense": {
+        "scale": 0.03153800219297409,
+        "mse": 0.0004242460456280121,
+        "snr_db": 3.700498580932617,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.7.intermediate.dense": {
+        "scale": 0.036900829523801804,
+        "mse": 0.0005699039599327896,
+        "snr_db": 3.782740592956543,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.7.output.dense": {
+        "scale": 0.03541020303964615,
+        "mse": 0.0005493882031069656,
+        "snr_db": 3.583773612976074,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.8.attention.self.query": {
+        "scale": 0.04199026897549629,
+        "mse": 0.0007291370158069513,
+        "snr_db": 3.8348746299743652,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.8.attention.self.key": {
+        "scale": 0.04189936816692352,
+        "mse": 0.0007261796499812619,
+        "snr_db": 3.833702564239502,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.8.attention.self.value": {
+        "scale": 0.03279659152030945,
+        "mse": 0.0004508144494682544,
+        "snr_db": 3.7765893936157227,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.8.attention.output.dense": {
+        "scale": 0.03146528825163841,
+        "mse": 0.0004231904456875955,
+        "snr_db": 3.6912693977355957,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.8.intermediate.dense": {
+        "scale": 0.036748021841049194,
+        "mse": 0.0005651920680580768,
+        "snr_db": 3.782716751098633,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.8.output.dense": {
+        "scale": 0.035647448152303696,
+        "mse": 0.0005548005429782854,
+        "snr_db": 3.5991978645324707,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.9.attention.self.query": {
+        "scale": 0.0413535013794899,
+        "mse": 0.0007099399837346298,
+        "snr_db": 3.818026065826416,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.9.attention.self.key": {
+        "scale": 0.041231218725442886,
+        "mse": 0.0007065678250102668,
+        "snr_db": 3.8129777908325195,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.9.attention.self.value": {
+        "scale": 0.03293514624238014,
+        "mse": 0.00045188492899198615,
+        "snr_db": 3.8029136657714844,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.9.attention.output.dense": {
+        "scale": 0.031232668086886406,
+        "mse": 0.0004095169841768821,
+        "snr_db": 3.7694549560546875,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.9.intermediate.dense": {
+        "scale": 0.0370938815176487,
+        "mse": 0.0005737686354621983,
+        "snr_db": 3.7986791133880615,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.9.output.dense": {
+        "scale": 0.03679891303181648,
+        "mse": 0.0005928099053520511,
+        "snr_db": 3.587545156478882,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.10.attention.self.query": {
+        "scale": 0.03898380324244499,
+        "mse": 0.000621141756980082,
+        "snr_db": 3.8857712745666504,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.10.attention.self.key": {
+        "scale": 0.03910345211625099,
+        "mse": 0.0006298064721396747,
+        "snr_db": 3.8522396087646484,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.10.attention.self.value": {
+        "scale": 0.0364421010017395,
+        "mse": 0.0005619911452158377,
+        "snr_db": 3.734767198562622,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.10.attention.output.dense": {
+        "scale": 0.034435443580150604,
+        "mse": 0.0004853661630065788,
+        "snr_db": 3.879410743713379,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.10.intermediate.dense": {
+        "scale": 0.037603266537189484,
+        "mse": 0.0005808478921483273,
+        "snr_db": 3.8638858795166016,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.10.output.dense": {
+        "scale": 0.03813443332910538,
+        "mse": 0.0006372477033638042,
+        "snr_db": 3.583261489868164,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.11.attention.self.query": {
+        "scale": 0.040044911205768585,
+        "mse": 0.0006531813823310418,
+        "snr_db": 3.9006030559539795,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.11.attention.self.key": {
+        "scale": 0.03978041931986809,
+        "mse": 0.0006506165317406603,
+        "snr_db": 3.8601303100585938,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.11.attention.self.value": {
+        "scale": 0.035260122269392014,
+        "mse": 0.0005255416651416934,
+        "snr_db": 3.7395975589752197,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.11.attention.output.dense": {
+        "scale": 0.03332046419382095,
+        "mse": 0.0004557080922297432,
+        "snr_db": 3.867347240447998,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 589824
+      },
+      "bert.encoder.layer.11.intermediate.dense": {
+        "scale": 0.034603673964738846,
+        "mse": 0.0004899966776758732,
+        "snr_db": 3.880610466003418,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      },
+      "bert.encoder.layer.11.output.dense": {
+        "scale": 0.03477248549461365,
+        "mse": 0.0005020303441336653,
+        "snr_db": 3.8174149990081787,
+        "bits": 1,
+        "method": "rtn",
+        "num_elements": 2359296
+      }
+    },
+    "config": {
+      "bits": 1,
+      "method": "rtn"
+    },
+    "aggregate_mse": 0.0005402790086118036,
+    "num_quantized_layers": 72,
+    "total_quantized_elements": 84934656
+  }
+}

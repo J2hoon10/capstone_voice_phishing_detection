@@ -1,0 +1,50 @@
+{
+  "config_name": "sdq_1bit_osr8",
+  "bits": 1,
+  "accuracy": 0.5162109726583595,
+  "macro_f1": 0.37573560350838026,
+  "weighted_f1": 0.3736921746448333,
+  "per_class": {
+    "negative": {
+      "precision": 0.5065251186385207,
+      "recall": 0.9974623378715862,
+      "f1": 0.6718669452207179,
+      "support": 24826
+    },
+    "positive": {
+      "precision": 0.9431920649233544,
+      "recall": 0.04155575861110008,
+      "f1": 0.07960426179604262,
+      "support": 25171
+    }
+  },
+  "num_samples": 49997,
+  "latency": {
+    "total_samples": 49997,
+    "total_time_s": 21.293547997949645,
+    "ms_per_sample": 0.4258965137498179,
+    "samples_per_second": 2347.9882265188594
+  },
+  "size": {
+    "size_bytes": 113353736.0,
+    "size_mb": 108.10254669189453,
+    "fp32_size_mb": 421.97754669189453,
+    "compression_ratio": 3.9034931146865772,
+    "quantized_params": 84934656,
+    "non_quantized_params": 25684226
+  },
+  "vram": {
+    "allocated_mb": 431.23583984375,
+    "reserved_mb": 866.0,
+    "peak_mb": 795.6455078125
+  },
+  "timestamp": "2026-04-11 20:14:13",
+  "quant_info": {
+    "aggregate_mse": 0.0004928495500361352,
+    "aggregate_snr_db": 22.59442378987581,
+    "num_quantized_layers": 72,
+    "bits": 1,
+    "osr": 8,
+    "adaptive": false
+  }
+}
