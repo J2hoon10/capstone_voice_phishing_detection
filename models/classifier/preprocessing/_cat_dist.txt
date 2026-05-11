@@ -1,0 +1,6 @@
+label=0  category=상품 가입 및 해지  1524건
+label=0  category=이체 출금 대출서비스  1238건
+label=0  category=잔고 및 거래내역  1240건
+label=1  category=대출 사기형  1000건
+label=1  category=바로 이 목소리  188건
+label=1  category=수사기관 사칭형  812건
