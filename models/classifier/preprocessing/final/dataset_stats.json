@@ -1,0 +1,19 @@
+{
+  "total_rows": 6002,
+  "unique_filenames": 2329,
+  "splits": {
+    "train": 4980,
+    "val": 508,
+    "test": 514
+  },
+  "label_distribution": {
+    "1": 2000,
+    "0": 4002
+  },
+  "source_distribution": {
+    "original": 2515,
+    "augmented_llm": 486,
+    "asr_noise": 3001
+  },
+  "augmented_ratio": 0.580973008997001
+}

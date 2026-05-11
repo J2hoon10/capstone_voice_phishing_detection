@@ -30,6 +30,7 @@
 | 파일 | 설명 |
 |------|------|
 | `augment_llm_fewshot.py` | 피싱 전사 결과에서 LLM API로 구어체 변형 생성. API 없으면 mock 모드 동작 |
+| `augmented_pipeline/augment_phishing.py` | OpenAI(`gpt-5.4-mini`) 기반 카테고리별 피싱 대화 생성 (프롬프트 분리형) |
 | `augment_asr_noise.py` | `error_summary.json`의 오류 확률 기반으로 텍스트에 ASR 노이즈 주입 (한국어 음운 유사 치환 포함) |
 | `build_training_dataset.py` | 원본 + LLM 증강 + ASR 노이즈를 합산하고 train/val/test 분할 → 최종 학습 데이터셋 생성 |
 
@@ -54,7 +55,7 @@ preprocessing/
 │   ├── error_report.csv            샘플별 CER 및 오류 유형
 │   └── error_summary.json          집계 오류율 (augment_asr_noise.py 입력으로 사용)
 ├── augmented/
-│   ├── llm_fewshot.csv         LLM이 생성한 피싱 구어체 변형
+│   ├── phishing_augmented.csv  OpenAI가 생성한 피싱 구어체 변형
 │   └── asr_noised.csv          ASR 노이즈가 주입된 텍스트
 └── final/
     ├── train.csv               학습 데이터 (80%)
@@ -68,7 +69,7 @@ preprocessing/
 | 컬럼 | 값 |
 |------|---|
 | `label` | 1 (피싱) / 0 (일반) |
-| `source` | `original` / `llm_fewshot` / `asr_noise` |
+| `source` | `original` / `augmented_llm` / `asr_noise` |
 | `category` | 대출 사기형, 수사기관 사칭형, 바로 이 목소리, 등 |
 
 ---
@@ -89,8 +90,9 @@ python preprocessing/sample_ground_truth.py --variant gpu_small --label phishing
 # P1 — Step 4: CER 오류 분석
 python preprocessing/whisper_error_analysis.py --plot
 
-# P2 — Step 5: LLM 구어체 증강 (API 없으면 mock 동작)
-python preprocessing/augment_llm_fewshot.py --variant gpu_small
+# P2 — Step 5: LLM 구어체 증강 (OpenAI API)
+$env:OPENAI_API_KEY="sk-..."
+python preprocessing/augmented_pipeline/augment_phishing.py --variant gpu_small --n-per-category 200 --model gpt-5.4-mini
 
 # P2 — Step 6: ASR 노이즈 주입
 python preprocessing/augment_asr_noise.py

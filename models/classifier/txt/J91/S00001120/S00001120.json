@@ -1,0 +1,260 @@
+{
+	"dataSet": {
+		"version": "1.0",
+		"date": "20201226",
+		"typeInfo": {
+			"category": "교육",
+			"subcategory": "교육",
+			"place": null,
+			"speakers": [
+				{
+					"id": "10019",
+					"gender": "여",
+					"type": "상담원",
+					"age": "30대",
+					"residence": "서울"
+				},
+				{
+					"id": "ctai3bcb",
+					"gender": "여",
+					"type": "고객",
+					"age": "50대",
+					"residence": "서울"
+				}
+			],
+			"inputType": "모바일"
+		},
+		"dialogs": [
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0001.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0001.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0002.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0002.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0003.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0003.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0004.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0004.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0005.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0005.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0006.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0006.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0007.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0007.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0008.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0008.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0009.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0009.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0010.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0010.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0011.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0011.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0012.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0012.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0013.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0013.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0014.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0014.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0015.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0015.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0016.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0016.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0017.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0017.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0018.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0018.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0019.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0019.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0020.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0020.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0021.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0021.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0022.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0022.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0023.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0023.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0024.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0024.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0025.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0025.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0026.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0026.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0027.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0027.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0028.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0028.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0029.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0029.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0030.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0030.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0031.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0031.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0032.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0032.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0033.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0033.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0034.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0034.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0035.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0035.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0036.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0036.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0037.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0037.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0038.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0038.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0039.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0039.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0040.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0040.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0041.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0041.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0042.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0042.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0043.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0043.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0044.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0044.txt"
+			},
+			{
+				"speaker": "ctai3bcb",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0045.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0045.txt"
+			},
+			{
+				"speaker": "10019",
+				"audioPath": "KtelSpeech/D60/J91/S00001120/0046.wav",
+				"textPath": "KtelSpeech/D60/J91/S00001120/0046.txt"
+			}
+		]
+	}
+}
