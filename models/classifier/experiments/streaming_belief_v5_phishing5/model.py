@@ -1,13 +1,21 @@
 from pathlib import Path
 import sys
+import importlib.util
 
 from config import ENCODER_CONFIG, HEAD_CONFIG, MAMBA_CONFIG, NUM_LABELS
 
 SRC_DIR = Path(__file__).resolve().parents[1] / "streaming_belief_v5"
-if str(SRC_DIR) not in sys.path:
-    sys.path.insert(0, str(SRC_DIR))
+model_path = SRC_DIR / "model.py"
+if not model_path.exists():
+    raise FileNotFoundError(f"Cannot find streaming belief model file: {model_path}")
 
-from model import StreamingBeliefClassifier  # type: ignore
+spec = importlib.util.spec_from_file_location("streaming_belief_v5_model", model_path)
+if spec is None or spec.loader is None:
+    raise ImportError(f"Cannot load module from {model_path}")
+streaming_module = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = streaming_module
+spec.loader.exec_module(streaming_module)
+StreamingBeliefClassifier = streaming_module.StreamingBeliefClassifier
 
 
 def build_model() -> StreamingBeliefClassifier:
