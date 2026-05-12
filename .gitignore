@@ -38,6 +38,7 @@ tb_logs/
 wandb/
 *.log
 *train_log.json
+!models/classifier/experiments/**/logs/*_eval.json
 
 # Env
 .env
