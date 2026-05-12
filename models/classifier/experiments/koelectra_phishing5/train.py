@@ -238,13 +238,19 @@ def save_resume_ckpt(
     )
 
 
-def train(resume: bool = False) -> None:
+def train(resume: bool = False, ablation_mode: str | None = None) -> None:
     set_seed(TRAIN_CONFIG["SEED"])
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-    train_loader = create_dataloader(DATA_DIR / "train.csv", TRAIN_CONFIG["BATCH_SIZE"], True)
-    val_loader = create_dataloader(DATA_DIR / "val.csv", TRAIN_CONFIG["BATCH_SIZE"], False)
+    source_filter = None
+    if ablation_mode == "A":
+        source_filter = ["original"]
+    elif ablation_mode == "B":
+        source_filter = ["original", "augmented_llm"]
+
+    train_loader = create_dataloader(DATA_DIR / "train.csv", TRAIN_CONFIG["BATCH_SIZE"], True, source_filter=source_filter)
+    val_loader = create_dataloader(DATA_DIR / "val.csv", TRAIN_CONFIG["BATCH_SIZE"], False, source_filter=source_filter)
 
     model = build_model().to(DEVICE)
     optimizer = build_optimizer(model)
@@ -350,5 +356,9 @@ if __name__ == "__main__":
         "--resume", action="store_true",
         help="checkpoints/resume_latest.pt 에서 이어서 학습",
     )
+    parser.add_argument(
+        "--ablation", type=str, choices=["A", "B"], default=None,
+        help="Ablation 모드: 'A' (원본만), 'B' (원본+LLM증강). 미입력 시 전체 데이터 사용.",
+    )
     args = parser.parse_args()
-    train(resume=args.resume)
+    train(resume=args.resume, ablation_mode=args.ablation)

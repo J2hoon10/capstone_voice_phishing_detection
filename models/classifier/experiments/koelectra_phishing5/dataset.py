@@ -52,12 +52,15 @@ def build_segments(tokenizer, text: str) -> list[dict]:
 
 
 class CsvStreamingDataset(Dataset):
-    def __init__(self, csv_path: str | Path):
+    def __init__(self, csv_path: str | Path, source_filter: list[str] | None = None):
         self.csv_path = Path(csv_path)
         self.tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG["MODEL_NAME"])
         self.rows = []
         with self.csv_path.open("r", encoding="utf-8-sig") as f:
             for row in csv.DictReader(f):
+                source = row.get("source", "").strip()
+                if source_filter is not None and source and source not in source_filter:
+                    continue
                 category = merge_phishing_category((row.get("category") or "").strip())
                 text = (row.get("text") or "").strip()
                 if category not in LABEL_TO_IDX or not text:
@@ -123,7 +126,7 @@ def collate_fn(batch):
     }
 
 
-def create_dataloader(csv_path: str | Path, batch_size: int, shuffle: bool) -> DataLoader:
-    ds = CsvStreamingDataset(csv_path)
+def create_dataloader(csv_path: str | Path, batch_size: int, shuffle: bool, source_filter: list[str] | None = None) -> DataLoader:
+    ds = CsvStreamingDataset(csv_path, source_filter=source_filter)
     return DataLoader(ds, batch_size=batch_size, shuffle=shuffle, collate_fn=collate_fn)
 
