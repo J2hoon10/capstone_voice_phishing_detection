@@ -17,11 +17,19 @@ def main():
         
         # 모델 학습 실행
         try:
+            print(f"  [1/2] 학습(Train) 진행 중...")
             subprocess.run(cmd, check=True)
-            print(f">> Mamba Layers = {layers} 학습 완료.")
+            print(f"  [1/2] Mamba Layers = {layers} 학습 완료.")
+            
+            # 테스트 세트 평가 실행
+            print(f"  [2/2] 평가(Test) 진행 중...")
+            eval_cmd = [sys.executable, str(base_dir / "evaluate.py"), "--mamba-layers", str(layers), "--split", "test"]
+            subprocess.run(eval_cmd, check=True)
+            print(f"  [2/2] Mamba Layers = {layers} 평가 완료.\n")
+            
         except subprocess.CalledProcessError as e:
-            print(f"[오류] Mamba Layers = {layers} 학습 중 오류 발생: {e}")
-            print("다음 설정으로 넘어갑니다...")
+            print(f"[오류] Mamba Layers = {layers} 단계 중 오류 발생: {e}")
+            print("다음 설정으로 넘어갑니다...\n")
             continue
 
     print("\n=== 모든 Ablation Study 완료 ===")

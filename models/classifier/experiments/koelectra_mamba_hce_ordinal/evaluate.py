@@ -102,7 +102,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=f"Evaluate {EXP_NAME} on test/val split")
     parser.add_argument("--split", default="test", choices=["val", "test"])
     parser.add_argument("--run-id", default=None, help="특정 run_id 지정 (없으면 latest 사용)")
+    parser.add_argument("--mamba-layers", type=int, default=None, help="Mamba 층 수(NUM_LAYERS) 오버라이드 (ablation study용)")
     args = parser.parse_args()
+
+    if args.mamba_layers is not None:
+        import config
+        config.MAMBA_CONFIG["NUM_LAYERS"] = args.mamba_layers
+        global EXP_NAME
+        EXP_NAME = f"koelectra_mamba_hce_ordinal_L{args.mamba_layers}"
 
     ckpt_path, run_id = resolve_checkpoint_path(args.run_id)
     if not ckpt_path.exists():
