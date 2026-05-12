@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실시간 음성 피싱 탐지 및 대응 가이드 시스템 포스터</title>
+<style>
+    :root {
+        --bg: #dfe7f3;
+        --paper: #ffffff;
+        --ink: #1f2937;
+        --muted: #5b677a;
+        --brand: #173f73;
+        --brand-2: #2f6fb5;
+        --soft: #eaf4ff;
+        --line: #c7d4e5;
+        --alert: #b42318;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        background:
+            radial-gradient(circle at top left, #f8fbff 0, #f8fbff 12%, transparent 12%) 0 0 / 24px 24px,
+            linear-gradient(180deg, #edf4fb 0%, var(--bg) 100%);
+        margin: 0;
+        padding: 40px;
+        color: var(--ink);
+        display: flex;
+        justify-content: center;
+    }
+
+    .poster-container {
+        width: 1200px;
+        background: var(--paper);
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14);
+        border-radius: 24px;
+        padding: 48px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .poster-container::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 10px;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    }
+
+    .header {
+        text-align: center;
+        border-bottom: 4px solid var(--brand);
+        padding-bottom: 28px;
+        margin-bottom: 34px;
+    }
+
+    .title {
+        font-size: 46px;
+        font-weight: 900;
+        color: var(--brand);
+        margin: 0 0 14px;
+        letter-spacing: -1px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        color: var(--muted);
+        margin: 0 0 22px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    .authors {
+        font-size: 22px;
+        font-weight: 800;
+        color: #223046;
+        margin-bottom: 8px;
+    }
+
+    .affiliation {
+        font-size: 18px;
+        color: #6b7280;
+    }
+
+    .message-banner {
+        background: linear-gradient(135deg, #edf7ff 0%, #e0f0ff 100%);
+        color: var(--brand-2);
+        font-size: 24px;
+        font-weight: 800;
+        text-align: center;
+        padding: 20px 24px;
+        border-radius: 16px;
+        margin-bottom: 34px;
+        border: 2px solid #c6def8;
+        line-height: 1.5;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    .column {
+        min-width: 0;
+    }
+
+    .section {
+        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+        border: 1px solid #edf2f7;
+        border-top: 5px solid var(--brand-2);
+        border-radius: 16px;
+        padding: 20px 22px;
+        margin-bottom: 22px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--brand-2);
+        margin: 0 0 18px;
+        display: inline-block;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #cfe3fb;
+    }
+
+    p, li {
+        font-size: 16px;
+        line-height: 1.72;
+        color: #425466;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .flow-box {
+        background: #f7fbff;
+        border: 1px solid #d8e6f5;
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        font-weight: 800;
+        color: var(--brand);
+        margin: 15px 0;
+        line-height: 1.7;
+    }
+
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .tech-badge {
+        background: #eef4fb;
+        color: #415266;
+        padding: 7px 12px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 800;
+        border: 1px solid #dde7f2;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    th, td {
+        border: 1px solid var(--line);
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background: var(--soft);
+        color: var(--brand-2);
+        font-weight: 900;
+    }
+
+    strong {
+        color: #22324b;
+    }
+
+    .highlight-text {
+        color: var(--alert);
+        font-weight: 900;
+    }
+
+    @media (max-width: 1280px) {
+        body {
+            padding: 20px;
+        }
+
+        .poster-container {
+            width: 100%;
+            padding: 32px;
+        }
+
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media print {
+        body {
+            background: #fff;
+            padding: 0;
+        }
+
+        .poster-container {
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 28px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="poster-container">
+    <div class="header">
+        <div class="title">실시간 음성 피싱 탐지 및 대응 가이드 시스템</div>
+        <div class="subtitle">통화 음성을 실시간으로 분석하여 보이스피싱 위험을 분류하고, 사용자에게 즉시 대응 방법을 제공하는 AI 기반 데모 시스템</div>
+        <div class="authors">김나현, 장수효, 정지훈</div>
+        <div class="affiliation">서울과학기술대학교 인공지능응용학과</div>
+    </div>
+
+    <div class="message-banner">
+        "통화가 끝난 뒤 대응하는 것이 아니라, 통화 중에 위험을 감지하고 바로 대응할 수 있도록 돕는 보이스피싱 탐지 시스템"
+    </div>
+
+    <div class="content-grid">
+        <div class="column">
+            <div class="section">
+                <div class="section-title">1. 문제 정의 및 목표</div>
+                <p>보이스피싱은 여전히 대표적인 금융 범죄 중 하나이며, 피해자는 통화 중 심리적으로 압박을 받는 상황에서 합리적인 판단을 내리기 어렵습니다. 기존의 사후 신고 방식에서 벗어나, <strong>실제 통화 중 위험을 조기에 감지하고 즉시 경고하는 시스템</strong>의 필요성이 큽니다.</p>
+                <ul>
+                    <li>통화 음성을 기반으로 피싱 위험을 자동 분류</li>
+                    <li>실시간 또는 준실시간으로 결과를 사용자에게 전달</li>
+                    <li>상황별 대응 가이드를 함께 제공</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">2. 시스템 개요</div>
+                <p>본 시스템은 다음과 같은 4단계 파이프라인으로 동작합니다.</p>
+                <div class="flow-box">
+                    음성 입력 ➔ STT (Whisper) ➔ 텍스트 분류기 ➔ 피싱 예측 ➔ 대응 가이드
+                </div>
+                <ul>
+                    <li><strong>사용 기술 (AI/모델링):</strong> Whisper 계열 STT, KoELECTRA, Streaming Belief v5, Mamba SSM</li>
+                    <li><strong>사용 기술 (서비스):</strong> FastAPI, WebSocket, React + Vite, Docker</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="section">
+                <div class="section-title">3. 모델 설계 아이디어</div>
+                <p>긴 통화 내용을 한 번에 처리하지 않고, 일정 길이의 세그먼트로 나누어 순차적으로 해석하도록 설계하였습니다.</p>
+                <ul>
+                    <li><strong>KoELECTRA:</strong> 각 텍스트 세그먼트의 의미 인코딩</li>
+                    <li><strong>Attention-weighted pooling:</strong> 세그먼트 대표 벡터 생성</li>
+                    <li><strong>Mamba SSM:</strong> 세그먼트들의 흐름을 따라가며 문맥 누적</li>
+                </ul>
+                <p>긴 통화에서 중요한 문맥이 뒤쪽에 등장하더라도 순차적으로 의미를 반영할 수 있습니다.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">4. 분류 대상 및 데이터</div>
+                <p>총 5개 클래스로 유형을 분류하며, 배치 크기 8, 총 8 epoch으로 학습을 진행했습니다.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">상품 가입 및 해지</span>
+                    <span class="tech-badge">이체 출금 대출서비스</span>
+                    <span class="tech-badge">잔고 및 거래내역</span>
+                    <span class="tech-badge">수사기관 사칭형 (고위험)</span>
+                    <span class="tech-badge">대출 사기형 (고위험)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="section">
+                <div class="section-title">5. 실험 결과</div>
+                <p>최적 모델은 <strong>Epoch 6</strong>에서 기록되었으며 (Validation macro F1: 0.8316), Test 데이터셋에 대한 전체 성능은 다음과 같습니다.</p>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Test Score</th>
+                    </tr>
+                    <tr>
+                        <td>Accuracy</td>
+                        <td>0.7607</td>
+                    </tr>
+                    <tr>
+                        <td>Macro F1</td>
+                        <td>0.7627</td>
+                    </tr>
+                    <tr>
+                        <td>Weighted F1</td>
+                        <td>0.7616</td>
+                    </tr>
+                </table>
+                <p><strong>클래스별 Test F1 Score:</strong></p>
+                <ul>
+                    <li><span class="highlight-text">수사기관 사칭형: 0.8551</span> (가장 높은 성능)</li>
+                    <li>상품 가입 및 해지: 0.8117</li>
+                    <li>잔고 및 거래내역: 0.7869</li>
+                    <li>대출 사기형: 0.7312</li>
+                    <li>이체 출금 대출서비스: 0.6286</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">6. 결론 및 향후 계획</div>
+                <p>본 연구를 통해 고위험 범주인 수사기관 사칭형 등에서 유의미한 위험 시나리오 식별 가능성을 확인하였습니다.</p>
+                <ul>
+                    <li><strong>기대 효과:</strong> 디지털 취약계층 보호 및 금융기관/통신사 예방 서비스 확장 가능</li>
+                    <li><strong>향후 개선 방향:</strong> 데이터 증강을 통한 클래스 불균형 보완, 실시간 스트리밍 환경 latency 최적화, 탐지 결과 개인화 강화</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
