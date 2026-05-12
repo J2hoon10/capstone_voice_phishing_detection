@@ -274,10 +274,10 @@ def train(resume: bool = False) -> None:
     elif resume:
         print(f"[warn] --resume 지정했지만 {RESUME_CKPT} 없음 → 처음부터 시작")
         run_id = time.strftime("%Y%m%d_%H%M%S")
-        best_path = CHECKPOINT_DIR / f"streaming_belief_v5_phishing5_{run_id}_best.pt"
+        best_path = CHECKPOINT_DIR / f"koelectra_mamba_phishing5_{run_id}_best.pt"
     else:
         run_id = time.strftime("%Y%m%d_%H%M%S")
-        best_path = CHECKPOINT_DIR / f"streaming_belief_v5_phishing5_{run_id}_best.pt"
+        best_path = CHECKPOINT_DIR / f"koelectra_mamba_phishing5_{run_id}_best.pt"
 
     logger = Logger(LOG_DIR, run_id)
     logger.write({"type": "start", "run_id": run_id, "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")})
@@ -334,7 +334,7 @@ def train(resume: bool = False) -> None:
 
         save_resume_ckpt(model, optimizer, scheduler, epoch, global_step, best_f1, best_path, run_id)
 
-    latest_meta = CHECKPOINT_DIR / "streaming_belief_v5_phishing5_latest.json"
+    latest_meta = CHECKPOINT_DIR / "koelectra_mamba_phishing5_latest.json"
     with latest_meta.open("w", encoding="utf-8") as f:
         json.dump(
             {"checkpoint_path": str(best_path), "best_macro_f1": best_f1, "run_id": run_id},

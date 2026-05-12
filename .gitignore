@@ -37,7 +37,6 @@ runs/
 tb_logs/
 wandb/
 *.log
-*eval.json
 *train_log.json
 
 # Env

@@ -20,8 +20,8 @@ from model import build_model
 
 def resolve_checkpoint_path(run_id: str | None = None) -> tuple[Path, str]:
     if run_id is not None:
-        return CHECKPOINT_DIR / f"streaming_belief_v5_phishing5_{run_id}_best.pt", run_id
-    latest_meta = CHECKPOINT_DIR / "streaming_belief_v5_phishing5_latest.json"
+        return CHECKPOINT_DIR / f"koelectra_mamba_phishing5_{run_id}_best.pt", run_id
+    latest_meta = CHECKPOINT_DIR / "koelectra_mamba_phishing5_latest.json"
     if latest_meta.exists():
         with latest_meta.open("r", encoding="utf-8") as f:
             meta = json.load(f)
@@ -77,7 +77,7 @@ def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> dict:
 
 def print_results(results: dict, split: str, run_id: str) -> None:
     print("\n" + "=" * 60)
-    print(f"  streaming_belief_v5_phishing5  split={split}  run={run_id}  ({results['num_samples']} samples)")
+    print(f"  koelectra_mamba_phishing5  split={split}  run={run_id}  ({results['num_samples']} samples)")
     print("=" * 60)
     print(f"  Accuracy:    {results['accuracy']:.4f}")
     print(f"  Macro F1:    {results['macro_f1']:.4f}")
@@ -91,7 +91,7 @@ def print_results(results: dict, split: str, run_id: str) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Evaluate streaming_belief_v5_phishing5 on test/val split")
+    parser = argparse.ArgumentParser(description="Evaluate koelectra_mamba_phishing5 on test/val split")
     parser.add_argument("--split", default="test", choices=["val", "test"])
     parser.add_argument("--run-id", default=None, help="특정 run_id 지정 (없으면 latest 사용)")
     args = parser.parse_args()
@@ -112,7 +112,7 @@ def main() -> None:
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     eval_run_id = time.strftime("%Y%m%d_%H%M%S")
-    save_path = LOG_DIR / f"streaming_belief_v5_phishing5_{run_id}_{args.split}_{eval_run_id}_eval.json"
+    save_path = LOG_DIR / f"koelectra_mamba_phishing5_{run_id}_{args.split}_{eval_run_id}_eval.json"
     with save_path.open("w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n[save] {save_path}")
