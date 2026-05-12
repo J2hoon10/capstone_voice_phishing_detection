@@ -115,7 +115,8 @@ def run_epoch(
     loader,
     optimizer: AdamW,
     scheduler: LambdaLR,
-    criterion: nn.Module,
+    criterion_main: nn.Module,
+    criterion_aux: nn.Module,
     epoch: int,
     global_step: int,
     logger: Logger,
@@ -134,7 +135,14 @@ def run_epoch(
             segment_mask=batch["segment_mask"],
             num_segments=batch["num_segments"],
         )
-        loss = criterion(out["logits"], batch["labels"])
+        loss_main = criterion_main(out["logits"], batch["labels"])
+        
+        aux_logits = out["aux_logits"].transpose(1, 2)
+        T = aux_logits.shape[2]
+        segment_risks = batch["segment_risks"][:, :T]
+        loss_aux = criterion_aux(aux_logits, segment_risks)
+        
+        loss = loss_main + 0.3 * loss_aux
         optimizer.zero_grad()
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), TRAIN_CONFIG["MAX_GRAD_NORM"])
@@ -169,7 +177,7 @@ def run_epoch(
 
 
 @torch.no_grad()
-def evaluate(model: nn.Module, loader, criterion: nn.Module) -> dict:
+def evaluate(model: nn.Module, loader, criterion_main: nn.Module, criterion_aux: nn.Module) -> dict:
     model.eval()
     total = 0.0
     y_true, y_pred = [], []
@@ -182,7 +190,14 @@ def evaluate(model: nn.Module, loader, criterion: nn.Module) -> dict:
             segment_mask=batch["segment_mask"],
             num_segments=batch["num_segments"],
         )
-        loss = criterion(out["logits"], batch["labels"])
+        loss_main = criterion_main(out["logits"], batch["labels"])
+        
+        aux_logits = out["aux_logits"].transpose(1, 2)
+        T = aux_logits.shape[2]
+        segment_risks = batch["segment_risks"][:, :T]
+        loss_aux = criterion_aux(aux_logits, segment_risks)
+        
+        loss = loss_main + 0.3 * loss_aux
         total += float(loss.item())
         pred = out["logits"].argmax(dim=-1)
         y_true.extend(batch["labels"].cpu().tolist())
@@ -235,7 +250,8 @@ def train(resume: bool = False) -> None:
     optimizer = build_optimizer(model)
     total_steps = TRAIN_CONFIG["EPOCHS"] * max(len(train_loader), 1)
     scheduler = build_scheduler(optimizer, total_steps)
-    criterion = nn.CrossEntropyLoss()
+    criterion_main = nn.CrossEntropyLoss()
+    criterion_aux = nn.CrossEntropyLoss(ignore_index=-100)
 
     start_epoch = 1
     global_step = 0
@@ -281,10 +297,10 @@ def train(resume: bool = False) -> None:
 
     for epoch in range(start_epoch, TRAIN_CONFIG["EPOCHS"] + 1):
         tr_loss, global_step = run_epoch(
-            model, train_loader, optimizer, scheduler, criterion,
+            model, train_loader, optimizer, scheduler, criterion_main, criterion_aux,
             epoch, global_step, logger, t0,
         )
-        val = evaluate(model, val_loader, criterion)
+        val = evaluate(model, val_loader, criterion_main, criterion_aux)
         is_best = val["macro_f1"] > best_f1
 
         epoch_record = {

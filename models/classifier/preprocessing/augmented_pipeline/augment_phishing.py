@@ -13,7 +13,7 @@ except ImportError:
     print("[ERROR] openai 패키지가 필요합니다. pip install openai")
     sys.exit(1)
 
-from pipeline_config import LEGACY_AUGMENTED_DIR, TRANSCRIPTION_DIR, DEFAULT_VARIANT
+from pipeline_config import AUGMENTED_DIR, TRANSCRIPTION_DIR, DEFAULT_VARIANT
 from prompt_loader import load_category_prompts, load_system_prompt
 
 OUTPUT_FIELDS = ["id", "text", "label", "category", "source"]
@@ -26,7 +26,9 @@ def build_prompt(category: str, few_shots: list[str], n_generate: int, category_
     return (
         f"{category_prompt}\n\n"
         f"[실제 STT 예시]\n{examples}\n\n"
-        f"위 예시 패턴을 참고해 동일 카테고리 보이스피싱 STT 전사 텍스트를 {n_generate}개 생성하라.\n"
+        f"위 예시의 구어체 말투(망설임·반복·말 끊김 등 음성 전사 특성)를 따라 동일 카테고리 보이스피싱 STT 전사 텍스트를 {n_generate}개 생성하라.\n"
+        "예시 문장을 직접 복사하지 말고 시나리오와 표현을 다양하게 변형하되, 말투의 자연스러움은 반드시 유지하라.\n"
+        "위 예시들이 각각 다른 방식으로 통화를 시작하는 점에 주목하고, 생성 결과도 변형마다 서로 다른 시작 표현을 사용하라.\n"
         "각 결과는 반드시 [변형1], [변형2] ... 태그로 구분하라."
     )
 
@@ -104,7 +106,7 @@ def main():
     parser.add_argument("--model", default="gpt-5.4-mini")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--resume", action="store_true")
-    parser.add_argument("--output-csv", default=os.path.join(LEGACY_AUGMENTED_DIR, "phishing_augmented.csv"))
+    parser.add_argument("--output-csv", default=os.path.join(AUGMENTED_DIR, "phishing_augmented.csv"))
     parser.add_argument("--fewshot-csv", default="", help="정제된 few-shot CSV 경로 (컬럼: category,text_clean)")
     args = parser.parse_args()
 

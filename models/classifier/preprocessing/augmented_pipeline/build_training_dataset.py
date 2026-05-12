@@ -2,6 +2,7 @@
 # 원본 + 증강 합치고 train/val/test 분할
 
 import os
+import re
 import csv
 import json
 import argparse
@@ -9,13 +10,38 @@ import random
 
 from pipeline_config import (
     TRANSCRIPTION_DIR,
-    LEGACY_AUGMENTED_DIR,
-    LEGACY_FINAL_DIR,
+    AUGMENTED_DIR,
+    FINAL_DIR,
+    STN_LABELING_OUTPUT_DIR,
     DEFAULT_VARIANT,
     CSV_COLUMNS,
     SPLIT_RATIOS,
     SPLIT_SEED,
 )
+
+
+def load_segment_risks(csv_path):
+    """segment_risks.csv → {conv_id: segment_risks_str}"""
+    risks = {}
+    if not os.path.exists(csv_path):
+        return risks
+    with open(csv_path, "r", encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            risks[row["id"]] = row.get("segment_risks", "[]")
+    return risks
+
+
+_ASR_ID_RE = re.compile(r"^asr_(.+)_\d+$")
+
+
+def resolve_segment_risks(row_id, seg_risks_map):
+    """row_id로 segment_risks 조회. asr_ 접두사 행은 원본 id로 폴백."""
+    if row_id in seg_risks_map:
+        return seg_risks_map[row_id]
+    m = _ASR_ID_RE.match(row_id)
+    if m:
+        return seg_risks_map.get(m.group(1), "[]")
+    return "[]"
 
 
 def load_rows(csv_path):
@@ -55,10 +81,11 @@ def split_filenames(filenames, ratios, seed):
 def main():
     parser = argparse.ArgumentParser(description="최종 학습 데이터셋 생성")
     parser.add_argument("--variant", default=DEFAULT_VARIANT, help="Whisper 변형")
-    parser.add_argument("--input-llm", default=os.path.join(LEGACY_AUGMENTED_DIR, "phishing_augmented.csv"), help="LLM 증강 CSV")
-    parser.add_argument("--input-asr", default=os.path.join(LEGACY_AUGMENTED_DIR, "asr_noised.csv"), help="ASR 노이즈 CSV")
+    parser.add_argument("--input-llm", default=os.path.join(AUGMENTED_DIR, "phishing_augmented.csv"), help="LLM 증강 CSV")
+    parser.add_argument("--input-asr", default=os.path.join(AUGMENTED_DIR, "asr_noised.csv"), help="ASR 노이즈 CSV")
+    parser.add_argument("--segment-risks", default=os.path.join(STN_LABELING_OUTPUT_DIR, "segment_risks.csv"), help="세그먼트 위험도 CSV (map_segments.py 출력)")
     parser.add_argument("--seed", type=int, default=SPLIT_SEED, help="분할 시드")
-    parser.add_argument("--output-dir", default=LEGACY_FINAL_DIR, help="출력 디렉터리")
+    parser.add_argument("--output-dir", default=FINAL_DIR, help="출력 디렉터리")
     args = parser.parse_args()
 
     original_csv = os.path.join(TRANSCRIPTION_DIR, args.variant, "all.csv")
@@ -70,6 +97,12 @@ def main():
     asr_rows = load_rows(args.input_asr)
 
     all_rows = original_rows + llm_rows + asr_rows
+
+    seg_risks_map = load_segment_risks(args.segment_risks)
+    if not seg_risks_map:
+        print(f"[WARN] segment_risks CSV 없음 또는 비어 있음: {args.segment_risks}")
+    for row in all_rows:
+        row["segment_risks"] = resolve_segment_risks(row.get("id", ""), seg_risks_map)
 
     filenames = sorted({row.get("filename", "") for row in original_rows if row.get("filename")})
     if not filenames:

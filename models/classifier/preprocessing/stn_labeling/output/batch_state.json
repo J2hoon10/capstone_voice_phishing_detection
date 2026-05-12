@@ -1,0 +1,268 @@
+{
+  "batch_id": "batch_6a028440d7708190b187f9143ea12f7c",
+  "input_file_id": "file-WppzVqivBVzVTXLaBQE3Xj",
+  "model": "gpt-4o-mini",
+  "submitted_at": "2026-05-12T10:37:03.756387",
+  "request_count": 43,
+  "output_csv": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\preprocessing\\stn_labeling\\output\\phishing_labeled.csv",
+  "row_meta": {
+    "req_000000": {
+      "id": "phishing_대출 사기형_23",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000001": {
+      "id": "phishing_대출 사기형_41",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000002": {
+      "id": "phishing_대출 사기형_66",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000003": {
+      "id": "phishing_대출 사기형_79",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000004": {
+      "id": "phishing_대출 사기형_101",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000005": {
+      "id": "phishing_대출 사기형_120",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000006": {
+      "id": "phishing_대출 사기형_145",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000007": {
+      "id": "phishing_대출 사기형_163",
+      "label": "1",
+      "category": "대출 사기형",
+      "source": "original"
+    },
+    "req_000008": {
+      "id": "phishing_수사기관 사칭형_29",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000009": {
+      "id": "phishing_수사기관 사칭형_33",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000010": {
+      "id": "phishing_수사기관 사칭형_34",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000011": {
+      "id": "phishing_수사기관 사칭형_39",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000012": {
+      "id": "phishing_수사기관 사칭형_47",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000013": {
+      "id": "phishing_수사기관 사칭형_67",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000014": {
+      "id": "phishing_수사기관 사칭형_68",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000015": {
+      "id": "phishing_수사기관 사칭형_75",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000016": {
+      "id": "phishing_수사기관 사칭형_88",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000017": {
+      "id": "phishing_수사기관 사칭형_96",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000018": {
+      "id": "phishing_수사기관 사칭형_109",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000019": {
+      "id": "phishing_수사기관 사칭형_128",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000020": {
+      "id": "phishing_수사기관 사칭형_129",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000021": {
+      "id": "phishing_수사기관 사칭형_130",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000022": {
+      "id": "phishing_수사기관 사칭형_131",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000023": {
+      "id": "phishing_수사기관 사칭형_132",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000024": {
+      "id": "phishing_수사기관 사칭형_133",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000025": {
+      "id": "phishing_수사기관 사칭형_135",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000026": {
+      "id": "phishing_수사기관 사칭형_136",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000027": {
+      "id": "phishing_수사기관 사칭형_137",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000028": {
+      "id": "phishing_수사기관 사칭형_187",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000029": {
+      "id": "phishing_수사기관 사칭형_188",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000030": {
+      "id": "phishing_수사기관 사칭형_189",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000031": {
+      "id": "phishing_수사기관 사칭형_190",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000032": {
+      "id": "phishing_수사기관 사칭형_191",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000033": {
+      "id": "phishing_수사기관 사칭형_192",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000034": {
+      "id": "phishing_수사기관 사칭형_193",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000035": {
+      "id": "phishing_수사기관 사칭형_194",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000036": {
+      "id": "phishing_수사기관 사칭형_195",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000037": {
+      "id": "phishing_수사기관 사칭형_208",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000038": {
+      "id": "phishing_수사기관 사칭형_209",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000039": {
+      "id": "phishing_수사기관 사칭형_212",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000040": {
+      "id": "phishing_수사기관 사칭형_215",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000041": {
+      "id": "phishing_수사기관 사칭형_216",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    },
+    "req_000042": {
+      "id": "phishing_수사기관 사칭형_217",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "original"
+    }
+  }
+}

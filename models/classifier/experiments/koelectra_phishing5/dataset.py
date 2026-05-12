@@ -1,9 +1,13 @@
+import ast
 import csv
+import logging
 from pathlib import Path
 
 import torch
 from torch.utils.data import DataLoader, Dataset
 from transformers import AutoTokenizer
+
+logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
 
 from config import ENCODER_CONFIG, LABEL_TO_IDX, STRIDE, WINDOW_SIZE
 
@@ -61,12 +65,25 @@ class CsvStreamingDataset(Dataset):
                 segs = build_segments(self.tokenizer, text)
                 if not segs:
                     continue
+                
+                segment_risks_str = row.get("segment_risks")
+                if segment_risks_str:
+                    risks = ast.literal_eval(segment_risks_str)
+                    mapped_risks = [r - 1 for r in risks]
+                    if len(mapped_risks) > len(segs):
+                        mapped_risks = mapped_risks[:len(segs)]
+                    elif len(mapped_risks) < len(segs):
+                        mapped_risks.extend([0] * (len(segs) - len(mapped_risks)))
+                else:
+                    mapped_risks = [0] * len(segs)
+
                 self.rows.append(
                     {
                         "input_ids": torch.tensor([s["input_ids"] for s in segs], dtype=torch.long),
                         "attention_mask": torch.tensor([s["attention_mask"] for s in segs], dtype=torch.long),
                         "num_segments": len(segs),
                         "label": LABEL_TO_IDX[category],
+                        "segment_risks": torch.tensor(mapped_risks, dtype=torch.long),
                     }
                 )
 
@@ -87,12 +104,14 @@ def collate_fn(batch):
     segment_mask = torch.zeros((bsz, max_s), dtype=torch.bool)
     num_segments = torch.tensor([x["num_segments"] for x in batch], dtype=torch.long)
     labels = torch.tensor([x["label"] for x in batch], dtype=torch.long)
+    segment_risks = torch.full((bsz, max_s), -100, dtype=torch.long)
 
     for i, item in enumerate(batch):
         n = item["num_segments"]
         input_ids[i, :n] = item["input_ids"]
         attention_mask[i, :n] = item["attention_mask"]
         segment_mask[i, :n] = True
+        segment_risks[i, :n] = item["segment_risks"]
 
     return {
         "input_ids": input_ids,
@@ -100,6 +119,7 @@ def collate_fn(batch):
         "segment_mask": segment_mask,
         "num_segments": num_segments,
         "labels": labels,
+        "segment_risks": segment_risks,
     }
 
 
