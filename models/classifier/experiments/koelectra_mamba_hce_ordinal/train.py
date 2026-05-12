@@ -426,5 +426,17 @@ if __name__ == "__main__":
         "--resume", action="store_true",
         help="checkpoints/resume_latest.pt 에서 이어서 학습",
     )
+    parser.add_argument(
+        "--mamba-layers", type=int, default=None,
+        help="Mamba 층 수(NUM_LAYERS) 오버라이드 (ablation study용)",
+    )
     args = parser.parse_args()
+
+    if args.mamba_layers is not None:
+        import config
+        config.MAMBA_CONFIG["NUM_LAYERS"] = args.mamba_layers
+        EXP_NAME = f"koelectra_mamba_hce_ordinal_L{args.mamba_layers}"
+        # RESUME_CKPT 경로도 ablation 설정에 맞게 변경
+        RESUME_CKPT = config.CHECKPOINT_DIR / f"resume_latest_L{args.mamba_layers}.pt"
+
     train(resume=args.resume)
