@@ -1,3 +1,13 @@
+"""
+koelectra_mamba_phishing6_hce / train.py
+
+phishing5 대비 주요 변경:
+  - criterion_main : HierarchicalCrossEntropyLoss (Spec §3.2)
+  - criterion_aux  : OrdinalRegressionLoss        (Spec §3.1)
+  - Curriculum β   : aux 가중치를 에폭 진행에 따라 선형 감소
+                     (Spec §4.1 Curriculum Learning)
+"""
+
 import argparse
 import json
 import math
@@ -12,12 +22,22 @@ from sklearn.metrics import accuracy_score, f1_score
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
 
-from config import CHECKPOINT_DIR, DATA_DIR, DEVICE, LABELS, LOG_DIR, TRAIN_CONFIG
+from config import (
+    CHECKPOINT_DIR,
+    DATA_DIR,
+    DEVICE,
+    LABELS,
+    LOG_DIR,
+    LOSS_CONFIG,
+    TRAIN_CONFIG,
+)
 from dataset import create_dataloader
+from losses import HierarchicalCrossEntropyLoss, OrdinalRegressionLoss
 from model import build_model
 
 LOG_STEP_INTERVAL = 200
 RESUME_CKPT = CHECKPOINT_DIR / "resume_latest.pt"
+EXP_NAME = "koelectra_mamba_hce_ordinal"
 
 
 def set_seed(seed: int):
@@ -62,6 +82,19 @@ def build_scheduler(optimizer: AdamW, total_steps: int) -> LambdaLR:
     return LambdaLR(optimizer, [make(g["lr"]) for g in optimizer.param_groups])
 
 
+def curriculum_beta(epoch: int, total_epochs: int) -> float:
+    """
+    Spec §4.1 Curriculum Learning:
+    β (aux 가중치)를 AUX_BETA_START → AUX_BETA_END 로 선형 감소.
+    """
+    beta_s = LOSS_CONFIG["AUX_BETA_START"]
+    beta_e = LOSS_CONFIG["AUX_BETA_END"]
+    ratio = min(1.0, (epoch - 1) / max(total_epochs - 1, 1))
+    return beta_s + (beta_e - beta_s) * ratio
+
+
+# ── Logger ────────────────────────────────────────────────────────────────
+
 class Logger:
     """스텝/에폭 로그를 텍스트(.log)와 JSON(.json) 두 파일로 동시 기록."""
 
@@ -81,6 +114,7 @@ class Logger:
                     f"epoch={record['epoch']} "
                     f"loss={record['loss']:.4f} "
                     f"lr={record['lr']:.2e} "
+                    f"beta={record['beta']:.4f} "
                     f"elapsed={record['elapsed']:.0f}s\n"
                 )
             elif t == "epoch":
@@ -110,17 +144,20 @@ class Logger:
             json.dump(self.records, f, ensure_ascii=False, indent=2)
 
 
+# ── 학습 루프 ─────────────────────────────────────────────────────────────
+
 def run_epoch(
     model: nn.Module,
     loader,
     optimizer: AdamW,
     scheduler: LambdaLR,
-    criterion_main: nn.Module,
-    criterion_aux: nn.Module,
+    criterion_main: HierarchicalCrossEntropyLoss,
+    criterion_aux: OrdinalRegressionLoss,
     epoch: int,
     global_step: int,
     logger: Logger,
     t0: float,
+    beta: float,
 ) -> tuple[float, int]:
     model.train()
     total_loss = 0.0
@@ -129,20 +166,32 @@ def run_epoch(
     for batch in loader:
         for k in batch:
             batch[k] = batch[k].to(DEVICE)
+
         out = model(
             input_ids=batch["input_ids"],
             attention_mask=batch["attention_mask"],
             segment_mask=batch["segment_mask"],
             num_segments=batch["num_segments"],
         )
-        loss_main = criterion_main(out["logits"], batch["labels"])
-        
-        aux_logits = out["aux_logits"].transpose(1, 2)
-        T = aux_logits.shape[2]
-        segment_risks = batch["segment_risks"][:, :T]
+
+        # ── 주 태스크: Hierarchical Cross-Entropy ───────────────────────
+        loss_main = criterion_main(
+            super_logits=out["super_logits"],
+            normal_logits=out["normal_logits"],
+            phishing_logits=out["phishing_logits"],
+            targets=batch["labels"],
+        )
+
+        # ── 보조 태스크: Ordinal Regression ─────────────────────────────
+        # aux_logits: (B, T, K-1=2)
+        aux_logits = out["aux_logits"]       # (B, T, 2)
+        T = aux_logits.shape[1]
+        segment_risks = batch["segment_risks"][:, :T]   # (B, T)
         loss_aux = criterion_aux(aux_logits, segment_risks)
-        
-        loss = loss_main + 0.3 * loss_aux
+
+        # ── Curriculum 가중 합산 ─────────────────────────────────────────
+        loss = loss_main + beta * loss_aux
+
         optimizer.zero_grad()
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), TRAIN_CONFIG["MAX_GRAD_NORM"])
@@ -165,45 +214,60 @@ def run_epoch(
                 "epoch": epoch,
                 "loss": avg_loss,
                 "lr": lr,
+                "beta": beta,
                 "elapsed": elapsed,
             }
             logger.write(record)
             print(
                 f"  [step {global_step:6d}] epoch={epoch} "
-                f"loss={avg_loss:.4f} lr={lr:.2e} elapsed={elapsed:.0f}s"
+                f"loss={avg_loss:.4f} lr={lr:.2e} beta={beta:.3f} elapsed={elapsed:.0f}s"
             )
 
     return total_loss / max(len(loader), 1), global_step
 
 
 @torch.no_grad()
-def evaluate(model: nn.Module, loader, criterion_main: nn.Module, criterion_aux: nn.Module) -> dict:
+def evaluate(
+    model: nn.Module,
+    loader,
+    criterion_main: HierarchicalCrossEntropyLoss,
+    criterion_aux: OrdinalRegressionLoss,
+    beta: float,
+) -> dict:
     model.eval()
     total = 0.0
     y_true, y_pred = [], []
     for batch in loader:
         for k in batch:
             batch[k] = batch[k].to(DEVICE)
+
         out = model(
             input_ids=batch["input_ids"],
             attention_mask=batch["attention_mask"],
             segment_mask=batch["segment_mask"],
             num_segments=batch["num_segments"],
         )
-        loss_main = criterion_main(out["logits"], batch["labels"])
-        
-        aux_logits = out["aux_logits"].transpose(1, 2)
-        T = aux_logits.shape[2]
+
+        loss_main = criterion_main(
+            super_logits=out["super_logits"],
+            normal_logits=out["normal_logits"],
+            phishing_logits=out["phishing_logits"],
+            targets=batch["labels"],
+        )
+        aux_logits = out["aux_logits"]
+        T = aux_logits.shape[1]
         segment_risks = batch["segment_risks"][:, :T]
         loss_aux = criterion_aux(aux_logits, segment_risks)
-        
-        loss = loss_main + 0.3 * loss_aux
+        loss = loss_main + beta * loss_aux
+
         total += float(loss.item())
         pred = out["logits"].argmax(dim=-1)
         y_true.extend(batch["labels"].cpu().tolist())
         y_pred.extend(pred.cpu().tolist())
 
-    per_class_f1 = f1_score(y_true, y_pred, average=None, zero_division=0, labels=list(range(len(LABELS))))
+    per_class_f1 = f1_score(
+        y_true, y_pred, average=None, zero_division=0, labels=list(range(len(LABELS)))
+    )
     return {
         "loss": total / max(len(loader), 1),
         "acc": float(accuracy_score(y_true, y_pred)),
@@ -250,8 +314,8 @@ def train(resume: bool = False) -> None:
     optimizer = build_optimizer(model)
     total_steps = TRAIN_CONFIG["EPOCHS"] * max(len(train_loader), 1)
     scheduler = build_scheduler(optimizer, total_steps)
-    criterion_main = nn.CrossEntropyLoss()
-    criterion_aux = nn.CrossEntropyLoss(ignore_index=-100)
+    criterion_main = HierarchicalCrossEntropyLoss()
+    criterion_aux = OrdinalRegressionLoss(ignore_index=-100)
 
     start_epoch = 1
     global_step = 0
@@ -274,10 +338,10 @@ def train(resume: bool = False) -> None:
     elif resume:
         print(f"[warn] --resume 지정했지만 {RESUME_CKPT} 없음 → 처음부터 시작")
         run_id = time.strftime("%Y%m%d_%H%M%S")
-        best_path = CHECKPOINT_DIR / f"streaming_belief_v5_phishing5_{run_id}_best.pt"
+        best_path = CHECKPOINT_DIR / f"{EXP_NAME}_{run_id}_best.pt"
     else:
         run_id = time.strftime("%Y%m%d_%H%M%S")
-        best_path = CHECKPOINT_DIR / f"streaming_belief_v5_phishing5_{run_id}_best.pt"
+        best_path = CHECKPOINT_DIR / f"{EXP_NAME}_{run_id}_best.pt"
 
     logger = Logger(LOG_DIR, run_id)
     logger.write({"type": "start", "run_id": run_id, "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")})
@@ -291,21 +355,33 @@ def train(resume: bool = False) -> None:
         })
 
     t0 = time.time()
+    total_epochs = TRAIN_CONFIG["EPOCHS"]
     print(f"[train] run_id={run_id}  log={logger.text_path}")
-    print(f"[train] epochs={start_epoch}~{TRAIN_CONFIG['EPOCHS']}  "
-          f"steps_per_epoch≈{len(train_loader)}  device={DEVICE}")
+    print(
+        f"[train] epochs={start_epoch}~{total_epochs}  "
+        f"steps_per_epoch≈{len(train_loader)}  device={DEVICE}"
+    )
+    print(
+        f"[train] loss=HCE (lambda={LOSS_CONFIG['HCE_LAMBDA']}, "
+        f"focal_gamma={LOSS_CONFIG['FOCAL_GAMMA']}) + "
+        f"OrdinalRegression (beta: {LOSS_CONFIG['AUX_BETA_START']}→{LOSS_CONFIG['AUX_BETA_END']})"
+    )
 
-    for epoch in range(start_epoch, TRAIN_CONFIG["EPOCHS"] + 1):
+    for epoch in range(start_epoch, total_epochs + 1):
+        beta = curriculum_beta(epoch, total_epochs)
+
         tr_loss, global_step = run_epoch(
-            model, train_loader, optimizer, scheduler, criterion_main, criterion_aux,
-            epoch, global_step, logger, t0,
+            model, train_loader, optimizer, scheduler,
+            criterion_main, criterion_aux,
+            epoch, global_step, logger, t0, beta,
         )
-        val = evaluate(model, val_loader, criterion_main, criterion_aux)
+        val = evaluate(model, val_loader, criterion_main, criterion_aux, beta)
         is_best = val["macro_f1"] > best_f1
 
         epoch_record = {
             "type": "epoch",
             "epoch": epoch,
+            "beta": beta,
             "train_loss": tr_loss,
             "val_loss": val["loss"],
             "val_acc": val["acc"],
@@ -320,7 +396,7 @@ def train(resume: bool = False) -> None:
 
         suffix = " <- best" if is_best else ""
         print(
-            f"[epoch {epoch}] train={tr_loss:.4f} val={val['loss']:.4f} "
+            f"[epoch {epoch}] β={beta:.3f} train={tr_loss:.4f} val={val['loss']:.4f} "
             f"acc={val['acc']:.4f} macro_f1={val['macro_f1']:.4f} "
             f"weighted_f1={val['weighted_f1']:.4f}{suffix}"
         )
@@ -334,7 +410,7 @@ def train(resume: bool = False) -> None:
 
         save_resume_ckpt(model, optimizer, scheduler, epoch, global_step, best_f1, best_path, run_id)
 
-    latest_meta = CHECKPOINT_DIR / "streaming_belief_v5_phishing5_latest.json"
+    latest_meta = CHECKPOINT_DIR / f"{EXP_NAME}_latest.json"
     with latest_meta.open("w", encoding="utf-8") as f:
         json.dump(
             {"checkpoint_path": str(best_path), "best_macro_f1": best_f1, "run_id": run_id},
@@ -348,7 +424,19 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--resume", action="store_true",
-        help=f"checkpoints/resume_latest.pt 에서 이어서 학습",
+        help="checkpoints/resume_latest.pt 에서 이어서 학습",
+    )
+    parser.add_argument(
+        "--mamba-layers", type=int, default=None,
+        help="Mamba 층 수(NUM_LAYERS) 오버라이드 (ablation study용)",
     )
     args = parser.parse_args()
+
+    if args.mamba_layers is not None:
+        import config
+        config.MAMBA_CONFIG["NUM_LAYERS"] = args.mamba_layers
+        EXP_NAME = f"koelectra_mamba_hce_ordinal_L{args.mamba_layers}"
+        # RESUME_CKPT 경로도 ablation 설정에 맞게 변경
+        RESUME_CKPT = config.CHECKPOINT_DIR / f"resume_latest_L{args.mamba_layers}.pt"
+
     train(resume=args.resume)

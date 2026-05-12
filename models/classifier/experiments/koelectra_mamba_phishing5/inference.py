@@ -60,7 +60,7 @@ class StreamingBeliefV5Phishing5Infer:
         self.checkpoint_path = ckpt
 
     def _resolve_latest_checkpoint(self) -> str:
-        meta_path = CHECKPOINT_DIR / "streaming_belief_v5_phishing5_latest.json"
+        meta_path = CHECKPOINT_DIR / "koelectra_mamba_phishing5_latest.json"
         if not meta_path.exists():
             raise FileNotFoundError(f"latest checkpoint meta not found: {meta_path}")
         with meta_path.open("r", encoding="utf-8") as f:

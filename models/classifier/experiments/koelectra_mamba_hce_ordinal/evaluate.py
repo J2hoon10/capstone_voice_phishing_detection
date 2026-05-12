@@ -1,3 +1,10 @@
+"""
+koelectra_mamba_phishing6_hce / evaluate.py
+
+phishing5 evaluate.py 와 동일한 구조지만,
+checkpoint 이름을 koelectra_mamba_phishing6_hce_* 로 조회합니다.
+"""
+
 import argparse
 import json
 import time
@@ -5,7 +12,6 @@ from pathlib import Path
 
 import numpy as np
 import torch
-import torch.nn as nn
 from sklearn.metrics import (
     accuracy_score,
     confusion_matrix,
@@ -17,11 +23,13 @@ from config import CHECKPOINT_DIR, DATA_DIR, DEVICE, LABELS, LOG_DIR, NUM_LABELS
 from dataset import create_dataloader
 from model import build_model
 
+EXP_NAME = "koelectra_mamba_hce_ordinal"
+
 
 def resolve_checkpoint_path(run_id: str | None = None) -> tuple[Path, str]:
     if run_id is not None:
-        return CHECKPOINT_DIR / f"streaming_belief_v5_phishing5_{run_id}_best.pt", run_id
-    latest_meta = CHECKPOINT_DIR / "streaming_belief_v5_phishing5_latest.json"
+        return CHECKPOINT_DIR / f"{EXP_NAME}_{run_id}_best.pt", run_id
+    latest_meta = CHECKPOINT_DIR / f"{EXP_NAME}_latest.json"
     if latest_meta.exists():
         with latest_meta.open("r", encoding="utf-8") as f:
             meta = json.load(f)
@@ -30,7 +38,7 @@ def resolve_checkpoint_path(run_id: str | None = None) -> tuple[Path, str]:
 
 
 @torch.no_grad()
-def collect_predictions(model: nn.Module, loader) -> tuple[np.ndarray, np.ndarray]:
+def collect_predictions(model, loader) -> tuple[np.ndarray, np.ndarray]:
     model.eval()
     all_true, all_pred = [], []
     for batch in loader:
@@ -77,7 +85,7 @@ def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> dict:
 
 def print_results(results: dict, split: str, run_id: str) -> None:
     print("\n" + "=" * 60)
-    print(f"  streaming_belief_v5_phishing5  split={split}  run={run_id}  ({results['num_samples']} samples)")
+    print(f"  {EXP_NAME}  split={split}  run={run_id}  ({results['num_samples']} samples)")
     print("=" * 60)
     print(f"  Accuracy:    {results['accuracy']:.4f}")
     print(f"  Macro F1:    {results['macro_f1']:.4f}")
@@ -91,10 +99,17 @@ def print_results(results: dict, split: str, run_id: str) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Evaluate streaming_belief_v5_phishing5 on test/val split")
+    parser = argparse.ArgumentParser(description=f"Evaluate {EXP_NAME} on test/val split")
     parser.add_argument("--split", default="test", choices=["val", "test"])
     parser.add_argument("--run-id", default=None, help="특정 run_id 지정 (없으면 latest 사용)")
+    parser.add_argument("--mamba-layers", type=int, default=None, help="Mamba 층 수(NUM_LAYERS) 오버라이드 (ablation study용)")
     args = parser.parse_args()
+
+    if args.mamba_layers is not None:
+        import config
+        config.MAMBA_CONFIG["NUM_LAYERS"] = args.mamba_layers
+        global EXP_NAME
+        EXP_NAME = f"koelectra_mamba_hce_ordinal_L{args.mamba_layers}"
 
     ckpt_path, run_id = resolve_checkpoint_path(args.run_id)
     if not ckpt_path.exists():
@@ -112,7 +127,7 @@ def main() -> None:
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     eval_run_id = time.strftime("%Y%m%d_%H%M%S")
-    save_path = LOG_DIR / f"streaming_belief_v5_phishing5_{run_id}_{args.split}_{eval_run_id}_eval.json"
+    save_path = LOG_DIR / f"{EXP_NAME}_{run_id}_{args.split}_{eval_run_id}_eval.json"
     with save_path.open("w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n[save] {save_path}")

@@ -125,11 +125,15 @@ def main():
     with open(source_csv, "r", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
             category = (row.get("category") or "").strip()
+            # '바로 이 목소리'는 수사기관 사칭형과 동일한 범죄 시나리오이므로 병합
+            if category == "바로 이 목소리":
+                category = "수사기관 사칭형"
             text = (row.get("text") or "").strip()
             if category:
                 source_counts[category] += 1
             if category and 1000 <= len(text) <= 2000:
                 source_texts[category].append(text)
+
 
     if args.fewshot_csv:
         source_texts = load_fewshot_from_clean_csv(args.fewshot_csv)
