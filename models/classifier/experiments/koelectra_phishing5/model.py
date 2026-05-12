@@ -41,6 +41,7 @@ class KoElectraClassifier(nn.Module):
         super().__init__()
         self.encoder = AutoModel.from_pretrained(encoder_name)
         self.pooling = AttentionWeightedPooling(hidden_size=768)
+        self.aux_head = nn.Linear(768, 3)
         self.head = nn.Sequential(
             nn.Linear(768, head_hidden_dim),
             nn.ReLU(),
@@ -82,11 +83,14 @@ class KoElectraClassifier(nn.Module):
             seg_repr[valid, t] = x_valid
 
         seg_repr = seg_repr.float()
+        
+        aux_logits = self.aux_head(seg_repr)  # (B, S, 3)
+
         seg_mask = segment_mask.unsqueeze(-1).float()  # (B, S, 1)
         pooled = (seg_repr * seg_mask).sum(dim=1) / seg_mask.sum(dim=1).clamp(min=1)  # (B, H)
 
         logits = self.head(pooled)  # (B, num_labels)
-        return {"logits": logits}
+        return {"logits": logits, "aux_logits": aux_logits}
 
 
 def build_model() -> KoElectraClassifier:

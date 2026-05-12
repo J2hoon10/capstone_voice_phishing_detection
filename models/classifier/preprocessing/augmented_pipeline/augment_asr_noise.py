@@ -8,8 +8,7 @@ import argparse
 import random
 
 from pipeline_config import (
-    TRANSCRIPTION_DIR,
-    LEGACY_AUGMENTED_DIR,
+    AUGMENTED_DIR,
     ERROR_ANALYSIS_DIR,
     DEFAULT_VARIANT,
     CSV_COLUMNS,
@@ -160,8 +159,9 @@ def main():
     parser.add_argument("--variant", default=DEFAULT_VARIANT, help="Whisper 변형")
     parser.add_argument("--error-summary", default=os.path.join(ERROR_ANALYSIS_DIR, "error_summary.json"),
                         help="오류 요약 JSON")
-    parser.add_argument("--input-llm", default=os.path.join(LEGACY_AUGMENTED_DIR, "phishing_augmented.csv"), help="LLM 증강 CSV")
-    parser.add_argument("--output", default=os.path.join(LEGACY_AUGMENTED_DIR, "asr_noised.csv"), help="출력 CSV")
+    parser.add_argument("--input-llm", default=os.path.join(AUGMENTED_DIR, "phishing_augmented.csv"), help="LLM 증강 CSV")
+    parser.add_argument("--input-original", default="", help="원본 전사 CSV (생략 시 증강 데이터만 처리)")
+    parser.add_argument("--output", default=os.path.join(AUGMENTED_DIR, "asr_noised.csv"), help="출력 CSV")
     parser.add_argument("--seed", type=int, default=42, help="랜덤 시드")
     parser.add_argument("--no-progress", action="store_true", help="진행률 표시 비활성화")
     args = parser.parse_args()
@@ -169,18 +169,16 @@ def main():
     with open(args.error_summary, "r", encoding="utf-8") as f:
         probs = json.load(f)
 
-    original_csv = os.path.join(TRANSCRIPTION_DIR, args.variant, "all.csv")
-    original_rows = load_rows(original_csv)
+    original_rows = load_rows(args.input_original) if args.input_original else []
     llm_rows = load_rows(args.input_llm)
 
-    if not original_rows:
-        raise SystemExit(f"원본 전사 CSV가 비어있음: {original_csv}")
-
     combined = original_rows + llm_rows
+    if not combined:
+        raise SystemExit("입력 데이터가 없습니다. --input-llm 또는 --input-original 을 확인하세요.")
 
     rng = random.Random(args.seed)
 
-    os.makedirs(LEGACY_AUGMENTED_DIR, exist_ok=True)
+    os.makedirs(AUGMENTED_DIR, exist_ok=True)
 
     out_rows = []
 
