@@ -19,7 +19,16 @@ def merge_phishing_category(category: str) -> str:
 
 
 def build_segments(tokenizer, text: str) -> list[dict]:
-    token_ids = tokenizer.encode(text, add_special_tokens=False, truncation=False)
+    # We intentionally tokenize the full transcript first and then slice it
+    # into fixed-size windows ourselves, so the model_max_length warning is
+    # not actionable here.
+    token_ids = tokenizer(
+        text,
+        add_special_tokens=False,
+        truncation=False,
+        return_attention_mask=False,
+        verbose=False,
+    )["input_ids"]
     if not token_ids:
         return []
 
@@ -126,4 +135,3 @@ def collate_fn(batch):
 def create_dataloader(csv_path: str | Path, batch_size: int, shuffle: bool) -> DataLoader:
     ds = CsvStreamingDataset(csv_path)
     return DataLoader(ds, batch_size=batch_size, shuffle=shuffle, collate_fn=collate_fn)
-

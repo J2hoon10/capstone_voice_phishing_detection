@@ -6,7 +6,7 @@ python -m pip install torch==2.5.1+cu121 --index-url https://download.pytorch.or
 
 # Install the pure-Python/common dependencies separately from the CUDA extensions.
 python -m pip install \
-  "transformers>=4.30.0,<5" \
+  "transformers==4.46.3" \
   "numpy>=1.24.0" \
   "scikit-learn>=1.3.0" \
   "peft>=0.11.0" \
