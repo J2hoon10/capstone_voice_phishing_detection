@@ -52,35 +52,35 @@
 
 | 실험명 | Accuracy | Macro F1 | Weighted F1 | 상태 |
 |--------|----------|----------|-------------|------|
-| `koelectra_phishing5` (KoELECTRA Only) | **0.7860** | **0.8132** | **0.7881** | ✅ 완료 |
-| `koelectra_mamba_phishing5` (KoELECTRA+Mamba, CE) | 0.7121 | 0.7438 | 0.7174 | ✅ 완료 |
-| `koelectra_mamba_hce_ordinal` (KoELECTRA+Mamba, HCE+Ordinal) | 0.7121 | 0.7468 | 0.7151 | ✅ 완료 |
+| `koelectra_phishing5` (KoELECTRA Baseline) | 0.7860 | 0.8146 | 0.7894 | ✅ 완료 |
+| `hce_ordinal` (KoELECTRA+Mamba L1) | **0.8366** | **0.8429** | **0.8378** | ✅ 완료 |
+| `hce_ordinal` (KoELECTRA+Mamba L2) | 0.7121 | 0.7470 | 0.7098 | ✅ 완료 |
 
-> **핵심 관찰**: Mamba 추가가 오히려 성능을 약 **7% 저하**시킴.  
-> HCE+Ordinal 손실 추가는 Mamba 기본 CE 대비 미미한 개선(Macro F1 +0.003).
+> **핵심 관찰**: **Mamba L1 레이어 추가 시 성능이 약 2.8%p(Macro F1) 향상**됨.  
+> 단, L2 이상 레이어 깊이 증가 시 성능이 급격히 저하(71.2%)되거나 NaN 폭발 발생. HCE+Ordinal 손실은 L1 단계에서 강력한 시너지를 냄.
 
-### 클래스별 F1 상세
+### 클래스별 F1 상세 (Baseline vs Mamba L1)
 
-| 클래스 | KoELECTRA Only | KoELECTRA+Mamba (HCE) | 차이 |
+| 클래스 | KoELECTRA Only | KoELECTRA+Mamba L1 | 차이 |
 |--------|---------------|----------------------|------|
-| 상품 가입 및 해지 | 0.770 | 0.707 | **-0.063** |
-| 이체 출금 대출서비스 | 0.651 | 0.535 | **-0.116** |
-| 잔고 및 거래내역 | 0.820 | 0.739 | **-0.081** |
-| 수사기관 사칭형 | 0.928 | 0.901 | -0.027 |
-| 대출 사기형 | 0.898 | 0.851 | -0.047 |
+| 상품 가입 및 해지 | 0.774 | 0.855 | **+0.081** |
+| 이체 출금 대출서비스 | 0.691 | 0.756 | **+0.065** |
+| 잔고 및 거래내역 | 0.783 | 0.855 | **+0.072** |
+| 수사기관 사칭형 | 0.928 | 0.904 | -0.024 |
+| 대출 사기형 | 0.898 | 0.844 | -0.054 |
 
-> 일반 클래스(0~2)에서 Mamba 결합 시 성능 하락이 두드러짐.  
-> 피싱 클래스(3~4)는 상대적으로 영향 적음 → 짧은 시퀀스에서도 피싱은 키워드가 뚜렷하기 때문.
+> 금융 정보형 클래스(0~2)에서 Mamba L1 결합 시 성능 향상이 뚜렷함 (+7~8%p).  
+> 피심 핵심 클래스(3~4)는 소폭 하락하는 trade-off 발생 → Mamba의 시퀀스 요약이 미세한 키워드 특징을 일부 희석시켰을 가능성.
 
-### 혼동 행렬 분석 (KoELECTRA+Mamba HCE 기준)
+### 혼동 행렬 분석 (KoELECTRA+Mamba L1 기준)
 
 ```
 실제\예측  가입해지  이체출금  잔고거래  수사기관  대출사기
-가입해지 [  53      17       4        0        0   ]
-이체출금 [  19      34       7        0        0   ]
-잔고거래 [   4      16      44        0        0   ]
-수사기관 [   0       0       0       32        4   ]
-대출사기 [   0       0       0        3       20   ]
+가입해지 [  62      10       2        0        0   ]
+이체출금 [   7      48       5        0        0   ]
+잔고거래 [   2       9      53        0        0   ]
+수사기관 [   0       0       0       33        3   ]
+대출사기 [   0       0       0        4       19   ]
 ```
 
 - 일반 3개 클래스 간 혼동이 심각 (특히 "이체출금" ↔ "가입해지")
@@ -284,31 +284,32 @@ def build_segments_sentence(tokenizer, text: str) -> list[dict]:
 
 ```
 [완료] ─────────────────────────────────────────────────────────────────
-  ① koelectra_phishing5          Macro F1 = 0.8132  ← 현재 최고 (기준선)
-  ② koelectra_mamba_phishing5    Macro F1 = 0.7438  ← Mamba 추가 시 하락
-  ③ koelectra_mamba_hce_ordinal  Macro F1 = 0.7468  ← HCE+Ordinal 손실 적용
+  ① koelectra_phishing5          Macro F1 = 0.8146  ← 현재 기준선
+  ② hce_ordinal (Mamba L1)       Macro F1 = 0.8429  ← Mamba L1 성공 (최고성능)
+  ③ hce_ordinal (Mamba L2)       Macro F1 = 0.7470  ← 깊어질수록 급격한 하락
+  ④ hce_ordinal (Mamba L4/L6)    NaN 폭발           ← 모델 붕괴
 
 [진행 예정: 학습 전략 최적화] ────────────────────────────────────────
-  ④ koelectra_mamba_freeze_init  KoELECTRA 동결 3에폭 → 단계적 해제
-  ⑤ koelectra_mamba_diff_lr      차등 LR: ENC=1e-5, Mamba=1e-3 (100배 격차)
+  ⑤ koelectra_mamba_freeze_init  KoELECTRA 동결 3에폭 → 단계적 해제 (L2+ 안정성 확보)
+  ⑥ koelectra_mamba_diff_lr      차등 LR: ENC=1e-5, Mamba=1e-3 (NaN 방지 및 최적화)
 
 [향후 계획: 전처리 개선] ─────────────────────────────────────────────
-  ⑥ koelectra_mamba_short_window  WINDOW=64, STRIDE=32 (세그먼트 수 ~5배 증가)
-  ⑦ koelectra_mamba_sent_window   문장 단위 의미 보존 분할 (★ 강력 추천)
+  ⑦ koelectra_mamba_short_window  WINDOW=64, STRIDE=32 (세그먼트 수 증가로 Mamba 강화)
+  ⑧ koelectra_mamba_sent_window   문장 단위 의미 보존 분할 (★ 강력 추천)
 
 [최종 목표] ──────────────────────────────────────────────────────────
-  Mamba 결합 모델이 KoELECTRA Only(0.8132)를 초과하는 Macro F1 달성
+  Mamba 결합 모델이 KoELECTRA Baseline(0.8146)을 넘어 **Macro F1 0.87 이상** 달성
 ```
 
 ---
 
 ## 10. 성능 목표 및 평가 기준
 
-| 지표 | 현재 최고 (기준선) | 목표 |
+| 지표 | 현재 최고 (Baseline) | 목표 |
 |------|-------------------|------|
-| Macro F1 | 0.8132 (KoELECTRA Only) | **0.85 이상** |
-| 피싱 클래스 F1 평균 | 0.913 | 0.93 이상 |
-| 일반 클래스 F1 평균 | 0.747 | 0.80 이상 |
+| Macro F1 | 0.8146 (KoELECTRA) | **0.87 이상** |
+| 피싱 클래스 F1 평균 | 0.913 | 0.94 이상 |
+| 일반 클래스 F1 평균 | 0.749 | 0.82 이상 |
 
 - **주요 평가 지표**: Macro F1 (클래스 불균형 고려)
 - **비교 기준**: Test Set (n=257, 고정)
