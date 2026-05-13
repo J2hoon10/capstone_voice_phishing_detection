@@ -1,8 +1,8 @@
 """
-koelectra_mamba_phishing6_hce / evaluate.py
+koelectra_mamba_freeze_init / evaluate.py
 
-phishing5 evaluate.py 와 동일한 구조지만,
-checkpoint 이름을 koelectra_mamba_phishing6_hce_* 로 조회합니다.
+koelectra_mamba_hce_ordinal evaluate.py와 동일한 구조.
+checkpoint 이름을 koelectra_mamba_freeze_init_* 로 조회합니다.
 """
 
 import argparse
@@ -23,7 +23,7 @@ from config import CHECKPOINT_DIR, DATA_DIR, DEVICE, LABELS, LOG_DIR, NUM_LABELS
 from dataset import create_dataloader
 from model import build_model
 
-EXP_NAME = "koelectra_mamba_hce_ordinal"
+EXP_NAME = "koelectra_mamba_freeze_init"
 
 
 def resolve_checkpoint_path(run_id: str | None = None) -> tuple[Path, str]:
@@ -99,17 +99,10 @@ def print_results(results: dict, split: str, run_id: str) -> None:
 
 
 def main() -> None:
-    global EXP_NAME
     parser = argparse.ArgumentParser(description=f"Evaluate {EXP_NAME} on test/val split")
     parser.add_argument("--split", default="test", choices=["val", "test"])
     parser.add_argument("--run-id", default=None, help="특정 run_id 지정 (없으면 latest 사용)")
-    parser.add_argument("--mamba-layers", type=int, default=None, help="Mamba 층 수(NUM_LAYERS) 오버라이드 (ablation study용)")
     args = parser.parse_args()
-
-    if args.mamba_layers is not None:
-        import config
-        config.MAMBA_CONFIG["NUM_LAYERS"] = args.mamba_layers
-        EXP_NAME = f"koelectra_mamba_hce_ordinal_L{args.mamba_layers}"
 
     ckpt_path, run_id = resolve_checkpoint_path(args.run_id)
     if not ckpt_path.exists():
