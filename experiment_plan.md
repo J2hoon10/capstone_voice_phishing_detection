@@ -1,223 +1,285 @@
-# Streaming Dialogue Classifier with Compressive Memory
-## 실험 계획서 (Experiment Plan)
+# 보이스피싱 탐지 모델 실험 계획서
+
+> 최종 업데이트: 2026-05-13  
+> 작성자: 캡스톤 팀
 
 ---
 
-## 1. 실험 개요
+## 0. 데이터셋 현황
 
-본 실험은 긴 대화 스크립트(씬)를 세그먼트 단위로 스트리밍하여 처리하면서, Compressive Memory를 활용해 이전 세그먼트의 정보를 누적하고 매 스텝마다 multi-label 분류를 수행하는 모델의 로직 및 성능을 검증한다.
+| 구분 | 샘플 수 | 비고 |
+|------|---------|------|
+| Train | 2,978건 | 학습에 사용 |
+| Validation | - | 에폭별 성능 기준 |
+| Test | 257건 | 최종 평가 기준 |
 
-| 항목 | 내용 |
-|---|---|
-| 실험 목적 | 스트리밍 방식의 Compressive Memory 기반 분류 모델 로직 검증 |
-| 인코더 | RoBERTa-base (roberta-base, fine-tuning 전체 학습) |
-| 데이터셋 | MELD (Friends TV series, 영어 대화 스크립트) |
-| 태스크 | 씬(Scene) 단위 Multi-label 분류 (감정 7종 + 감성 3종 = 10차원) |
-| 최종 목표 | 동일 아키텍처에서 인코더만 KoELECTRA로 교체 후 한국어 데이터 적용 |
+### 대화(텍스트) 길이 통계 (train.csv 기준)
+
+| 항목 | 평균 | 중간값 | 최소 | 최대 |
+|------|------|--------|------|------|
+| 문장 수 | 21.4 | 16 | 2 | 429 |
+| 어절 수 | 177.6 | 138 | 12 | 4,941 |
+| 글자 수 | 734.8 | 576 | 46 | 19,857 |
+| 토큰 수 (추정) | 213~266 | 166~207 | 14~18 | 5,929~7,412 |
+
+> **분포 특성**: 평균 > 중간값으로 오른쪽으로 치우친 분포.  
+> 중간값 기준 ~166~207 토큰으로 WINDOW_SIZE=128 적용 시 대부분 1~2 세그먼트 처리됨.
 
 ---
 
-## 2. 데이터셋 구성
+## 1. 원인 진단: Mamba 결합 모델 성능 저하 분석
 
-### 2-1. MELD 원본 구조
+단순 평균 풀링(KoELECTRA Only)보다 KoELECTRA+Mamba 조합이 성능이 낮았던 원인.
 
-MELD는 Friends TV 시리즈에서 추출한 1,433개의 씬(Dialogue), 13,708개의 발화(Utterance)로 구성된다. 각 발화에는 감정(Emotion)과 감성(Sentiment) 레이블이 하나씩 부착되어 있다.
+### 1-1. 시퀀스 부족
+- 데이터 중간값(~166 토큰)을 WINDOW_SIZE=128로 자르면 **윈도우가 1~2개**에 불과
+- Mamba는 긴 시퀀스(수십 개 이상)에서 상태 누적 효과가 발휘되는 모델
+- 2개의 세그먼트로는 Mamba가 맥락을 누적할 기회 자체가 없음
 
-| Split | 씬 수 | 발화 수 | 평균 턴 수 |
+### 1-2. Catastrophic Forgetting (가중치 붕괴)
+- 학습이 완료된 KoELECTRA(수억 파라미터)와 무작위 초기화된 Mamba를 **동시에 같은 LR로** 학습
+- 초기 Mamba의 큰 오차(loss)가 역전파를 통해 KoELECTRA의 사전학습 지식을 덮어씀
+- 결과적으로 두 모델 모두 불안정한 상태에서 수렴
+
+### 1-3. 키워드 희석
+- 피싱 대화의 핵심 키워드("대포통장", "공증", "공무원 사칭" 등)가
+  Mamba의 선형 상태 압축 과정에서 일반 대화 맥락과 혼합
+- 특히 세그먼트가 1~2개일 때 Mamba 처리의 이점이 사실상 없음
+
+---
+
+## 2. 완료된 실험 결과
+
+### 실험 결과 종합 (Test Set, n=257)
+
+| 실험명 | Accuracy | Macro F1 | Weighted F1 | 상태 |
+|--------|----------|----------|-------------|------|
+| `koelectra_phishing5` (KoELECTRA Only) | **0.7860** | **0.8132** | **0.7881** | ✅ 완료 |
+| `koelectra_mamba_phishing5` (KoELECTRA+Mamba, CE) | 0.7121 | 0.7438 | 0.7174 | ✅ 완료 |
+| `koelectra_mamba_hce_ordinal` (KoELECTRA+Mamba, HCE+Ordinal) | 0.7121 | 0.7468 | 0.7151 | ✅ 완료 |
+
+> **핵심 관찰**: Mamba 추가가 오히려 성능을 약 7% 저하시킴.  
+> HCE+Ordinal 손실 추가는 Mamba 기본 CE 대비 미미한 개선(+0.003 Macro F1).
+
+### 클래스별 F1 상세 (최신 완료 실험 비교)
+
+| 클래스 | KoELECTRA Only | KoELECTRA+Mamba (HCE) | 차이 |
+|--------|---------------|----------------------|------|
+| 상품 가입 및 해지 | 0.770 | 0.707 | **-0.063** |
+| 이체 출금 대출서비스 | 0.651 | 0.535 | **-0.116** |
+| 잔고 및 거래내역 | 0.820 | 0.739 | **-0.081** |
+| 수사기관 사칭형 | 0.928 | 0.901 | -0.027 |
+| 대출 사기형 | 0.898 | 0.851 | -0.047 |
+
+> 일반 클래스(0~2)에서 Mamba 결합 시 성능 하락이 두드러짐.  
+> 피싱 클래스(3~4)는 상대적으로 영향 적음 → 짧은 시퀀스도 피싱은 키워드가 뚜렷함.
+
+---
+
+## 3. 진행 예정 실험 — 학습 전략 최적화
+
+> 목표: Catastrophic Forgetting 방지 및 Mamba 초기 안정화를 통한 성능 회복
+
+### 실험 A: `koelectra_mamba_freeze_init` — 동결 & 초기화
+
+**폴더**: `models/classifier/experiments/koelectra_mamba_freeze_init/`
+
+#### 전략
+```
+Phase 1 (Epoch 1~3): KoELECTRA 완전 동결
+  → Mamba + Head만 학습 (LR = 5e-4)
+  → Mamba 오차가 KoELECTRA에 역전파 차단
+
+Phase 2 (Epoch 4~8): KoELECTRA 동결 해제
+  → KoELECTRA: LR = 1e-5 (낮게)
+  → Mamba + Head: LR = 5e-4 (유지)
+```
+
+#### 핵심 파라미터
+
+| 파라미터 | 값 | 기존 대비 |
+|---|---|---|
+| `FREEZE_EPOCHS` | **3** | 신규 |
+| `ENCODER_LR` (2단계) | **1e-5** | `2e-5` → 절반 |
+| `UPPER_LR` | **5e-4** | 동일 |
+| `EPOCHS` | 8 | 동일 |
+
+#### 실행 방법
+```bash
+cd models\classifier\experiments\koelectra_mamba_freeze_init
+python train.py
+python evaluate.py --split test
+```
+
+#### 기대 효과
+- Phase 1에서 Mamba가 KoELECTRA 표현 공간에 적응
+- Phase 2에서 KoELECTRA가 안전하게 미세조정
+- Catastrophic Forgetting 완전 차단 후 단계적 해제
+
+---
+
+### 실험 B: `koelectra_mamba_diff_lr` — 차등 학습률
+
+**폴더**: `models/classifier/experiments/koelectra_mamba_diff_lr/`
+
+#### 전략
+```
+Epoch 1~8 (단일 단계, 동결 없음):
+  KoELECTRA: LR = 1e-5 (사전학습 지식 보호)
+  Mamba + Head: LR = 1e-3 (빠른 수렴 유도)
+  → LR 격차 100배로 암묵적 보호 효과
+```
+
+#### 핵심 파라미터
+
+| 파라미터 | 값 | 기존 대비 |
+|---|---|---|
+| `ENCODER_LR` | **1e-5** | `2e-5` → 절반 |
+| `UPPER_LR` | **1e-3** | `5e-4` → **2배** |
+| LR 비율 (Mamba/ENC) | **100배** | 25배 → 4배 증가 |
+| `FREEZE_EPOCHS` | 없음 | 없음 |
+
+#### 실행 방법
+```bash
+cd models\classifier\experiments\koelectra_mamba_diff_lr
+python train.py
+python evaluate.py --split test
+```
+
+#### 기대 효과
+- 동결 없이 처음부터 KoELECTRA 데이터 적응 가능
+- LR 격차 100배로 Mamba가 초기에 주로 학습 → 암묵적 보호
+- 구현 단순, 실험 A와 병렬 비교 가능
+
+---
+
+### 실험 A vs B 비교
+
+| 관점 | 실험 A (freeze_init) | 실험 B (diff_lr) |
+|---|---|---|
+| **KoELECTRA 보호** | 명시적 동결 (gradient 완전 차단) | 암묵적 보호 (LR 격차) |
+| **초기 KoELECTRA 업데이트** | epoch 1~3: 전혀 없음 | epoch 1부터 `1e-5`로 조금씩 |
+| **Mamba 수렴 속도** | 보통 (`5e-4`) | 빠름 (`1e-3`) |
+| **구현 복잡도** | 높음 (단계 전환 로직) | 낮음 (옵티마이저 그룹 분리) |
+| **예상 장점** | Forgetting 방지 확실 | KoELECTRA도 처음부터 적응 |
+| **예상 위험** | 단계 전환 시 일시적 불안정 | 초기 epoch KoELECTRA 일부 손상 가능 |
+
+---
+
+## 4. 향후 실험 계획 — 데이터 전처리 개선
+
+> 목표: Mamba가 충분한 시퀀스(5개 이상 세그먼트)를 처리할 수 있도록 입력 파이프라인 재설계
+
+### 실험 C: `koelectra_mamba_short_window` — 짧은 고정 윈도우 (대안 A)
+
+**폴더 (예정)**: `models/classifier/experiments/koelectra_mamba_short_window/`
+
+#### 전략
+```
+WINDOW_SIZE: 128 → 64 토큰
+STRIDE:      100 → 32 토큰
+
+기대 세그먼트 수 변화:
+  현재:  중간값 166토큰 / (128-28) = ~1.7개
+  변경:  중간값 166토큰 / (64-32) = ~5.2개
+```
+
+#### 핵심 파라미터
+
+| 파라미터 | 현재 | 변경 | 기대 효과 |
 |---|---|---|---|
-| Train | 1,039 | 9,989 | 약 9.6턴 |
-| Validation | 114 | 1,109 | 약 9.7턴 |
-| Test | 280 | 2,610 | 약 9.3턴 |
+| `WINDOW_SIZE` | 128 | **64** | 세그먼트 수 약 3배 증가 |
+| `STRIDE` | 100 | **32** | 세그먼트 간 50% 중첩 |
+| 평균 세그먼트 수 | ~2개 | **~5~8개** | Mamba 상태 누적 기회 확보 |
 
-### 2-2. 레이블 구조
-
-| 레이블 종류 | 클래스 | 차원 |
-|---|---|---|
-| Emotion (감정) | Anger, Disgust, Fear, Joy, Neutral, Sadness, Surprise | 7차원 |
-| Sentiment (감성) | Positive, Negative, Neutral | 3차원 |
-| **최종 레이블** | Emotion + Sentiment 합산 | **10차원 multi-hot 벡터** |
-
-### 2-3. 씬 단위 Multi-hot 변환 방법
-
-원본 MELD는 발화(utterance) 단위로 단일 레이블이 부착되어 있다. 이를 씬 단위 multi-hot 벡터로 변환하는 과정은 다음과 같다.
-
-1. `Dialogue_ID`를 기준으로 발화를 그룹핑하여 하나의 씬으로 묶는다.
-2. 발화를 `Utterance_ID` 순으로 정렬한 뒤 `"Speaker: Utterance"` 형식으로 이어붙여 하나의 텍스트 스크립트를 생성한다.
-3. 씬 내 모든 발화의 Emotion과 Sentiment를 수집하여 10차원 multi-hot 벡터를 생성한다. 해당 씬에 한 번이라도 등장한 클래스는 1, 없으면 0으로 표시한다.
-4. 스크립트 텍스트와 multi-hot 레이블 벡터를 쌍으로 저장한다.
-
-**변환 예시 (씬 #6):**
-
-```
-발화 감정:  Joy, Joy, Surprise, Anger, Neutral, Sadness
-
-multi-hot:
-  Anger=1, Disgust=0, Fear=0, Joy=1, Neutral=1,
-  Sadness=1, Surprise=1, Positive=1, Negative=1, Neutral_sent=1
-  → [1, 0, 0, 1, 1, 1, 1, 1, 1, 1]
-```
-
-### 2-4. 세그먼테이션
-
-씬 텍스트를 RoBERTa 토크나이저로 토크나이징한 뒤 슬라이딩 윈도우 방식으로 세그먼트를 생성한다.
-
-| 파라미터 | 값 | 비고 |
-|---|---|---|
-| 세그먼트 크기 (seg_size) | 200 토큰 | CLS, SEP 포함 시 202 |
-| 이동 폭 (shift) | 50 토큰 | 인접 세그먼트 150토큰 중첩 |
-| 최대 길이 (max_len) | 512 토큰 | 패딩 포함 |
+#### 구현 포인트
+- `config.py`의 `WINDOW_SIZE`, `STRIDE` 값만 변경
+- `dataset.py`는 그대로 사용 가능 (동적으로 슬라이딩 윈도우 처리)
+- 세그먼트 수 증가로 배치당 메모리 사용량 증가 → `BATCH_SIZE` 조정 필요할 수 있음
 
 ---
 
-## 3. 모델 아키텍처
+### 실험 D: `koelectra_mamba_sent_window` — 문장 단위 동적 윈도우 (대안 B, 강력 추천)
 
-### 3-1. 전체 구조
+**폴더 (예정)**: `models/classifier/experiments/koelectra_mamba_sent_window/`
 
-모델은 RoBERTa 인코더, Linear Projection, Compressive Memory Module, Attention, Classification Head의 5단계로 구성된다. 각 세그먼트를 순차적으로 처리하면서 메모리를 업데이트하고 매 스텝마다 분류값을 출력한다.
-
+#### 전략
 ```
-세그먼트 segₜ 입력
-      ↓
-RoBERTa Encoder (fine-tuning)
-      ↓  pooler_output (768차원)
-Linear Projection (768 → 128)
-      ↓  segment_repr sₜ (128차원)
-┌─────────────────────────────────────┐
-│       Compressive Memory            │
-│                                     │
-│  Fine Memory (FM)    최근 r=3개     │
-│  fm₁, fm₂, fm₃      (128차원)      │
-│        ↓ (가득 차면)                │
-│  1D Conv 압축 함수                  │
-│        ↓                            │
-│  Compressed Memory (CM)  k=4개 고정 │
-│  cm₁, cm₂, cm₃, cm₄  (128차원)    │
-└─────────────────────────────────────┘
-      ↓
-Attention (query=sₜ, key/value=[CM;FM])
-      ↓  context (128차원)
-Classification Head (128 → 64 → 10)
-      ↓
-multi-hot 출력 (Sigmoid, 10차원)
+토큰 수 기준 고정 분할 → 문장(마침표/화자교대) 기준 의미 단위 분할
+
+예시:
+  현재: "[안녕하세요 저희는 대출] [팀입니다 고객님 혹시]"
+         → 단어가 중간에 잘림
+
+  변경: ["안녕하세요 저희는 대출팀입니다."] ["고객님 혹시 대출이 필요하신가요?"]
+         → 의미 완결 단위 유지
 ```
 
-| # | 모듈 | 입/출력 차원 | 역할 |
-|---|---|---|---|
-| 1 | RoBERTa Encoder | 입력: 202토큰 → 출력: 768 | 세그먼트를 문맥 표현으로 인코딩 (fine-tuning) |
-| 2 | Linear Projection | 768 → 128 | 차원 축소 및 메모리 차원 통일 |
-| 3 | Compressive Memory | FM: r×128 / CM: k×128 | 최근 세그먼트 상세 보존 + 오래된 세그먼트 압축 보존 |
-| 4 | Attention | (r+k)×128 → 128 | 현재 세그먼트를 query로 메모리 전체에서 관련 정보 추출 |
-| 5 | Classification Head | 128 → 64 → 10 | multi-hot 출력 (Sigmoid 활성화) |
+#### 구현 포인트
+- `dataset.py`의 `build_segments()` 함수를 문장 분리 기반으로 교체
+- 분리 기준: `。`, `.`, `?`, `!`, 화자 교대(`\n` 등)
+- 고정 길이 초과 시: 문장을 유지하면서 그룹핑하여 128토큰 이하로 묶음
+- 중요한 피싱 키워드가 세그먼트 경계에서 잘리는 현상 원천 차단
 
-### 3-2. Compressive Memory 하이퍼파라미터
-
-| 파라미터 | 값 | 의미 |
-|---|---|---|
-| r (Fine Memory 크기) | 3 | 최근 3개 세그먼트 = 약 600토큰 상세 보존 |
-| k (Compressed Memory 크기) | 4 | 고정 4개 슬롯에 압축된 과거 정보 보존 |
-| slot_dim | 128 | 메모리 슬롯 1개의 차원 수 |
-| 압축 함수 | 1D Conv | kernel_size=3, 순서 정보 보존하며 압축 |
-
-### 3-3. 알고리즘 순서 (세그먼트 루프 t = 1, 2, ..., N)
-
-```
-Step 1. 세그먼트 인코딩
-  segₜ → RoBERTa → pooler_output(768) → Projection → sₜ(128)
-
-Step 2. Fine Memory 업데이트
-  FM 맨 뒤에 sₜ 추가
-  FM = [fm₁, ..., fmᵣ₋₁, sₜ]
-
-Step 3. Fine Memory 크기 확인
-  [FM 크기 ≤ r] → 압축 없이 Step 4 진행
-  [FM 크기 > r] →
-    fm₁(가장 오래된 것) FM에서 제거
-    1D Conv([cm_last, fm₁]) → c_new(128)
-    CM에서 cm₁ 제거, c_new 추가 (k개 고정 유지)
-
-Step 4. Context 구성 및 분류
-  [CM; FM] 이어붙이기  →  (k+r)개의 128차원 벡터
-  Attention(query=sₜ, key/value=[CM;FM])  →  context(128)
-  Classification Head(context)  →  logits(10)
-  Sigmoid(logits)  →  multi-hot 확률값
-
-Step 5. 다음 세그먼트로 이동 → Step 1 반복
+#### 전처리 로직 예시
+```python
+def build_segments_sentence(tokenizer, text: str) -> list[dict]:
+    # 1. 문장 분리
+    sentences = re.split(r'[.?!]+', text)
+    # 2. 빈 문장 제거
+    sentences = [s.strip() for s in sentences if s.strip()]
+    # 3. 각 문장 토크나이즈
+    # 4. 최대 WINDOW_SIZE 토큰 이하가 되도록 문장 그룹화
+    # 5. 각 그룹 → segment dict 반환
 ```
 
 ---
 
-## 4. 학습 설정
+## 5. 전체 실험 로드맵
 
-| 항목 | 설정값 |
-|---|---|
-| Loss 함수 | BCEWithLogitsLoss (multi-label 이진 분류) |
-| Optimizer | AdamW |
-| RoBERTa Learning Rate | 2e-5 (fine-tuning) |
-| 상위 모듈 Learning Rate | 1e-3 (Memory, Attention, Head) |
-| Batch Size | 16 (씬 단위) |
-| Epoch | 10 (Early Stopping patience=3) |
-| 학습 출력 기준 | 마지막 세그먼트(segₙ)의 출력만 Loss 계산에 사용 |
-| 클래스 불균형 처리 | BCEWithLogitsLoss의 pos_weight로 희귀 클래스 가중치 부여 |
+```
+[완료] ─────────────────────────────────────────────────────────────────
+  ① koelectra_phishing5          Macro F1 = 0.8132 (기준선 - Best)
+  ② koelectra_mamba_phishing5    Macro F1 = 0.7438 (Mamba 추가 시 하락)
+  ③ koelectra_mamba_hce_ordinal  Macro F1 = 0.7468 (HCE+Ordinal 손실)
 
----
+[진행 예정: 학습 전략 최적화] ────────────────────────────────────────
+  ④ koelectra_mamba_freeze_init  KoELECTRA 동결 3에폭 후 단계적 해제
+  ⑤ koelectra_mamba_diff_lr      차등 LR: ENC=1e-5, Mamba=1e-3
 
-## 5. 평가 방식
+[향후 계획: 전처리 개선] ─────────────────────────────────────────────
+  ⑥ koelectra_mamba_short_window  WINDOW=64, STRIDE=32 (세그먼트 수 증가)
+  ⑦ koelectra_mamba_sent_window   문장 단위 의미 보존 분할 (강력 추천)
 
-### 5-1. 기본 평가 지표
-
-입력 1개(씬 1개)에 대한 출력값이 정답 레이블 벡터와 얼마나 일치하는지를 기준으로 평가한다. threshold=0.5 기준으로 이진화한 뒤 아래 지표를 계산한다.
-
-| 지표 | 수식 | 의미 |
-|---|---|---|
-| **Subset Accuracy (Exact Match)** | 예측 벡터 == 정답 벡터인 샘플 수 / 전체 | 10개 레이블을 모두 정확히 맞춘 씬의 비율 (가장 엄격) |
-| Micro F1 | 전체 TP/FP/FN 합산 후 F1 | 클래스 불균형에 강함, 전체 성능 대표 |
-| Macro F1 | 클래스별 F1의 단순 평균 | 희귀 클래스(Fear, Disgust) 성능 반영 |
-| Hamming Loss | 잘못 예측한 레이블 수 / 전체 레이블 수 | 낮을수록 좋음, 부분 정답 반영 |
-
-**주요 보고 지표:** Subset Accuracy (메인), Micro F1 (보조), Hamming Loss (보조)
-
-### 5-2. 스트리밍 동작 정성 평가
-
-추론 시 매 세그먼트마다 출력을 기록하여, 세그먼트가 누적될수록 분류 확신도(Sigmoid 출력값)가 정답 방향으로 수렴하는지 확인한다.
-
-- seg₁ 출력 확신도 vs seg_N 출력 확신도 비교
-- 틀린 예측이 발생하는 구간 분석 (초반부 세그먼트에서의 오류 비율)
+[최종 목표] ──────────────────────────────────────────────────────────
+  Mamba 결합 모델이 KoELECTRA Only(0.8132)를 초과하는 성능 달성
+```
 
 ---
 
-## 6. Ablation 실험
+## 6. 성능 목표 및 평가 기준
 
-| # | 실험 | 변경 조건 | 목적 |
-|---|---|---|---|
-| A | Baseline (하한선) | 메모리 없음, 마지막 세그먼트만 분류 | 메모리 유무의 성능 차이 확인 |
-| B | Fine Memory만 사용 | CM 제거, FM만 유지 (r=3) | 압축 메모리의 기여도 측정 |
-| **C** | **제안 모델 (Full)** | **FM(r=3) + CM(k=4) + 1D Conv** | **메인 실험** |
-| D | 압축 함수 비교 | Mean Pooling vs 1D Conv | 1D Conv의 우위 검증 |
-| E | k Ablation | k = 1, 2, 4, 8 | 최적 슬롯 수 탐색 |
+| 지표 | 현재 최고 (기준선) | 목표 |
+|------|-------------------|------|
+| Macro F1 | 0.8132 (KoELECTRA Only) | **0.85 이상** |
+| 피싱 클래스 F1 평균 | (0.928 + 0.898) / 2 = 0.913 | 0.93 이상 |
+| 일반 클래스 F1 평균 | (0.770 + 0.651 + 0.820) / 3 = 0.747 | 0.80 이상 |
 
----
-
-## 7. 실험 로드맵
-
-| 단계 | 작업 | 목표 산출물 |
-|---|---|---|
-| Day 1 | 데이터 전처리 | 씬 단위 multi-hot 변환 완료, 세그먼트 생성 확인 |
-| Day 2 | Baseline(A) 학습 | 하한선 성능 수치 확보 |
-| Day 3 | 제안 모델(C) 학습 | Subset Accuracy, Micro F1 측정 |
-| Day 4 | Baseline vs 제안 모델 비교 | 메모리 효과 정량 확인 |
-| Day 5 | Ablation (D, E) | 최적 압축 함수 및 k 결정 |
-| Day 6 | 스트리밍 정성 분석 | 세그먼트별 확신도 수렴 그래프 |
-| Day 7+ | 인코더 교체 (KoELECTRA) | 한국어 데이터로 동일 실험 재현 |
+- **주요 평가 지표**: Macro F1 (클래스 불균형 고려)
+- **비교 기준**: Test Set (n=257)
+- **체크포인트 선정**: Validation Macro F1 기준 best 모델 저장
 
 ---
 
-## 8. 언어 확장 계획 (한국어)
+## 7. 실험별 코드 위치 요약
 
-MELD 실험에서 검증된 아키텍처를 그대로 유지하고, 인코더(토큰 임베딩 레이어)만 교체하여 한국어 데이터에 적용한다. `pooler_output` 차원이 두 모델 모두 768로 동일하므로 Projection 레이어 이후의 모든 구성 요소는 수정 없이 재사용 가능하다.
-
-| 구성 요소 | 영어 실험 | 한국어 실험 |
-|---|---|---|
-| 인코더 | `roberta-base` | `monologg/koelectra-base-v3-discriminator` |
-| Projection 이후 모듈 | - | 동일 (변경 없음) |
-| 데이터셋 | MELD (Friends) | AI Hub 한국어 SNS 멀티턴 대화 |
-| pooler_output 차원 | 768 | 768 (동일) |
+```
+models/classifier/experiments/
+├── koelectra_phishing5/              ✅ 완료 (기준선)
+├── koelectra_mamba_phishing5/        ✅ 완료
+├── koelectra_mamba_hce_ordinal/      ✅ 완료 (HCE+Ordinal)
+├── koelectra_mamba_freeze_init/      🔄 진행 예정 (실험 A)
+├── koelectra_mamba_diff_lr/          🔄 진행 예정 (실험 B)
+├── koelectra_mamba_short_window/     📋 계획 (실험 C)
+└── koelectra_mamba_sent_window/      📋 계획 (실험 D)
+```
