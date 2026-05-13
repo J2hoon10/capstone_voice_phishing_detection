@@ -51,7 +51,7 @@ MAMBA_CONFIG = {
     "D_STATE": 16,
     "D_CONV": 4,
     "EXPAND": 2,
-    "NUM_LAYERS": 2,
+    "NUM_LAYERS": 1,
     "DROPOUT": 0.1,
 }
 
