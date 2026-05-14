@@ -1,0 +1,5 @@
+{
+  "checkpoint_path": "/home/data/capstone_voice_phishing_detection/models/classifier/experiments/roberta_mamba_short_window_freeze_init/checkpoints/roberta_mamba_short_window_freeze_init_20260514_152715_best.pt",
+  "best_macro_f1": 0.9451473173046594,
+  "run_id": "20260514_152715"
+}
