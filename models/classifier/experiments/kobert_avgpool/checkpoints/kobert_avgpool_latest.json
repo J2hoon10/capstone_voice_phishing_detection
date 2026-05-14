@@ -1,0 +1,5 @@
+{
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\kobert_avgpool\\checkpoints\\kobert_avgpool_20260514_223210_best.pt",
+  "best_macro_f1": 0.9359273341453933,
+  "run_id": "20260514_223210"
+}
