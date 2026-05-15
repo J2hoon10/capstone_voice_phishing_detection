@@ -6,6 +6,7 @@ from threading import Lock
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 
 from config import CONFIG
+from five_label_inference import FiveLabelVoicePhishingDetector
 from inference import VoicePhishingDetector
 
 
@@ -24,11 +25,17 @@ def _get_detector() -> VoicePhishingDetector:
     with _detector_lock:
         if _detector is not None:
             return _detector
-        model_path = CONFIG["MODEL_PATH"]
-        if not Path(model_path).exists():
+        model_kind = CONFIG.get("MODEL_KIND", "legacy")
+        model_path = os.getenv("FIVE_LABEL_MODEL_PATH") if model_kind == "roberta_avgpool_5" else CONFIG["MODEL_PATH"]
+        if model_kind == "roberta_avgpool_5" and not model_path:
+            model_path = None
+        elif model_path and not Path(model_path).exists():
             raise RuntimeError(f"model file not found: {model_path}")
         try:
-            _detector = VoicePhishingDetector(model_path=model_path, device=CONFIG["DEVICE"])
+            if model_kind == "roberta_avgpool_5":
+                _detector = FiveLabelVoicePhishingDetector(model_path=model_path, device=CONFIG["DEVICE"])
+            else:
+                _detector = VoicePhishingDetector(model_path=model_path, device=CONFIG["DEVICE"])
             return _detector
         except Exception as exc:
             _detector_error = str(exc)
@@ -47,11 +54,13 @@ def _startup() -> None:
 @app.get("/health")
 def health() -> dict:
     model_loaded = _detector is not None
+    model_kind = CONFIG.get("MODEL_KIND", "legacy")
     return {
         "status": "ok" if model_loaded else "degraded",
         "model_loaded": model_loaded,
         "device": CONFIG["DEVICE"],
-        "model_path": CONFIG["MODEL_PATH"],
+        "model_kind": model_kind,
+        "model_path": os.getenv("FIVE_LABEL_MODEL_PATH") if model_kind == "roberta_avgpool_5" else CONFIG["MODEL_PATH"],
         "error": _detector_error,
     }
 
@@ -86,4 +95,3 @@ async def predict(
                 os.remove(temp_path)
             except OSError:
                 pass
-

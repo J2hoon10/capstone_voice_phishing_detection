@@ -4,7 +4,9 @@ services:
       context: ./models/classifier
     container_name: phishing-classifier
     environment:
-      MODEL_PATH: /app/weights/student_best.pt
+      MODEL_PATH: ${MODEL_PATH:-/app/weights/student_best.pt}
+      CLASSIFIER_MODEL_KIND: ${CLASSIFIER_MODEL_KIND:-legacy}
+      FIVE_LABEL_MODEL_PATH: ${FIVE_LABEL_MODEL_PATH:-}
       CLASSIFIER_DEVICE: ${CLASSIFIER_DEVICE:-cuda}
       WHISPER_MODEL_SIZE: ${WHISPER_MODEL_SIZE:-Systran/faster-whisper-base}
     volumes:

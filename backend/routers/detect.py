@@ -51,12 +51,13 @@ async def detect_audio(
     max_risk_score = float(prediction.get("max_risk_score", 0.0))
     warning_level = _warning_level(max_risk_score)
     dangerous_segment = prediction.get("dangerous_segment", "")
+    pred_label = prediction.get("pred_label")
 
     try:
         guidance_response = await guidance_client.get_guidance(
             risk_score=max_risk_score,
             warning_level=warning_level,
-            text=dangerous_segment,
+            text=f"{pred_label or ''}\n{dangerous_segment}".strip(),
         )
     except Exception:
         guidance_response = None
@@ -66,8 +67,11 @@ async def detect_audio(
         is_phishing=bool(prediction.get("is_phishing", False)),
         max_risk_score=max_risk_score,
         dangerous_segment=dangerous_segment,
+        pred_label_id=prediction.get("pred_label_id"),
+        pred_label=pred_label,
+        confidence=prediction.get("confidence"),
+        class_probs=prediction.get("class_probs"),
         warning_level=warning_level,
         guidance=guidance_response,
         raw=prediction,
     )
-

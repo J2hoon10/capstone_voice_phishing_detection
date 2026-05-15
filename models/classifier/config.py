@@ -29,6 +29,7 @@ DEFAULT_MODEL_PATH = BASE_DIR / "weights" / "student_best.pt"
 
 CONFIG = {
     "DEVICE": os.getenv("CLASSIFIER_DEVICE", "cuda" if torch.cuda.is_available() else "cpu"),
+    "MODEL_KIND": os.getenv("CLASSIFIER_MODEL_KIND", "legacy"),
     "BASE_MODEL_NAME": os.getenv("BASE_MODEL_NAME", "neavo/modern_bert_multilingual"),
     "NUM_LABELS": _get_env_int("NUM_LABELS", 2),
     "MAX_LENGTH": _get_env_int("MAX_LENGTH", 1024),
@@ -46,4 +47,3 @@ CONFIG = {
         }
     },
 }
-

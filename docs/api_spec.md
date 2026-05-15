@@ -13,6 +13,7 @@
   "status": "ok|degraded",
   "model_loaded": true,
   "device": "cuda",
+  "model_kind": "legacy|roberta_avgpool_5",
   "model_path": "/app/weights/student_best.pt",
   "error": null
 }
@@ -34,6 +35,16 @@
   "is_phishing": true,
   "max_risk_score": 87.3,
   "dangerous_segment": "계좌 동결 처리를 위해...",
+  "pred_label_id": 3,
+  "pred_label": "수사기관 사칭형",
+  "confidence": 0.92,
+  "class_probs": {
+    "상품 가입 및 해지": 0.01,
+    "이체 출금 대출서비스": 0.02,
+    "잔고 및 거래내역": 0.01,
+    "수사기관 사칭형": 0.92,
+    "대출 사기형": 0.04
+  },
   "filename": "sample.wav"
 }
 ```
@@ -110,6 +121,16 @@
   "is_phishing": true,
   "max_risk_score": 83.4,
   "dangerous_segment": "...",
+  "pred_label_id": 3,
+  "pred_label": "수사기관 사칭형",
+  "confidence": 0.92,
+  "class_probs": {
+    "상품 가입 및 해지": 0.01,
+    "이체 출금 대출서비스": 0.02,
+    "잔고 및 거래내역": 0.01,
+    "수사기관 사칭형": 0.92,
+    "대출 사기형": 0.04
+  },
   "warning_level": "WARNING",
   "guidance": { "..." },
   "raw": { "classifier 원본 응답" }
