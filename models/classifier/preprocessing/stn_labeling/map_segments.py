@@ -6,6 +6,13 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+_PUNCT_RE = re.compile(r"[^\uAC00-\uD7A3a-zA-Z0-9\s]")
+
+
+def clean_text(text: str) -> str:
+    cleaned = _PUNCT_RE.sub("", text)
+    return re.sub(r" +", " ", cleaned).strip()
+
 try:
     from transformers import AutoTokenizer
 except ImportError:
@@ -32,7 +39,7 @@ def map_conversation(sentences: list[dict], tokenizer, window_size: int, stride:
     full_text = ""
     for s in sentences:
         start = len(full_text)
-        full_text += s["sentence"]
+        full_text += clean_text(s["sentence"])
         end = len(full_text)
         char_spans.append((start, end, s["risk"]))
         full_text += SEP
@@ -47,6 +54,7 @@ def map_conversation(sentences: list[dict], tokenizer, window_size: int, stride:
         truncation=False,
     )
     offsets: list[tuple[int, int]] = encoding["offset_mapping"]
+    token_strings: list[str] = tokenizer.convert_ids_to_tokens(encoding["input_ids"])
 
     # Assign risk to each token based on character span overlap
     token_risks: list[int] = []
@@ -61,16 +69,28 @@ def map_conversation(sentences: list[dict], tokenizer, window_size: int, stride:
                 break
         token_risks.append(risk)
 
-    # Apply sliding window
+    # Apply sliding window with word-boundary alignment
     n = len(token_risks)
     segment_risks: list[int] = []
     pos = 0
     while pos < n:
-        window = token_risks[pos: pos + window_size]
-        segment_risks.append(max(window))
-        if pos + window_size >= n:
+        # 윈도우 끝 위치: 단어 경계까지 확장
+        end = min(pos + window_size, n) - 1
+        while end + 1 < n and token_strings[end + 1].startswith("##"):
+            end += 1
+
+        segment_risks.append(max(token_risks[pos: end + 1]))
+
+        if end + 1 >= n:
             break
-        pos += stride
+
+        # stride 이동 후 단어 시작 위치로 정렬
+        next_pos = pos + stride
+        while next_pos < n and token_strings[next_pos].startswith("##"):
+            next_pos += 1
+        if next_pos >= n:
+            break
+        pos = next_pos
 
     return segment_risks
 
@@ -98,8 +118,8 @@ def main() -> None:
         default="monologg/koelectra-base-v3-discriminator",
         help="토크나이저 (학습 모델과 동일해야 함)",
     )
-    parser.add_argument("--window-size", type=int, default=128)
-    parser.add_argument("--stride", type=int, default=100)
+    parser.add_argument("--window-size", type=int, default=64)
+    parser.add_argument("--stride", type=int, default=32)
     args = parser.parse_args()
 
     print(f"[INFO] 토크나이저 로드: {args.model_name}")

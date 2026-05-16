@@ -1,0 +1,701 @@
+﻿id,segment_risks,label,category,source
+normal_aug_0001,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0002,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0003,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0004,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0005,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0006,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0007,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0008,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0009,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0010,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0011,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0012,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0013,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0014,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0015,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0016,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0017,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0018,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0019,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0020,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0021,[1],0,A,normal_combined
+normal_aug_0022,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0023,[1],0,A,normal_combined
+normal_aug_0024,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0025,[1],0,A,normal_combined
+normal_aug_0026,"[1, 1]",0,A,normal_combined
+normal_aug_0027,[1],0,A,normal_combined
+normal_aug_0028,"[1, 1]",0,A,normal_combined
+normal_aug_0029,[1],0,A,normal_combined
+normal_aug_0030,"[1, 1]",0,A,normal_combined
+normal_aug_0031,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0032,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0033,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0034,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0035,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0036,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0037,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0038,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0039,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0040,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0041,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0042,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0043,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0044,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0045,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0046,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0047,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0048,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0049,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0050,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0051,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0052,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0053,"[1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0054,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0055,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0056,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0057,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0058,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0059,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0060,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0061,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0062,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0063,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0064,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0065,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0066,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0067,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0068,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0069,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0070,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0071,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0072,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0073,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0074,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0075,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0076,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0077,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0078,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0079,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0080,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0081,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0082,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0083,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0084,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0085,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0086,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0087,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0088,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0089,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0090,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0091,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0092,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0093,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0094,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0095,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0096,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0097,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0098,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0099,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0100,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0101,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0102,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0103,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0104,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0105,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0106,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0107,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0108,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0109,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0110,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0111,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0112,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0113,"[1, 1]",0,B,normal_combined
+normal_aug_0114,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0115,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0116,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0117,"[1, 1]",0,B,normal_combined
+normal_aug_0118,"[1, 1]",0,B,normal_combined
+normal_aug_0119,"[1, 1]",0,B,normal_combined
+normal_aug_0120,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0121,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0122,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0123,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0124,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0125,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0126,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0127,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0128,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0129,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0130,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0131,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0132,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0133,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0134,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0135,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0136,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0137,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0138,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0139,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0140,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0141,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0142,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0143,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0144,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0145,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0146,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0147,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0148,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0149,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0150,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0151,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0152,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0153,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0154,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0155,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0156,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0157,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0158,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0159,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0160,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0161,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0162,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0163,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0164,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0165,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0166,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0167,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0168,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0169,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0170,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0171,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0172,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0173,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0174,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0175,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0176,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0177,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0178,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0179,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0180,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0181,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0182,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0183,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0184,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0185,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0186,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0187,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0188,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0189,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0190,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0191,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0192,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0193,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0194,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0195,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0196,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0197,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0198,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0199,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0200,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0201,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0202,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0203,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0204,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0205,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0206,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0207,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0208,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0209,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0210,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0211,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0212,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0213,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0214,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0215,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0216,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0217,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0218,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0219,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0220,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0221,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0222,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0223,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0224,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0225,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0226,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0227,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0228,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0229,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0230,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0231,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0232,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0233,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0234,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0235,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0236,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0237,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0238,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0239,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0240,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0241,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0242,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0243,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0244,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0245,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0246,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0247,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0248,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0249,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0250,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0251,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0252,"[1, 1]",0,B,normal_combined
+normal_aug_0253,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0254,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0255,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0256,"[1, 1]",0,B,normal_combined
+normal_aug_0257,"[1, 1]",0,B,normal_combined
+normal_aug_0258,"[1, 1]",0,B,normal_combined
+normal_aug_0259,"[1, 1]",0,B,normal_combined
+normal_aug_0260,"[1, 1]",0,B,normal_combined
+normal_aug_0261,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0262,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0263,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0264,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0265,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0266,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0267,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0268,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0269,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0270,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0271,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0272,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0273,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0274,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0275,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0276,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0277,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0278,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0279,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0280,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0281,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0282,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0283,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0284,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0285,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0286,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0287,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0288,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0289,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0290,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0291,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0292,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0293,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0294,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0295,"[1, 1]",0,B,normal_combined
+normal_aug_0296,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0297,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0298,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0299,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0300,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0301,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0302,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0303,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0304,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0305,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0306,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0307,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0308,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0309,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0310,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0311,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0312,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0313,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0314,"[1, 1]",0,B,normal_combined
+normal_aug_0315,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0316,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0317,"[1, 1]",0,B,normal_combined
+normal_aug_0318,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0319,"[1, 1]",0,B,normal_combined
+normal_aug_0320,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0321,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0322,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0323,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0324,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0325,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0326,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0327,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0328,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0329,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0330,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0331,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0332,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0333,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0334,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0335,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0336,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0337,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0338,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0339,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0340,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0341,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0342,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0343,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0344,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0345,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0346,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0347,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0348,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0349,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0350,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0351,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0352,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0353,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0354,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0355,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0356,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0357,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0358,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0359,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0360,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0361,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0362,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0363,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0364,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0365,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0366,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0367,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0368,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0369,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0370,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0371,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0372,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0373,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0374,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0375,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0376,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0377,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0378,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0379,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0380,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0381,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0382,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0383,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0384,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0385,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0386,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0387,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0388,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0389,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0390,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0391,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0392,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0393,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0394,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0395,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0396,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0397,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0398,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0399,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0400,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0401,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0402,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0403,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0404,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0405,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0406,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0407,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0408,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0409,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0410,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0411,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0412,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0413,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0414,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0415,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0416,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0417,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0418,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0419,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0420,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0421,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0422,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0423,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0424,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0425,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0426,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0427,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0428,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0429,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0430,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0431,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0432,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0433,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0434,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0435,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0436,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0437,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0438,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0439,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0440,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0441,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0442,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0443,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0444,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0445,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0446,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0447,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0448,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0449,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0450,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0451,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0452,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0453,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0454,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0455,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0456,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0457,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0458,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0459,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0460,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0461,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0462,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0463,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0464,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0465,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0466,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0467,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0468,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0469,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0470,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0471,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0472,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0473,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0474,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0475,"[1, 1]",0,B,normal_combined
+normal_aug_0476,"[1, 1]",0,B,normal_combined
+normal_aug_0477,"[1, 1]",0,B,normal_combined
+normal_aug_0478,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0479,"[1, 1]",0,B,normal_combined
+normal_aug_0480,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0481,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0482,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0483,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0484,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0485,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0486,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0487,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0488,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0489,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0490,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0491,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0492,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0493,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0494,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0495,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0496,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0497,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0498,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0499,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0500,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0501,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0502,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0503,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0504,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0505,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0506,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0507,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0508,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0509,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0510,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0511,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0512,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0513,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0514,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0515,"[1, 1]",0,B,normal_combined
+normal_aug_0516,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0517,"[1, 1]",0,B,normal_combined
+normal_aug_0518,"[1, 1]",0,B,normal_combined
+normal_aug_0519,"[1, 1]",0,B,normal_combined
+normal_aug_0520,"[1, 1]",0,B,normal_combined
+normal_aug_0521,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0522,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0523,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0524,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0525,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0526,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0527,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0528,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0529,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0530,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0531,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0532,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0533,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0534,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0535,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0536,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0537,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0538,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0539,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0540,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0541,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0542,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0543,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0544,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0545,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0546,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0547,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0548,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0549,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0550,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0551,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0552,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0553,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0554,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0555,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0556,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0557,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0558,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0559,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0560,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0561,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0562,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0563,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0564,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0565,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0566,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0567,"[1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0568,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0569,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0570,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0571,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0572,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0573,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0574,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0575,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0576,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0577,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0578,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0579,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0580,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0581,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0582,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0583,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0584,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0585,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0586,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0587,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0588,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0589,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0590,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0591,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0592,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0593,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0594,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0595,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0596,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0597,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0598,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0599,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0600,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0601,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0602,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0603,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0604,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0605,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0606,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0607,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0608,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0609,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0610,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0611,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0612,"[1, 1]",0,B,normal_combined
+normal_aug_0613,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0614,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0615,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0616,"[1, 1]",0,B,normal_combined
+normal_aug_0617,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0618,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0619,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0620,"[1, 1]",0,B,normal_combined
+normal_aug_0621,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0622,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0623,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0624,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0625,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0626,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0627,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0628,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0629,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0630,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0631,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0632,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0633,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0634,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0635,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0636,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0637,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0638,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0639,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0640,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0641,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0642,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0643,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0644,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0645,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0646,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0647,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0648,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0649,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0650,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0651,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0652,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0653,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0654,"[1, 1]",0,B,normal_combined
+normal_aug_0655,"[1, 1]",0,B,normal_combined
+normal_aug_0656,"[1, 1]",0,B,normal_combined
+normal_aug_0657,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0658,"[1, 1]",0,B,normal_combined
+normal_aug_0659,"[1, 1]",0,B,normal_combined
+normal_aug_0660,"[1, 1]",0,B,normal_combined
+normal_aug_0661,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0662,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0663,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0664,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0665,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0666,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0667,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0668,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0669,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0670,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0671,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0672,"[1, 1]",0,B,normal_combined
+normal_aug_0673,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0674,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0675,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0676,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0677,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0678,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0679,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0680,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0681,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0682,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0683,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0684,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0685,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0686,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0687,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0688,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0689,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0690,"[1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0691,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0692,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0693,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0694,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0695,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0696,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0697,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0698,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0699,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0700,"[1, 1, 1, 1]",0,B,normal_combined
