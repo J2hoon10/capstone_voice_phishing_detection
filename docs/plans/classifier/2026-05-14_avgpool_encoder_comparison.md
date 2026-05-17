@@ -62,6 +62,114 @@
 | KoELECTRA + Mamba | monologg/koelectra-base-v3 | Mamba 1-depth (short_window_freeze_init) | 20260514_115731 | - |
 | RoBERTa + Mamba | klue/roberta-base | Mamba 1-depth (short_window_freeze_init) | 20260514_152715 | - |
 
+### Mamba 적용 모델 구조 (RoBERTa + Mamba 계열)
+
+> 이 구조는 `roberta_mamba_short_window_freeze_init/model.py` 및  
+> `streaming_belief_v5/model.py`의 실제 코드를 기반으로 작성되었다.  
+> `koelectra_mamba_short_window_freeze_init`도 인코더만 다를 뿐 구조는 동일하다.
+
+#### 전체 데이터 흐름
+
+```
+[입력 대화 텍스트]
+        │
+        ▼
+┌─────────────────────────────────────────────┐
+│  슬라이딩 윈도우 분할                          │
+│  window=64 tokens, stride=32 tokens          │
+│  → 세그먼트 시퀀스 (B, max_S, 64)             │
+└─────────────────────────────────────────────┘
+        │ 세그먼트 t = 0, 1, ..., T-1 순차 처리
+        ▼
+┌─────────────────────────────────────────────┐
+│  RoBERTa 인코더 (klue/roberta-base)           │
+│  input_ids (valid_B, 64) → last_hidden_state  │
+│  출력: (valid_B, 64, 768)                     │
+└─────────────────────────────────────────────┘
+        │
+        ▼
+┌─────────────────────────────────────────────┐
+│  Attention-Weighted Pooling                  │
+│  [CLS](idx 0), [SEP](idx -1) 제외            │
+│  e = W_a(tanh(W_b(H_tokens)))               │
+│  → softmax → 가중합                           │
+│  출력: (B, 768) — 세그먼트 벡터 x_t           │
+└─────────────────────────────────────────────┘
+        │ T개 세그먼트 누적
+        ▼
+   x_stacked: (B, T, 768)
+        │
+        ├────────────────────────────────────────
+        │                                       │
+        ▼                                       ▼
+┌────────────────────┐              ┌────────────────────┐
+│  Auxiliary Head    │              │  Mamba SSM (1-layer)│
+│  Linear(768 → 2)   │              │  D_STATE=16         │
+│  출력: (B, T, 2)   │              │  D_CONV=4, EXPAND=2 │
+│  → OrdinalLoss     │              │  + Dropout(0.1)     │
+│  (세그먼트 위험도)  │              │  출력: y (B, T, 768)│
+└────────────────────┘              └────────────────────┘
+  (보조 손실에만 사용)                       │
+                                            ▼
+                             ┌──────────────────────────────┐
+                             │  Hierarchical Classification  │
+                             │  Head (각 타임스텝 t에 적용)   │
+                             │                               │
+                             │  LayerNorm(768)               │
+                             │  → Linear(768→64) → GELU      │
+                             │  → Dropout(0.1)               │
+                             │        │                      │
+                             │   ┌────┴────┐                 │
+                             │   ▼         ▼                 │
+                             │ super    normal  phishing      │
+                             │ (→2)     (→3)    (→2)         │
+                             └──────────────────────────────┘
+                                            │
+                                    last state 추출
+                                    idx = num_segments - 1
+                                            │
+                                            ▼
+                             ┌──────────────────────────────┐
+                             │  계층적 확률 조합 (5-class)    │
+                             │                               │
+                             │  P_super = softmax(super)     │
+                             │  P_normal = softmax(normal)   │
+                             │  P_phish = softmax(phishing)  │
+                             │                               │
+                             │  logits_5 = concat(           │
+                             │    P_super[일반] × P_normal,  │
+                             │    P_super[피싱] × P_phish    │
+                             │  )  → log(logits_5 + 1e-8)   │
+                             └──────────────────────────────┘
+                                            │
+                                            ▼
+                                    최종 5-class 예측
+```
+
+#### 손실 함수
+
+| 손실 | 대상 | 수식 | 하이퍼파라미터 |
+|---|---|---|---|
+| **HierarchicalCrossEntropyLoss** | 메인 분류 | `L_super + λ·(L_normal + L_phishing)` | λ=0.5, Focal γ=2.0 |
+| **OrdinalRegressionLoss** | 보조 세그먼트 위험도 | Binary CE over ordinal thresholds | ignore_index=-100 |
+| **합산** | 전체 | `L_main + β·L_aux` | β: 0.5→0.1 (curriculum) |
+
+- **Focal Loss** 적용: `fw = (1 - p_t)^γ`으로 오분류 샘플에 가중치 부여
+- **β curriculum**: epoch 진행에 따라 보조 손실 가중치를 선형 감소 → 후반부에는 메인 분류 손실에 집중
+
+#### freeze_init 학습 전략
+
+```
+Epoch 1~2  : encoder 전체 freeze  →  Mamba + Head만 학습
+              (embeddings + layer[0~11] 모두 grad=False)
+
+Epoch 3~8  : encoder layer[10~11] unfreeze  →  encoder 상위 레이어 fine-tune
+              (embeddings + layer[0~9] 끝까지 freeze 유지)
+```
+
+- LR 그룹 분리: encoder 파라미터 `2e-5`, Mamba·Head 파라미터 `5e-4` (25× 차이)
+- `build_model(unfreeze_all=True)`로 optimizer에 모든 파라미터 등록 후, `requires_grad` 제어로 freeze 관리
+
 ---
 
 ## 2. 테스트 성능 통합 비교

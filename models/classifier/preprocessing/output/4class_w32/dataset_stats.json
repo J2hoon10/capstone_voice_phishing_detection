@@ -1,0 +1,54 @@
+{
+  "total": 4034,
+  "splits": {
+    "train": 2420,
+    "val": 806,
+    "test": 808
+  },
+  "class_distribution": {
+    "total": {
+      "0": 1000,
+      "1": 1000,
+      "2": 1017,
+      "3": 1017
+    },
+    "train": {
+      "3": 610,
+      "1": 600,
+      "0": 600,
+      "2": 610
+    },
+    "val": {
+      "3": 203,
+      "0": 200,
+      "2": 203,
+      "1": 200
+    },
+    "test": {
+      "2": 204,
+      "1": 200,
+      "0": 200,
+      "3": 204
+    }
+  },
+  "source_distribution": {
+    "normal_asr_orig": 200,
+    "normal_asr_llm": 1200,
+    "normal_clean_llm": 600,
+    "phishing_original": 513,
+    "phishing_asr_llm": 1013,
+    "phishing_clean_llm": 508
+  },
+  "category_distribution": {
+    "상담 대화": 1000,
+    "일상 대화": 1000,
+    "대출 사기형": 1017,
+    "수사기관 사칭형": 1017
+  },
+  "label_names": {
+    "0": "상담 대화",
+    "1": "일상 대화",
+    "2": "대출 사기형",
+    "3": "수사기관 사칭형"
+  }
+}

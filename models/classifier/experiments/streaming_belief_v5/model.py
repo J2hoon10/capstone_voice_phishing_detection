@@ -34,7 +34,7 @@ IGNORED_LOAD_REPORT_PREFIXES = (
 def load_encoder_backbone(encoder_name: str):
     buffer = io.StringIO()
     with redirect_stdout(buffer), redirect_stderr(buffer):
-        encoder = AutoModel.from_pretrained(encoder_name)
+        encoder = AutoModel.from_pretrained(encoder_name, trust_remote_code=True)
 
     noteworthy_rows = []
     for line in buffer.getvalue().splitlines():

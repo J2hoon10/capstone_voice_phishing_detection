@@ -1,0 +1,213 @@
+[
+  {
+    "type": "start",
+    "run_id": "20260517_210247",
+    "timestamp": "2026-05-17 21:02:47",
+    "dataset": "4class",
+    "data_dir": "/home/j2hoon10/capstone_voice_phishing_detection/models/classifier/preprocessing/output/4class"
+  },
+  {
+    "type": "step",
+    "global_step": 200,
+    "epoch": 1,
+    "loss": 0.5577234379947186,
+    "anisotropy": 0.7455922088027,
+    "lr": 6.944444444444445e-06,
+    "beta": 0.5,
+    "elapsed": 29.20352602005005
+  },
+  {
+    "type": "step",
+    "global_step": 400,
+    "epoch": 1,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 9.984804411784717e-06,
+    "beta": 0.5,
+    "elapsed": 77.18250322341919
+  },
+  {
+    "type": "step",
+    "global_step": 600,
+    "epoch": 1,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 9.882482608435924e-06,
+    "beta": 0.5,
+    "elapsed": 128.52690625190735
+  },
+  {
+    "type": "epoch",
+    "epoch": 1,
+    "beta": 0.5,
+    "encoder_frozen": true,
+    "train_loss": NaN,
+    "train_anisotropy": NaN,
+    "val_loss": NaN,
+    "val_acc": 0.25,
+    "val_macro_f1": 0.1,
+    "val_weighted_f1": 0.1,
+    "val_anisotropy": NaN,
+    "per_class_f1": {
+      "상담 대화": 0.4,
+      "일상 대화": 0.0,
+      "대출 사기형": 0.0,
+      "수사기관 사칭형": 0.0
+    },
+    "is_best": true,
+    "global_step": 600
+  },
+  {
+    "type": "step",
+    "global_step": 800,
+    "epoch": 2,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 9.685632835815519e-06,
+    "beta": 0.44285714285714284,
+    "elapsed": 238.9682276248932
+  },
+  {
+    "type": "step",
+    "global_step": 1000,
+    "epoch": 2,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 9.398066230746645e-06,
+    "beta": 0.44285714285714284,
+    "elapsed": 304.54619002342224
+  },
+  {
+    "type": "step",
+    "global_step": 1200,
+    "epoch": 2,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 9.025350265637816e-06,
+    "beta": 0.44285714285714284,
+    "elapsed": 366.53382635116577
+  },
+  {
+    "type": "epoch",
+    "epoch": 2,
+    "beta": 0.44285714285714284,
+    "encoder_frozen": true,
+    "train_loss": NaN,
+    "train_anisotropy": NaN,
+    "val_loss": NaN,
+    "val_acc": 0.25,
+    "val_macro_f1": 0.1,
+    "val_weighted_f1": 0.1,
+    "val_anisotropy": NaN,
+    "per_class_f1": {
+      "상담 대화": 0.4,
+      "일상 대화": 0.0,
+      "대출 사기형": 0.0,
+      "수사기관 사칭형": 0.0
+    },
+    "is_best": false,
+    "global_step": 1200
+  },
+  {
+    "type": "step",
+    "global_step": 1400,
+    "epoch": 3,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 8.574700958675345e-06,
+    "beta": 0.38571428571428573,
+    "elapsed": 497.57839179039
+  },
+  {
+    "type": "step",
+    "global_step": 1600,
+    "epoch": 3,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 8.054843167120827e-06,
+    "beta": 0.38571428571428573,
+    "elapsed": 565.0526969432831
+  },
+  {
+    "type": "step",
+    "global_step": 1800,
+    "epoch": 3,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 7.475841668524268e-06,
+    "beta": 0.38571428571428573,
+    "elapsed": 636.1723732948303
+  },
+  {
+    "type": "epoch",
+    "epoch": 3,
+    "beta": 0.38571428571428573,
+    "encoder_frozen": true,
+    "train_loss": NaN,
+    "train_anisotropy": NaN,
+    "val_loss": NaN,
+    "val_acc": 0.25,
+    "val_macro_f1": 0.1,
+    "val_weighted_f1": 0.1,
+    "val_anisotropy": NaN,
+    "per_class_f1": {
+      "상담 대화": 0.4,
+      "일상 대화": 0.0,
+      "대출 사기형": 0.0,
+      "수사기관 사칭형": 0.0
+    },
+    "is_best": false,
+    "global_step": 1800
+  },
+  {
+    "type": "step",
+    "global_step": 2000,
+    "epoch": 4,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 6.848906300228047e-06,
+    "beta": 0.32857142857142857,
+    "elapsed": 765.5724201202393
+  },
+  {
+    "type": "step",
+    "global_step": 2200,
+    "epoch": 4,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 6.1861749297848685e-06,
+    "beta": 0.32857142857142857,
+    "elapsed": 831.5857329368591
+  },
+  {
+    "type": "step",
+    "global_step": 2400,
+    "epoch": 4,
+    "loss": NaN,
+    "anisotropy": NaN,
+    "lr": 5.500478458120493e-06,
+    "beta": 0.32857142857142857,
+    "elapsed": 902.0245637893677
+  },
+  {
+    "type": "epoch",
+    "epoch": 4,
+    "beta": 0.32857142857142857,
+    "encoder_frozen": true,
+    "train_loss": NaN,
+    "train_anisotropy": NaN,
+    "val_loss": NaN,
+    "val_acc": 0.25,
+    "val_macro_f1": 0.1,
+    "val_weighted_f1": 0.1,
+    "val_anisotropy": NaN,
+    "per_class_f1": {
+      "상담 대화": 0.4,
+      "일상 대화": 0.0,
+      "대출 사기형": 0.0,
+      "수사기관 사칭형": 0.0
+    },
+    "is_best": false,
+    "global_step": 2400
+  }
+]

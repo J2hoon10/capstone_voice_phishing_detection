@@ -1,5 +1,5 @@
 """
-streaming_inference.py  (roberta_gru_freeze_init_4class)
+streaming_inference.py  (roberta_mamba_freeze_init_4class)
 
 대화를 윈도우 단위로 순차 누적할 때 모델 예측이 어떻게 변하는지 시각화.
 
@@ -32,7 +32,7 @@ from transformers import AutoTokenizer
 from config import ENCODER_CONFIG
 
 
-EXP_NAME = "roberta_gru_freeze_init_4class"
+EXP_NAME = "kobert_mamba_freeze_init_4class"
 LABEL_COLORS = {
     "상담 대화":      "\033[94m",   # 파랑
     "일상 대화":      "\033[92m",   # 초록
@@ -85,18 +85,18 @@ def bar(prob: float, width: int = 20) -> str:
 
 @torch.no_grad()
 def encode_window(model, seg: dict, device: torch.device) -> torch.Tensor:
-    """단일 세그먼트를 RoBERTa + AttentionWeightedPooling으로 인코딩 → (1, 1, D)"""
+    """단일 세그먼트를 RoBERTa + AttentionWeightedPooling으로 인코딩 → (1, D)"""
     ids  = torch.tensor([seg["input_ids"]],       dtype=torch.long, device=device)
     attn = torch.tensor([seg["attention_mask"]], dtype=torch.long, device=device)
     enc_dtype = next(model.encoder.parameters()).dtype
     H   = model.encoder(input_ids=ids, attention_mask=attn).last_hidden_state
     vec = model.pooling(H, attn).to(enc_dtype).float()  # (1, D)
-    return vec.unsqueeze(1)                              # (1, 1, D)
+    return vec
 
 
-def predict_from_rnn_out(model, rnn_out_last: torch.Tensor, temp: float = 1.0) -> torch.Tensor:
-    """GRU 마지막 출력 (1, H) → 4-class 확률 벡터 (CPU)"""
-    head_out       = model.head(rnn_out_last)
+def predict_from_mamba_out(model, mamba_out_last: torch.Tensor, temp: float = 1.0) -> torch.Tensor:
+    """Mamba 마지막 출력 (1, H) → 4-class 확률 벡터 (CPU)"""
+    head_out       = model.head(mamba_out_last)
     super_probs    = torch.softmax(head_out["super_logits"],    dim=-1)
     normal_probs   = torch.softmax(head_out["normal_logits"],   dim=-1)
     phishing_probs = torch.softmax(head_out["phishing_logits"], dim=-1)
@@ -173,21 +173,22 @@ def run_streaming(model, tokenizer, text: str, true_label: str | None = None,
 def run_interactive(model, tokenizer, temp_warmup: int = 8, temp_max: float = 4.0):
     """
     문장을 한 줄씩 입력받아 누적하고, 새로 생긴 윈도우만 incremental하게 처리.
-    GRU hidden state를 캐싱하여 이전 윈도우를 재계산하지 않음.
+    RoBERTa 인코딩 벡터를 캐싱하여 재인코딩을 방지.
+    Mamba는 병렬 스캔 구조상 step caching 대신 캐시된 벡터 전체를 재실행.
 
     'q' 또는 빈 줄로 종료, 'r' 입력 시 상태 초기화.
     """
     print(f"\n{'='*65}")
     print("  [인터랙티브 incremental 모드]")
-    print("  문장을 한 줄씩 입력하세요. 새 윈도우만 처리합니다 (hidden state 캐싱).")
+    print("  문장을 한 줄씩 입력하세요. 새 윈도우의 RoBERTa만 실행합니다 (벡터 캐싱).")
     print(f"  온도 스케일링: warmup={temp_warmup}  max_temp={temp_max:.1f}")
     print("  r  → 상태 초기화")
     print("  q  → 종료")
     print(f"{'='*65}\n")
 
-    accumulated:       list[str]   = []
-    hidden_state                   = None   # GRU h_n 캐시
-    processed_seg_count: int       = 0
+    accumulated:       list[str]          = []
+    encoded_cache:     list[torch.Tensor] = []   # (1, D) 인코딩 벡터 캐시
+    processed_seg_count: int              = 0
     last_probs:          torch.Tensor | None = None
 
     while True:
@@ -203,7 +204,7 @@ def run_interactive(model, tokenizer, temp_warmup: int = 8, temp_max: float = 4.
 
         if line.lower() == "r":
             accumulated.clear()
-            hidden_state        = None
+            encoded_cache.clear()
             processed_seg_count = 0
             last_probs          = None
             print("  → 상태를 초기화했습니다.\n")
@@ -226,19 +227,30 @@ def run_interactive(model, tokenizer, temp_warmup: int = 8, temp_max: float = 4.
             print(f"  (새 윈도우 없음 — 텍스트가 아직 충분하지 않습니다)\n")
             continue
 
+        # 새 세그먼트만 RoBERTa로 인코딩하여 캐시에 추가
+        for seg in new_segs:
+            encoded_cache.append(encode_window(model, seg, DEVICE))  # (1, D)
+            processed_seg_count += 1
+
         print(f"\n  누적 문장 수: {len(accumulated)}개  |  "
               f"전체 윈도우: {len(segments)}개  |  새 윈도우: {len(new_segs)}개")
         print(f"  {'윈도우':>4}  {'예측 레이블':<14}  {'확신도':>6}  확률 분포")
         print(f"  {'-'*61}")
 
-        prev_label = IDX_TO_LABEL[last_probs.argmax().item()] if last_probs is not None else None
+        # 캐시된 벡터 전체로 Mamba 실행 (새 윈도우 추가될 때마다)
+        x_stacked = torch.stack(encoded_cache, dim=1)  # (1, T, D)
+        y = x_stacked
+        for mamba, dropout in zip(model.mamba_layers, model.mamba_dropouts):
+            y = dropout(mamba(y))
 
-        for seg in new_segs:
-            processed_seg_count += 1
-            vec                  = encode_window(model, seg, DEVICE)          # (1,1,D)
-            rnn_out, hidden_state = model.rnn(vec, hidden_state)              # (1,1,H)
-            temp                 = get_temperature(processed_seg_count, temp_warmup, temp_max)
-            last_probs           = predict_from_rnn_out(model, rnn_out[:, 0, :], temp)
+        # 새 윈도우 각각의 위치에서 예측 출력
+        prev_label = IDX_TO_LABEL[last_probs.argmax().item()] if last_probs is not None else None
+        new_start  = processed_seg_count - len(new_segs)
+
+        for i in range(len(new_segs)):
+            seg_idx    = new_start + i
+            temp       = get_temperature(seg_idx + 1, temp_warmup, temp_max)
+            last_probs = predict_from_mamba_out(model, y[:, seg_idx, :], temp)
 
             pred_idx   = last_probs.argmax().item()
             pred_label = IDX_TO_LABEL[pred_idx]
@@ -246,9 +258,9 @@ def run_interactive(model, tokenizer, temp_warmup: int = 8, temp_max: float = 4.
             changed    = "◀ 변경!" if (prev_label is not None and pred_label != prev_label) else ""
             color      = LABEL_COLORS.get(pred_label, "")
 
-            print(f"  {processed_seg_count:>4}  {color}{pred_label:<14}{RESET}  {conf:>5.1%}  ", end="")
-            for i, label in enumerate(LABELS):
-                p = last_probs[i].item()
+            print(f"  {seg_idx+1:>4}  {color}{pred_label:<14}{RESET}  {conf:>5.1%}  ", end="")
+            for j, label in enumerate(LABELS):
+                p = last_probs[j].item()
                 print(f"{label[:4]}:{bar(p,8)}{p:.2f}  ", end="")
             if changed:
                 print(f"  {BOLD}{changed}{RESET}", end="")
@@ -267,7 +279,7 @@ def load_rows_by_split(split: str = "test") -> list[dict]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="순차 윈도우 스트리밍 추론 (GRU)")
+    parser = argparse.ArgumentParser(description="순차 윈도우 스트리밍 추론 (Mamba)")
     parser.add_argument("--run-id",      default=None, help="체크포인트 run_id (없으면 latest)")
     parser.add_argument("--split",       default="test", choices=["train", "val", "test"])
     parser.add_argument("--id",          default=None, help="데이터셋 내 특정 id")
@@ -285,7 +297,7 @@ def main():
     ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
     model.load_state_dict(ckpt["model_state_dict"] if isinstance(ckpt, dict) and "model_state_dict" in ckpt else ckpt)
     model.eval()
-    tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG["MODEL_NAME"])
+    tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG["MODEL_NAME"], trust_remote_code=True)
 
     if args.interactive:
         run_interactive(model, tokenizer,

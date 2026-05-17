@@ -25,7 +25,7 @@ import torch
 import torch.nn.functional as F
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from config import CHECKPOINT_DIR, DATA_DIR, DEVICE, IDX_TO_LABEL, LABELS, NUM_LABELS, MAX_SEQ_LEN
+from config import CHECKPOINT_DIR, DATA_DIR, DEVICE, IDX_TO_LABEL, LABELS, NUM_LABELS, MAX_SEQ_LEN, WINDOW_SIZE
 from dataset import build_segments
 from model import build_model
 from transformers import AutoTokenizer
@@ -211,6 +211,14 @@ def run_interactive(model, tokenizer, temp_warmup: int = 8, temp_max: float = 4.
 
         accumulated.append(line)
         full_text = " ".join(accumulated)
+
+        # 전체 누적 토큰 수가 content_size 미만이면 아직 대기
+        token_ids    = tokenizer(full_text, add_special_tokens=False)["input_ids"]
+        content_size = WINDOW_SIZE - 2
+        if len(token_ids) < content_size:
+            print(f"  (누적 {len(token_ids)}/{content_size} 토큰 — 윈도우 크기만큼 쌓이면 시작됩니다)\n")
+            continue
+
         segments  = build_segments(tokenizer, full_text)
 
         new_segs = segments[processed_seg_count:]
