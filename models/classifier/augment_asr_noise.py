@@ -163,11 +163,15 @@ def main():
     parser.add_argument("--input-llm", default=os.path.join(AUGMENTED_DIR, "llm_fewshot.csv"), help="LLM 증강 CSV")
     parser.add_argument("--output", default=os.path.join(AUGMENTED_DIR, "asr_noised.csv"), help="출력 CSV")
     parser.add_argument("--seed", type=int, default=42, help="랜덤 시드")
+    parser.add_argument("--noise-scale", type=float, default=1.0,
+                        help="노이즈 확률 배율 (0.5 = 절반, 1.0 = 원본)")
     parser.add_argument("--no-progress", action="store_true", help="진행률 표시 비활성화")
     args = parser.parse_args()
 
     with open(args.error_summary, "r", encoding="utf-8") as f:
         probs = json.load(f)
+
+    probs = {k: v * args.noise_scale for k, v in probs.items()}
 
     original_csv = os.path.join(TRANSCRIPTION_DIR, args.variant, "all.csv")
     original_rows = load_rows(original_csv)

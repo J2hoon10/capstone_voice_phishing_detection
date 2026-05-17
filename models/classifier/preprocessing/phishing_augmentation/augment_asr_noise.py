@@ -163,11 +163,24 @@ def main():
     parser.add_argument("--input-original", default="", help="원본 전사 CSV (생략 시 증강 데이터만 처리)")
     parser.add_argument("--output", default=os.path.join(AUGMENTED_DIR, "asr_noised.csv"), help="출력 CSV")
     parser.add_argument("--seed", type=int, default=42, help="랜덤 시드")
+    parser.add_argument("--noise-scale", type=float, default=1.0,
+                        help="노이즈 확률 배율 (0.5 = 절반, 1.0 = 원본)")
     parser.add_argument("--no-progress", action="store_true", help="진행률 표시 비활성화")
+    parser.add_argument(
+        "--skip-existing", action="store_true",
+        help="출력 파일에 이미 존재하는 기반 ID(asr_ 접두사 제거)는 건너뜀 (top-up용)",
+    )
+    parser.add_argument(
+        "--append", action="store_true",
+        help="출력 파일에 덧붙이기 (skip-existing과 함께 사용하면 기존 파일 유지 + 신규 행 추가)",
+    )
     args = parser.parse_args()
 
     with open(args.error_summary, "r", encoding="utf-8") as f:
         probs = json.load(f)
+
+    _noise_keys = {"substitution", "deletion", "insertion", "whitespace"}
+    probs = {k: (v * args.noise_scale if k in _noise_keys else v) for k, v in probs.items()}
 
     original_rows = load_rows(args.input_original) if args.input_original else []
     llm_rows = load_rows(args.input_llm)
@@ -175,6 +188,26 @@ def main():
     combined = original_rows + llm_rows
     if not combined:
         raise SystemExit("입력 데이터가 없습니다. --input-llm 또는 --input-original 을 확인하세요.")
+
+    # --skip-existing: 이미 처리된 기반 ID 수집 후 필터링
+    if args.skip_existing and os.path.exists(args.output):
+        existing_base_ids: set[str] = set()
+        with open(args.output, "r", encoding="utf-8-sig") as f:
+            for row in csv.DictReader(f):
+                raw_id = row.get("id", "")
+                # 형식: asr_<base_id>_<idx>  → 마지막 _숫자 제거 후 asr_ 제거
+                base = raw_id
+                if base.startswith("asr_"):
+                    base = base[4:]
+                base = base.rsplit("_", 1)[0] if base.rsplit("_", 1)[-1].isdigit() else base
+                existing_base_ids.add(base)
+        before = len(combined)
+        combined = [r for r in combined if r.get("id", "") not in existing_base_ids]
+        print(f"[skip-existing] {before}건 중 {before - len(combined)}건 건너뜀 → {len(combined)}건 처리")
+
+    if not combined:
+        print("[INFO] 신규 처리 대상 없음.")
+        return
 
     rng = random.Random(args.seed)
 
@@ -200,12 +233,25 @@ def main():
             "filename": row.get("filename", ""),
         })
 
-    with open(args.output, "w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=CSV_COLUMNS)
-        writer.writeheader()
-        writer.writerows(out_rows)
-
-    print(f"ASR 노이즈 저장: {args.output} ({len(out_rows)}건)")
+    if args.append and os.path.exists(args.output):
+        existing_out = load_rows(args.output)
+        start_idx = len(existing_out) + 1
+        # idx를 기존 건수 이후부터 부여
+        for i, row in enumerate(out_rows):
+            parts = row["id"].rsplit("_", 1)
+            row["id"] = f"{parts[0]}_{start_idx + i}"
+        all_out = existing_out + out_rows
+        with open(args.output, "w", newline="", encoding="utf-8-sig") as f:
+            writer = csv.DictWriter(f, fieldnames=CSV_COLUMNS)
+            writer.writeheader()
+            writer.writerows(all_out)
+        print(f"ASR 노이즈 추가 저장: {args.output} (+{len(out_rows)}건, 전체 {len(all_out)}건)")
+    else:
+        with open(args.output, "w", newline="", encoding="utf-8-sig") as f:
+            writer = csv.DictWriter(f, fieldnames=CSV_COLUMNS)
+            writer.writeheader()
+            writer.writerows(out_rows)
+        print(f"ASR 노이즈 저장: {args.output} ({len(out_rows)}건)")
 
 
 if __name__ == "__main__":

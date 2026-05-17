@@ -1,0 +1,1801 @@
+﻿id,segment_risks,label,category,source
+normal_aug_0001,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0002,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0003,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0004,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0005,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0006,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0007,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0008,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0009,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0010,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0011,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0012,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0013,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0014,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0015,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0016,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0017,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0018,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0019,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0020,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0021,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0022,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0023,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0024,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0025,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0026,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0027,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0028,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0029,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0030,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0031,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0032,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0033,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0034,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0035,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0036,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0037,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0038,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0041,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0042,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0043,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0044,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0046,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0047,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0048,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0049,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0050,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0051,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0052,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0053,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0054,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0055,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0056,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0057,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0058,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0059,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0060,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0061,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0063,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0064,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0065,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0066,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0067,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0068,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0069,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0070,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0072,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0073,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0074,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0075,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0076,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0077,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0078,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0079,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0080,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0081,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0082,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0083,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0084,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0085,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0086,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0087,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0088,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0089,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0090,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0091,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0092,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0093,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0094,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0095,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0096,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0097,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0098,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0099,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0100,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0101,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0102,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0103,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0104,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0105,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0106,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0107,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0108,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0109,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0110,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0111,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0112,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0113,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0114,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0115,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0116,"[1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0117,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0118,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0119,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0120,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0121,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0123,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0124,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0125,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0126,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0127,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0128,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0129,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0130,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0131,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0132,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0133,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0134,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0135,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0136,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0137,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0138,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0139,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0140,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0141,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0142,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0143,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0144,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0145,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0146,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0147,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0148,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0149,"[1, 1]",0,A,normal_combined
+normal_aug_0150,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0151,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0152,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0153,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0154,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0155,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0156,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0157,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0158,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0159,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0160,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0161,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0162,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0163,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0164,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0165,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0166,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0167,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0168,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0170,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0171,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0172,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0173,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0174,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0175,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0176,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0177,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0178,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0179,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0180,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0181,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0182,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0183,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0184,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0185,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0186,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0187,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0188,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0189,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0190,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0191,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0192,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0193,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0194,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0195,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0196,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0197,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0198,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0199,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0200,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0201,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0202,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0203,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0204,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0205,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0206,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0207,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0208,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0209,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0210,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0211,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0212,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0213,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0214,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0215,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0216,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0217,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0218,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0219,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0220,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0221,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0222,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0223,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0224,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0225,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0226,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0227,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0228,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0229,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0230,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0231,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0232,"[1, 1]",0,A,normal_combined
+normal_aug_0233,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0234,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0235,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0236,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0237,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0239,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0240,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0241,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0242,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0243,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0244,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0245,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0246,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0247,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0248,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0249,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0250,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0251,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0252,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0253,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0254,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0255,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0256,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0257,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0258,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0259,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0260,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0261,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0262,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0263,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0264,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0265,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0266,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0267,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0268,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0269,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0270,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0271,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0272,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0273,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0274,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0275,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0276,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0277,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0278,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0279,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0280,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0281,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0282,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0283,"[1, 1]",0,A,normal_combined
+normal_aug_0284,"[1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0285,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0286,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0287,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0288,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0289,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0290,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0291,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0292,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0293,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0294,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0295,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0296,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0297,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0298,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0299,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0300,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0301,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0302,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0303,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0304,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0305,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0306,[1],0,B,normal_combined
+normal_aug_0307,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0308,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0309,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0310,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0311,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0312,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0313,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0314,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0315,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0316,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0317,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0318,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0319,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0320,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0321,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0322,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0323,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0324,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0325,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0326,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0327,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0328,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0329,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0330,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0331,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0332,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0333,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0334,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0335,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0336,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0337,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0338,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0339,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0340,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0341,"[1, 1]",0,B,normal_combined
+normal_aug_0342,"[1, 1]",0,B,normal_combined
+normal_aug_0343,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0344,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0345,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0346,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0347,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0348,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0349,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0350,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0351,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0352,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0353,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0354,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0355,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0356,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0357,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0358,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0360,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0361,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0362,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0363,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0364,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0365,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0366,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0367,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0368,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0369,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0370,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0371,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0372,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0373,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0374,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0375,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0376,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0377,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0378,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0379,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0380,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0381,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0382,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0383,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0384,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0385,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0386,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0387,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0389,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0390,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0391,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0392,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0393,"[1, 1]",0,A,normal_combined
+normal_aug_0394,"[1, 1]",0,A,normal_combined
+normal_aug_0395,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0396,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0397,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0398,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0399,"[1, 1]",0,B,normal_combined
+normal_aug_0400,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0401,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0402,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0403,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0404,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0405,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0406,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0407,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0408,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0409,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0410,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0411,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0412,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0413,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0414,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0415,"[1, 1]",0,B,normal_combined
+normal_aug_0416,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0418,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0419,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0420,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0421,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0422,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0423,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0424,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0425,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0426,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0427,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0428,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0429,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0430,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0431,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0432,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0433,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0434,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0435,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0436,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0437,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0438,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0439,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0440,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0441,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0442,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0443,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0444,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0445,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0446,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0447,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0448,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0449,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0450,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0451,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0452,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0453,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0454,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0455,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0456,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0457,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0458,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0459,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0460,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0461,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0462,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0463,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0464,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0465,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0467,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0468,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0469,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0470,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0471,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0472,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0473,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0474,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0475,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0476,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0477,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0478,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0479,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0480,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0482,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0483,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0484,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0485,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0486,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0487,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0488,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0489,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0490,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0491,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0492,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0493,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0494,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0495,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0496,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0497,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0498,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0499,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0500,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0501,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0502,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0503,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0504,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0505,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0506,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0507,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0508,"[1, 1]",0,A,normal_combined
+normal_aug_0509,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0510,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0511,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0512,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0513,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0515,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0516,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0517,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0518,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0520,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0521,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0523,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0524,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0525,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0526,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0527,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0528,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0529,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0530,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0531,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0532,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0533,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0534,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0535,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0536,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0537,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0538,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0539,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0540,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0542,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0543,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0544,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0545,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0546,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0547,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0548,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0549,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0550,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0551,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0552,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0553,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0554,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0555,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0557,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0558,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0559,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0560,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0561,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0562,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0563,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0564,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0565,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0566,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0567,"[1, 1]",0,A,normal_combined
+normal_aug_0568,"[1, 1]",0,A,normal_combined
+normal_aug_0569,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0570,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0571,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0572,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0573,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0574,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0575,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0576,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0577,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0578,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0579,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0580,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0581,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0582,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0583,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0584,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0585,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0586,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0587,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0588,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0589,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0590,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0591,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0592,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0593,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0594,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0595,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0596,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0597,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0598,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0599,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0600,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0601,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0602,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0603,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0604,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0605,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0606,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0607,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0608,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0609,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0610,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0611,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0612,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0614,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0615,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0616,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0617,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0618,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0619,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0620,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0621,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0622,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0623,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0624,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0625,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0626,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0627,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0628,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0629,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0630,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0631,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0632,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0633,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0634,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0635,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0636,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0637,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0638,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0639,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0640,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0641,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0642,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0643,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0644,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0645,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0646,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0647,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0649,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0650,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0651,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0652,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0653,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0654,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0655,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0656,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0657,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0658,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0659,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0660,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0661,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0662,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0663,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0664,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0665,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0666,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0667,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0668,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0669,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0670,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0671,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0672,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0673,[1],0,A,normal_combined
+normal_aug_0674,[1],0,A,normal_combined
+normal_aug_0675,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0676,"[1, 1]",0,B,normal_combined
+normal_aug_0677,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0678,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0679,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0680,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0681,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0682,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0683,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0684,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0685,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0686,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0687,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0688,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0689,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0690,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0691,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0692,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0693,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0694,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0695,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0696,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0697,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0698,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0699,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0700,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0701,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0702,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0703,"[1, 1]",0,B,normal_combined
+normal_aug_0704,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0705,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0706,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0707,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0708,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0709,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0710,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0711,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0712,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0713,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0714,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0715,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0716,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0717,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0718,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0719,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0720,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0722,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0723,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0724,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0725,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0726,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0727,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0728,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0729,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0730,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0731,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0732,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0733,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0735,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0736,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0737,"[1, 1]",0,A,normal_combined
+normal_aug_0738,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0739,"[1, 1]",0,B,normal_combined
+normal_aug_0740,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0741,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0742,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0744,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0745,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0746,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0747,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0748,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0749,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0751,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0752,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0753,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0754,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0755,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0756,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0757,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0758,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0759,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0760,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0761,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0762,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0763,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0764,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0765,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0766,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0767,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0768,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0769,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0770,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0771,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0772,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0773,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0774,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0775,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0776,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0777,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0778,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0779,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0780,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0781,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0782,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0783,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0784,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0785,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0786,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0787,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0788,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0789,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0790,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0791,"[1, 1]",0,B,normal_combined
+normal_aug_0792,[1],0,B,normal_combined
+normal_aug_0793,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0794,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0795,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0796,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0797,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0798,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0799,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0800,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0801,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0802,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0803,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0804,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0805,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0806,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0807,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0808,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0809,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0810,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0811,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0812,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0813,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0814,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0815,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0816,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0817,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0818,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0819,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0820,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0821,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0822,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0823,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0824,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0826,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0827,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0828,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0829,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0830,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0831,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0832,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0833,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0834,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0835,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0836,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0837,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0838,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0839,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0840,"[1, 1]",0,A,normal_combined
+normal_aug_0841,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0842,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0843,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0844,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0845,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0846,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0847,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0848,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0849,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0850,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0851,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0852,"[1, 1]",0,A,normal_combined
+normal_aug_0853,"[1, 1]",0,A,normal_combined
+normal_aug_0854,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0855,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0856,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0857,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0858,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0859,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0861,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0862,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0863,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0864,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0865,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0866,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0868,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0869,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0870,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0871,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0872,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0873,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0874,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0875,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0876,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0877,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0878,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0879,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0880,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0881,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0882,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0883,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0884,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0885,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0886,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0887,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0888,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0889,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0890,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0891,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0892,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0893,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0894,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0895,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0896,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0897,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0898,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0899,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0900,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0901,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0902,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0903,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0904,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0905,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0906,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0907,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0908,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0909,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0910,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0911,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0912,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0913,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0914,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0915,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0916,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0917,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0918,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0919,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0920,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0921,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0922,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0923,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0924,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0925,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0926,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0927,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0928,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0929,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0930,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0931,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0932,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0933,[],0,A,normal_combined
+normal_aug_0934,"[1, 1]",0,B,normal_combined
+normal_aug_0935,[1],0,B,normal_combined
+normal_aug_0936,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0937,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0938,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0939,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0940,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0941,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0942,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0943,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0944,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0945,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0946,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0947,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0948,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0949,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0950,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0951,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0952,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0953,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0955,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0956,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0957,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0958,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0959,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0960,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0961,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0962,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0963,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0964,"[1, 1, 1]",0,A,normal_combined
+normal_aug_0965,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0966,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0967,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0968,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0969,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0970,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0971,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0972,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0973,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0974,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0975,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0976,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0977,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0978,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0979,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0980,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0981,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0982,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0983,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0984,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0985,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0986,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0987,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0988,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0989,"[1, 1, 1]",0,B,normal_combined
+normal_aug_0990,"[1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0991,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0992,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0993,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0994,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0995,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0996,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_0997,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0998,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_0999,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1000,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1001,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1002,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1003,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1004,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1005,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1006,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1007,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1008,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1009,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1010,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1011,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1012,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1013,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1014,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1015,"[1, 1, 1]",0,A,normal_combined
+normal_aug_1016,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1017,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1018,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1019,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1020,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1021,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1022,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1024,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1025,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1026,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1027,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1028,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1029,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1030,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1031,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1032,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1033,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1034,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1035,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1036,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1037,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1038,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1039,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1041,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1042,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1043,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1044,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1045,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1046,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1047,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1048,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1049,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1050,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1051,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1052,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1054,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1055,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1056,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1057,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1058,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1059,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1060,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1061,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1062,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1063,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1065,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1066,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1067,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1068,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1069,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1070,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1071,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1072,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1073,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1074,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1075,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1076,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1077,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1078,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1079,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1080,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1081,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1082,"[1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1083,"[1, 1]",0,B,normal_combined
+normal_aug_1084,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1085,[1],0,A,normal_combined
+normal_aug_1086,"[1, 1]",0,A,normal_combined
+normal_aug_1087,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1088,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1089,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1090,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1091,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1092,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1093,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1094,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1095,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1096,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1097,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1098,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1099,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1100,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1101,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1102,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1103,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1104,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1105,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1106,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1107,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1108,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1109,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1110,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1111,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1112,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1113,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1114,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1115,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1116,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1117,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1118,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1119,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1120,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1121,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1122,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1123,"[1, 1]",0,B,normal_combined
+normal_aug_1124,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1125,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1126,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1127,[1],0,B,normal_combined
+normal_aug_1128,[1],0,B,normal_combined
+normal_aug_1129,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1130,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1131,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1132,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1134,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1135,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1136,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1137,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1139,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1140,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1141,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1142,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1143,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1144,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1145,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1146,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1147,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1148,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1149,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1150,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1151,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1152,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1153,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1154,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1155,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1156,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1157,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1158,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1159,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1160,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1161,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1162,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1163,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1164,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1165,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1166,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1167,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1168,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1169,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1170,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1171,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1172,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1174,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1175,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1177,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1178,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1179,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1180,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1181,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1182,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1183,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1184,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1185,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1186,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1187,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1188,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1189,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1190,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1191,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1192,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1193,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1194,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1195,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1196,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1197,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1198,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1199,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1200,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1201,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1202,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1203,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1204,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1205,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1206,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1207,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1208,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1209,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1210,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1211,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1212,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1213,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1214,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1215,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1216,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1217,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1218,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1219,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1220,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1221,"[1, 1]",0,B,normal_combined
+normal_aug_1222,[1],0,B,normal_combined
+normal_aug_1223,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1224,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1225,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1226,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1227,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1228,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1229,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1230,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1231,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1232,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1233,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1234,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1235,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1236,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1237,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1238,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1239,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1240,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1241,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1242,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1243,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1244,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1246,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1247,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1248,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1249,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1251,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1252,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1253,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1254,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1255,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1256,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1257,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1258,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1259,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1260,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1261,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1262,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1263,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1264,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1265,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1266,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1267,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1268,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1269,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1270,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1271,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1272,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1273,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1274,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1275,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1276,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1277,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1278,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1279,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1280,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1281,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1282,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1283,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1284,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1285,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1286,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1287,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1288,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1289,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1290,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1291,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1292,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1294,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1295,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1296,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1297,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1298,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1299,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1300,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1301,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1302,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1303,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1304,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1305,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1306,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1307,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1308,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1309,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1310,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1311,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1312,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1313,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1314,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1315,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1316,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1317,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1319,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1320,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1321,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1322,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1323,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1324,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1325,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1326,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1327,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1328,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1329,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1330,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1331,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1332,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1333,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1334,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1335,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1336,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1337,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1338,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1339,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1340,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1341,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1342,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1343,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1344,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1345,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1346,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1347,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1348,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1349,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1350,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1351,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1352,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1353,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1354,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1356,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1357,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1358,"[1, 1, 1]",0,A,normal_combined
+normal_aug_1359,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1360,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1361,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1362,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1363,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1364,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1365,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1366,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1367,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1368,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1369,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1370,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1371,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1372,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1373,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1374,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1375,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1376,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1377,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1378,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1379,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1380,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1381,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1382,"[1, 1]",0,B,normal_combined
+normal_aug_1383,[1],0,B,normal_combined
+normal_aug_1384,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1385,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1386,"[1, 1]",0,B,normal_combined
+normal_aug_1387,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1388,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1389,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1390,"[1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1391,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1392,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1393,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1394,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1395,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1397,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1398,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1399,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1400,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1401,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1402,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1404,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1405,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1406,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1407,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1408,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1409,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1410,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1411,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1412,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1413,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1414,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1415,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1416,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1417,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1418,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1419,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1420,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1421,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1422,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1423,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1424,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1425,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1426,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1427,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1428,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1429,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1430,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1431,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1432,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1433,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1434,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1435,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1436,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1437,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1438,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1439,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1440,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1441,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1442,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1443,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1444,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1445,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1447,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1448,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1449,"[1, 1]",0,A,normal_combined
+normal_aug_1450,"[1, 1, 1]",0,A,normal_combined
+normal_aug_1451,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1452,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1453,"[1, 1]",0,A,normal_combined
+normal_aug_1454,"[1, 1]",0,A,normal_combined
+normal_aug_1455,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1456,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1457,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1458,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1459,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1460,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1461,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1462,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1463,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1464,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1465,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1466,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1467,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1468,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1469,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1470,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1472,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1473,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1474,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1475,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1477,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1478,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1479,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1480,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1481,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1482,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1483,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1484,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1485,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1486,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1487,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1488,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1489,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1490,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1491,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1492,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1493,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1494,[1],0,B,normal_combined
+normal_aug_1495,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1496,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1497,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1498,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1499,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1500,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1501,"[1, 1]",0,B,normal_combined
+normal_aug_1502,"[1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1503,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1504,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1505,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1506,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1507,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1508,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1509,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1510,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1511,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1512,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1513,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1514,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1515,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1516,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1517,"[1, 1]",0,B,normal_combined
+normal_aug_1518,"[1, 1]",0,B,normal_combined
+normal_aug_1519,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1520,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1521,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1522,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1523,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1524,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1525,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1526,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1527,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1528,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1529,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1530,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1531,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1532,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1534,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1535,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1536,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1537,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1538,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1539,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1540,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1541,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1542,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1543,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1544,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1545,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1546,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1547,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1548,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1549,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1550,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1551,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1552,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1553,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1554,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1555,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1556,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1557,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1558,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1559,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1560,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1561,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1562,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1563,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1564,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1565,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1566,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1567,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1568,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1569,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1570,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1571,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1572,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1573,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1574,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1575,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1576,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1577,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1578,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1579,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1580,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1581,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1582,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1583,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1584,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1585,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1586,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1587,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1588,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1589,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1590,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1591,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1592,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1593,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1594,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1595,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1596,[1],0,A,normal_combined
+normal_aug_1597,"[1, 1]",0,A,normal_combined
+normal_aug_1598,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1599,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1600,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1601,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1602,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1603,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1605,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1606,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1607,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1608,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1609,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1610,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1612,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1613,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1614,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1615,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1616,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1617,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1619,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1620,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1621,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1622,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1623,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1624,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1625,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1626,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1627,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1628,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1629,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1630,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1631,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1632,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1633,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1634,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1635,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1636,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1637,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1638,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1639,"[1, 1]",0,A,normal_combined
+normal_aug_1640,"[1, 1, 1]",0,A,normal_combined
+normal_aug_1641,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1642,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1643,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1644,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1645,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1646,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1647,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1648,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1649,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1650,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1651,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1652,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1653,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1654,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1656,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1657,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1658,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1659,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1660,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1661,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1662,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1663,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1664,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1665,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1666,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1667,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1668,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1669,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1670,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1671,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1672,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1673,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1674,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1675,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1676,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1677,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1678,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1679,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1680,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1681,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1682,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1683,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1684,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1685,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1686,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1687,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1689,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1690,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1691,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1692,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1693,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1694,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1695,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1696,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1697,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1698,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1699,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1700,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1701,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1702,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1703,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1704,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1705,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1706,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1707,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1708,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1709,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1710,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1711,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1712,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1713,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1714,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1715,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1716,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1717,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1718,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1719,"[1, 1, 1]",0,A,normal_combined
+normal_aug_1720,"[1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1721,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1722,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1723,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1724,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1725,[1],0,B,normal_combined
+normal_aug_1726,"[1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1728,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1729,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1730,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1731,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1733,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1734,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1735,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1736,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1737,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1738,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1739,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1740,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1741,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1742,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1743,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1744,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1745,"[1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1746,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1747,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1748,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1750,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1751,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1752,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1753,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1754,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1755,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1756,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1757,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1758,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1759,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1760,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1761,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1762,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1763,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1764,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1765,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1766,"[1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1767,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1768,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1769,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1770,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1771,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1772,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1773,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1774,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1775,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1776,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1777,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1778,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1779,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1780,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1781,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1782,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1783,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1784,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1785,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1786,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1787,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1788,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1789,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1790,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1791,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1792,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1793,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1794,"[1, 1]",0,B,normal_combined
+normal_aug_1795,"[1, 1, 1]",0,B,normal_combined
+normal_aug_1796,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1797,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1798,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1799,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1800,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1801,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1802,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1803,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1804,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1805,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1806,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1807,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1808,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1809,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1810,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1811,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1812,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1813,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1814,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1815,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1816,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1817,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1818,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1819,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1820,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1821,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1822,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1823,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1824,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1825,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1826,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1827,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1828,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1829,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1830,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1831,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1832,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1833,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1834,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1835,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1836,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1837,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1838,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1839,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1840,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1841,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1842,"[1, 1]",0,B,normal_combined
+normal_aug_1843,"[1, 1]",0,B,normal_combined
+normal_aug_1844,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1845,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1846,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1847,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1848,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1849,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,B,normal_combined
+normal_aug_1850,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1851,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1852,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1853,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1854,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined
+normal_aug_1855,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",0,A,normal_combined

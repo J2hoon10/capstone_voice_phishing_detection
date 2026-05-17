@@ -66,6 +66,7 @@ from model import build_model
 LOG_STEP_INTERVAL = 200
 RESUME_CKPT = CHECKPOINT_DIR / "resume_latest.pt"
 EXP_NAME = "roberta_mamba_freeze_init_4class"
+DATASET_TAG = DATA_DIR.name  # e.g. "4class"
 FREEZE_INIT_EPOCHS = TRAIN_CONFIG["FREEZE_INIT_EPOCHS"]
 
 
@@ -200,7 +201,10 @@ class Logger:
                     f"best_f1={record['best_f1']:.4f}\n"
                 )
             elif t == "start":
-                f.write(f"[start] run_id={record['run_id']} {record['timestamp']}\n")
+                f.write(
+                    f"[start] run_id={record['run_id']} {record['timestamp']} "
+                    f"dataset={record['dataset']} data_dir={record['data_dir']}\n"
+                )
 
     def flush_json(self) -> None:
         with self.json_path.open("w", encoding="utf-8") as f:
@@ -414,10 +418,10 @@ def train(resume: bool = False) -> None:
     elif resume:
         print(f"[warn] --resume 지정했지만 {RESUME_CKPT} 없음 → 처음부터 시작")
         run_id = time.strftime("%Y%m%d_%H%M%S")
-        best_path = CHECKPOINT_DIR / f"{EXP_NAME}_{run_id}_best.pt"
+        best_path = CHECKPOINT_DIR / f"{EXP_NAME}_{DATASET_TAG}_{run_id}_best.pt"
     else:
         run_id = time.strftime("%Y%m%d_%H%M%S")
-        best_path = CHECKPOINT_DIR / f"{EXP_NAME}_{run_id}_best.pt"
+        best_path = CHECKPOINT_DIR / f"{EXP_NAME}_{DATASET_TAG}_{run_id}_best.pt"
 
     # ── freeze_init 상태 복원 ─────────────────────────────────────────────────
     if start_epoch <= FREEZE_INIT_EPOCHS:
@@ -431,7 +435,13 @@ def train(resume: bool = False) -> None:
         print(f"[freeze_init] encoder layer[10~11] 이미 unfreeze 상태로 시작")
 
     logger = Logger(LOG_DIR, run_id)
-    logger.write({"type": "start", "run_id": run_id, "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")})
+    logger.write({
+        "type": "start",
+        "run_id": run_id,
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "dataset": DATASET_TAG,
+        "data_dir": str(DATA_DIR),
+    })
 
     if resume and RESUME_CKPT.exists():
         logger.write({

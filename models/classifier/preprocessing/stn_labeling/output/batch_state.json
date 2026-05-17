@@ -1,268 +1,412 @@
 {
-  "batch_id": "batch_6a028440d7708190b187f9143ea12f7c",
-  "input_file_id": "file-WppzVqivBVzVTXLaBQE3Xj",
+  "batch_id": "batch_6a097c7733ac81909779433d51654033",
+  "input_file_id": "file-QcnKhkzXyEYxGyS4t568oT",
   "model": "gpt-4o-mini",
-  "submitted_at": "2026-05-12T10:37:03.756387",
-  "request_count": 43,
-  "output_csv": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\preprocessing\\stn_labeling\\output\\phishing_labeled.csv",
+  "submitted_at": "2026-05-17T17:29:45.263638",
+  "request_count": 67,
+  "output_csv": "/home/j2hoon10/capstone_voice_phishing_detection/models/classifier/preprocessing/stn_labeling/output/phishing_labeled.csv",
   "row_meta": {
     "req_000000": {
-      "id": "phishing_대출 사기형_23",
+      "id": "aug_대출 사기형_0824",
       "label": "1",
       "category": "대출 사기형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000001": {
-      "id": "phishing_대출 사기형_41",
+      "id": "aug_대출 사기형_0825",
       "label": "1",
       "category": "대출 사기형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000002": {
-      "id": "phishing_대출 사기형_66",
+      "id": "aug_대출 사기형_0826",
       "label": "1",
       "category": "대출 사기형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000003": {
-      "id": "phishing_대출 사기형_79",
+      "id": "aug_대출 사기형_0827",
       "label": "1",
       "category": "대출 사기형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000004": {
-      "id": "phishing_대출 사기형_101",
+      "id": "aug_수사기관 사칭형_0678",
       "label": "1",
-      "category": "대출 사기형",
-      "source": "original"
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
     },
     "req_000005": {
-      "id": "phishing_대출 사기형_120",
+      "id": "aug_수사기관 사칭형_0679",
       "label": "1",
-      "category": "대출 사기형",
-      "source": "original"
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
     },
     "req_000006": {
-      "id": "phishing_대출 사기형_145",
+      "id": "aug_수사기관 사칭형_0680",
       "label": "1",
-      "category": "대출 사기형",
-      "source": "original"
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
     },
     "req_000007": {
-      "id": "phishing_대출 사기형_163",
+      "id": "aug_수사기관 사칭형_0681",
       "label": "1",
-      "category": "대출 사기형",
-      "source": "original"
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
     },
     "req_000008": {
-      "id": "phishing_수사기관 사칭형_29",
+      "id": "aug_수사기관 사칭형_0682",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000009": {
-      "id": "phishing_수사기관 사칭형_33",
+      "id": "aug_수사기관 사칭형_0683",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000010": {
-      "id": "phishing_수사기관 사칭형_34",
+      "id": "aug_수사기관 사칭형_0684",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000011": {
-      "id": "phishing_수사기관 사칭형_39",
+      "id": "aug_수사기관 사칭형_0685",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000012": {
-      "id": "phishing_수사기관 사칭형_47",
+      "id": "aug_수사기관 사칭형_0686",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000013": {
-      "id": "phishing_수사기관 사칭형_67",
+      "id": "aug_수사기관 사칭형_0687",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000014": {
-      "id": "phishing_수사기관 사칭형_68",
+      "id": "aug_수사기관 사칭형_0688",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000015": {
-      "id": "phishing_수사기관 사칭형_75",
+      "id": "aug_수사기관 사칭형_0689",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000016": {
-      "id": "phishing_수사기관 사칭형_88",
+      "id": "aug_수사기관 사칭형_0690",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000017": {
-      "id": "phishing_수사기관 사칭형_96",
+      "id": "aug_수사기관 사칭형_0691",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000018": {
-      "id": "phishing_수사기관 사칭형_109",
+      "id": "aug_수사기관 사칭형_0692",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000019": {
-      "id": "phishing_수사기관 사칭형_128",
+      "id": "aug_수사기관 사칭형_0693",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000020": {
-      "id": "phishing_수사기관 사칭형_129",
+      "id": "aug_수사기관 사칭형_0694",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000021": {
-      "id": "phishing_수사기관 사칭형_130",
+      "id": "aug_수사기관 사칭형_0695",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000022": {
-      "id": "phishing_수사기관 사칭형_131",
+      "id": "aug_수사기관 사칭형_0696",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000023": {
-      "id": "phishing_수사기관 사칭형_132",
+      "id": "aug_수사기관 사칭형_0697",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000024": {
-      "id": "phishing_수사기관 사칭형_133",
+      "id": "aug_수사기관 사칭형_0698",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000025": {
-      "id": "phishing_수사기관 사칭형_135",
+      "id": "aug_수사기관 사칭형_0699",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000026": {
-      "id": "phishing_수사기관 사칭형_136",
+      "id": "aug_수사기관 사칭형_0700",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000027": {
-      "id": "phishing_수사기관 사칭형_137",
+      "id": "aug_수사기관 사칭형_0701",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000028": {
-      "id": "phishing_수사기관 사칭형_187",
+      "id": "aug_수사기관 사칭형_0702",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000029": {
-      "id": "phishing_수사기관 사칭형_188",
+      "id": "aug_수사기관 사칭형_0703",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000030": {
-      "id": "phishing_수사기관 사칭형_189",
+      "id": "aug_수사기관 사칭형_0704",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000031": {
-      "id": "phishing_수사기관 사칭형_190",
+      "id": "aug_수사기관 사칭형_0705",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000032": {
-      "id": "phishing_수사기관 사칭형_191",
+      "id": "aug_수사기관 사칭형_0706",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000033": {
-      "id": "phishing_수사기관 사칭형_192",
+      "id": "aug_수사기관 사칭형_0707",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000034": {
-      "id": "phishing_수사기관 사칭형_193",
+      "id": "aug_수사기관 사칭형_0708",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000035": {
-      "id": "phishing_수사기관 사칭형_194",
+      "id": "aug_수사기관 사칭형_0709",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000036": {
-      "id": "phishing_수사기관 사칭형_195",
+      "id": "aug_수사기관 사칭형_0710",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000037": {
-      "id": "phishing_수사기관 사칭형_208",
+      "id": "aug_수사기관 사칭형_0711",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000038": {
-      "id": "phishing_수사기관 사칭형_209",
+      "id": "aug_수사기관 사칭형_0712",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000039": {
-      "id": "phishing_수사기관 사칭형_212",
+      "id": "aug_수사기관 사칭형_0713",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000040": {
-      "id": "phishing_수사기관 사칭형_215",
+      "id": "aug_수사기관 사칭형_0714",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000041": {
-      "id": "phishing_수사기관 사칭형_216",
+      "id": "aug_수사기관 사칭형_0715",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
     },
     "req_000042": {
-      "id": "phishing_수사기관 사칭형_217",
+      "id": "aug_수사기관 사칭형_0716",
       "label": "1",
       "category": "수사기관 사칭형",
-      "source": "original"
+      "source": "augmented_llm"
+    },
+    "req_000043": {
+      "id": "aug_수사기관 사칭형_0717",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000044": {
+      "id": "aug_수사기관 사칭형_0718",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000045": {
+      "id": "aug_수사기관 사칭형_0719",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000046": {
+      "id": "aug_수사기관 사칭형_0720",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000047": {
+      "id": "aug_수사기관 사칭형_0721",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000048": {
+      "id": "aug_수사기관 사칭형_0722",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000049": {
+      "id": "aug_수사기관 사칭형_0723",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000050": {
+      "id": "aug_수사기관 사칭형_0724",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000051": {
+      "id": "aug_수사기관 사칭형_0725",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000052": {
+      "id": "aug_수사기관 사칭형_0726",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000053": {
+      "id": "aug_수사기관 사칭형_0727",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000054": {
+      "id": "aug_수사기관 사칭형_0728",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000055": {
+      "id": "aug_수사기관 사칭형_0729",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000056": {
+      "id": "aug_수사기관 사칭형_0730",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000057": {
+      "id": "aug_수사기관 사칭형_0731",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000058": {
+      "id": "aug_수사기관 사칭형_0732",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000059": {
+      "id": "aug_수사기관 사칭형_0733",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000060": {
+      "id": "aug_수사기관 사칭형_0734",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000061": {
+      "id": "aug_수사기관 사칭형_0735",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000062": {
+      "id": "aug_수사기관 사칭형_0736",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000063": {
+      "id": "aug_수사기관 사칭형_0737",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000064": {
+      "id": "aug_수사기관 사칭형_0738",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000065": {
+      "id": "aug_수사기관 사칭형_0739",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
+    },
+    "req_000066": {
+      "id": "aug_수사기관 사칭형_0740",
+      "label": "1",
+      "category": "수사기관 사칭형",
+      "source": "augmented_llm"
     }
   }
 }

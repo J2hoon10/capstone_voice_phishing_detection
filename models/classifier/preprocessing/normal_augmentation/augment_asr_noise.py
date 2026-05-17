@@ -117,7 +117,7 @@ def apply_noise(text, probs, rng):
     return "".join(out)
 
 
-SAMPLES_PER_TRACK = 350
+SAMPLES_PER_TRACK = 100
 
 
 def sample_by_track(rows: list, n: int, rng: random.Random) -> list:
@@ -160,11 +160,16 @@ def main():
     parser.add_argument("--samples-per-track", type=int, default=SAMPLES_PER_TRACK,
                         help="원본에서 트랙별 샘플 수 (기본 350)")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--noise-scale", type=float, default=1.0,
+                        help="노이즈 확률 배율 (0.5 = 절반, 1.0 = 원본)")
     parser.add_argument("--no-progress", action="store_true")
     args = parser.parse_args()
 
     with open(args.error_summary, "r", encoding="utf-8") as f:
         probs = json.load(f)
+
+    _noise_keys = {"substitution", "deletion", "insertion", "whitespace"}
+    probs = {k: (v * args.noise_scale if k in _noise_keys else v) for k, v in probs.items()}
 
     rng = random.Random(args.seed)
 

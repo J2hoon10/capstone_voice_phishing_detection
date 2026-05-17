@@ -120,6 +120,10 @@ def main() -> None:
     )
     parser.add_argument("--window-size", type=int, default=64)
     parser.add_argument("--stride", type=int, default=32)
+    parser.add_argument(
+        "--append", action="store_true",
+        help="기존 output-csv에 이미 있는 ID는 건너뛰고 신규 항목만 추가 (top-up용)",
+    )
     args = parser.parse_args()
 
     print(f"[INFO] 토크나이저 로드: {args.model_name}")
@@ -145,15 +149,27 @@ def main() -> None:
                     "source": row.get("source", ""),
                 }
 
-    print(f"[INFO] {len(conversations)}개 대화 처리 중...")
+    # --append: 기존 파일의 ID 수집 → 신규 항목만 처리
+    output_path = Path(args.output_csv)
+    done_ids: set[str] = set()
+    if args.append and output_path.exists():
+        with output_path.open("r", encoding="utf-8-sig") as f:
+            for row in csv.DictReader(f):
+                done_ids.add(row["id"])
+        print(f"[INFO] 기존 segment_risks: {len(done_ids)}건 (skip 대상)")
 
-    Path(args.output_csv).parent.mkdir(parents=True, exist_ok=True)
+    new_convs = {k: v for k, v in conversations.items() if k not in done_ids}
+    print(f"[INFO] {len(new_convs)}개 대화 처리 중 (전체 {len(conversations)}개)...")
 
-    with open(args.output_csv, "w", newline="", encoding="utf-8-sig") as f:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    mode = "a" if args.append and output_path.exists() else "w"
+
+    with open(output_path, mode, newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=OUTPUT_FIELDS)
-        writer.writeheader()
+        if mode == "w":
+            writer.writeheader()
 
-        for conv_id, sentences in conversations.items():
+        for conv_id, sentences in new_convs.items():
             seg_risks = map_conversation(sentences, tokenizer, args.window_size, args.stride)
             meta = conv_meta[conv_id]
             writer.writerow(
@@ -166,7 +182,8 @@ def main() -> None:
                 }
             )
 
-    print(f"[DONE] {args.output_csv}  ({len(conversations)}개 대화)")
+    total = len(done_ids) + len(new_convs)
+    print(f"[DONE] {output_path}  (신규 {len(new_convs)}건 추가, 전체 {total}건)")
 
 
 if __name__ == "__main__":

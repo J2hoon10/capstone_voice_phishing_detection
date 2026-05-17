@@ -154,7 +154,7 @@ def main():
     print(f"[로드] {ckpt_path}")
     model = build_model().to(DEVICE)
     model.load_state_dict(
-        torch.load(ckpt_path, map_location="cpu", weights_only=False)["model_state_dict"]
+        torch.load(ckpt_path, map_location="cpu", weights_only=False)
     )
     model.eval()
     tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG["MODEL_NAME"])

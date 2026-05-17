@@ -1,0 +1,4471 @@
+{
+  "batch_id": "batch_6a08c9c287d881908db0428bb3e3c4c1",
+  "file_id": "file-7AAcmkWbFnSdtXsgHYFGcX",
+  "status": "validating",
+  "requests": [
+    {
+      "custom_id": "investigation_0000",
+      "category": "수사기관 사칭형",
+      "call_idx": 0,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0001",
+      "category": "수사기관 사칭형",
+      "call_idx": 1,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0002",
+      "category": "수사기관 사칭형",
+      "call_idx": 2,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0003",
+      "category": "수사기관 사칭형",
+      "call_idx": 3,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0004",
+      "category": "수사기관 사칭형",
+      "call_idx": 4,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0005",
+      "category": "수사기관 사칭형",
+      "call_idx": 5,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0006",
+      "category": "수사기관 사칭형",
+      "call_idx": 6,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0007",
+      "category": "수사기관 사칭형",
+      "call_idx": 7,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0008",
+      "category": "수사기관 사칭형",
+      "call_idx": 8,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0009",
+      "category": "수사기관 사칭형",
+      "call_idx": 9,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0010",
+      "category": "수사기관 사칭형",
+      "call_idx": 10,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0011",
+      "category": "수사기관 사칭형",
+      "call_idx": 11,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0012",
+      "category": "수사기관 사칭형",
+      "call_idx": 12,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0013",
+      "category": "수사기관 사칭형",
+      "call_idx": 13,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0014",
+      "category": "수사기관 사칭형",
+      "call_idx": 14,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0015",
+      "category": "수사기관 사칭형",
+      "call_idx": 15,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0016",
+      "category": "수사기관 사칭형",
+      "call_idx": 16,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0017",
+      "category": "수사기관 사칭형",
+      "call_idx": 17,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0018",
+      "category": "수사기관 사칭형",
+      "call_idx": 18,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0019",
+      "category": "수사기관 사칭형",
+      "call_idx": 19,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0020",
+      "category": "수사기관 사칭형",
+      "call_idx": 20,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0021",
+      "category": "수사기관 사칭형",
+      "call_idx": 21,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0022",
+      "category": "수사기관 사칭형",
+      "call_idx": 22,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0023",
+      "category": "수사기관 사칭형",
+      "call_idx": 23,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0024",
+      "category": "수사기관 사칭형",
+      "call_idx": 24,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0025",
+      "category": "수사기관 사칭형",
+      "call_idx": 25,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0026",
+      "category": "수사기관 사칭형",
+      "call_idx": 26,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0027",
+      "category": "수사기관 사칭형",
+      "call_idx": 27,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0028",
+      "category": "수사기관 사칭형",
+      "call_idx": 28,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0029",
+      "category": "수사기관 사칭형",
+      "call_idx": 29,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0030",
+      "category": "수사기관 사칭형",
+      "call_idx": 30,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0031",
+      "category": "수사기관 사칭형",
+      "call_idx": 31,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0032",
+      "category": "수사기관 사칭형",
+      "call_idx": 32,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0033",
+      "category": "수사기관 사칭형",
+      "call_idx": 33,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0034",
+      "category": "수사기관 사칭형",
+      "call_idx": 34,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0035",
+      "category": "수사기관 사칭형",
+      "call_idx": 35,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0036",
+      "category": "수사기관 사칭형",
+      "call_idx": 36,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0037",
+      "category": "수사기관 사칭형",
+      "call_idx": 37,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0038",
+      "category": "수사기관 사칭형",
+      "call_idx": 38,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0039",
+      "category": "수사기관 사칭형",
+      "call_idx": 39,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0040",
+      "category": "수사기관 사칭형",
+      "call_idx": 40,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0041",
+      "category": "수사기관 사칭형",
+      "call_idx": 41,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0042",
+      "category": "수사기관 사칭형",
+      "call_idx": 42,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0043",
+      "category": "수사기관 사칭형",
+      "call_idx": 43,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0044",
+      "category": "수사기관 사칭형",
+      "call_idx": 44,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0045",
+      "category": "수사기관 사칭형",
+      "call_idx": 45,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0046",
+      "category": "수사기관 사칭형",
+      "call_idx": 46,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0047",
+      "category": "수사기관 사칭형",
+      "call_idx": 47,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0048",
+      "category": "수사기관 사칭형",
+      "call_idx": 48,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0049",
+      "category": "수사기관 사칭형",
+      "call_idx": 49,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0050",
+      "category": "수사기관 사칭형",
+      "call_idx": 50,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0051",
+      "category": "수사기관 사칭형",
+      "call_idx": 51,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0052",
+      "category": "수사기관 사칭형",
+      "call_idx": 52,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0053",
+      "category": "수사기관 사칭형",
+      "call_idx": 53,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0054",
+      "category": "수사기관 사칭형",
+      "call_idx": 54,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0055",
+      "category": "수사기관 사칭형",
+      "call_idx": 55,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0056",
+      "category": "수사기관 사칭형",
+      "call_idx": 56,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0057",
+      "category": "수사기관 사칭형",
+      "call_idx": 57,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0058",
+      "category": "수사기관 사칭형",
+      "call_idx": 58,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0059",
+      "category": "수사기관 사칭형",
+      "call_idx": 59,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0060",
+      "category": "수사기관 사칭형",
+      "call_idx": 60,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0061",
+      "category": "수사기관 사칭형",
+      "call_idx": 61,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0062",
+      "category": "수사기관 사칭형",
+      "call_idx": 62,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0063",
+      "category": "수사기관 사칭형",
+      "call_idx": 63,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0064",
+      "category": "수사기관 사칭형",
+      "call_idx": 64,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0065",
+      "category": "수사기관 사칭형",
+      "call_idx": 65,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0066",
+      "category": "수사기관 사칭형",
+      "call_idx": 66,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0067",
+      "category": "수사기관 사칭형",
+      "call_idx": 67,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0068",
+      "category": "수사기관 사칭형",
+      "call_idx": 68,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0069",
+      "category": "수사기관 사칭형",
+      "call_idx": 69,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0070",
+      "category": "수사기관 사칭형",
+      "call_idx": 70,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0071",
+      "category": "수사기관 사칭형",
+      "call_idx": 71,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0072",
+      "category": "수사기관 사칭형",
+      "call_idx": 72,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0073",
+      "category": "수사기관 사칭형",
+      "call_idx": 73,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0074",
+      "category": "수사기관 사칭형",
+      "call_idx": 74,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0075",
+      "category": "수사기관 사칭형",
+      "call_idx": 75,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0076",
+      "category": "수사기관 사칭형",
+      "call_idx": 76,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0077",
+      "category": "수사기관 사칭형",
+      "call_idx": 77,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0078",
+      "category": "수사기관 사칭형",
+      "call_idx": 78,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0079",
+      "category": "수사기관 사칭형",
+      "call_idx": 79,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0080",
+      "category": "수사기관 사칭형",
+      "call_idx": 80,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0081",
+      "category": "수사기관 사칭형",
+      "call_idx": 81,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0082",
+      "category": "수사기관 사칭형",
+      "call_idx": 82,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0083",
+      "category": "수사기관 사칭형",
+      "call_idx": 83,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0084",
+      "category": "수사기관 사칭형",
+      "call_idx": 84,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0085",
+      "category": "수사기관 사칭형",
+      "call_idx": 85,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0086",
+      "category": "수사기관 사칭형",
+      "call_idx": 86,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0087",
+      "category": "수사기관 사칭형",
+      "call_idx": 87,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0088",
+      "category": "수사기관 사칭형",
+      "call_idx": 88,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0089",
+      "category": "수사기관 사칭형",
+      "call_idx": 89,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0090",
+      "category": "수사기관 사칭형",
+      "call_idx": 90,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0091",
+      "category": "수사기관 사칭형",
+      "call_idx": 91,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0092",
+      "category": "수사기관 사칭형",
+      "call_idx": 92,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0093",
+      "category": "수사기관 사칭형",
+      "call_idx": 93,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0094",
+      "category": "수사기관 사칭형",
+      "call_idx": 94,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0095",
+      "category": "수사기관 사칭형",
+      "call_idx": 95,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0096",
+      "category": "수사기관 사칭형",
+      "call_idx": 96,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0097",
+      "category": "수사기관 사칭형",
+      "call_idx": 97,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0098",
+      "category": "수사기관 사칭형",
+      "call_idx": 98,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0099",
+      "category": "수사기관 사칭형",
+      "call_idx": 99,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0100",
+      "category": "수사기관 사칭형",
+      "call_idx": 100,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0101",
+      "category": "수사기관 사칭형",
+      "call_idx": 101,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0102",
+      "category": "수사기관 사칭형",
+      "call_idx": 102,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0103",
+      "category": "수사기관 사칭형",
+      "call_idx": 103,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0104",
+      "category": "수사기관 사칭형",
+      "call_idx": 104,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0105",
+      "category": "수사기관 사칭형",
+      "call_idx": 105,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0106",
+      "category": "수사기관 사칭형",
+      "call_idx": 106,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0107",
+      "category": "수사기관 사칭형",
+      "call_idx": 107,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0108",
+      "category": "수사기관 사칭형",
+      "call_idx": 108,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0109",
+      "category": "수사기관 사칭형",
+      "call_idx": 109,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0110",
+      "category": "수사기관 사칭형",
+      "call_idx": 110,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0111",
+      "category": "수사기관 사칭형",
+      "call_idx": 111,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0112",
+      "category": "수사기관 사칭형",
+      "call_idx": 112,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0113",
+      "category": "수사기관 사칭형",
+      "call_idx": 113,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0114",
+      "category": "수사기관 사칭형",
+      "call_idx": 114,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0115",
+      "category": "수사기관 사칭형",
+      "call_idx": 115,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0116",
+      "category": "수사기관 사칭형",
+      "call_idx": 116,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0117",
+      "category": "수사기관 사칭형",
+      "call_idx": 117,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0118",
+      "category": "수사기관 사칭형",
+      "call_idx": 118,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0119",
+      "category": "수사기관 사칭형",
+      "call_idx": 119,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0120",
+      "category": "수사기관 사칭형",
+      "call_idx": 120,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0121",
+      "category": "수사기관 사칭형",
+      "call_idx": 121,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0122",
+      "category": "수사기관 사칭형",
+      "call_idx": 122,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0123",
+      "category": "수사기관 사칭형",
+      "call_idx": 123,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0124",
+      "category": "수사기관 사칭형",
+      "call_idx": 124,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0125",
+      "category": "수사기관 사칭형",
+      "call_idx": 125,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0126",
+      "category": "수사기관 사칭형",
+      "call_idx": 126,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0127",
+      "category": "수사기관 사칭형",
+      "call_idx": 127,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0128",
+      "category": "수사기관 사칭형",
+      "call_idx": 128,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0129",
+      "category": "수사기관 사칭형",
+      "call_idx": 129,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0130",
+      "category": "수사기관 사칭형",
+      "call_idx": 130,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0131",
+      "category": "수사기관 사칭형",
+      "call_idx": 131,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0132",
+      "category": "수사기관 사칭형",
+      "call_idx": 132,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0133",
+      "category": "수사기관 사칭형",
+      "call_idx": 133,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0134",
+      "category": "수사기관 사칭형",
+      "call_idx": 134,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0135",
+      "category": "수사기관 사칭형",
+      "call_idx": 135,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0136",
+      "category": "수사기관 사칭형",
+      "call_idx": 136,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0137",
+      "category": "수사기관 사칭형",
+      "call_idx": 137,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0138",
+      "category": "수사기관 사칭형",
+      "call_idx": 138,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0139",
+      "category": "수사기관 사칭형",
+      "call_idx": 139,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0140",
+      "category": "수사기관 사칭형",
+      "call_idx": 140,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0141",
+      "category": "수사기관 사칭형",
+      "call_idx": 141,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0142",
+      "category": "수사기관 사칭형",
+      "call_idx": 142,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0143",
+      "category": "수사기관 사칭형",
+      "call_idx": 143,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0144",
+      "category": "수사기관 사칭형",
+      "call_idx": 144,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0145",
+      "category": "수사기관 사칭형",
+      "call_idx": 145,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0146",
+      "category": "수사기관 사칭형",
+      "call_idx": 146,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0147",
+      "category": "수사기관 사칭형",
+      "call_idx": 147,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0148",
+      "category": "수사기관 사칭형",
+      "call_idx": 148,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0149",
+      "category": "수사기관 사칭형",
+      "call_idx": 149,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0150",
+      "category": "수사기관 사칭형",
+      "call_idx": 150,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0151",
+      "category": "수사기관 사칭형",
+      "call_idx": 151,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0152",
+      "category": "수사기관 사칭형",
+      "call_idx": 152,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0153",
+      "category": "수사기관 사칭형",
+      "call_idx": 153,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0154",
+      "category": "수사기관 사칭형",
+      "call_idx": 154,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0155",
+      "category": "수사기관 사칭형",
+      "call_idx": 155,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0156",
+      "category": "수사기관 사칭형",
+      "call_idx": 156,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0157",
+      "category": "수사기관 사칭형",
+      "call_idx": 157,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0158",
+      "category": "수사기관 사칭형",
+      "call_idx": 158,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0159",
+      "category": "수사기관 사칭형",
+      "call_idx": 159,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0160",
+      "category": "수사기관 사칭형",
+      "call_idx": 160,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0161",
+      "category": "수사기관 사칭형",
+      "call_idx": 161,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0162",
+      "category": "수사기관 사칭형",
+      "call_idx": 162,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0163",
+      "category": "수사기관 사칭형",
+      "call_idx": 163,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0164",
+      "category": "수사기관 사칭형",
+      "call_idx": 164,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0165",
+      "category": "수사기관 사칭형",
+      "call_idx": 165,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0166",
+      "category": "수사기관 사칭형",
+      "call_idx": 166,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0167",
+      "category": "수사기관 사칭형",
+      "call_idx": 167,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0168",
+      "category": "수사기관 사칭형",
+      "call_idx": 168,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0169",
+      "category": "수사기관 사칭형",
+      "call_idx": 169,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0170",
+      "category": "수사기관 사칭형",
+      "call_idx": 170,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0171",
+      "category": "수사기관 사칭형",
+      "call_idx": 171,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0172",
+      "category": "수사기관 사칭형",
+      "call_idx": 172,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0173",
+      "category": "수사기관 사칭형",
+      "call_idx": 173,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0174",
+      "category": "수사기관 사칭형",
+      "call_idx": 174,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0175",
+      "category": "수사기관 사칭형",
+      "call_idx": 175,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0176",
+      "category": "수사기관 사칭형",
+      "call_idx": 176,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0177",
+      "category": "수사기관 사칭형",
+      "call_idx": 177,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0178",
+      "category": "수사기관 사칭형",
+      "call_idx": 178,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0179",
+      "category": "수사기관 사칭형",
+      "call_idx": 179,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0180",
+      "category": "수사기관 사칭형",
+      "call_idx": 180,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0181",
+      "category": "수사기관 사칭형",
+      "call_idx": 181,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0182",
+      "category": "수사기관 사칭형",
+      "call_idx": 182,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0183",
+      "category": "수사기관 사칭형",
+      "call_idx": 183,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0184",
+      "category": "수사기관 사칭형",
+      "call_idx": 184,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0185",
+      "category": "수사기관 사칭형",
+      "call_idx": 185,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0186",
+      "category": "수사기관 사칭형",
+      "call_idx": 186,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0187",
+      "category": "수사기관 사칭형",
+      "call_idx": 187,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0188",
+      "category": "수사기관 사칭형",
+      "call_idx": 188,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0189",
+      "category": "수사기관 사칭형",
+      "call_idx": 189,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0190",
+      "category": "수사기관 사칭형",
+      "call_idx": 190,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0191",
+      "category": "수사기관 사칭형",
+      "call_idx": 191,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0192",
+      "category": "수사기관 사칭형",
+      "call_idx": 192,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0193",
+      "category": "수사기관 사칭형",
+      "call_idx": 193,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0194",
+      "category": "수사기관 사칭형",
+      "call_idx": 194,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0195",
+      "category": "수사기관 사칭형",
+      "call_idx": 195,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0196",
+      "category": "수사기관 사칭형",
+      "call_idx": 196,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0197",
+      "category": "수사기관 사칭형",
+      "call_idx": 197,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0198",
+      "category": "수사기관 사칭형",
+      "call_idx": 198,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0199",
+      "category": "수사기관 사칭형",
+      "call_idx": 199,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0200",
+      "category": "수사기관 사칭형",
+      "call_idx": 200,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0201",
+      "category": "수사기관 사칭형",
+      "call_idx": 201,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0202",
+      "category": "수사기관 사칭형",
+      "call_idx": 202,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0203",
+      "category": "수사기관 사칭형",
+      "call_idx": 203,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0204",
+      "category": "수사기관 사칭형",
+      "call_idx": 204,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0205",
+      "category": "수사기관 사칭형",
+      "call_idx": 205,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0206",
+      "category": "수사기관 사칭형",
+      "call_idx": 206,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0207",
+      "category": "수사기관 사칭형",
+      "call_idx": 207,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0208",
+      "category": "수사기관 사칭형",
+      "call_idx": 208,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0209",
+      "category": "수사기관 사칭형",
+      "call_idx": 209,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0210",
+      "category": "수사기관 사칭형",
+      "call_idx": 210,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0211",
+      "category": "수사기관 사칭형",
+      "call_idx": 211,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0212",
+      "category": "수사기관 사칭형",
+      "call_idx": 212,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0213",
+      "category": "수사기관 사칭형",
+      "call_idx": 213,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0214",
+      "category": "수사기관 사칭형",
+      "call_idx": 214,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0215",
+      "category": "수사기관 사칭형",
+      "call_idx": 215,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0216",
+      "category": "수사기관 사칭형",
+      "call_idx": 216,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0217",
+      "category": "수사기관 사칭형",
+      "call_idx": 217,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0218",
+      "category": "수사기관 사칭형",
+      "call_idx": 218,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0219",
+      "category": "수사기관 사칭형",
+      "call_idx": 219,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0220",
+      "category": "수사기관 사칭형",
+      "call_idx": 220,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0221",
+      "category": "수사기관 사칭형",
+      "call_idx": 221,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0222",
+      "category": "수사기관 사칭형",
+      "call_idx": 222,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0223",
+      "category": "수사기관 사칭형",
+      "call_idx": 223,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0224",
+      "category": "수사기관 사칭형",
+      "call_idx": 224,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0225",
+      "category": "수사기관 사칭형",
+      "call_idx": 225,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0226",
+      "category": "수사기관 사칭형",
+      "call_idx": 226,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0227",
+      "category": "수사기관 사칭형",
+      "call_idx": 227,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0228",
+      "category": "수사기관 사칭형",
+      "call_idx": 228,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0229",
+      "category": "수사기관 사칭형",
+      "call_idx": 229,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0230",
+      "category": "수사기관 사칭형",
+      "call_idx": 230,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0231",
+      "category": "수사기관 사칭형",
+      "call_idx": 231,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0232",
+      "category": "수사기관 사칭형",
+      "call_idx": 232,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0233",
+      "category": "수사기관 사칭형",
+      "call_idx": 233,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0234",
+      "category": "수사기관 사칭형",
+      "call_idx": 234,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0235",
+      "category": "수사기관 사칭형",
+      "call_idx": 235,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0236",
+      "category": "수사기관 사칭형",
+      "call_idx": 236,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0237",
+      "category": "수사기관 사칭형",
+      "call_idx": 237,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0238",
+      "category": "수사기관 사칭형",
+      "call_idx": 238,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0239",
+      "category": "수사기관 사칭형",
+      "call_idx": 239,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0240",
+      "category": "수사기관 사칭형",
+      "call_idx": 240,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0241",
+      "category": "수사기관 사칭형",
+      "call_idx": 241,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0242",
+      "category": "수사기관 사칭형",
+      "call_idx": 242,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0243",
+      "category": "수사기관 사칭형",
+      "call_idx": 243,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0244",
+      "category": "수사기관 사칭형",
+      "call_idx": 244,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0245",
+      "category": "수사기관 사칭형",
+      "call_idx": 245,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0246",
+      "category": "수사기관 사칭형",
+      "call_idx": 246,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0247",
+      "category": "수사기관 사칭형",
+      "call_idx": 247,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0248",
+      "category": "수사기관 사칭형",
+      "call_idx": 248,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0249",
+      "category": "수사기관 사칭형",
+      "call_idx": 249,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0250",
+      "category": "수사기관 사칭형",
+      "call_idx": 250,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0251",
+      "category": "수사기관 사칭형",
+      "call_idx": 251,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0252",
+      "category": "수사기관 사칭형",
+      "call_idx": 252,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0253",
+      "category": "수사기관 사칭형",
+      "call_idx": 253,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0254",
+      "category": "수사기관 사칭형",
+      "call_idx": 254,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0255",
+      "category": "수사기관 사칭형",
+      "call_idx": 255,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0256",
+      "category": "수사기관 사칭형",
+      "call_idx": 256,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0257",
+      "category": "수사기관 사칭형",
+      "call_idx": 257,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0258",
+      "category": "수사기관 사칭형",
+      "call_idx": 258,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0259",
+      "category": "수사기관 사칭형",
+      "call_idx": 259,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0260",
+      "category": "수사기관 사칭형",
+      "call_idx": 260,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0261",
+      "category": "수사기관 사칭형",
+      "call_idx": 261,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0262",
+      "category": "수사기관 사칭형",
+      "call_idx": 262,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0263",
+      "category": "수사기관 사칭형",
+      "call_idx": 263,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0264",
+      "category": "수사기관 사칭형",
+      "call_idx": 264,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0265",
+      "category": "수사기관 사칭형",
+      "call_idx": 265,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0266",
+      "category": "수사기관 사칭형",
+      "call_idx": 266,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0267",
+      "category": "수사기관 사칭형",
+      "call_idx": 267,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0268",
+      "category": "수사기관 사칭형",
+      "call_idx": 268,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0269",
+      "category": "수사기관 사칭형",
+      "call_idx": 269,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0270",
+      "category": "수사기관 사칭형",
+      "call_idx": 270,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0271",
+      "category": "수사기관 사칭형",
+      "call_idx": 271,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0272",
+      "category": "수사기관 사칭형",
+      "call_idx": 272,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0273",
+      "category": "수사기관 사칭형",
+      "call_idx": 273,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0274",
+      "category": "수사기관 사칭형",
+      "call_idx": 274,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0275",
+      "category": "수사기관 사칭형",
+      "call_idx": 275,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0276",
+      "category": "수사기관 사칭형",
+      "call_idx": 276,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0277",
+      "category": "수사기관 사칭형",
+      "call_idx": 277,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0278",
+      "category": "수사기관 사칭형",
+      "call_idx": 278,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0279",
+      "category": "수사기관 사칭형",
+      "call_idx": 279,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0280",
+      "category": "수사기관 사칭형",
+      "call_idx": 280,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0281",
+      "category": "수사기관 사칭형",
+      "call_idx": 281,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0282",
+      "category": "수사기관 사칭형",
+      "call_idx": 282,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0283",
+      "category": "수사기관 사칭형",
+      "call_idx": 283,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0284",
+      "category": "수사기관 사칭형",
+      "call_idx": 284,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0285",
+      "category": "수사기관 사칭형",
+      "call_idx": 285,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0286",
+      "category": "수사기관 사칭형",
+      "call_idx": 286,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0287",
+      "category": "수사기관 사칭형",
+      "call_idx": 287,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0288",
+      "category": "수사기관 사칭형",
+      "call_idx": 288,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0289",
+      "category": "수사기관 사칭형",
+      "call_idx": 289,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0290",
+      "category": "수사기관 사칭형",
+      "call_idx": 290,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0291",
+      "category": "수사기관 사칭형",
+      "call_idx": 291,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0292",
+      "category": "수사기관 사칭형",
+      "call_idx": 292,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0293",
+      "category": "수사기관 사칭형",
+      "call_idx": 293,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0294",
+      "category": "수사기관 사칭형",
+      "call_idx": 294,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0295",
+      "category": "수사기관 사칭형",
+      "call_idx": 295,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0296",
+      "category": "수사기관 사칭형",
+      "call_idx": 296,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0297",
+      "category": "수사기관 사칭형",
+      "call_idx": 297,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0298",
+      "category": "수사기관 사칭형",
+      "call_idx": 298,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0299",
+      "category": "수사기관 사칭형",
+      "call_idx": 299,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0300",
+      "category": "수사기관 사칭형",
+      "call_idx": 300,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0301",
+      "category": "수사기관 사칭형",
+      "call_idx": 301,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0302",
+      "category": "수사기관 사칭형",
+      "call_idx": 302,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0303",
+      "category": "수사기관 사칭형",
+      "call_idx": 303,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0304",
+      "category": "수사기관 사칭형",
+      "call_idx": 304,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0305",
+      "category": "수사기관 사칭형",
+      "call_idx": 305,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0306",
+      "category": "수사기관 사칭형",
+      "call_idx": 306,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0307",
+      "category": "수사기관 사칭형",
+      "call_idx": 307,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0308",
+      "category": "수사기관 사칭형",
+      "call_idx": 308,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0309",
+      "category": "수사기관 사칭형",
+      "call_idx": 309,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0310",
+      "category": "수사기관 사칭형",
+      "call_idx": 310,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0311",
+      "category": "수사기관 사칭형",
+      "call_idx": 311,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0312",
+      "category": "수사기관 사칭형",
+      "call_idx": 312,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0313",
+      "category": "수사기관 사칭형",
+      "call_idx": 313,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0314",
+      "category": "수사기관 사칭형",
+      "call_idx": 314,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0315",
+      "category": "수사기관 사칭형",
+      "call_idx": 315,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0316",
+      "category": "수사기관 사칭형",
+      "call_idx": 316,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0317",
+      "category": "수사기관 사칭형",
+      "call_idx": 317,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0318",
+      "category": "수사기관 사칭형",
+      "call_idx": 318,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0319",
+      "category": "수사기관 사칭형",
+      "call_idx": 319,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0320",
+      "category": "수사기관 사칭형",
+      "call_idx": 320,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0321",
+      "category": "수사기관 사칭형",
+      "call_idx": 321,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0322",
+      "category": "수사기관 사칭형",
+      "call_idx": 322,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0323",
+      "category": "수사기관 사칭형",
+      "call_idx": 323,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0324",
+      "category": "수사기관 사칭형",
+      "call_idx": 324,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0325",
+      "category": "수사기관 사칭형",
+      "call_idx": 325,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0326",
+      "category": "수사기관 사칭형",
+      "call_idx": 326,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0327",
+      "category": "수사기관 사칭형",
+      "call_idx": 327,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0328",
+      "category": "수사기관 사칭형",
+      "call_idx": 328,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0329",
+      "category": "수사기관 사칭형",
+      "call_idx": 329,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0330",
+      "category": "수사기관 사칭형",
+      "call_idx": 330,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0331",
+      "category": "수사기관 사칭형",
+      "call_idx": 331,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0332",
+      "category": "수사기관 사칭형",
+      "call_idx": 332,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0333",
+      "category": "수사기관 사칭형",
+      "call_idx": 333,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0334",
+      "category": "수사기관 사칭형",
+      "call_idx": 334,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0335",
+      "category": "수사기관 사칭형",
+      "call_idx": 335,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0336",
+      "category": "수사기관 사칭형",
+      "call_idx": 336,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0337",
+      "category": "수사기관 사칭형",
+      "call_idx": 337,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "investigation_0338",
+      "category": "수사기관 사칭형",
+      "call_idx": 338,
+      "n_generate": 1
+    },
+    {
+      "custom_id": "loan_0000",
+      "category": "대출 사기형",
+      "call_idx": 0,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0001",
+      "category": "대출 사기형",
+      "call_idx": 1,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0002",
+      "category": "대출 사기형",
+      "call_idx": 2,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0003",
+      "category": "대출 사기형",
+      "call_idx": 3,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0004",
+      "category": "대출 사기형",
+      "call_idx": 4,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0005",
+      "category": "대출 사기형",
+      "call_idx": 5,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0006",
+      "category": "대출 사기형",
+      "call_idx": 6,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0007",
+      "category": "대출 사기형",
+      "call_idx": 7,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0008",
+      "category": "대출 사기형",
+      "call_idx": 8,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0009",
+      "category": "대출 사기형",
+      "call_idx": 9,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0010",
+      "category": "대출 사기형",
+      "call_idx": 10,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0011",
+      "category": "대출 사기형",
+      "call_idx": 11,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0012",
+      "category": "대출 사기형",
+      "call_idx": 12,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0013",
+      "category": "대출 사기형",
+      "call_idx": 13,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0014",
+      "category": "대출 사기형",
+      "call_idx": 14,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0015",
+      "category": "대출 사기형",
+      "call_idx": 15,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0016",
+      "category": "대출 사기형",
+      "call_idx": 16,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0017",
+      "category": "대출 사기형",
+      "call_idx": 17,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0018",
+      "category": "대출 사기형",
+      "call_idx": 18,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0019",
+      "category": "대출 사기형",
+      "call_idx": 19,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0020",
+      "category": "대출 사기형",
+      "call_idx": 20,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0021",
+      "category": "대출 사기형",
+      "call_idx": 21,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0022",
+      "category": "대출 사기형",
+      "call_idx": 22,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0023",
+      "category": "대출 사기형",
+      "call_idx": 23,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0024",
+      "category": "대출 사기형",
+      "call_idx": 24,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0025",
+      "category": "대출 사기형",
+      "call_idx": 25,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0026",
+      "category": "대출 사기형",
+      "call_idx": 26,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0027",
+      "category": "대출 사기형",
+      "call_idx": 27,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0028",
+      "category": "대출 사기형",
+      "call_idx": 28,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0029",
+      "category": "대출 사기형",
+      "call_idx": 29,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0030",
+      "category": "대출 사기형",
+      "call_idx": 30,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0031",
+      "category": "대출 사기형",
+      "call_idx": 31,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0032",
+      "category": "대출 사기형",
+      "call_idx": 32,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0033",
+      "category": "대출 사기형",
+      "call_idx": 33,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0034",
+      "category": "대출 사기형",
+      "call_idx": 34,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0035",
+      "category": "대출 사기형",
+      "call_idx": 35,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0036",
+      "category": "대출 사기형",
+      "call_idx": 36,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0037",
+      "category": "대출 사기형",
+      "call_idx": 37,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0038",
+      "category": "대출 사기형",
+      "call_idx": 38,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0039",
+      "category": "대출 사기형",
+      "call_idx": 39,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0040",
+      "category": "대출 사기형",
+      "call_idx": 40,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0041",
+      "category": "대출 사기형",
+      "call_idx": 41,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0042",
+      "category": "대출 사기형",
+      "call_idx": 42,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0043",
+      "category": "대출 사기형",
+      "call_idx": 43,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0044",
+      "category": "대출 사기형",
+      "call_idx": 44,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0045",
+      "category": "대출 사기형",
+      "call_idx": 45,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0046",
+      "category": "대출 사기형",
+      "call_idx": 46,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0047",
+      "category": "대출 사기형",
+      "call_idx": 47,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0048",
+      "category": "대출 사기형",
+      "call_idx": 48,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0049",
+      "category": "대출 사기형",
+      "call_idx": 49,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0050",
+      "category": "대출 사기형",
+      "call_idx": 50,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0051",
+      "category": "대출 사기형",
+      "call_idx": 51,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0052",
+      "category": "대출 사기형",
+      "call_idx": 52,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0053",
+      "category": "대출 사기형",
+      "call_idx": 53,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0054",
+      "category": "대출 사기형",
+      "call_idx": 54,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0055",
+      "category": "대출 사기형",
+      "call_idx": 55,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0056",
+      "category": "대출 사기형",
+      "call_idx": 56,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0057",
+      "category": "대출 사기형",
+      "call_idx": 57,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0058",
+      "category": "대출 사기형",
+      "call_idx": 58,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0059",
+      "category": "대출 사기형",
+      "call_idx": 59,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0060",
+      "category": "대출 사기형",
+      "call_idx": 60,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0061",
+      "category": "대출 사기형",
+      "call_idx": 61,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0062",
+      "category": "대출 사기형",
+      "call_idx": 62,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0063",
+      "category": "대출 사기형",
+      "call_idx": 63,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0064",
+      "category": "대출 사기형",
+      "call_idx": 64,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0065",
+      "category": "대출 사기형",
+      "call_idx": 65,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0066",
+      "category": "대출 사기형",
+      "call_idx": 66,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0067",
+      "category": "대출 사기형",
+      "call_idx": 67,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0068",
+      "category": "대출 사기형",
+      "call_idx": 68,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0069",
+      "category": "대출 사기형",
+      "call_idx": 69,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0070",
+      "category": "대출 사기형",
+      "call_idx": 70,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0071",
+      "category": "대출 사기형",
+      "call_idx": 71,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0072",
+      "category": "대출 사기형",
+      "call_idx": 72,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0073",
+      "category": "대출 사기형",
+      "call_idx": 73,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0074",
+      "category": "대출 사기형",
+      "call_idx": 74,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0075",
+      "category": "대출 사기형",
+      "call_idx": 75,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0076",
+      "category": "대출 사기형",
+      "call_idx": 76,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0077",
+      "category": "대출 사기형",
+      "call_idx": 77,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0078",
+      "category": "대출 사기형",
+      "call_idx": 78,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0079",
+      "category": "대출 사기형",
+      "call_idx": 79,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0080",
+      "category": "대출 사기형",
+      "call_idx": 80,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0081",
+      "category": "대출 사기형",
+      "call_idx": 81,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0082",
+      "category": "대출 사기형",
+      "call_idx": 82,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0083",
+      "category": "대출 사기형",
+      "call_idx": 83,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0084",
+      "category": "대출 사기형",
+      "call_idx": 84,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0085",
+      "category": "대출 사기형",
+      "call_idx": 85,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0086",
+      "category": "대출 사기형",
+      "call_idx": 86,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0087",
+      "category": "대출 사기형",
+      "call_idx": 87,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0088",
+      "category": "대출 사기형",
+      "call_idx": 88,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0089",
+      "category": "대출 사기형",
+      "call_idx": 89,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0090",
+      "category": "대출 사기형",
+      "call_idx": 90,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0091",
+      "category": "대출 사기형",
+      "call_idx": 91,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0092",
+      "category": "대출 사기형",
+      "call_idx": 92,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0093",
+      "category": "대출 사기형",
+      "call_idx": 93,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0094",
+      "category": "대출 사기형",
+      "call_idx": 94,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0095",
+      "category": "대출 사기형",
+      "call_idx": 95,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0096",
+      "category": "대출 사기형",
+      "call_idx": 96,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0097",
+      "category": "대출 사기형",
+      "call_idx": 97,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0098",
+      "category": "대출 사기형",
+      "call_idx": 98,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0099",
+      "category": "대출 사기형",
+      "call_idx": 99,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0100",
+      "category": "대출 사기형",
+      "call_idx": 100,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0101",
+      "category": "대출 사기형",
+      "call_idx": 101,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0102",
+      "category": "대출 사기형",
+      "call_idx": 102,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0103",
+      "category": "대출 사기형",
+      "call_idx": 103,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0104",
+      "category": "대출 사기형",
+      "call_idx": 104,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0105",
+      "category": "대출 사기형",
+      "call_idx": 105,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0106",
+      "category": "대출 사기형",
+      "call_idx": 106,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0107",
+      "category": "대출 사기형",
+      "call_idx": 107,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0108",
+      "category": "대출 사기형",
+      "call_idx": 108,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0109",
+      "category": "대출 사기형",
+      "call_idx": 109,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0110",
+      "category": "대출 사기형",
+      "call_idx": 110,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0111",
+      "category": "대출 사기형",
+      "call_idx": 111,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0112",
+      "category": "대출 사기형",
+      "call_idx": 112,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0113",
+      "category": "대출 사기형",
+      "call_idx": 113,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0114",
+      "category": "대출 사기형",
+      "call_idx": 114,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0115",
+      "category": "대출 사기형",
+      "call_idx": 115,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0116",
+      "category": "대출 사기형",
+      "call_idx": 116,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0117",
+      "category": "대출 사기형",
+      "call_idx": 117,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0118",
+      "category": "대출 사기형",
+      "call_idx": 118,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0119",
+      "category": "대출 사기형",
+      "call_idx": 119,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0120",
+      "category": "대출 사기형",
+      "call_idx": 120,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0121",
+      "category": "대출 사기형",
+      "call_idx": 121,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0122",
+      "category": "대출 사기형",
+      "call_idx": 122,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0123",
+      "category": "대출 사기형",
+      "call_idx": 123,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0124",
+      "category": "대출 사기형",
+      "call_idx": 124,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0125",
+      "category": "대출 사기형",
+      "call_idx": 125,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0126",
+      "category": "대출 사기형",
+      "call_idx": 126,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0127",
+      "category": "대출 사기형",
+      "call_idx": 127,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0128",
+      "category": "대출 사기형",
+      "call_idx": 128,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0129",
+      "category": "대출 사기형",
+      "call_idx": 129,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0130",
+      "category": "대출 사기형",
+      "call_idx": 130,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0131",
+      "category": "대출 사기형",
+      "call_idx": 131,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0132",
+      "category": "대출 사기형",
+      "call_idx": 132,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0133",
+      "category": "대출 사기형",
+      "call_idx": 133,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0134",
+      "category": "대출 사기형",
+      "call_idx": 134,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0135",
+      "category": "대출 사기형",
+      "call_idx": 135,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0136",
+      "category": "대출 사기형",
+      "call_idx": 136,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0137",
+      "category": "대출 사기형",
+      "call_idx": 137,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0138",
+      "category": "대출 사기형",
+      "call_idx": 138,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0139",
+      "category": "대출 사기형",
+      "call_idx": 139,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0140",
+      "category": "대출 사기형",
+      "call_idx": 140,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0141",
+      "category": "대출 사기형",
+      "call_idx": 141,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0142",
+      "category": "대출 사기형",
+      "call_idx": 142,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0143",
+      "category": "대출 사기형",
+      "call_idx": 143,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0144",
+      "category": "대출 사기형",
+      "call_idx": 144,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0145",
+      "category": "대출 사기형",
+      "call_idx": 145,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0146",
+      "category": "대출 사기형",
+      "call_idx": 146,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0147",
+      "category": "대출 사기형",
+      "call_idx": 147,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0148",
+      "category": "대출 사기형",
+      "call_idx": 148,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0149",
+      "category": "대출 사기형",
+      "call_idx": 149,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0150",
+      "category": "대출 사기형",
+      "call_idx": 150,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0151",
+      "category": "대출 사기형",
+      "call_idx": 151,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0152",
+      "category": "대출 사기형",
+      "call_idx": 152,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0153",
+      "category": "대출 사기형",
+      "call_idx": 153,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0154",
+      "category": "대출 사기형",
+      "call_idx": 154,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0155",
+      "category": "대출 사기형",
+      "call_idx": 155,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0156",
+      "category": "대출 사기형",
+      "call_idx": 156,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0157",
+      "category": "대출 사기형",
+      "call_idx": 157,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0158",
+      "category": "대출 사기형",
+      "call_idx": 158,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0159",
+      "category": "대출 사기형",
+      "call_idx": 159,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0160",
+      "category": "대출 사기형",
+      "call_idx": 160,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0161",
+      "category": "대출 사기형",
+      "call_idx": 161,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0162",
+      "category": "대출 사기형",
+      "call_idx": 162,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0163",
+      "category": "대출 사기형",
+      "call_idx": 163,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0164",
+      "category": "대출 사기형",
+      "call_idx": 164,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0165",
+      "category": "대출 사기형",
+      "call_idx": 165,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0166",
+      "category": "대출 사기형",
+      "call_idx": 166,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0167",
+      "category": "대출 사기형",
+      "call_idx": 167,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0168",
+      "category": "대출 사기형",
+      "call_idx": 168,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0169",
+      "category": "대출 사기형",
+      "call_idx": 169,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0170",
+      "category": "대출 사기형",
+      "call_idx": 170,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0171",
+      "category": "대출 사기형",
+      "call_idx": 171,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0172",
+      "category": "대출 사기형",
+      "call_idx": 172,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0173",
+      "category": "대출 사기형",
+      "call_idx": 173,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0174",
+      "category": "대출 사기형",
+      "call_idx": 174,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0175",
+      "category": "대출 사기형",
+      "call_idx": 175,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0176",
+      "category": "대출 사기형",
+      "call_idx": 176,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0177",
+      "category": "대출 사기형",
+      "call_idx": 177,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0178",
+      "category": "대출 사기형",
+      "call_idx": 178,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0179",
+      "category": "대출 사기형",
+      "call_idx": 179,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0180",
+      "category": "대출 사기형",
+      "call_idx": 180,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0181",
+      "category": "대출 사기형",
+      "call_idx": 181,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0182",
+      "category": "대출 사기형",
+      "call_idx": 182,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0183",
+      "category": "대출 사기형",
+      "call_idx": 183,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0184",
+      "category": "대출 사기형",
+      "call_idx": 184,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0185",
+      "category": "대출 사기형",
+      "call_idx": 185,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0186",
+      "category": "대출 사기형",
+      "call_idx": 186,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0187",
+      "category": "대출 사기형",
+      "call_idx": 187,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0188",
+      "category": "대출 사기형",
+      "call_idx": 188,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0189",
+      "category": "대출 사기형",
+      "call_idx": 189,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0190",
+      "category": "대출 사기형",
+      "call_idx": 190,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0191",
+      "category": "대출 사기형",
+      "call_idx": 191,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0192",
+      "category": "대출 사기형",
+      "call_idx": 192,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0193",
+      "category": "대출 사기형",
+      "call_idx": 193,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0194",
+      "category": "대출 사기형",
+      "call_idx": 194,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0195",
+      "category": "대출 사기형",
+      "call_idx": 195,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0196",
+      "category": "대출 사기형",
+      "call_idx": 196,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0197",
+      "category": "대출 사기형",
+      "call_idx": 197,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0198",
+      "category": "대출 사기형",
+      "call_idx": 198,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0199",
+      "category": "대출 사기형",
+      "call_idx": 199,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0200",
+      "category": "대출 사기형",
+      "call_idx": 200,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0201",
+      "category": "대출 사기형",
+      "call_idx": 201,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0202",
+      "category": "대출 사기형",
+      "call_idx": 202,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0203",
+      "category": "대출 사기형",
+      "call_idx": 203,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0204",
+      "category": "대출 사기형",
+      "call_idx": 204,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0205",
+      "category": "대출 사기형",
+      "call_idx": 205,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0206",
+      "category": "대출 사기형",
+      "call_idx": 206,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0207",
+      "category": "대출 사기형",
+      "call_idx": 207,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0208",
+      "category": "대출 사기형",
+      "call_idx": 208,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0209",
+      "category": "대출 사기형",
+      "call_idx": 209,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0210",
+      "category": "대출 사기형",
+      "call_idx": 210,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0211",
+      "category": "대출 사기형",
+      "call_idx": 211,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0212",
+      "category": "대출 사기형",
+      "call_idx": 212,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0213",
+      "category": "대출 사기형",
+      "call_idx": 213,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0214",
+      "category": "대출 사기형",
+      "call_idx": 214,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0215",
+      "category": "대출 사기형",
+      "call_idx": 215,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0216",
+      "category": "대출 사기형",
+      "call_idx": 216,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0217",
+      "category": "대출 사기형",
+      "call_idx": 217,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0218",
+      "category": "대출 사기형",
+      "call_idx": 218,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0219",
+      "category": "대출 사기형",
+      "call_idx": 219,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0220",
+      "category": "대출 사기형",
+      "call_idx": 220,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0221",
+      "category": "대출 사기형",
+      "call_idx": 221,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0222",
+      "category": "대출 사기형",
+      "call_idx": 222,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0223",
+      "category": "대출 사기형",
+      "call_idx": 223,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0224",
+      "category": "대출 사기형",
+      "call_idx": 224,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0225",
+      "category": "대출 사기형",
+      "call_idx": 225,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0226",
+      "category": "대출 사기형",
+      "call_idx": 226,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0227",
+      "category": "대출 사기형",
+      "call_idx": 227,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0228",
+      "category": "대출 사기형",
+      "call_idx": 228,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0229",
+      "category": "대출 사기형",
+      "call_idx": 229,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0230",
+      "category": "대출 사기형",
+      "call_idx": 230,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0231",
+      "category": "대출 사기형",
+      "call_idx": 231,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0232",
+      "category": "대출 사기형",
+      "call_idx": 232,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0233",
+      "category": "대출 사기형",
+      "call_idx": 233,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0234",
+      "category": "대출 사기형",
+      "call_idx": 234,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0235",
+      "category": "대출 사기형",
+      "call_idx": 235,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0236",
+      "category": "대출 사기형",
+      "call_idx": 236,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0237",
+      "category": "대출 사기형",
+      "call_idx": 237,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0238",
+      "category": "대출 사기형",
+      "call_idx": 238,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0239",
+      "category": "대출 사기형",
+      "call_idx": 239,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0240",
+      "category": "대출 사기형",
+      "call_idx": 240,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0241",
+      "category": "대출 사기형",
+      "call_idx": 241,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0242",
+      "category": "대출 사기형",
+      "call_idx": 242,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0243",
+      "category": "대출 사기형",
+      "call_idx": 243,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0244",
+      "category": "대출 사기형",
+      "call_idx": 244,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0245",
+      "category": "대출 사기형",
+      "call_idx": 245,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0246",
+      "category": "대출 사기형",
+      "call_idx": 246,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0247",
+      "category": "대출 사기형",
+      "call_idx": 247,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0248",
+      "category": "대출 사기형",
+      "call_idx": 248,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0249",
+      "category": "대출 사기형",
+      "call_idx": 249,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0250",
+      "category": "대출 사기형",
+      "call_idx": 250,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0251",
+      "category": "대출 사기형",
+      "call_idx": 251,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0252",
+      "category": "대출 사기형",
+      "call_idx": 252,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0253",
+      "category": "대출 사기형",
+      "call_idx": 253,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0254",
+      "category": "대출 사기형",
+      "call_idx": 254,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0255",
+      "category": "대출 사기형",
+      "call_idx": 255,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0256",
+      "category": "대출 사기형",
+      "call_idx": 256,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0257",
+      "category": "대출 사기형",
+      "call_idx": 257,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0258",
+      "category": "대출 사기형",
+      "call_idx": 258,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0259",
+      "category": "대출 사기형",
+      "call_idx": 259,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0260",
+      "category": "대출 사기형",
+      "call_idx": 260,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0261",
+      "category": "대출 사기형",
+      "call_idx": 261,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0262",
+      "category": "대출 사기형",
+      "call_idx": 262,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0263",
+      "category": "대출 사기형",
+      "call_idx": 263,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0264",
+      "category": "대출 사기형",
+      "call_idx": 264,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0265",
+      "category": "대출 사기형",
+      "call_idx": 265,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0266",
+      "category": "대출 사기형",
+      "call_idx": 266,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0267",
+      "category": "대출 사기형",
+      "call_idx": 267,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0268",
+      "category": "대출 사기형",
+      "call_idx": 268,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0269",
+      "category": "대출 사기형",
+      "call_idx": 269,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0270",
+      "category": "대출 사기형",
+      "call_idx": 270,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0271",
+      "category": "대출 사기형",
+      "call_idx": 271,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0272",
+      "category": "대출 사기형",
+      "call_idx": 272,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0273",
+      "category": "대출 사기형",
+      "call_idx": 273,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0274",
+      "category": "대출 사기형",
+      "call_idx": 274,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0275",
+      "category": "대출 사기형",
+      "call_idx": 275,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0276",
+      "category": "대출 사기형",
+      "call_idx": 276,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0277",
+      "category": "대출 사기형",
+      "call_idx": 277,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0278",
+      "category": "대출 사기형",
+      "call_idx": 278,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0279",
+      "category": "대출 사기형",
+      "call_idx": 279,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0280",
+      "category": "대출 사기형",
+      "call_idx": 280,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0281",
+      "category": "대출 사기형",
+      "call_idx": 281,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0282",
+      "category": "대출 사기형",
+      "call_idx": 282,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0283",
+      "category": "대출 사기형",
+      "call_idx": 283,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0284",
+      "category": "대출 사기형",
+      "call_idx": 284,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0285",
+      "category": "대출 사기형",
+      "call_idx": 285,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0286",
+      "category": "대출 사기형",
+      "call_idx": 286,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0287",
+      "category": "대출 사기형",
+      "call_idx": 287,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0288",
+      "category": "대출 사기형",
+      "call_idx": 288,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0289",
+      "category": "대출 사기형",
+      "call_idx": 289,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0290",
+      "category": "대출 사기형",
+      "call_idx": 290,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0291",
+      "category": "대출 사기형",
+      "call_idx": 291,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0292",
+      "category": "대출 사기형",
+      "call_idx": 292,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0293",
+      "category": "대출 사기형",
+      "call_idx": 293,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0294",
+      "category": "대출 사기형",
+      "call_idx": 294,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0295",
+      "category": "대출 사기형",
+      "call_idx": 295,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0296",
+      "category": "대출 사기형",
+      "call_idx": 296,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0297",
+      "category": "대출 사기형",
+      "call_idx": 297,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0298",
+      "category": "대출 사기형",
+      "call_idx": 298,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0299",
+      "category": "대출 사기형",
+      "call_idx": 299,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0300",
+      "category": "대출 사기형",
+      "call_idx": 300,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0301",
+      "category": "대출 사기형",
+      "call_idx": 301,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0302",
+      "category": "대출 사기형",
+      "call_idx": 302,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0303",
+      "category": "대출 사기형",
+      "call_idx": 303,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0304",
+      "category": "대출 사기형",
+      "call_idx": 304,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0305",
+      "category": "대출 사기형",
+      "call_idx": 305,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0306",
+      "category": "대출 사기형",
+      "call_idx": 306,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0307",
+      "category": "대출 사기형",
+      "call_idx": 307,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0308",
+      "category": "대출 사기형",
+      "call_idx": 308,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0309",
+      "category": "대출 사기형",
+      "call_idx": 309,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0310",
+      "category": "대출 사기형",
+      "call_idx": 310,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0311",
+      "category": "대출 사기형",
+      "call_idx": 311,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0312",
+      "category": "대출 사기형",
+      "call_idx": 312,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0313",
+      "category": "대출 사기형",
+      "call_idx": 313,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0314",
+      "category": "대출 사기형",
+      "call_idx": 314,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0315",
+      "category": "대출 사기형",
+      "call_idx": 315,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0316",
+      "category": "대출 사기형",
+      "call_idx": 316,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0317",
+      "category": "대출 사기형",
+      "call_idx": 317,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0318",
+      "category": "대출 사기형",
+      "call_idx": 318,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0319",
+      "category": "대출 사기형",
+      "call_idx": 319,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0320",
+      "category": "대출 사기형",
+      "call_idx": 320,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0321",
+      "category": "대출 사기형",
+      "call_idx": 321,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0322",
+      "category": "대출 사기형",
+      "call_idx": 322,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0323",
+      "category": "대출 사기형",
+      "call_idx": 323,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0324",
+      "category": "대출 사기형",
+      "call_idx": 324,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0325",
+      "category": "대출 사기형",
+      "call_idx": 325,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0326",
+      "category": "대출 사기형",
+      "call_idx": 326,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0327",
+      "category": "대출 사기형",
+      "call_idx": 327,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0328",
+      "category": "대출 사기형",
+      "call_idx": 328,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0329",
+      "category": "대출 사기형",
+      "call_idx": 329,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0330",
+      "category": "대출 사기형",
+      "call_idx": 330,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0331",
+      "category": "대출 사기형",
+      "call_idx": 331,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0332",
+      "category": "대출 사기형",
+      "call_idx": 332,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0333",
+      "category": "대출 사기형",
+      "call_idx": 333,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0334",
+      "category": "대출 사기형",
+      "call_idx": 334,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0335",
+      "category": "대출 사기형",
+      "call_idx": 335,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0336",
+      "category": "대출 사기형",
+      "call_idx": 336,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0337",
+      "category": "대출 사기형",
+      "call_idx": 337,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0338",
+      "category": "대출 사기형",
+      "call_idx": 338,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0339",
+      "category": "대출 사기형",
+      "call_idx": 339,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0340",
+      "category": "대출 사기형",
+      "call_idx": 340,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0341",
+      "category": "대출 사기형",
+      "call_idx": 341,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0342",
+      "category": "대출 사기형",
+      "call_idx": 342,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0343",
+      "category": "대출 사기형",
+      "call_idx": 343,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0344",
+      "category": "대출 사기형",
+      "call_idx": 344,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0345",
+      "category": "대출 사기형",
+      "call_idx": 345,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0346",
+      "category": "대출 사기형",
+      "call_idx": 346,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0347",
+      "category": "대출 사기형",
+      "call_idx": 347,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0348",
+      "category": "대출 사기형",
+      "call_idx": 348,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0349",
+      "category": "대출 사기형",
+      "call_idx": 349,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0350",
+      "category": "대출 사기형",
+      "call_idx": 350,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0351",
+      "category": "대출 사기형",
+      "call_idx": 351,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0352",
+      "category": "대출 사기형",
+      "call_idx": 352,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0353",
+      "category": "대출 사기형",
+      "call_idx": 353,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0354",
+      "category": "대출 사기형",
+      "call_idx": 354,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0355",
+      "category": "대출 사기형",
+      "call_idx": 355,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0356",
+      "category": "대출 사기형",
+      "call_idx": 356,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0357",
+      "category": "대출 사기형",
+      "call_idx": 357,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0358",
+      "category": "대출 사기형",
+      "call_idx": 358,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0359",
+      "category": "대출 사기형",
+      "call_idx": 359,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0360",
+      "category": "대출 사기형",
+      "call_idx": 360,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0361",
+      "category": "대출 사기형",
+      "call_idx": 361,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0362",
+      "category": "대출 사기형",
+      "call_idx": 362,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0363",
+      "category": "대출 사기형",
+      "call_idx": 363,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0364",
+      "category": "대출 사기형",
+      "call_idx": 364,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0365",
+      "category": "대출 사기형",
+      "call_idx": 365,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0366",
+      "category": "대출 사기형",
+      "call_idx": 366,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0367",
+      "category": "대출 사기형",
+      "call_idx": 367,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0368",
+      "category": "대출 사기형",
+      "call_idx": 368,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0369",
+      "category": "대출 사기형",
+      "call_idx": 369,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0370",
+      "category": "대출 사기형",
+      "call_idx": 370,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0371",
+      "category": "대출 사기형",
+      "call_idx": 371,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0372",
+      "category": "대출 사기형",
+      "call_idx": 372,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0373",
+      "category": "대출 사기형",
+      "call_idx": 373,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0374",
+      "category": "대출 사기형",
+      "call_idx": 374,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0375",
+      "category": "대출 사기형",
+      "call_idx": 375,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0376",
+      "category": "대출 사기형",
+      "call_idx": 376,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0377",
+      "category": "대출 사기형",
+      "call_idx": 377,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0378",
+      "category": "대출 사기형",
+      "call_idx": 378,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0379",
+      "category": "대출 사기형",
+      "call_idx": 379,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0380",
+      "category": "대출 사기형",
+      "call_idx": 380,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0381",
+      "category": "대출 사기형",
+      "call_idx": 381,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0382",
+      "category": "대출 사기형",
+      "call_idx": 382,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0383",
+      "category": "대출 사기형",
+      "call_idx": 383,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0384",
+      "category": "대출 사기형",
+      "call_idx": 384,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0385",
+      "category": "대출 사기형",
+      "call_idx": 385,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0386",
+      "category": "대출 사기형",
+      "call_idx": 386,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0387",
+      "category": "대출 사기형",
+      "call_idx": 387,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0388",
+      "category": "대출 사기형",
+      "call_idx": 388,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0389",
+      "category": "대출 사기형",
+      "call_idx": 389,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0390",
+      "category": "대출 사기형",
+      "call_idx": 390,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0391",
+      "category": "대출 사기형",
+      "call_idx": 391,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0392",
+      "category": "대출 사기형",
+      "call_idx": 392,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0393",
+      "category": "대출 사기형",
+      "call_idx": 393,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0394",
+      "category": "대출 사기형",
+      "call_idx": 394,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0395",
+      "category": "대출 사기형",
+      "call_idx": 395,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0396",
+      "category": "대출 사기형",
+      "call_idx": 396,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0397",
+      "category": "대출 사기형",
+      "call_idx": 397,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0398",
+      "category": "대출 사기형",
+      "call_idx": 398,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0399",
+      "category": "대출 사기형",
+      "call_idx": 399,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0400",
+      "category": "대출 사기형",
+      "call_idx": 400,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0401",
+      "category": "대출 사기형",
+      "call_idx": 401,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0402",
+      "category": "대출 사기형",
+      "call_idx": 402,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0403",
+      "category": "대출 사기형",
+      "call_idx": 403,
+      "n_generate": 2
+    },
+    {
+      "custom_id": "loan_0404",
+      "category": "대출 사기형",
+      "call_idx": 404,
+      "n_generate": 2
+    }
+  ]
+}

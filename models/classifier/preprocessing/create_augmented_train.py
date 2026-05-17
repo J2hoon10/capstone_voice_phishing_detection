@@ -104,7 +104,9 @@ def detect_outliers(rows):
         print(f"  {cat}: mean={mean:.1f}, std={std:.1f}, 상한={threshold:.1f}")
         for r in rows:
             if r["_category"] == cat and r["_nseg"] > threshold:
-                outlier_ids.add(r.get("id") or r.get("\ufeffid") or "")
+                rid = r.get("id") or r.get("\ufeffid") or ""
+                if rid:  # 빈 id는 outlier_ids에 추가하지 않음 (전체 삭제 방지)
+                    outlier_ids.add(rid)
                 print(f"    제거: {(r.get('id') or r.get(chr(65279)+'id','')):<45} nseg={r['_nseg']:>4}  z={zscore(r['_nseg'],mean,std):>5.2f}")
     print(f"  → 총 {len(outlier_ids)}개 제거 예정\n")
     return outlier_ids
@@ -249,7 +251,7 @@ def main():
     outlier_ids = detect_outliers(rows)
 
     # 2. 아웃라이어 제거
-    cleaned = [r for r in rows if (r.get("id") or r.get("\ufeffid") or "") not in outlier_ids]
+    cleaned = [r for r in rows if not outlier_ids or (r.get("id") or r.get("\ufeffid") or "") not in outlier_ids]
     removed = len(rows) - len(cleaned)
     print(f"[제거 후] {len(rows)} → {len(cleaned)}행  (-{removed}개)")
     print_summary("아웃라이어 제거 후", cleaned)

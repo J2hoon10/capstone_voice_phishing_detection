@@ -1,5 +1,5 @@
 {
-  "checkpoint_path": "/home/j2hoon10/capstone_voice_phishing_detection/models/classifier/experiments/roberta_gru_freeze_init_4class/checkpoints/roberta_gru_freeze_init_4class_20260516_224755_best.pt",
-  "best_macro_f1": 0.994999499949995,
-  "run_id": "20260516_224755"
+  "checkpoint_path": "/home/j2hoon10/capstone_voice_phishing_detection/models/classifier/experiments/roberta_gru_freeze_init_4class/checkpoints/roberta_gru_freeze_init_4class_4class_20260517_174807_best.pt",
+  "best_macro_f1": 0.9925119476872595,
+  "run_id": "20260517_174807"
 }
