@@ -193,7 +193,7 @@ def visualize(model_keys, all_results, n_windows, true_label, output_path):
             title_str     = (f"{MODEL_DISPLAY.get(key, key.upper())}\n"
                              f"{final_label}  {final_conf:.1%}")
 
-        ax.set_title(title_str, color="#111111", fontsize=13,
+        ax.set_title(title_str, color="#111111", fontsize=17,
                      fontweight="bold", pad=10,
                      bbox=dict(boxstyle="round,pad=0.5",
                                facecolor=verdict_color + "28",
@@ -212,13 +212,13 @@ def visualize(model_keys, all_results, n_windows, true_label, output_path):
                loc="lower center", ncol=4,
                framealpha=0.25, facecolor=CARD_BG,
                edgecolor=BORDER, labelcolor="#111111",
-               fontsize=12, bbox_to_anchor=(0.5, -0.04))
+               fontsize=19, bbox_to_anchor=(0.5, -0.04))
 
     # ── 전체 제목 ─────────────────────────────────────────────────────────────
     suptitle = "스트리밍 추론 모델 비교  —  윈도우별 4-class 확률 분포"
     if true_label:
         suptitle += f"   |   정답: {true_label}"
-    fig.suptitle(suptitle, color="#111111", fontsize=15,
+    fig.suptitle(suptitle, color="#111111", fontsize=20,
                  fontweight="bold", y=1.02)
 
     plt.savefig(output_path, dpi=150, bbox_inches="tight",
@@ -230,14 +230,37 @@ def visualize(model_keys, all_results, n_windows, true_label, output_path):
 # ── 진입점 ─────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--text",        required=True)
+    # 추론 모드
+    parser.add_argument("--text",        default=None)
     parser.add_argument("--models",      nargs="+", default=["mamba", "gru", "lstm"],
                         choices=list(MODEL_REGISTRY.keys()))
-    parser.add_argument("--true-label",  default=None)
-    parser.add_argument("--output",      default="streaming_comparison.png")
     parser.add_argument("--temp-warmup", type=int,   default=8)
     parser.add_argument("--temp-max",    type=float, default=4.0)
+    # 시각화 공통
+    parser.add_argument("--true-label",  default=None)
+    parser.add_argument("--output",      default="streaming_comparison.png")
+    # 저장/로드
+    parser.add_argument("--save-json",   default=None,
+                        help="추론 결과를 JSON으로 저장할 경로 (예: results.json)")
+    parser.add_argument("--from-json",   default=None,
+                        help="저장된 JSON에서 결과를 불러와 시각화만 실행")
     args = parser.parse_args()
+
+    # ── JSON에서 불러오기 (추론 생략) ─────────────────────────────────────────
+    if args.from_json:
+        print(f"[불러오기] {args.from_json}")
+        with open(args.from_json, encoding="utf-8") as f:
+            saved = json.load(f)
+        model_keys  = saved["models"]
+        all_results = saved["results"]
+        n_windows   = saved["n_windows"]
+        true_label  = args.true_label if args.true_label else saved.get("true_label")
+        visualize(model_keys, all_results, n_windows, true_label, args.output)
+        return
+
+    # ── 추론 실행 ─────────────────────────────────────────────────────────────
+    if not args.text:
+        parser.error("--text 또는 --from-json 중 하나는 반드시 지정해야 합니다.")
 
     all_results = []
     n_windows   = 0
@@ -248,6 +271,18 @@ def main():
         all_results.append(results)
         n_windows = n_win
         print(f"       완료 (윈도우 {n_win}개)")
+
+    # 결과 저장 (지정한 경우)
+    if args.save_json:
+        payload = {
+            "models":     args.models,
+            "results":    all_results,
+            "n_windows":  n_windows,
+            "true_label": args.true_label,
+        }
+        with open(args.save_json, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        print(f"[저장] 추론 결과 → {args.save_json}")
 
     visualize(args.models, all_results, n_windows, args.true_label, args.output)
 

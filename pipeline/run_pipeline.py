@@ -4,9 +4,9 @@ run_pipeline.py
 음성 파일 → Whisper STT → RoBERTa-Mamba 분류기 스트리밍 파이프라인
 STT + 추론 속도를 FPS(프레임/초) 및 RTF(실시간 배율)로 측정.
 
-분류기: roberta_mamba_freeze_init_4class (interactive 방식 그대로)
-  - Whisper 세그먼트가 한 줄씩 입력되는 것처럼 동작
-  - RoBERTa 인코딩 벡터 캐싱 + Mamba 재실행 (streaming_inference --interactive 동일)
+분류기: --exp 인자로 선택 (기본: w64)
+  - w64: roberta_mamba_freeze_init_4class        (WINDOW=64, STRIDE=32, MAX_SEQ=128)
+  - w32: roberta_mamba_w32_freeze_init_4class    (WINDOW=32, STRIDE=16, MAX_SEQ=64)
 
 모드:
   [기본] 파일 전체를 한 번에 Whisper 처리
@@ -15,17 +15,18 @@ STT + 추론 속도를 FPS(프레임/초) 및 RTF(실시간 배율)로 측정.
                             ex) chunk=30, overlap=10 → [0:30], [20:60], [50:90], ...
 
 사용법:
-  # 전체 파일 한 번에
-  python run_pipeline.py --audio /home/j2hoon10/20.mp3
-
-  # 30초 청크 + 10초 오버랩
+  # W64 기본 (30초 청크)
   python run_pipeline.py --audio /home/j2hoon10/20.mp3 --chunk-secs 30 --overlap-secs 10
+
+  # W32 모델로 전환
+  python run_pipeline.py --audio /home/j2hoon10/20.mp3 --chunk-secs 15 --overlap-secs 8 --exp w32
 
   # 디렉터리 전체
   python run_pipeline.py --audio /home/j2hoon10/ --ext mp3 --chunk-secs 30 --overlap-secs 10
 """
 
 import argparse
+import importlib
 import json
 import sys
 import time
@@ -35,16 +36,34 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-# ── 분류기 실험 경로 ──────────────────────────────────────────────────────────
-EXP_DIR = (
-    Path(__file__).resolve().parents[1]
-    / "models" / "classifier" / "experiments" / "roberta_mamba_freeze_init_4class"
-)
-sys.path.insert(0, str(EXP_DIR))
+# ── 실험 이름 → 디렉터리 매핑 ──────────────────────────────────────────────────
+EXPERIMENTS = {
+    "w64": "roberta_mamba_freeze_init_4class",
+    "w32": "roberta_mamba_w32_freeze_init_4class",
+}
 
-from config import CHECKPOINT_DIR, DEVICE, IDX_TO_LABEL, LABELS, ENCODER_CONFIG
-from dataset import build_segments
-from model import build_model
+MODELS_BASE = Path(__file__).resolve().parents[1] / "models" / "classifier" / "experiments"
+
+
+def _load_exp_modules(exp_key: str):
+    """실험 디렉터리를 sys.path 앞에 삽입하고 config/dataset/model 모듈을 동적 로드."""
+    exp_name = EXPERIMENTS[exp_key]
+    exp_dir  = str(MODELS_BASE / exp_name)
+
+    # 이전 실험 경로가 남아 있으면 제거 후 새 경로 삽입
+    sys.path = [p for p in sys.path if str(MODELS_BASE) not in p]
+    sys.path.insert(0, exp_dir)
+
+    # 캐시된 모듈 제거 (다른 exp를 이미 로드했을 경우 대비)
+    for mod in ("config", "dataset", "model"):
+        sys.modules.pop(mod, None)
+
+    config  = importlib.import_module("config")
+    dataset = importlib.import_module("dataset")
+    model   = importlib.import_module("model")
+    return config, dataset, model
+
+
 from transformers import AutoTokenizer
 
 # ── 색상 코드 ─────────────────────────────────────────────────────────────────
@@ -57,18 +76,17 @@ LABEL_COLORS = {
 RESET = "\033[0m"
 BOLD  = "\033[1m"
 
-EXP_NAME     = "roberta_mamba_freeze_init_4class"
-WHISPER_SR   = 16_000   # faster-whisper 입력 샘플레이트
+WHISPER_SR = 16_000   # faster-whisper 입력 샘플레이트
 
 
 # ── 체크포인트 로드 ───────────────────────────────────────────────────────────
-def load_checkpoint(run_id: str | None = None) -> Path:
+def load_checkpoint(checkpoint_dir: Path, exp_name: str, run_id: str | None = None) -> Path:
     if run_id:
-        return CHECKPOINT_DIR / f"{EXP_NAME}_{run_id}_best.pt"
-    meta = CHECKPOINT_DIR / f"{EXP_NAME}_latest.json"
+        return checkpoint_dir / f"{exp_name}_{run_id}_best.pt"
+    meta = checkpoint_dir / f"{exp_name}_latest.json"
     if meta.exists():
         return Path(json.loads(meta.read_text(encoding="utf-8"))["checkpoint_path"])
-    raise FileNotFoundError(f"체크포인트 없음: {CHECKPOINT_DIR}")
+    raise FileNotFoundError(f"체크포인트 없음: {checkpoint_dir}")
 
 
 # ── 온도 스케일링 ─────────────────────────────────────────────────────────────
@@ -80,9 +98,9 @@ def get_temperature(k: int, warmup: int = 8, max_temp: float = 4.0) -> float:
 
 # ── RoBERTa 단일 세그먼트 인코딩 ─────────────────────────────────────────────
 @torch.no_grad()
-def encode_window(model, seg: dict) -> torch.Tensor:
-    ids  = torch.tensor([seg["input_ids"]],      dtype=torch.long, device=DEVICE)
-    attn = torch.tensor([seg["attention_mask"]], dtype=torch.long, device=DEVICE)
+def encode_window(model, seg: dict, device) -> torch.Tensor:
+    ids  = torch.tensor([seg["input_ids"]],      dtype=torch.long, device=device)
+    attn = torch.tensor([seg["attention_mask"]], dtype=torch.long, device=device)
     enc_dtype = next(model.encoder.parameters()).dtype
     H   = model.encoder(input_ids=ids, attention_mask=attn).last_hidden_state
     return model.pooling(H, attn).to(enc_dtype).float()   # (1, D)
@@ -117,21 +135,23 @@ def make_classifier_state():
 # ── 분류기 incremental 추론 ───────────────────────────────────────────────────
 @torch.no_grad()
 def classifier_step(state: dict, new_text: str, classifier, tokenizer,
-                    temp_warmup: int, temp_max: float) -> tuple[str | None, float, int]:
+                    temp_warmup: int, temp_max: float,
+                    build_segments_fn, idx_to_label: dict,
+                    device) -> tuple[str | None, float, int]:
     """
     new_text 를 누적한 뒤 새로 생긴 윈도우만 인코딩 + Mamba 실행.
     반환: (pred_label, conf, n_new_windows)
     """
     state["accumulated"].append(new_text)
     full_text = " ".join(state["accumulated"])
-    segments  = build_segments(tokenizer, full_text)
+    segments  = build_segments_fn(tokenizer, full_text)
 
     new_segs = segments[state["processed_seg_count"]:]
     if not new_segs:
         return None, 0.0, 0
 
     for seg in new_segs:
-        state["encoded_cache"].append(encode_window(classifier, seg))
+        state["encoded_cache"].append(encode_window(classifier, seg, device))
         state["processed_seg_count"] += 1
 
     x = torch.stack(state["encoded_cache"], dim=1)   # (1, T, D)
@@ -146,7 +166,7 @@ def classifier_step(state: dict, new_text: str, classifier, tokenizer,
 
     probs = state["last_probs"]
     idx   = probs.argmax().item()
-    return IDX_TO_LABEL[idx], probs[idx].item(), len(new_segs)
+    return idx_to_label[idx], probs[idx].item(), len(new_segs)
 
 
 # ── 타이밍 결과 출력 ─────────────────────────────────────────────────────────
@@ -194,7 +214,8 @@ def print_timing(audio_duration, stt_time, inf_time, n_whisper, n_windows) -> di
 # ══════════════════════════════════════════════════════════════════════════════
 @torch.no_grad()
 def run_full(audio_path: Path, whisper_model, classifier, tokenizer,
-             temp_warmup: int, temp_max: float) -> dict | None:
+             temp_warmup: int, temp_max: float,
+             build_segments_fn, idx_to_label: dict, labels: list, device) -> dict | None:
     print(f"\n{'='*70}")
     print(f"  [전체 모드] {audio_path.name}")
     print(f"{'='*70}")
@@ -225,9 +246,12 @@ def run_full(audio_path: Path, whisper_model, classifier, tokenizer,
         if not text:
             continue
 
-        prev_label = IDX_TO_LABEL[state["last_probs"].argmax().item()] if state["last_probs"] is not None else None
+        prev_label = idx_to_label[state["last_probs"].argmax().item()] if state["last_probs"] is not None else None
         t0 = time.perf_counter()
-        pred_label, conf, n_new = classifier_step(state, text, classifier, tokenizer, temp_warmup, temp_max)
+        pred_label, conf, n_new = classifier_step(
+            state, text, classifier, tokenizer, temp_warmup, temp_max,
+            build_segments_fn, idx_to_label, device,
+        )
         t_inf_total += time.perf_counter() - t0
         n_whisper   += 1
 
@@ -239,14 +263,14 @@ def run_full(audio_path: Path, whisper_model, classifier, tokenizer,
         short   = text[:30] + "…" if len(text) > 30 else text.ljust(32)
         print(f"  {short:<32} {state['processed_seg_count']:>4}  "
               f"{color}{pred_label:<14}{RESET}  {conf:>5.1%}  ", end="")
-        for j, lbl in enumerate(LABELS):
+        for j, lbl in enumerate(labels):
             p = state["last_probs"][j].item()
             print(f"{lbl[:2]}:{bar(p)}{p:.2f}  ", end="")
         if changed:
             print(f" {BOLD}{changed}{RESET}", end="")
         print()
 
-    final = IDX_TO_LABEL[state["last_probs"].argmax().item()] if state["last_probs"] is not None else "판단 불가"
+    final = idx_to_label[state["last_probs"].argmax().item()] if state["last_probs"] is not None else "판단 불가"
     print(f"\n{'='*70}")
     print(f"  최종 판단: {BOLD}{LABEL_COLORS.get(final,'')}{final}{RESET}")
 
@@ -262,7 +286,8 @@ def run_full(audio_path: Path, whisper_model, classifier, tokenizer,
 @torch.no_grad()
 def run_chunked(audio_path: Path, whisper_model, classifier, tokenizer,
                 chunk_secs: int, overlap_secs: int,
-                temp_warmup: int, temp_max: float) -> dict | None:
+                temp_warmup: int, temp_max: float,
+                build_segments_fn, idx_to_label: dict, device) -> dict | None:
     """
     오디오를 chunk_secs 단위로 잘라 순차 처리.
     각 청크는 이전 overlap_secs 초를 Whisper 컨텍스트로 포함.
@@ -336,11 +361,12 @@ def run_chunked(audio_path: Path, whisper_model, classifier, tokenizer,
             if not text:
                 continue
 
-            prev_label = (IDX_TO_LABEL[state["last_probs"].argmax().item()]
+            prev_label = (idx_to_label[state["last_probs"].argmax().item()]
                           if state["last_probs"] is not None else None)
             t0 = time.perf_counter()
             pred_label, conf, n_new = classifier_step(
-                state, text, classifier, tokenizer, temp_warmup, temp_max
+                state, text, classifier, tokenizer, temp_warmup, temp_max,
+                build_segments_fn, idx_to_label, device,
             )
             t_inf_total += time.perf_counter() - t0
             n_whisper   += 1
@@ -361,7 +387,7 @@ def run_chunked(audio_path: Path, whisper_model, classifier, tokenizer,
             print()
             first_in_chunk = False
 
-    final = (IDX_TO_LABEL[state["last_probs"].argmax().item()]
+    final = (idx_to_label[state["last_probs"].argmax().item()]
              if state["last_probs"] is not None else "판단 불가")
     print(f"\n{'='*70}")
     print(f"  최종 판단: {BOLD}{LABEL_COLORS.get(final,'')}{final}{RESET}")
@@ -394,7 +420,22 @@ def main():
                         help="청크 모드: 청크 길이(초). 미지정 시 전체 파일 모드")
     parser.add_argument("--overlap-secs", type=int, default=10,
                         help="청크 모드: Whisper 컨텍스트용 오버랩 길이(초, 기본: 10)")
+    parser.add_argument("--exp",          default="w64", choices=list(EXPERIMENTS.keys()),
+                        help="분류기 실험 선택: w64 (기본, WINDOW=64) | w32 (WINDOW=32)")
     args = parser.parse_args()
+
+    # ── 실험 모듈 동적 로드 ───────────────────────────────────────────────────
+    exp_name = EXPERIMENTS[args.exp]
+    print(f"[로드] 실험: {exp_name}  (--exp {args.exp})")
+    cfg, ds, mdl = _load_exp_modules(args.exp)
+
+    DEVICE_        = cfg.DEVICE
+    IDX_TO_LABEL_  = cfg.IDX_TO_LABEL
+    LABELS_        = cfg.LABELS
+    ENCODER_CONFIG_= cfg.ENCODER_CONFIG
+    CHECKPOINT_DIR_= cfg.CHECKPOINT_DIR
+    build_segments_fn = ds.build_segments
+    build_model_fn    = mdl.build_model
 
     # ── Whisper 로드 ──────────────────────────────────────────────────────────
     from faster_whisper import WhisperModel
@@ -405,15 +446,15 @@ def main():
     whisper_model = WhisperModel(args.whisper_model, device=w_device, compute_type=compute_type)
 
     # ── 분류기 로드 ───────────────────────────────────────────────────────────
-    ckpt_path  = load_checkpoint(args.run_id)
+    ckpt_path  = load_checkpoint(CHECKPOINT_DIR_, exp_name, args.run_id)
     print(f"[로드] 분류기: {ckpt_path}")
-    classifier = build_model().to(DEVICE)
+    classifier = build_model_fn().to(DEVICE_)
     ckpt       = torch.load(ckpt_path, map_location="cpu", weights_only=False)
     classifier.load_state_dict(
         ckpt["model_state_dict"] if isinstance(ckpt, dict) and "model_state_dict" in ckpt else ckpt
     )
     classifier.eval()
-    tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG["MODEL_NAME"])
+    tokenizer = AutoTokenizer.from_pretrained(ENCODER_CONFIG_["MODEL_NAME"])
 
     # ── 음성 파일 수집 ────────────────────────────────────────────────────────
     audio_files = collect_audio_files(Path(args.audio), args.ext)
@@ -430,11 +471,15 @@ def main():
                 af, whisper_model, classifier, tokenizer,
                 chunk_secs=args.chunk_secs, overlap_secs=args.overlap_secs,
                 temp_warmup=args.temp_warmup, temp_max=args.temp_max,
+                build_segments_fn=build_segments_fn,
+                idx_to_label=IDX_TO_LABEL_, device=DEVICE_,
             )
         else:
             result = run_full(
                 af, whisper_model, classifier, tokenizer,
                 temp_warmup=args.temp_warmup, temp_max=args.temp_max,
+                build_segments_fn=build_segments_fn,
+                idx_to_label=IDX_TO_LABEL_, labels=LABELS_, device=DEVICE_,
             )
         if result:
             all_results.append(result)
