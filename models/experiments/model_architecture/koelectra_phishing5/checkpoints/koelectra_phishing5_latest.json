@@ -1,5 +1,0 @@
-{
-  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\koelectra_phishing5\\checkpoints\\koelectra_phishing5_20260512_145355_best.pt",
-  "best_macro_f1": 0.8129120120954632,
-  "run_id": "20260512_145355"
-}

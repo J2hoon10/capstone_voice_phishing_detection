@@ -1,5 +1,0 @@
-{
-  "checkpoint_path": "/home/data/capstone_voice_phishing_detection/models/classifier/experiments/koelectra_mamba_freeze_init/checkpoints/koelectra_mamba_freeze_init_20260513_152612_best.pt",
-  "best_macro_f1": 0.9134731410956457,
-  "run_id": "20260513_152612"
-}
