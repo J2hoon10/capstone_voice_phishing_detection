@@ -1,7 +1,7 @@
 services:
   classifier:
     build:
-      context: ./models/classifier
+      context: ./models/main/model_architecture
     container_name: phishing-classifier
     environment:
       MODEL_PATH: ${MODEL_PATH:-/app/weights/student_best.pt}
@@ -10,17 +10,10 @@ services:
       CLASSIFIER_DEVICE: ${CLASSIFIER_DEVICE:-cuda}
       WHISPER_MODEL_SIZE: ${WHISPER_MODEL_SIZE:-Systran/faster-whisper-base}
     volumes:
-      - ./models/classifier/weights:/app/weights
+      - ./models/main/model_architecture/weights:/app/weights
       - hf-cache:/cache/huggingface
     expose:
       - "8001"
-
-  guidance:
-    build:
-      context: ./models/guidance
-    container_name: phishing-guidance
-    expose:
-      - "8002"
 
   backend:
     build:
@@ -28,11 +21,9 @@ services:
     container_name: phishing-backend
     environment:
       CLASSIFIER_URL: ${CLASSIFIER_URL:-http://classifier:8001}
-      GUIDANCE_URL: ${GUIDANCE_URL:-http://guidance:8002}
       CORS_ORIGINS: ${CORS_ORIGINS:-*}
     depends_on:
       - classifier
-      - guidance
     expose:
       - "8000"
 
