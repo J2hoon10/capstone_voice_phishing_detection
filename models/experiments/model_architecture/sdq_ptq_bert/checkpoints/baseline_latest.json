@@ -1,0 +1,6 @@
+{
+  "run_id": "20260411_184739",
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\sdq_ptq_bert\\checkpoints\\baseline_20260411_184739_best.pt",
+  "train_log_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\sdq_ptq_bert\\logs\\baseline_20260411_184739_train_log.json",
+  "best_accuracy": 0.907454447266836
+}

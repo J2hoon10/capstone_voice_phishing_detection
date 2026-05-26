@@ -1,0 +1,8 @@
+{
+  "experiment": "fm_only",
+  "run_id": "20260327_211341",
+  "loss_strategy": "L3",
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\compressive_memory\\checkpoints\\fm_only_20260327_211341_best.pt",
+  "train_log_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\compressive_memory\\logs\\fm_only_20260327_211341_train_log.json",
+  "timestamp": "20260327_211341"
+}

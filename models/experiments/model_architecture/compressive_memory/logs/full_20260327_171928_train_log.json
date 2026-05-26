@@ -1,0 +1,103 @@
+{
+  "experiment": "full",
+  "run_id": "20260327_171928",
+  "loss_strategy": "L1",
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\compressive_memory\\checkpoints\\full_20260327_171928_best.pt",
+  "gpu_config": {
+    "dtype": "bf16",
+    "gradient_accumulation": 2,
+    "effective_batch_size": 16
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5921017871453211,
+      "val_loss": 0.591386616230011,
+      "encoder_lr": 2e-05,
+      "upper_lr": 0.001,
+      "vram_gb": 0.48,
+      "time": 25.2854642868042
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5710857712305509,
+      "val_loss": 0.579566232363383,
+      "encoder_lr": 1.9396926207859085e-05,
+      "upper_lr": 0.0009698463103929542,
+      "vram_gb": 0.48,
+      "time": 6.031863689422607
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5616851836442948,
+      "val_loss": 0.5752077460289001,
+      "encoder_lr": 1.766044443118978e-05,
+      "upper_lr": 0.000883022221559489,
+      "vram_gb": 0.48,
+      "time": 6.069203853607178
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5479801274262942,
+      "val_loss": 0.5521085639794667,
+      "encoder_lr": 1.5000000000000002e-05,
+      "upper_lr": 0.00075,
+      "vram_gb": 0.48,
+      "time": 5.978249788284302
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.536796242915667,
+      "val_loss": 0.5506235341231028,
+      "encoder_lr": 1.1736481776669307e-05,
+      "upper_lr": 0.0005868240888334653,
+      "vram_gb": 0.48,
+      "time": 6.155649423599243
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5308093648690444,
+      "val_loss": 0.5363259414831797,
+      "encoder_lr": 8.263518223330698e-06,
+      "upper_lr": 0.00041317591116653486,
+      "vram_gb": 0.48,
+      "time": 6.083410024642944
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5254036254607715,
+      "val_loss": 0.5371379991372426,
+      "encoder_lr": 5.000000000000003e-06,
+      "upper_lr": 0.0002500000000000001,
+      "vram_gb": 0.48,
+      "time": 5.9296653270721436
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5247060849116398,
+      "val_loss": 0.5362541496753692,
+      "encoder_lr": 2.339555568810221e-06,
+      "upper_lr": 0.00011697777844051105,
+      "vram_gb": 0.48,
+      "time": 5.9816200733184814
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.517855172432386,
+      "val_loss": 0.5347488661607106,
+      "encoder_lr": 1e-06,
+      "upper_lr": 3.0153689607045842e-05,
+      "vram_gb": 0.48,
+      "time": 5.93725061416626
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.5186377880664972,
+      "val_loss": 0.5339655141035716,
+      "encoder_lr": 1e-06,
+      "upper_lr": 1e-06,
+      "vram_gb": 0.48,
+      "time": 6.103707313537598
+    }
+  ]
+}

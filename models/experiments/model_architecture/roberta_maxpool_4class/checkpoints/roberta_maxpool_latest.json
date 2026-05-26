@@ -1,0 +1,5 @@
+{
+  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\roberta_maxpool\\checkpoints\\roberta_maxpool_20260514_233241_best.pt",
+  "best_macro_f1": 0.9362468058249604,
+  "run_id": "20260514_233241"
+}

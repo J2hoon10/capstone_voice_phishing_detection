@@ -1,0 +1,68 @@
+{
+  "roberta_mamba_freeze_init_4class": {
+    "Short (1-4)": {
+      "n": 47,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Medium (5-8)": {
+      "n": 90,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Long (9-15)": {
+      "n": 71,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Very Long (16+)": {
+      "n": 32,
+      "accuracy": 0.875,
+      "macro_f1": 0.875
+    }
+  },
+  "roberta_gru_freeze_init_4class": {
+    "Short (1-4)": {
+      "n": 47,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Medium (5-8)": {
+      "n": 90,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Long (9-15)": {
+      "n": 71,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Very Long (16+)": {
+      "n": 32,
+      "accuracy": 0.875,
+      "macro_f1": 0.875
+    }
+  },
+  "roberta_lstm_freeze_init_4class": {
+    "Short (1-4)": {
+      "n": 47,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Medium (5-8)": {
+      "n": 90,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Long (9-15)": {
+      "n": 71,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "Very Long (16+)": {
+      "n": 32,
+      "accuracy": 0.875,
+      "macro_f1": 0.875
+    }
+  }
+}

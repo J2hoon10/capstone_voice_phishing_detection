@@ -1,0 +1,20 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# Install in sequence for a fresh environment:
+#   1) torch first
+#   2) then the rest
+#   3) then `causal-conv1d` / `mamba-ssm` with `--no-build-isolation`
+# See `install_requirements.sh` in this directory for the exact commands.
+#
+# This experiment uses `mamba-ssm`, so pin a PyTorch/CUDA pair that has
+# matching prebuilt wheels and works with hosts capped at CUDA 12.2 drivers.
+torch==2.5.1+cu121
+transformers==4.46.3
+numpy>=1.24.0
+scikit-learn>=1.3.0
+peft>=0.11.0
+packaging
+ninja
+wheel
+causal-conv1d==1.5.0.post8
+mamba-ssm==2.2.4
