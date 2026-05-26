@@ -12,7 +12,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
-EXPERIMENTS_DIR = Path(__file__).resolve().parent
+EXPERIMENTS_DIR = Path(__file__).resolve().parents[1] / "models" / "experiments" / "model_architecture"
 
 EXPERIMENTS = [
     {"name": "roberta_mamba_freeze_init_4class", "dir": EXPERIMENTS_DIR / "roberta_mamba_freeze_init_4class"},

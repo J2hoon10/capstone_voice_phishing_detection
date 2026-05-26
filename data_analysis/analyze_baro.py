@@ -13,7 +13,7 @@ from pathlib import Path
 from collections import defaultdict
 
 # ── 설정 ──────────────────────────────────────────────────────────────────────
-DATA_DIR = Path(__file__).resolve().parents[3] / "models" / "classifier" / "preprocessing" / "output" / "4class"
+DATA_DIR = Path(__file__).resolve().parents[1] / "models" / "main" / "data_augmentation" / "output" / "4class"
 CSV_FILES = [DATA_DIR / "train.csv", DATA_DIR / "val.csv", DATA_DIR / "test.csv"]
 
 # 대출 관련 키워드

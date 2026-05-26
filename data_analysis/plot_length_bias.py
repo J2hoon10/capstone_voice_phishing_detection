@@ -19,12 +19,15 @@ except ImportError:
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SPLITS = ["train", "val", "test"]
-OUT_DIR = BASE  # figures/ 폴더 자체
+OUT_DIR = os.path.join(BASE, "output")
+os.makedirs(OUT_DIR, exist_ok=True)
+
+_DATA_DIR = os.path.join(BASE, "..", "models", "main", "data_augmentation", "output", "4class")
 
 # ── 데이터 로드 ─────────────────────────────────────────────────────────────
 rows = []
 for split in SPLITS:
-    path = os.path.join(BASE, "..", f"{split}.csv")
+    path = os.path.join(_DATA_DIR, f"{split}.csv")
     with open(path, encoding="utf-8-sig") as f:
         rows += list(csv.DictReader(f))
 

@@ -5,8 +5,11 @@ import os
 import csv
 import json
 import argparse
+from pathlib import Path
 
-from pipeline_config import ERROR_ANALYSIS_DIR
+_ROOT = Path(__file__).resolve().parents[1]
+ERROR_ANALYSIS_DIR = str(_ROOT / "models" / "main" / "data_augmentation" / "error_analysis")
+OUTPUT_DIR = str(Path(__file__).resolve().parent / "output")
 
 try:
     from tqdm import tqdm
@@ -111,9 +114,9 @@ def main():
     parser = argparse.ArgumentParser(description="Whisper 오류 분석 (CER)")
     parser.add_argument("--input", default=os.path.join(ERROR_ANALYSIS_DIR, "ground_truth_annotated.csv"),
                         help="사람 정답이 포함된 CSV")
-    parser.add_argument("--output-report", default=os.path.join(ERROR_ANALYSIS_DIR, "error_report.csv"),
+    parser.add_argument("--output-report", default=os.path.join(OUTPUT_DIR, "error_report.csv"),
                         help="샘플별 오류 리포트")
-    parser.add_argument("--output-summary", default=os.path.join(ERROR_ANALYSIS_DIR, "error_summary.json"),
+    parser.add_argument("--output-summary", default=os.path.join(OUTPUT_DIR, "error_summary.json"),
                         help="오류 요약 JSON")
     parser.add_argument("--plot", action="store_true", help="수렴 그래프 출력")
     parser.add_argument("--no-progress", action="store_true", help="진행률 표시 비활성화")
@@ -168,7 +171,7 @@ def main():
     if total_ref == 0:
         raise SystemExit("정답 텍스트가 비어있어 분석할 수 없습니다.")
 
-    os.makedirs(ERROR_ANALYSIS_DIR, exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     with open(args.output_report, "w", newline="", encoding="utf-8-sig") as f:
         fieldnames = [

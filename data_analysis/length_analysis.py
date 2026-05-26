@@ -28,7 +28,7 @@ import torch
 from sklearn.metrics import accuracy_score, f1_score
 
 # ── 실험 디렉토리 정의 ────────────────────────────────────────────────────────
-EXPERIMENTS_DIR = Path(__file__).resolve().parent
+EXPERIMENTS_DIR = Path(__file__).resolve().parents[1] / "models" / "experiments" / "model_architecture"
 
 EXPERIMENTS = [
     {
@@ -249,7 +249,8 @@ def main():
     print_table(all_results)
 
     # JSON 저장
-    out_dir = Path(__file__).resolve().parent
+    out_dir = Path(__file__).resolve().parent / "output"
+    out_dir.mkdir(exist_ok=True)
     save_path = out_dir / f"length_analysis_{args.split}_{time.strftime('%Y%m%d_%H%M%S')}.json"
     with save_path.open("w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
