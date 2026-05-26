@@ -5,8 +5,8 @@ import torch
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parents[3]
 
-DATA_DIR = PROJECT_ROOT / "models" / "classifier" / "preprocessing" / "final"
-STN_LABELING_DIR = PROJECT_ROOT / "models" / "classifier" / "preprocessing" / "stn_labeling" / "output"
+DATA_DIR = PROJECT_ROOT / "models" / "main" / "data_augmentation" / "output" / "4class"
+STN_LABELING_DIR = PROJECT_ROOT / "models" / "remain" / "stn_labeling" / "output"
 # map_segments.py --window-size 64 --stride 32 로 생성 (기존 segment_risks.csv 보존)
 SEGMENT_RISKS_CSV = STN_LABELING_DIR / "segment_risks_w64_s32.csv"
 CHECKPOINT_DIR = BASE_DIR / "checkpoints"

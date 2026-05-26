@@ -1,5 +1,0 @@
-{
-  "checkpoint_path": "/home/data/capstone_voice_phishing_detection/models/classifier/experiments/koelectra_mamba_sent_window/checkpoints/koelectra_mamba_sent_window_20260513_164525_best.pt",
-  "best_macro_f1": 0.8190492121991628,
-  "run_id": "20260513_164525"
-}

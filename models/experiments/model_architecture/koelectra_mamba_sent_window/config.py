@@ -5,8 +5,8 @@ import torch
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parents[3]
 
-DATA_DIR = PROJECT_ROOT / "models" / "classifier" / "preprocessing" / "final"
-STN_LABELING_DIR = PROJECT_ROOT / "models" / "classifier" / "preprocessing" / "stn_labeling" / "output"
+DATA_DIR = PROJECT_ROOT / "models" / "main" / "data_augmentation" / "output" / "4class"
+STN_LABELING_DIR = PROJECT_ROOT / "models" / "remain" / "stn_labeling" / "output"
 # 문장 단위 위험도 원본 데이터 (label_sentences.py 출력)
 PHISHING_LABELED_CSV = STN_LABELING_DIR / "phishing_labeled.csv"
 CHECKPOINT_DIR = BASE_DIR / "checkpoints"

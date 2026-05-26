@@ -1,5 +1,0 @@
-data/*
-!data/.gitkeep
-checkpoints/
-logs/
-__pycache__/

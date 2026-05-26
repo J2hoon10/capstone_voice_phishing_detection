@@ -5,7 +5,7 @@ import torch
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parents[3]
 
-DATA_DIR = PROJECT_ROOT / "models" / "classifier" / "preprocessing" / "output" / "4class"
+DATA_DIR = PROJECT_ROOT / "models" / "main" / "data_augmentation" / "output" / "4class"
 CHECKPOINT_DIR = BASE_DIR / "checkpoints"
 LOG_DIR = BASE_DIR / "logs"
 

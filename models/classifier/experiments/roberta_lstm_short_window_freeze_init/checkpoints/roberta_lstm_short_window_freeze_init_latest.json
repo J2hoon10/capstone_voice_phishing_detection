@@ -1,5 +1,0 @@
-{
-  "checkpoint_path": "C:\\Users\\myhom\\Jihoon\\capstone_project\\capstone_voice_phishing_detection\\models\\classifier\\experiments\\roberta_lstm_short_window_freeze_init\\checkpoints\\roberta_lstm_short_window_freeze_init_20260515_141742_best.pt",
-  "best_macro_f1": 0.9369680365296803,
-  "run_id": "20260515_141742"
-}
