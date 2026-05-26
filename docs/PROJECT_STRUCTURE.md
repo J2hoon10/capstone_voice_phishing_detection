@@ -1,6 +1,6 @@
 # 프로젝트 파일 구조
 
-> 최종 업데이트: 2026-03-13
+> 최종 업데이트: 2026-05-27
 
 ## 전체 구조 요약
 
@@ -8,13 +8,35 @@
 capstone_voice_phishing_detection/
 │
 ├── models/                    ★ 핵심 서비스 (모델 + API)
-│   ├── classifier/            ← 담당자A
-│   └── guidance/              ← 담당자B, C
+│   ├── main/                  ← Baseline 서비스 및 최신 데이터 증강
+│   │   ├── model_architecture/← roberta+mamba 4class 모델 및 API
+│   │   └── data_augmentation/ ← 노말 & 피싱 데이터 증강 파이프라인
+│   │
+│   ├── experiments/           ← 기타 모델 구조 및 증강 기법 실험
+│   │   ├── model_architecture/← 기타 모델 구조 변경 실험 폴더 및 코드
+│   │   └── data_augmentation/ ← 그 외 데이터 증강 방법 실험 코드
+│   │
+│   └── remain/                ← 분류가 애매하거나 보관이 필요한 파일/폴더
 │
-├── backend/                   API 게이트웨이
-├── frontend/                  웹 UI (React + Vite)
-├── docs/                      문서
-├── Project/                   (아카이브) 연구/학습 코드
+├── demo/                      데모 앱 골격 (작성 예정)
+│   ├── frontend/              ← 프론트엔드 (React + Vite)
+│   │   └── src/
+│   │       ├── components/
+│   │       ├── hooks/
+│   │       └── styles/
+│   └── backend/               ← 백엔드 API 게이트웨이
+│       ├── routers/
+│       ├── schemas/
+│       └── services/
+│
+├── pipeline/                  실시간 스트리밍 파이프라인 속도 평가
+├── normal_data_reference/     일반 대화 참조 데이터
+├── docs/                      문서 정리
+│   ├── plans/                 작업 계획서 / 설계서
+│   ├── reports/               실험 결과 보고서 및 분석 리포트
+│   └── archive/               아카이브 문서
+│
+├── presentation/              발표용 자료 (작성 예정)
 │
 ├── docker-compose.yml         서비스 오케스트레이션
 ├── docker-compose.cpu.yml     CPU 전용 오버라이드
@@ -27,153 +49,90 @@ capstone_voice_phishing_detection/
 
 ## models/ — 핵심 서비스
 
-### models/classifier/ (담당자A)
+### models/main/ (Baseline 모델 및 최신 증강 기법)
 
-보이스피싱 탐지의 핵심. 음성 입력 → 텍스트 변환(STT) → 피싱 분류.
+보이스피싱 탐지 분류기(Classifier)의 핵심 baseline 환경입니다.
 
-```
-models/classifier/
-├── app.py                  FastAPI 앱 (/health, /predict 엔드포인트)
-├── inference.py            추론 파이프라인 (VoicePhishingDetector, PhishingRiskScorer)
-├── audio_processor.py      Whisper STT + 텍스트 정제
-├── audio_enhancer.py       오디오 전처리 (Bandpass → Noise Reduction → VAD → Normalize)
-├── architecture.py         ModernBERT Student 모델 아키텍처 정의
-├── config.py               설정 관리 (디바이스, 모델 경로, 임계값 등)
-├── requirements.txt        Python 의존성
-├── Dockerfile              컨테이너 빌드 정의
-│
-├── data/                   음성 데이터 (git 제외, 로컬 전용)
-│   ├── phishing/           피싱 음성 파일 (515개)
-│   │   ├── 대출 사기형/         185개
-│   │   ├── 바로 이 목소리/       94개
-│   │   └── 수사기관 사칭형/      236개
-│   └── normal/             일반 음성 파일 (2,001개)
-│       ├── 상품 가입 및 해지/    762개
-│       ├── 이체 출금 대출서비스/  619개
-│       └── 잔고 및 거래내역/     620개
-│
-├── STT_test/               STT 테스트 결과
-│   ├── run_stt_test.py         테스트 스크립트
-│   ├── stt_test_results.csv    결과 CSV
-│   └── stt_test_report.txt     결과 리포트
-│
-└── weights/                모델 가중치 (git 제외)
-    └── student_best.pt         학습된 Student 모델
-```
+#### models/main/model_architecture/
+- `app.py`: FastAPI 앱 구동 (/health, /predict 엔드포인트)
+- `model.py`: RoBERTa-Mamba 4클래스 분류 모델 정의 (Self-contained)
+- `train.py`: Baseline 모델 학습 루프 (freeze_init 전략 관리)
+- `dataset.py`: 슬라이딩 윈도우 기반 데이터셋 빌더 및 로더
+- `inference.py`: 추론기 서비스 엔진 (`VoicePhishingDetector`, `PhishingRiskScorer`) 및 CLI 테스트 도구
+- `evaluate.py`: 검증 및 평가 루프
+- `losses.py`: Hierarchical Cross Entropy Loss 및 Ordinal Regression Loss
+- `config.py`: RoBERTa-Mamba 아키텍처 파라미터 및 API 서버 통합 설정
+- `audio_processor.py`: Whisper STT + 텍스트 정제
+- `audio_enhancer.py`: 오디오 전처리 (Bandpass → Noise Reduction → VAD → Normalize)
+- `Dockerfile` & `requirements.txt`: FastAPI 배포 설정
+- `weights/` (git 제외): Baseline 학습 완료 모델 가중치 (`student_best.pt` 또는 최신 pt 파일)
+- `data/` (git 제외): 음성 및 학습/검증용 데이터
 
-### models/guidance/ (담당자B, C)
-
-피싱 유형 매칭 및 대응 지침 제공.
-
-```
-models/guidance/
-├── app.py                  FastAPI 앱 (/health, /guidance 엔드포인트)
-├── guidance_engine.py      대응 지침 생성 엔진 (키워드 매칭, 행동 지침 구성)
-├── knowledge_base/         피싱 지식 베이스
-│   ├── phishing_types.json     피싱 유형별 키워드, 요약, 권장 행동
-│   └── emergency_contacts.json 긴급 연락처 (경찰, 금융감독원 등)
-├── requirements.txt
-└── Dockerfile
-```
+#### models/main/data_augmentation/
+- `build_4class_dataset.py`: 4클래스 데이터셋 최종 조합 스크립트
+- `build_final_dataset.py`: 최종 데이터셋 빌드 스크립트
+- `batch_transcribe.py`: Whisper STT 일괄 전사 전처리 스크립트
+- `normal_augmentation/`: 일반 데이터 LLM 증강 및 ASR 노이즈 주입 스크립트/프롬프트
+- `phishing_augmentation/`: 피싱 데이터 LLM 증강 및 ASR 노이즈 주입 스크립트
+- `error_analysis/`: Whisper 실측 에러 분석 결과 (`error_summary.json` 포함)
 
 ---
 
-## backend/ — API 게이트웨이
+### models/experiments/ (기타 실험 모델 및 증강 기법)
 
-클라이언트 요청을 classifier/guidance 서비스로 라우팅.
-
-```
-backend/
-├── main.py                 FastAPI 앱 초기화, CORS 설정
-├── routers/
-│   ├── detect.py           POST /api/detect (음성 파일 업로드 → 탐지)
-│   ├── guidance.py         POST /api/guidance (대응 지침 요청)
-│   └── stream.py           WS /ws/stream (실시간 마이크 스트리밍)
-├── schemas/
-│   ├── detect.py           탐지 요청/응답 Pydantic 모델
-│   └── guidance.py         지침 요청/응답 Pydantic 모델
-├── services/
-│   ├── classifier_client.py    classifier 서비스 HTTP 클라이언트
-│   └── guidance_client.py      guidance 서비스 HTTP 클라이언트
-├── requirements.txt
-└── Dockerfile
-```
+- **`model_architecture/`**:
+  - `bert_avgpool/`, `koelectra_mamba_freeze_init_4class/` 등 30여 개의 모델 구조 변경 실험 폴더 및 코드 보관.
+  - `five_label_inference.py`, `whisper_error_analysis.py` 등 실험용 추론 및 분석 스크립트.
+- **`data_augmentation/`**:
+  - `augment_asr_noise.py`, `augment_llm_fewshot.py` 등 레거시/실험용 데이터 증강 스크립트.
 
 ---
 
-## frontend/ — 웹 UI
+### models/remain/ (기타 보관 파일)
 
-React + Vite 기반. 파일 업로드 및 실시간 마이크 녹음 지원.
-
-```
-frontend/
-├── src/
-│   ├── App.jsx                 메인 앱 컴포넌트
-│   ├── main.jsx                엔트리 포인트
-│   ├── styles/main.css         스타일시트
-│   ├── components/
-│   │   ├── AudioRecorder.jsx   실시간 마이크 녹음
-│   │   ├── FileUpload.jsx      음성 파일 업로드
-│   │   ├── RiskGauge.jsx       위험도 게이지 시각화
-│   │   ├── WarningBanner.jsx   경고 배너
-│   │   ├── TranscriptView.jsx  전사 텍스트 표시
-│   │   └── GuidancePanel.jsx   대응 지침 패널
-│   └── hooks/
-│       └── useWebSocket.js     WebSocket 연결 훅
-├── index.html
-├── package.json
-├── vite.config.js
-├── nginx.conf                  Nginx 프록시 설정
-└── Dockerfile
-```
+분류가 모호하거나 레거시 코드 중 보관이 필요한 파일들을 임시 격리 보관하는 디렉토리입니다.
+- `conversations.json`: 대화 텍스트 데이터 json 파일
+- `architecture.py`: ModernBERT Student 오리지널 구조 정의 파일 (Baseline 교체로 보관)
+- `legacy_v1/`, `stn_labeling/`, `stt_tools/`, `phishing_analysis/`: 레거시 전처리/라벨링 유틸리티 폴더
 
 ---
 
-## docs/ — 문서
+## demo/ — 데모 앱 (작성 예정)
 
-```
-docs/
-├── README.md               문서 인덱스 (목록)
-├── GETTING_STARTED.md       환경 설정 및 실행 가이드
-├── TEAM_WORKFLOW.md         브랜치 전략, 커밋 컨벤션, PR 규칙
-├── ROLE_CLASSIFIER.md       Classifier 담당자(A) 가이드
-├── ROLE_GUIDANCE.md         Guidance 담당자(B, C) 가이드
-├── architecture.md          서비스 아키텍처 및 담당 영역
-├── api_spec.md              API 엔드포인트 명세
-├── deployment_guide.md      Docker 배포 가이드
-├── PROJECT_STRUCTURE.md     이 파일 (프로젝트 구조 설명)
-│
-├── plans/                   담당자별 작업 계획서
-│   ├── classifier/              담당자A 계획서
-│   ├── guidance-B/              담당자B 계획서
-│   └── guidance-C/              담당자C 계획서
-│
-└── archive/                 과거 시나리오 문서
-    ├── SINARIO_v1.md            초기 모델 파이프라인 설계
-    ├── SINARIO_v2.md            ModernBERT TA 기반 증류 계획
-    └── SINARIO_v3.md            최종 증류 계획
-```
+데모 서비스의 프론트엔드 및 백엔드 코드를 위한 골격 디렉토리입니다.
+
+### demo/frontend/
+- `src/components/`: UI 컴포넌트
+- `src/hooks/`: 커스텀 훅
+- `src/styles/`: 스타일시트
+
+### demo/backend/
+- `routers/`: API 라우터
+- `schemas/`: 요청/응답 스키마
+- `services/`: 외부 모델 서비스 클라이언트
 
 ---
 
-## 서비스 간 통신 흐름
+## pipeline/ — 스트리밍 파이프라인 평가
 
-```
-[Browser] ←→ [frontend:80 (nginx)]
-                  |
-                  ├─ /api/*     → [backend:8000] → [classifier:8001]  ← 담당자A
-                  |                              └→ [guidance:8002]   ← 담당자B, C
-                  |
-                  └─ /ws/stream → [backend:8000 WebSocket]
-```
+실시간 스트리밍 파이프라인의 처리 속도 및 성능 측정 실험 모음입니다.
+- `run_pipeline.py`, `run_pipeline_watch.py`: 파이프라인 실행 스크립트
+- `compare_streaming.py`: 스트리밍 방식 비교 분석
+- `visualize_pipeline.py`, `visualize_comparison.py`: 결과 시각화
+- `figure/`: 시각화 결과 이미지
+- `results.json`: 실험 결과 데이터
+- `PIPELINE_REPORT.md`: 실험 보고서
 
-## Git에서 제외되는 파일
+---
 
-| 패턴 | 대상 |
-|------|------|
-| `*.pt`, `*.pth` | 모델 가중치 |
-| `*.wav`, `*.mp3`, `*.flac`, `*.m4a`, `*.ogg` | 음성 파일 |
-| `*.zip` | 압축 파일 |
-| `__pycache__/`, `*.pyc` | Python 캐시 |
-| `frontend/node_modules/`, `frontend/dist/` | Node.js 의존성/빌드 |
-| `.env` | 환경 변수 (비밀 정보) |
+## docs/ — 문서 정리
+
+- **`plans/`**: 작업 계획서 및 환경 설정 가이드 문서 (`experiment_plan.md`, `GETTING_STARTED.md`, `TEAM_WORKFLOW.md`, `ROLE_CLASSIFIER.md`, `api_spec.md`, `deployment_guide.md` 등)
+- **`reports/`**: 실험 결과 보고서, 분석 리포트 및 스펙 정의 문서 (`2026-05-18_experiment_report.md`, `voice_phishing_model_spec.md`, `architecture.md` 등)
+- **`archive/`**: 과거 아카이브용 시나리오 문서 (`SINARIO_v1.md`, `SINARIO_v2.md`, `SINARIO_v3.md` 등)
+
+---
+
+## presentation/ — 발표용 자료 (작성 예정)
+
+발표 자료를 위한 골격 디렉토리입니다.
