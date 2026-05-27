@@ -36,7 +36,7 @@ import torch.nn.functional as F
 # ── 분류기 실험 경로 ──────────────────────────────────────────────────────────
 EXP_DIR = (
     Path(__file__).resolve().parents[1]
-    / "models" / "classifier" / "experiments" / "roberta_mamba_freeze_init_4class"
+    / "models" / "experiments" / "model_architecture" / "roberta_mamba_freeze_init_4class"
 )
 sys.path.insert(0, str(EXP_DIR))
 

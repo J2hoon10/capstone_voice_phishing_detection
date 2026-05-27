@@ -20,7 +20,7 @@ python models/classifier/experiments/streaming_belief_v5/benchmark.py --experime
 
 ## 1. 데이터 전처리 — `data_preprocessing.py`
 
-`Data/Training`, `Data/Validation` 원시 데이터를 128토큰 overlap sliding-window 청크로 변환해 캐시 파일로 저장한다.
+`normal_data_reference/Training`, `normal_data_reference/Validation` 원시 데이터를 128토큰 overlap sliding-window 청크로 변환해 캐시 파일로 저장한다.
 
 ```bash
 # 원시 데이터로 슬라이딩 윈도우 캐시 빌드

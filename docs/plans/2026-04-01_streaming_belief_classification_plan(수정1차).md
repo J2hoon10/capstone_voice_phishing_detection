@@ -10,7 +10,7 @@
 
 | 항목 | 내용 |
 |------|------|
-| **입력** | `Data/` 원본 JSON 대화를 턴 단위 텍스트 청크로 순차 재생한 스트림 |
+| **입력** | `normal_data_reference/` 원본 JSON 대화를 턴 단위 텍스트 청크로 순차 재생한 스트림 |
 | **단위** | 고정 크기 또는 의미 단위로 분할된 청크 c₁, c₂, ..., cT |
 | **연속성** | 청크들은 독립적이지 않고 하나의 이어지는 내용을 구성 |
 | **출력** | 각 청크 수신 시마다 업데이트되는 분류 확률 분포 p_t(y) |
@@ -44,7 +44,7 @@
 ### 1.4 실험 데이터셋(Compressive Memory KR 수정2차와 동일)
 
 - 데이터셋: 한국어 SNS 일상대화 데이터셋
-- 원본 경로: `Data/Training/`, `Data/Validation/`
+- 원본 경로: `normal_data_reference/Training/`, `normal_data_reference/Validation/`
 - 샘플 단위: JSON 파일 1개 = 대화(dialogue) 1개
 - 입력 레이블: `info[0].annotations.subject` (20-class single-label)
 - 레이블 정규화: `상거래전반` → `상거래 전반`
@@ -52,9 +52,9 @@
 
 | Split | 출처 | 구성 방식 | 샘플 수 |
 |---|---|---|---:|
-| Train | `Data/Training/` | 원본 Training의 90% (label stratified, seed=42) | 약 78,921 |
-| Val | `Data/Training/` | 원본 Training의 10% (label stratified, seed=42) | 약 8,769 |
-| Test | `Data/Validation/` | 원본 Validation 전체 | 10,962 |
+| Train | `normal_data_reference/Training/` | 원본 Training의 90% (label stratified, seed=42) | 약 78,921 |
+| Val | `normal_data_reference/Training/` | 원본 Training의 10% (label stratified, seed=42) | 약 8,769 |
+| Test | `normal_data_reference/Validation/` | 원본 Validation 전체 | 10,962 |
 
 - 실시간 추론 시에는 STT로 생성된 청크를 동일 포맷으로 처리하고,
   오프라인 실험/학습에서는 위 split 캐시(`train/val/test`)를 사용한다.

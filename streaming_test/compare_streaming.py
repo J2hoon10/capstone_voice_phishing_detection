@@ -59,7 +59,7 @@ def get_temperature(k: int, warmup: int = 8, max_temp: float = 4.0) -> float:
 
 # ── 모델 로드 ──────────────────────────────────────────────────────────────────
 def load_model(exp_name: str):
-    exp_dir = PROJECT_ROOT / "models" / "classifier" / "experiments" / exp_name
+    exp_dir = PROJECT_ROOT / "models" / "experiments" / "model_architecture" / exp_name
     if str(exp_dir) not in sys.path:
         sys.path.insert(0, str(exp_dir))
 

@@ -42,7 +42,7 @@ EXPERIMENTS = {
     "w32": "roberta_mamba_w32_freeze_init_4class",
 }
 
-MODELS_BASE = Path(__file__).resolve().parents[1] / "models" / "classifier" / "experiments"
+MODELS_BASE = Path(__file__).resolve().parents[1] / "models" / "experiments" / "model_architecture"
 
 
 def _load_exp_modules(exp_key: str):

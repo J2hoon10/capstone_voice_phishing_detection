@@ -1,0 +1,32 @@
+\documentclass[tikz, border=8pt]{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}
+  %% ── 원본 이미지를 배경으로 삽입 ──────────────────────────────────────
+  %% Overleaf에 이미지를 "diagram.png" 이름으로 업로드하세요.
+  \node[anchor=south west, inner sep=0] (img) at (0,0)
+    {\includegraphics[width=14cm]{보이스 피싱 탐지 모델 구조도}};
+  %% 이미지 TikZ 좌표계: 너비 14cm, 높이 4.54cm (비율 2413:783 유지)
+
+  %% ── Local Encoder (파란색) ────────────────────────────────────────────
+  %% 커버 영역: Sliding Window + ×T Segments 점선 박스 (RoBERTa + Attention Pooling)
+  \draw[blue!65, very thick, rounded corners=10pt,
+        fill=blue!10, fill opacity=0.35]
+    (1.35, 3.05) rectangle (11.05, 4.50);
+  \node[blue!70, font=\bfseries\small, anchor=south west]
+    at (1.35, 4.50) {Local Encoder};
+
+  %% ── Global Context Model (초록색) ────────────────────────────────────
+  %% 커버 영역: Aux Head + Mamba SSM Block + Last Valid State Gather
+  %%           + Normal/Super/Phishing Head + Fusion & Log + Final Output
+  \draw[green!50!black, very thick, rounded corners=10pt,
+        fill=green!10, fill opacity=0.35]
+    (0.08, 0.08) rectangle (13.05, 2.90);
+  \node[green!45!black, font=\bfseries\small, anchor=south west]
+    at (0.08, 2.90) {Global Context Model};
+
+\end{tikzpicture}
+\end{document}

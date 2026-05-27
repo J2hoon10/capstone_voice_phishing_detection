@@ -67,7 +67,7 @@ def get_temperature(k, warmup=8, max_temp=4.0):
 
 def load_and_run(key: str, text: str, temp_warmup: int, temp_max: float):
     exp_name = MODEL_REGISTRY[key]
-    exp_dir  = PROJECT_ROOT / "models" / "classifier" / "experiments" / exp_name
+    exp_dir  = PROJECT_ROOT / "models" / "experiments" / "model_architecture" / exp_name
     if str(exp_dir) not in sys.path:
         sys.path.insert(0, str(exp_dir))
     for mod in ["config", "model", "dataset"]:
@@ -221,6 +221,7 @@ def visualize(model_keys, all_results, n_windows, true_label, output_path):
     fig.suptitle(suptitle, color="#111111", fontsize=20,
                  fontweight="bold", y=1.02)
 
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(output_path, dpi=150, bbox_inches="tight",
                 facecolor=fig.get_facecolor())
     plt.close()
@@ -238,7 +239,7 @@ def main():
     parser.add_argument("--temp-max",    type=float, default=4.0)
     # 시각화 공통
     parser.add_argument("--true-label",  default=None)
-    parser.add_argument("--output",      default="streaming_comparison.png")
+    parser.add_argument("--output",      default=str(Path(__file__).parent / "figure" / "streaming_comparison.png"))
     # 저장/로드
     parser.add_argument("--save-json",   default=None,
                         help="추론 결과를 JSON으로 저장할 경로 (예: results.json)")

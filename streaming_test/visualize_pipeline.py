@@ -243,7 +243,8 @@ def main():
     fig.suptitle("실시간 음성 피싱 탐지 파이프라인  —  속도 측정 결과 요약",
                  fontsize=19, fontweight="bold", color=TEXT, y=1.01)
 
-    out = Path(__file__).parent / "pipeline_speed_summary.png"
+    out = Path(__file__).parent / "figure" / "pipeline_speed_summary.png"
+    out.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(out, dpi=150, bbox_inches="tight", facecolor=BG)
     plt.close()
     print(f"[저장] {out}")

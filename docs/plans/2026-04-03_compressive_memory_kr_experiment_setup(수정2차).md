@@ -1,7 +1,7 @@
 # Compressive Memory KR 실험 구성 정리
 
 ## 1. 문서 목적
-- `Data/` 폴더의 SNS 일상대화 데이터셋을 활용하여 Compressive Memory(FM/CM) 구조로 대화 주제(subject) 분류를 수행하는 실험 계획과 코드 구현 상태를 한 문서로 정리한다.
+- `normal_data_reference/` 폴더의 SNS 일상대화 데이터셋을 활용하여 Compressive Memory(FM/CM) 구조로 대화 주제(subject) 분류를 수행하는 실험 계획과 코드 구현 상태를 한 문서로 정리한다.
 - 실험에 사용한 데이터셋 정보, 모델 정보, 파일 구성 및 실행 흐름을 명확히 기록한다.
 
 ## 2. 실험 목표 및 배경
@@ -16,7 +16,7 @@
 
 ### 3.1 SNS 일상대화 데이터셋
 - 이름: 한국어 SNS 일상대화 데이터셋
-- 출처: `Data/Training/` 및 `Data/Validation/` (로컬 보유)
+- 출처: `normal_data_reference/Training/` 및 `normal_data_reference/Validation/` (로컬 보유)
 - 성격: 카카오톡·페이스북·인스타그램·밴드·네이트온 등 SNS 멀티턴 대화
 - 단위: JSON 파일 1개 = 대화(dialogue) 1개
 - 레이블: `info[0].annotations.subject` 필드 (대화 수준 단일 레이블)
@@ -78,9 +78,9 @@
 
 | Split | 출처 | 구성 방법 | 샘플 수(예상) |
 |---|---|---|---:|
-| **Train** | `Data/Training/` | 원본 Training에서 **90%** 무작위 추출 (label stratified) | ~78,921 |
-| **Val** | `Data/Training/` | 원본 Training에서 **10%** 무작위 추출 (label stratified) | ~8,769 |
-| **Test** | `Data/Validation/` | 원본 Validation 폴더 **전체** | 10,962 |
+| **Train** | `normal_data_reference/Training/` | 원본 Training에서 **90%** 무작위 추출 (label stratified) | ~78,921 |
+| **Val** | `normal_data_reference/Training/` | 원본 Training에서 **10%** 무작위 추출 (label stratified) | ~8,769 |
+| **Test** | `normal_data_reference/Validation/` | 원본 Validation 폴더 **전체** | 10,962 |
 
 - 분할 근거:
   - 원본 Validation은 수집 시점이 다른 독립 데이터이므로, **최종 성능 보고용 Test set으로 보존**한다.
@@ -127,11 +127,11 @@
 
 #### 전처리 흐름
 ```
-1) Data/Training/**/*.json 재귀 로드 (87,690개)
+1) normal_data_reference/Training/**/*.json 재귀 로드 (87,690개)
    → 레이블 정규화 (상거래전반 → 상거래 전반)
    → label stratified split (90/10, seed=42) → Train / Val
 
-2) Data/Validation/**/*.json 재귀 로드 (10,962개)
+2) normal_data_reference/Validation/**/*.json 재귀 로드 (10,962개)
    → 레이블 정규화 → Test 그대로 사용
 
 3) 각 대화에 대해:
@@ -220,11 +220,11 @@
   - `SPLIT_SEED`: 42
   - `UTTERANCE_FORMAT`: `"{speaker_id}: {norm_text}"`
   - `ROLE_MAP` 제거 (치료자/내담자 구분 없음)
-- `DATA_ROOT`: `PROJECT_ROOT / "Data"` 추가 (원본 JSON 경로)
+- `DATA_ROOT`: `PROJECT_ROOT / "normal_data_reference"` 추가 (원본 JSON 경로)
 - `TRAIN_CONFIG.LOSS_FN`: 기본값 `"cross_entropy"`로 변경
 
 #### `data_preprocessing.py`
-- `Data/Training/**/*.json`, `Data/Validation/**/*.json` 재귀 로드
+- `normal_data_reference/Training/**/*.json`, `normal_data_reference/Validation/**/*.json` 재귀 로드
 - `상거래전반` → `상거래 전반` 레이블 정규화
 - 원본 Training → label stratified split (90/10, seed=42) → `train.json` / `val.json`
 - 원본 Validation → `test.json`
@@ -281,8 +281,8 @@
 1. `cd models/classifier/experiments/compressive_memory_kr`
 2. `pip install -r requirements.txt`
 3. `python data_preprocessing.py`
-   - `Data/Training/` → train.json(~78.9K) + val.json(~8.8K)
-   - `Data/Validation/` → test.json(10,962)
+   - `normal_data_reference/Training/` → train.json(~78.9K) + val.json(~8.8K)
+   - `normal_data_reference/Validation/` → test.json(10,962)
 4. `python train.py --experiment baseline --loss-fn cross_entropy`
 5. `python train.py --experiment full --loss-fn cross_entropy`
 6. `python evaluate.py --experiment full --split test`
