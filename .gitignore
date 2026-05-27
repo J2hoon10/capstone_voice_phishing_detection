@@ -59,6 +59,15 @@ models/remain/stn_labeling/output/
 # gitkeep(빈 폴더 유지 마커)는 예외
 !**/.gitkeep
 
+# ── STT 전사 데이터 (실제 통화 내용 포함 — 민감 데이터) ──────────────────────
+models/main/data_augmentation/transcriptions/
+models/main/data_augmentation/error_analysis/*.csv
+models/main/data_augmentation/error_analysis/*.json
+
+# ── 데이터 분석 산출물 (CSV/JSON — 전사 내용 포함 가능) ───────────────────────
+data_analysis/output/*.csv
+data_analysis/output/*.json
+
 # ── Experiment data folders ──────────────────────────────────────────────────
 models/classifier/experiments/*/data/
 models/classifier/experiments/mamba_belief/data/
