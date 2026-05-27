@@ -43,7 +43,7 @@ wandb/
 
 # ── Raw datasets ─────────────────────────────────────────────────────────────
 Data/
-normal_data_reference/
+normal_data_reference/*/
 
 # ── Preprocessed / augmented data ────────────────────────────────────────────
 models/main/model_architecture/data/
@@ -65,6 +65,31 @@ models/classifier/experiments/mamba_belief/data/
 
 # ── Env ──────────────────────────────────────────────────────────────────────
 .env
+
+# ── Docs (내부 계획 / 역할 가이드 / 아카이브) ──────────────────────────────
+docs/archive/
+docs/plans/
+docs/reports/
+docs/api_spec.md
+docs/deployment_guide.md
+docs/GETTING_STARTED.md
+docs/GIT_DATA_TRACKING_ISSUE.md
+docs/ROLE_CLASSIFIER.md
+docs/ROLE_GUIDANCE.md
+
+# ── Experiment checkpoints & logs (figures 폴더 제외) ────────────────────────
+models/experiments/model_architecture/*/checkpoints/
+models/experiments/model_architecture/*/logs/
+
+# ── Main model architecture artifacts ────────────────────────────────────────
+models/main/model_architecture/checkpoints/
+models/main/model_architecture/logs/
+
+# ── Deprecated / legacy model folder ─────────────────────────────────────────
+models/remain/
+
+# ── Analysis outputs ──────────────────────────────────────────────────────────
+models_analysis/output/
 
 # ── Misc ─────────────────────────────────────────────────────────────────────
 *.jsons

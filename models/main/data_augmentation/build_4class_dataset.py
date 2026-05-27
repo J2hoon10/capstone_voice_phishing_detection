@@ -395,8 +395,8 @@ def main():
     parser.add_argument("--output-dir",    default=str(OUTPUT_DIR))
     parser.add_argument("--seed", type=int, default=SPLIT_SEED)
     parser.add_argument(
-        "--max-orig-len", type=int, default=None,
-        help="피싱 원본 데이터 최대 텍스트 길이 (초과 행 제외). 예: --max-orig-len 2800",
+        "--max-orig-len", type=int, default=2800,
+        help="피싱 원본 데이터 최대 텍스트 길이 (초과 행 제외). 기본값: 2800",
     )
     args = parser.parse_args()
 
