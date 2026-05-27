@@ -228,6 +228,6 @@ capstone_voice_phishing_detection/
 | `plans/` | 작업 계획서, 설계서, 팀 가이드 (`GETTING_STARTED.md`, `TEAM_WORKFLOW.md`, `api_spec.md` 등) |
 | `reports/` | 실험 결과 보고서 및 분석 리포트 (`2026-05-18_experiment_report.md`, `architecture.md` 등) |
 | `archive/` | 과거 시나리오 문서 아카이브 |
-| `PROJECT_STRUCTURE.md` | 이 문서 |
+| `PROJECT_FILE_STRUCTURE.md` | 이 문서 |
 | `roberta_mamba_architecture.tex` | 모델 아키텍처 LaTeX 다이어그램 소스 |
 | `sinario_poster.md` | 포스터용 시나리오 문서 |
