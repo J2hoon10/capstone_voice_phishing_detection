@@ -100,5 +100,8 @@ models/remain/
 # ── Analysis outputs ──────────────────────────────────────────────────────────
 models_analysis/output/
 
+# ── Claude Code (로컬 개인 설정만 제외, 팀 공유 settings.json은 포함) ────────
+.claude/settings.local.json
+
 # ── Misc ─────────────────────────────────────────────────────────────────────
 *.jsons
