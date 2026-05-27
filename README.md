@@ -18,25 +18,7 @@
 
 ## 모델 아키텍처
 
-```
-Conversation Script
-       │
-   Sliding Window
-       │
-┌──────▼───────┐
-│ Local Encoder │  KLUE-RoBERTa + Attention Pooling
-│  (×T segments)│  → 세그먼트 내 주요 발화에 가중치 부여 후 고정 길이 벡터 생성
-└──────┬───────┘
-       │
-┌──────▼──────────────┐
-│ Global Context Model │  Mamba SSM Block (×2 Layers)
-│                      │  → 대화 전반의 흐름·순서 정보·장기 문맥 반영
-└──────┬──────────────┘
-       │
-  Fusion & Log
-       │
-  Final Output (4-class)
-```
+![모델 아키텍처](docs/figures/architecture_diagram.png)
 
 **Auxiliary Head** — 학습 단계에서 보조 분류 손실을 적용해 Local Encoder가 개별 세그먼트 수준의 보이스피싱 단서를 더 잘 학습하도록 유도
 
@@ -97,6 +79,12 @@ STEP 1            STEP 2              STEP 3                STEP 4
 | 대출 사기형 | 0.9876 | 0.9803 | 0.9950 |
 | 수사기관 사칭형 | 0.9874 | 0.9949 | 0.9800 |
 | **Macro F1** | **0.9937** | — | — |
+
+### 스트리밍 추론 비교 (윈도우별 4-class 확률 분포)
+
+![스트리밍 추론 모델 비교](pipeline/streaming_comparison.png)
+
+RoBERTa-Mamba는 초반 윈도우(W1~W5)에서도 정답 클래스(상담 대화)로 수렴하는 반면, GRU·LSTM은 수사기관 사칭형으로 오분류가 지속되다가 후반에야 수정된다.
 
 ### Ablation Study
 
