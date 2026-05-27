@@ -18,25 +18,7 @@
 
 ## 모델 아키텍처
 
-```
-Conversation Script
-       │
-   Sliding Window
-       │
-┌──────▼───────┐
-│ Local Encoder │  KLUE-RoBERTa + Attention Pooling
-│  (×T segments)│  → 세그먼트 내 주요 발화에 가중치 부여 후 고정 길이 벡터 생성
-└──────┬───────┘
-       │
-┌──────▼──────────────┐
-│ Global Context Model │  Mamba SSM Block (×2 Layers)
-│                      │  → 대화 전반의 흐름·순서 정보·장기 문맥 반영
-└──────┬──────────────┘
-       │
-  Fusion & Log
-       │
-  Final Output (4-class)
-```
+![모델 아키텍처](docs/figures/architecture_diagram.png)
 
 **Auxiliary Head** — 학습 단계에서 보조 분류 손실을 적용해 Local Encoder가 개별 세그먼트 수준의 보이스피싱 단서를 더 잘 학습하도록 유도
 
@@ -70,8 +52,8 @@ L_HCE = L_super + λ · (L_normal + L_phishing) + β_t · L_aux
 | **합계** | — | **2,400** | **800** | **800** | 713 | 2,191 | 1,096 | **4,000** |
 
 **데이터 출처**
-- **AI Hub** — 민간 민원 상담 대화 (학습·Instruction Tuning), SNS 일상 대화
-- **금융감독원** — 보이스피싱 음성 녹취 (대출 사기형 323건, 수사기관 사칭형 190건)
+- **AI Hub** — 민간 민원 상담 LLM 사전학습 및 Instruction Tuning (상담 대화), 주제별 텍스트 일상 대화 (일상 대화), 상담 음성 (Whisper ASR 노이즈 측정)
+- **금융감독원** — 보이스피싱 음성 녹취 (대출 사기형 190건, 수사기관 사칭형 323건)
 
 **데이터 파이프라인**
 
@@ -97,6 +79,12 @@ STEP 1            STEP 2              STEP 3                STEP 4
 | 대출 사기형 | 0.9876 | 0.9803 | 0.9950 |
 | 수사기관 사칭형 | 0.9874 | 0.9949 | 0.9800 |
 | **Macro F1** | **0.9937** | — | — |
+
+### 스트리밍 추론 비교 (윈도우별 4-class 확률 분포)
+
+![스트리밍 추론 모델 비교](pipeline/streaming_comparison.png)
+
+RoBERTa-Mamba는 초반 윈도우(W1~W5)에서도 정답 클래스(상담 대화)로 수렴하는 반면, GRU·LSTM은 수사기관 사칭형으로 오분류가 지속되다가 후반에야 수정된다.
 
 ### Ablation Study
 
@@ -143,12 +131,128 @@ STEP 1            STEP 2              STEP 3                STEP 4
 | `Data/` | 원본 음성 데이터셋 (`.wav`, `.mp3`) | 음성 개인정보 |
 | `normal_data_reference/` | 일반 대화 JSON 원본 (AI Hub) | 라이선스·개인정보 |
 | `models/main/model_architecture/data/` | 전처리된 학습 데이터 | 실제 통화 내용 포함 |
+| `models/main/data_augmentation/transcriptions/` | STT 전사 결과 CSV | 실제 통화 내용 포함 |
+| `models/main/data_augmentation/error_analysis/*.csv` | STT 오류 분석 CSV | 전사 텍스트 포함 |
+| `models/main/data_augmentation/output/` | 최종 학습용 CSV | 전사 내용 파생 데이터 |
+| `data_analysis/output/*.csv` / `*.json` | 데이터 분석 산출물 | 전사 내용 파생 데이터 |
 | `models/*/checkpoints/` | 모델 체크포인트 | 용량 |
 | `models/*/logs/` | 학습 로그 | 재현 가능 |
-| `models_analysis/output/` | 분석 산출물 | 전사 내용 파생 |
 
-> **⚠️ 이 파일들을 절대 `git add` 하지 마세요.**
-> 실수로 push되면 공개 저장소에서 개인정보가 노출될 수 있습니다.
+> **⚠️ 이 파일들을 절대 `git add` 하지 마세요.**  
+> `git add .` 대신 파일을 명시하거나 `git add -p`를 사용하세요.
+
+### 데이터 준비 가이드 (학습 재현)
+
+학습 파이프라인 전체를 재현하려면 아래 순서대로 원본 데이터를 준비하세요.
+
+#### Step 1 — 원본 데이터 다운로드
+
+**보이스피싱 데이터 (금융감독원)**
+
+```
+출처: 금융감독원 보이스피싱피해 바로고
+URL : https://www.fss.or.kr/fss/bbs/B0000203/list.do?menuNo=200686
+```
+
+다운로드 후 아래 구조로 배치하세요:
+
+```
+models/main/model_architecture/data/phishing/
+├── 대출 사기형/          ← 폴더명 정확히 일치해야 함
+│   ├── 1.mp3
+│   ├── 2.mp3
+│   └── ...              (총 190건)
+└── 수사기관 사칭형/       ← 폴더명 정확히 일치해야 함
+    ├── 1.mp3
+    └── ...              (총 323건)
+```
+
+> 폴더명은 `대출 사기형`, `수사기관 사칭형` 이어야 합니다.  
+> 빌드 스크립트가 하위 폴더명을 카테고리(label)로 자동 매핑합니다.
+
+**일반 대화 데이터 (AI Hub)**
+
+```
+출처: AI Hub — https://aihub.or.kr
+  ① 민간 민원 상담 LLM 사전학습 및 Instruction Tuning  (콜센터 상담 대화 — 상담 대화 클래스)
+  ② 주제별 텍스트 일상 대화                            (SNS/일상 대화 — 일상 대화 클래스)
+  ③ 상담 음성                                        (Whisper ASR 노이즈 측정용 — 음성 + GT 전사 스크립트 제공)
+```
+
+데이터셋 ①②의 텍스트 JSON 원본 파일은 `normal_data_reference/` 하위에 배치합니다:
+
+```
+normal_data_reference/
+├── Training/
+│   ├── TL_01. KAKAO(1)/   ← 카카오톡 대화
+│   ├── TL_02. FACEBOOK/
+│   ├── TL_03. INSTAGRAM/
+│   ├── TL_04. BAND/
+│   └── TL_05. NATEON/
+└── Validation/
+    ├── VL_01. KAKAO/
+    ├── VL_02. FACEBOOK/
+    ├── VL_03. INSTAGRAM/
+    ├── VL_04. BAND/
+    └── VL_05. NATEON/
+```
+
+데이터셋 ③의 음성 파일(Whisper ASR 노이즈 측정용)은 아래 경로에 배치합니다:
+
+```
+models/main/model_architecture/data/normal/
+└── [카테고리 폴더명]/
+    └── *.wav (또는 *.mp3)
+```
+
+#### Step 2 — STT 전사
+
+```bash
+conda activate capstone
+
+# GPU (권장, ~수 시간)
+python models/main/data_augmentation/batch_transcribe.py --variant gpu_small
+
+# 이전 실행에서 이어받기
+python models/main/data_augmentation/batch_transcribe.py --variant gpu_small --resume
+```
+
+출력: `models/main/data_augmentation/transcriptions/gpu_small/{phishing,normal,all}.csv`
+
+#### Step 3 — LLM 기반 데이터 증강
+
+```bash
+# .env에 OPENAI_API_KEY 설정 필요
+python models/main/data_augmentation/phishing_augmentation/augment.py  # 보이스피싱
+python models/main/data_augmentation/normal_augmentation/augment.py    # 일반 대화
+```
+
+출력:
+- `models/main/data_augmentation/phishing_augmentation/output/phishing_augmented.csv`
+- `models/main/data_augmentation/normal_augmentation/output/normal_augmented.csv`
+
+#### Step 4 — 4클래스 학습 데이터셋 빌드
+
+```bash
+python models/main/data_augmentation/build_4class_dataset.py
+```
+
+출력: `models/main/data_augmentation/output/4class/{train,val,test}.csv`
+
+컬럼: `id, text, label, binary_label, category, source, filename, segment_risks`
+
+#### Step 5 — 모델 학습
+
+```bash
+# 베이스 모델: KLUE-RoBERTa + Mamba
+python models/experiments/model_architecture/roberta_mamba_l2_freeze_init_4class/train.py
+
+# 기타 실험 모델 (experiments/ 하위 각 폴더)
+python models/experiments/model_architecture/<실험명>/train.py
+```
+
+학습 데이터 경로는 각 모델의 `config.py` 내 `DATA_DIR` 변수로 관리됩니다  
+(기본값: `models/main/data_augmentation/output/4class/`).
 
 ---
 
