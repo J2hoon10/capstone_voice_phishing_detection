@@ -1,9 +1,0 @@
-torch
-transformers
-pandas
-numpy
-scikit-learn
-tqdm
-kss
-koeda
-konlpy

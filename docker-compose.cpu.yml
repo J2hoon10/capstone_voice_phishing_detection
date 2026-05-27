@@ -1,4 +1,0 @@
-services:
-  classifier:
-    environment:
-      CLASSIFIER_DEVICE: cpu

@@ -1,28 +1,95 @@
+# ── Model checkpoints & weights ────────────────────────────────────────────
 *.pt
 *.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pb
+*.h5
+*.model
+*.weights
+*.bin
 *.zip
+!models/classifier/weights/.gitkeep
 
-# Audio files
+# ── Audio files ─────────────────────────────────────────────────────────────
 *.wav
 *.mp3
 *.flac
 *.m4a
 *.ogg
 
-# Python
+# ── Python ──────────────────────────────────────────────────────────────────
 __pycache__/
 *.pyc
 .pytest_cache/
 .venv/
 
-# Frontend
+# ── Frontend ─────────────────────────────────────────────────────────────────
 frontend/node_modules/
 frontend/dist/
+demo/node_modules/
+demo/dist/
 
-# Model artifacts
-models/classifier/weights/*.pt
-models/classifier/weights/*.bin
-!models/classifier/weights/.gitkeep
+# ── Training logs ────────────────────────────────────────────────────────────
+runs/
+tb_logs/
+wandb/
+*.log
+*_train.json
+# eval / latest JSON 은 실험 기록이므로 유지
+!**/*_eval.json
+!**/*_latest.json
 
-# Env
+# ── Raw datasets ─────────────────────────────────────────────────────────────
+Data/
+normal_data_reference/*/
+
+# ── Preprocessed / augmented data ────────────────────────────────────────────
+models/main/model_architecture/data/
+models/classifier/preprocessing/output/
+models/classifier/preprocessing/legacy_v1/output/
+models/classifier/preprocessing/normal_augmentation/output/
+models/classifier/preprocessing/stn_labeling/output/
+models/main/data_augmentation/output/
+models/main/data_augmentation/normal_augmentation/output/
+models/main/data_augmentation/phishing_augmentation/output/
+models/remain/legacy_v1/output/
+models/remain/stn_labeling/output/
+# gitkeep(빈 폴더 유지 마커)는 예외
+!**/.gitkeep
+
+# ── Experiment data folders ──────────────────────────────────────────────────
+models/classifier/experiments/*/data/
+models/classifier/experiments/mamba_belief/data/
+
+# ── Env ──────────────────────────────────────────────────────────────────────
 .env
+
+# ── Docs (내부 계획 / 역할 가이드 / 아카이브) ──────────────────────────────
+docs/archive/
+docs/plans/
+docs/reports/
+docs/api_spec.md
+docs/deployment_guide.md
+docs/GETTING_STARTED.md
+docs/GIT_DATA_TRACKING_ISSUE.md
+docs/ROLE_CLASSIFIER.md
+docs/ROLE_GUIDANCE.md
+
+# ── Experiment checkpoints & logs (figures 폴더 제외) ────────────────────────
+models/experiments/model_architecture/*/checkpoints/
+models/experiments/model_architecture/*/logs/
+
+# ── Main model architecture artifacts ────────────────────────────────────────
+models/main/model_architecture/checkpoints/
+models/main/model_architecture/logs/
+
+# ── Deprecated / legacy model folder ─────────────────────────────────────────
+models/remain/
+
+# ── Analysis outputs ──────────────────────────────────────────────────────────
+models_analysis/output/
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.jsons

@@ -1,6 +1,0 @@
-[2026-01-08 22:46:35] --- [TA Training] Device: cuda ---
-[2026-01-08 22:52:38] Loading Teacher Model...
-[2026-01-08 22:52:38] Config path empty. Found checkpoint at fallback: ./ModernBERT_Result\best_model.pt
-[2026-01-08 22:52:41] Loading Teacher weights from: ./ModernBERT_Result\best_model.pt
-[2026-01-08 22:52:42] Initializing Teacher Assistant...
-[2026-01-08 22:52:44] >>> Start Training TA
