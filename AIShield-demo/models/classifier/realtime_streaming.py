@@ -1,6 +1,8 @@
 import asyncio
 import os
+import re
 import time
+import traceback
 from pathlib import Path
 from uuid import uuid4
 
@@ -140,6 +142,7 @@ class RealtimeVoicePhishingSession:
             line = f"[{window_start:06.1f}-{window_end:06.1f}] {transcript}"
             with self.script_path.open("a", encoding="utf-8") as fp:
                 fp.write(line + "\n")
+            print(f"[STT] window={window_start:.1f}-{window_end:.1f}s transcript_len={len(transcript)}", flush=True)
 
             await self._send_json(
                 {
@@ -168,15 +171,39 @@ class RealtimeVoicePhishingSession:
                 continue
             self._last_prediction_source = source
 
+            # 타임스탬프 접두사 "[  0.0- 20.0] " 제거 후 모델에 전달
+            clean_lines = [
+                re.sub(r'^\[[\d\s.+\-]+\]\s*', '', line)
+                for line in source.splitlines()
+                if line.strip()
+            ]
+            clean_text = " ".join(line for line in clean_lines if line.strip())
+            if not clean_text.strip():
+                continue
+
+            print(f"[Prediction] source_lines={len(source.splitlines())} clean_chars={len(clean_text)}", flush=True)
             started_at = time.time()
-            result = await asyncio.to_thread(self._streaming_session.predict, source, self.threshold)
+            try:
+                result = await asyncio.to_thread(
+                    self._streaming_session.predict, clean_text, self.threshold
+                )
+            except Exception as exc:
+                traceback.print_exc()
+                print(f"[Prediction] ERROR: {exc}", flush=True)
+                await self._send_json({"event": "prediction", "status": "fail", "raw": {"error": str(exc)}})
+                continue
             elapsed = time.time() - started_at
             if result.get("status") != "success":
                 await self._send_json({"event": "prediction", "status": "fail", "raw": result})
                 continue
 
             risk_score = float(result.get("max_risk_score", 0.0))
-            warning_level = "WARNING" if risk_score >= 60 else "CAUTION" if risk_score >= 30 else "NORMAL"
+            class_probs = result.get("class_probs") or {}
+            max_phishing = max(
+                class_probs.get("대출 사기형", 0.0),
+                class_probs.get("수사기관 사칭형", 0.0),
+            )
+            warning_level = "WARNING" if max_phishing > 0.9 else "CAUTION" if max_phishing > 0.7 else "NORMAL"
             await self._send_json(
                 {
                     "event": "prediction",

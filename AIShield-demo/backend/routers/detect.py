@@ -8,10 +8,14 @@ from services.guidance_client import guidance_client
 router = APIRouter(prefix="/api", tags=["detect"])
 
 
-def _warning_level(score: float) -> str:
-    if score >= 60:
+def _warning_level(class_probs: dict) -> str:
+    max_prob = max(
+        class_probs.get("대출 사기형", 0.0),
+        class_probs.get("수사기관 사칭형", 0.0),
+    )
+    if max_prob > 0.9:
         return "WARNING"
-    if score >= 30:
+    if max_prob > 0.7:
         return "CAUTION"
     return "NORMAL"
 
@@ -49,7 +53,7 @@ async def detect_audio(
         )
 
     max_risk_score = float(prediction.get("max_risk_score", 0.0))
-    warning_level = _warning_level(max_risk_score)
+    warning_level = _warning_level(prediction.get("class_probs") or {})
     dangerous_segment = prediction.get("dangerous_segment", "")
     pred_label = prediction.get("pred_label")
 

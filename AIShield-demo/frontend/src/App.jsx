@@ -222,11 +222,17 @@ function normalizeRealtimePrediction(payload) {
   const risk = Number(payload.risk_score ?? payload.score ?? 0);
   const label = payload.pred_label || payload.raw?.pred_label || (risk >= 60 ? "보이스피싱 의심" : "정상 통화");
   const transcript = payload.dangerous_segment || payload.transcript || "";
+  const classProbs = payload.class_probs || payload.raw?.class_probs || {};
+  const maxPhishing = Math.max(
+    Number(classProbs["대출 사기형"] ?? 0),
+    Number(classProbs["수사기관 사칭형"] ?? 0),
+  );
+  const derivedLevel = maxPhishing > 0.9 ? "WARNING" : maxPhishing > 0.7 ? "CAUTION" : "NORMAL";
   return {
     status: "success",
     is_phishing: Boolean(payload.is_phishing || risk >= 60),
     max_risk_score: risk,
-    warning_level: payload.warning_level || (risk >= 60 ? "WARNING" : risk >= 30 ? "CAUTION" : "NORMAL"),
+    warning_level: payload.warning_level || derivedLevel,
     dangerous_segment: transcript,
     pred_label: label,
     confidence: payload.confidence,
@@ -263,7 +269,7 @@ export default function App() {
     setResult(normalized);
     setHistory(saveHistoryItem(normalized, source));
     setError("");
-    setScreen(normalized.is_phishing || normalized.max_risk_score >= 60 ? "alert" : "safe");
+    setScreen(normalized.warning_level === "WARNING" ? "alert" : "safe");
   };
 
   const onFileChange = async (event) => {
@@ -875,7 +881,7 @@ function RealtimeScreen({ onBack, onDetected }) {
         } else if (payload.event === "prediction" && payload.status === "success") {
           setLatest(payload);
           const normalized = normalizeRealtimePrediction(payload);
-          if (!triggeredRef.current && normalized.is_phishing && normalized.max_risk_score >= 60) {
+          if (!triggeredRef.current && normalized.warning_level === "WARNING") {
             triggeredRef.current = true;
             setStatus("위험 통화 감지");
             cleanup();
@@ -924,8 +930,14 @@ function RealtimeScreen({ onBack, onDetected }) {
   };
 
   const stop = () => {
-    cleanup();
-    setStatus("중지됨");
+    if (latest) {
+      const normalized = normalizeRealtimePrediction(latest);
+      cleanup();
+      setTimeout(() => onDetected(normalized), 250);
+    } else {
+      cleanup();
+      setStatus("중지됨");
+    }
   };
 
   const risk = clampScore(latest?.risk_score ?? latest?.score ?? 0);
@@ -1157,14 +1169,11 @@ function DetailsScreen({ result, score, phrases, onBack, onDone, onReport }) {
         </section>
 
         <section className={`risk-card ${isDanger ? "danger" : "safe"}`}>
-          <span>위험도</span>
-          <strong>{score}%</strong>
-          <p>{isDanger ? "피싱 시도 가능성 매우 높음" : "위험 신호 낮음"}</p>
-        </section>
-
-        <section className="predicted-type">
-          <h3>예측 유형</h3>
-          <p>{getLabel(result)}</p>
+          <span>탐지 결과</span>
+          <strong style={{ fontSize: "28px", lineHeight: "1.3", margin: "8px 0" }}>
+            {getLabel(result)}
+          </strong>
+          <p>신뢰도 {Math.round((result?.confidence ?? 0) * 100)}%</p>
         </section>
 
         <ClassProbabilities result={result} />

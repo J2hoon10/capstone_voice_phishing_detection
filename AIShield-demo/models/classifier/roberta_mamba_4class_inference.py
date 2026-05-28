@@ -262,11 +262,12 @@ class StreamingSession:
             with torch.amp.autocast("cuda", enabled=self._detector.device.type == "cuda"):
                 for mamba, dropout in zip(model.mamba_layers, model.mamba_dropouts):
                     y = dropout(mamba(y))
+                # head도 동일한 autocast 컨텍스트 안에서 호출해야 dtype 일치
+                T = y.shape[1]
+                head_out = model.head(y[:, -1, :])
 
             # 마지막 위치에서 temperature 적용 후 확률 계산
-            T = y.shape[1]
             temp = _get_temperature(T, self._temp_warmup, self._temp_max)
-            head_out = model.head(y[:, -1, :])
 
             super_probs    = torch.softmax(head_out["super_logits"],    dim=-1)
             normal_probs   = torch.softmax(head_out["normal_logits"],   dim=-1)
