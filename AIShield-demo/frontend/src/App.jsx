@@ -228,11 +228,12 @@ function normalizeRealtimePrediction(payload) {
     Number(classProbs["수사기관 사칭형"] ?? 0),
   );
   const derivedLevel = maxPhishing > 0.9 ? "WARNING" : maxPhishing > 0.8 ? "CAUTION" : "NORMAL";
+  const warningLevel = payload.warning_level || derivedLevel;
   return {
     status: "success",
-    is_phishing: Boolean(payload.is_phishing || risk >= 60),
+    is_phishing: warningLevel !== "NORMAL",
     max_risk_score: risk,
-    warning_level: payload.warning_level || derivedLevel,
+    warning_level: warningLevel,
     dangerous_segment: transcript,
     pred_label: label,
     confidence: payload.confidence,
@@ -576,7 +577,7 @@ const defaultHistory = [
 ];
 
 function HistoryItem({ item }) {
-  const status = item.is_phishing || item.risk >= 60 ? "위험" : item.risk >= 30 ? "주의" : "안전";
+  const status = item.risk > 90 ? "위험" : item.risk > 80 ? "주의" : "안전";
   return (
     <article className="history-item">
       <div className="history-left">
