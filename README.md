@@ -1,7 +1,7 @@
 # 텍스트 기반 실시간 보이스피싱 탐지 시스템
 **Text-based Streaming Voice Phishing Detection System**
 
-서울과학기술대학교 인공지능응용학과 | 김나현, 정지훈, 박종열
+서울과학기술대학교 인공지능응용학과 | 김나현, 정지훈, 지도 교수 박종열
 
 ---
 
