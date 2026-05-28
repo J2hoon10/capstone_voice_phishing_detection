@@ -66,11 +66,7 @@ docker compose up --build
 
 `http://localhost` 에서 확인합니다.
 
-기본 설정은 `CLASSIFIER_DEVICE=cpu` 로 되어 있어 GPU가 없는 환경에서도 실행 가능합니다. CUDA GPU가 있는 경우 `.env` 를 수정하세요:
-
-```bash
-CLASSIFIER_DEVICE=cuda
-```
+기본 설정은 `CLASSIFIER_DEVICE=cuda` 입니다. mamba_ssm CUDA 커널이 필수라 CPU에서는 모델 추론이 동작하지 않습니다. CUDA GPU가 없는 환경에서는 프론트엔드 폴백 화면만 사용 가능합니다.
 
 ## 모델 가중치
 

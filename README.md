@@ -132,7 +132,7 @@ cp .env.example .env
 
 | 변수 | 기본값 | 설명 |
 |------|--------|------|
-| `CLASSIFIER_DEVICE` | `cpu` | GPU 사용 시 `cuda` 로 변경 |
+| `CLASSIFIER_DEVICE` | `cuda` | CPU 환경이면 `cpu` 로 변경 (단, mamba_ssm CUDA 커널 필수라 CPU에서 모델 추론 불가) |
 | `ROBERTA_MAMBA_MODEL_PATH` | `/app/checkpoints/roberta_mamba_freeze_init_4class_4class_20260517_174922_best.pt` | 다른 체크포인트 사용 시 경로 지정 |
 
 ### Step 3 — 전체 서비스 실행 (Docker Compose)
@@ -315,7 +315,7 @@ python models/main/data_augmentation/build_4class_dataset.py
 
 ```bash
 # 베이스 모델: KLUE-RoBERTa + Mamba
-python models/experiments/model_architecture/roberta_mamba_l2_freeze_init_4class/train.py
+python models/experiments/model_architecture/roberta_mamba_freeze_init_4class/train.py
 
 # 기타 실험 모델 (experiments/ 하위 각 폴더)
 python models/experiments/model_architecture/<실험명>/train.py
