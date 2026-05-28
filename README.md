@@ -1,7 +1,7 @@
 # 텍스트 기반 실시간 보이스피싱 탐지 시스템
 **Text-based Streaming Voice Phishing Detection System**
 
-서울과학기술대학교 인공지능융합학과 | 김나현, 정지훈, 박종열
+서울과학기술대학교 인공지능응용학과 | 김나현, 정지훈, 박종열
 
 ---
 
@@ -266,4 +266,4 @@ python models/experiments/model_architecture/<실험명>/train.py
 6. J. Y. Sim et al., "Voice phishing detection scheme using a GPT-3.5 based large language model," *Journal of KIISE*, vol. 51, no. 1, 2024.
 7. S. Kim and S. Noh, "딥러닝 기반 NLP 및 작성기법을 활용한 보이스피싱 의심발언 탐지," *한국전자거래학회지*, vol. 29, no. 4, pp. 139–148, 2024.
 8. H. Park et al., "Enhanced voice phishing detection using an LLM-based framework for data augmentation and classification," *IEEE Access*, 2025. doi: 10.1109/ACCESS.2025.3603007.
-9. 금융감독원, "보이스피싱피해 바로고" [Online]. Available: https://www.fss.or.kr/fss/bbs/B0000203/list.do?menuNo=200686. [Accessed: May 19, 2026].
+9. 금융감독원, "보이스피싱체험관: 바로 그 목소리, 그놈 목소리 데이터셋" [Online]. Available: https://www.fss.or.kr/fss/bbs/B0000203/list.do?menuNo=200686. [Accessed: May 19, 2026].
