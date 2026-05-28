@@ -1,6 +1,6 @@
 # 프로젝트 파일 구조
 
-> 최종 업데이트: 2026-05-27
+> 최종 업데이트: 2026-05-28
 
 ## 전체 구조 요약
 
@@ -27,16 +27,18 @@ capstone_voice_phishing_detection/
 ├── streaming_test/            실시간 스트리밍 파이프라인 속도 평가
 │   └── figure/                ← 시각화 결과 이미지
 │
-├── demo/                      데모 앱 골격 (작성 예정)
-│   ├── frontend/              ← 프론트엔드 (React + Vite)
-│   │   └── src/
-│   │       ├── components/
-│   │       ├── hooks/
-│   │       └── styles/
-│   └── backend/               ← 백엔드 API 게이트웨이
-│       ├── routers/
-│       ├── schemas/
-│       └── services/
+├── AIShield-demo/             ★ 데모 서비스 (Docker Compose 풀스택)
+│   ├── docker-compose.yml     ← 4개 서비스 오케스트레이션
+│   ├── .env / .env.example    ← 환경변수 설정
+│   ├── backend/               ← FastAPI API 게이트웨이
+│   │   ├── routers/           ← detect, guidance, stream 엔드포인트
+│   │   ├── schemas/           ← 요청/응답 스키마
+│   │   └── services/          ← classifier/guidance 클라이언트
+│   ├── frontend/              ← React + Vite SPA (nginx 서빙)
+│   │   └── src/               ← App.jsx, main.jsx, styles.css
+│   └── models/
+│       ├── classifier/        ← 분류기 서비스 (Whisper STT + RoBERTa-Mamba)
+│       └── guidance/          ← 대응 가이던스 서비스
 │
 ├── normal_data_reference/     일반 대화 참조 데이터 (Training / Validation)
 ├── docs/                      문서 정리
@@ -212,12 +214,58 @@ capstone_voice_phishing_detection/
 
 ---
 
-## demo/ — 데모 앱 (작성 예정)
+## AIShield-demo/ — 데모 서비스
 
-데모 서비스의 프론트엔드 및 백엔드 코드를 위한 골격 디렉토리입니다.
+Docker Compose 기반 풀스택 데모 서비스입니다. classifier / guidance / backend / frontend 4개 컨테이너로 구성됩니다.
 
-- `frontend/src/`: components, hooks, styles
-- `backend/`: routers, schemas, services
+### AIShield-demo/backend/ — API 게이트웨이
+
+| 파일 | 설명 |
+|------|------|
+| `main.py` | FastAPI 앱 진입점 |
+| `routers/detect.py` | 음성·텍스트 보이스피싱 탐지 엔드포인트 |
+| `routers/guidance.py` | 대응 가이던스 조회 엔드포인트 |
+| `routers/stream.py` | 실시간 스트리밍 엔드포인트 |
+| `schemas/` | 요청/응답 Pydantic 스키마 (detect, guidance) |
+| `services/classifier_client.py` | classifier 서비스 HTTP 클라이언트 |
+| `services/guidance_client.py` | guidance 서비스 HTTP 클라이언트 |
+| `Dockerfile` & `requirements.txt` | 배포 설정 |
+
+### AIShield-demo/frontend/ — React + Vite SPA
+
+| 파일 | 설명 |
+|------|------|
+| `src/App.jsx` | 메인 앱 컴포넌트 |
+| `src/main.jsx` | React 진입점 |
+| `src/styles.css` | 전역 스타일 |
+| `index.html` | HTML 템플릿 |
+| `vite.config.js` | Vite 빌드 설정 |
+| `nginx.conf` | 프로덕션 nginx 서빙 설정 |
+| `Dockerfile` & `package.json` | 배포 설정 |
+
+### AIShield-demo/models/classifier/ — 분류기 서비스
+
+| 파일 | 설명 |
+|------|------|
+| `app.py` | FastAPI 엔드포인트 (`/predict`, `/predict/stream`, `/health`) |
+| `roberta_mamba_4class_inference.py` | 텍스트·오디오 탐지 추론 엔진 |
+| `audio_processor.py` | Whisper STT (`Systran/faster-whisper-small`) + 텍스트 정제 |
+| `audio_enhancer.py` | 오디오 전처리 (Bandpass → Noise Reduction → VAD → Normalize) |
+| `realtime_streaming.py` | 실시간 스트리밍 추론 |
+| `config.py` | 서비스 설정 (device, threshold) |
+| `experiments/roberta_mamba_freeze_init_4class/` | 모델 코드 (config, dataset, losses, model) |
+| `checkpoints/` *(git 제외)* | 학습 완료 모델 가중치 |
+| `Dockerfile` & `requirements.txt` | 배포 설정 |
+
+### AIShield-demo/models/guidance/ — 가이던스 서비스
+
+| 파일 | 설명 |
+|------|------|
+| `app.py` | FastAPI 엔드포인트 |
+| `guidance_engine.py` | 탐지 결과 기반 대응 가이던스 생성 엔진 |
+| `knowledge_base/phishing_types.json` | 피싱 유형별 설명 및 대응 정보 |
+| `knowledge_base/emergency_contacts.json` | 긴급 연락처 정보 |
+| `Dockerfile` & `requirements.txt` | 배포 설정 |
 
 ---
 

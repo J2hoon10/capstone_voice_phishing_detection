@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env
+.DS_Store
+runtime_scripts/
+
+# Keep model weights outside the Docker build context.
+# docker-compose mounts ./models/classifier/checkpoints into /app/checkpoints.
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Training artifacts are not needed for runtime builds.
+preprocessing/
+**/logs/

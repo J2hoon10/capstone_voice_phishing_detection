@@ -1,0 +1,27 @@
+# ── Core: 모델 학습 / 추론 ────────────────────────────────────────────────────
+# torch는 base 이미지(pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel)에 포함
+transformers==4.46.3
+# mamba-ssm, causal-conv1d는 Dockerfile에서 --no-build-isolation으로 별도 설치
+numpy==2.3.5
+scikit-learn==1.8.0
+
+# ── STT / 데이터 증강 ─────────────────────────────────────────────────────────
+faster-whisper==1.1.0
+openai==2.36.0
+
+# ── API 서버 (app.py) ─────────────────────────────────────────────────────────
+fastapi==0.129.0
+uvicorn[standard]==0.40.0
+python-multipart==0.0.20
+
+# ── 오디오 처리 ───────────────────────────────────────────────────────────────
+torchaudio>=2.2.0
+librosa==0.11.0
+soundfile==0.13.1
+scipy==1.17.0
+noisereduce==3.0.3
+
+# ── 데이터 처리 ───────────────────────────────────────────────────────────────
+pandas==3.0.0
+kss>=6.0.4
+requests>=2.31.0

@@ -109,13 +109,83 @@ RoBERTa-Mamba는 초반 윈도우(W1~W5)에서도 정답 클래스(상담 대화
 
 ## 실행 방법
 
-> 🚧 추후 작성 예정
+데모 서비스는 `AIShield-demo/` 디렉토리에서 실행합니다. frontend / backend / classifier / guidance 4개 서비스로 구성됩니다.
+
+### Step 1 — 모델 가중치 배치
+
+체크포인트 파일(`.pt`)을 아래 경로에 복사합니다:
+
+```text
+AIShield-demo/models/classifier/checkpoints/roberta_mamba_freeze_init_4class_4class_20260517_174922_best.pt
+```
+
+파일이 없으면 classifier 서비스가 `degraded` 상태로 뜨고 실제 예측이 동작하지 않습니다. 프론트엔드 폴백 화면은 가중치 없이도 동작합니다.
+
+### Step 2 — 환경변수 설정
+
+```bash
+cd AIShield-demo
+cp .env.example .env
+```
+
+`.env` 주요 항목:
+
+| 변수 | 기본값 | 설명 |
+|------|--------|------|
+| `CLASSIFIER_DEVICE` | `cpu` | GPU 사용 시 `cuda` 로 변경 |
+| `ROBERTA_MAMBA_MODEL_PATH` | `/app/checkpoints/roberta_mamba_freeze_init_4class_4class_20260517_174922_best.pt` | 다른 체크포인트 사용 시 경로 지정 |
+
+### Step 3 — 전체 서비스 실행 (Docker Compose)
+
+```bash
+docker compose up --build
+```
+
+빌드 완료 후 `http://localhost` 에서 UI를 확인합니다.
+
+> 초기 실행 시 Whisper 모델(`Systran/faster-whisper-small`) 다운로드로 수 분이 소요될 수 있습니다.
+
+### 서비스 URL
+
+| 서비스 | URL |
+|--------|-----|
+| 프론트엔드 | `http://localhost` |
+| 백엔드 헬스체크 | `http://localhost:8000/health` |
+| 분류기 헬스체크 | `http://localhost:8001/health` |
+| 가이던스 헬스체크 | `http://localhost:8002/health` |
+
+### UI 단독 실행 (백엔드 없이 화면만 확인)
+
+```bash
+cd AIShield-demo/frontend
+npm install
+npm run dev
+```
+
+`http://localhost:5174` 에서 확인합니다. 백엔드가 없으면 발표용 폴백 결과로 자동 전환됩니다.
+
+### 백엔드 단독 실행 (Docker 없이)
+
+```bash
+cd AIShield-demo/backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+로컬에서 classifier / guidance 서비스도 함께 띄울 경우 환경변수를 설정합니다:
+
+```bash
+export CLASSIFIER_URL=http://localhost:8001
+export GUIDANCE_URL=http://localhost:8002
+```
 
 ---
 
 ## 프로젝트 구조
 
-→ [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md) 참고
+→ [docs/PROJECT_FILE_STRUCTURE.md](docs/PROJECT_FILE_STRUCTURE.md) 참고
 
 ---
 

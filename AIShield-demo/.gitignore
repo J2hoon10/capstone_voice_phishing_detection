@@ -1,0 +1,29 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Large local model/data artifacts
+*.pt
+*.pth
+*.ckpt
+models/classifier/weights/*
+!models/classifier/weights/README.md
+models/classifier/runtime_scripts/
+
+# Local caches
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+
+# New checkpoints folder (모델 가중치)
+models/classifier/checkpoints/*
+!models/classifier/checkpoints/README.md
+
+# Windows artifacts
+*.Zone.Identifier

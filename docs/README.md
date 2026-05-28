@@ -4,7 +4,7 @@
 
 | 문서 | 설명 |
 |------|------|
-| [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) | 프로젝트 파일 구조 설명 |
+| [PROJECT_FILE_STRUCTURE.md](PROJECT_FILE_STRUCTURE.md) | 프로젝트 파일 구조 설명 |
 
 ## 기술 문서
 
