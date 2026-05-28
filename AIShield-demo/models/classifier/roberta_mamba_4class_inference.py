@@ -166,7 +166,7 @@ class RobertaMamba4ClassTextDetector:
         pred_idx = int(probs.argmax().item())
         pred_label = self.idx_to_label[pred_idx]
         class_probs = {label: float(probs[index].item()) for index, label in enumerate(self.labels)}
-        phishing_prob = sum(class_probs.get(label, 0.0) for label in PHISHING_LABELS)
+        phishing_prob = max(class_probs.get(label, 0.0) for label in PHISHING_LABELS)
         risk_score = phishing_prob * 100.0
         is_phishing = pred_label in PHISHING_LABELS or phishing_prob >= threshold
 
@@ -283,7 +283,7 @@ class StreamingSession:
         pred_label = self._detector.idx_to_label[pred_idx]
         labels     = self._detector.labels
         class_probs   = {label: float(probs[i].item()) for i, label in enumerate(labels)}
-        phishing_prob = sum(class_probs.get(lbl, 0.0) for lbl in PHISHING_LABELS)
+        phishing_prob = max(class_probs.get(lbl, 0.0) for lbl in PHISHING_LABELS)
         risk_score    = phishing_prob * 100.0
         is_phishing   = pred_label in PHISHING_LABELS or phishing_prob >= threshold
 

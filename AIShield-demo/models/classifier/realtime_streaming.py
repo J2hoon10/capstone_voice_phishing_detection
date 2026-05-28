@@ -203,7 +203,7 @@ class RealtimeVoicePhishingSession:
                 class_probs.get("대출 사기형", 0.0),
                 class_probs.get("수사기관 사칭형", 0.0),
             )
-            warning_level = "WARNING" if max_phishing > 0.9 else "CAUTION" if max_phishing > 0.7 else "NORMAL"
+            warning_level = "WARNING" if max_phishing > 0.9 else "CAUTION" if max_phishing > 0.8 else "NORMAL"
             await self._send_json(
                 {
                     "event": "prediction",

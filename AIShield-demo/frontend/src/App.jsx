@@ -227,7 +227,7 @@ function normalizeRealtimePrediction(payload) {
     Number(classProbs["대출 사기형"] ?? 0),
     Number(classProbs["수사기관 사칭형"] ?? 0),
   );
-  const derivedLevel = maxPhishing > 0.9 ? "WARNING" : maxPhishing > 0.7 ? "CAUTION" : "NORMAL";
+  const derivedLevel = maxPhishing > 0.9 ? "WARNING" : maxPhishing > 0.8 ? "CAUTION" : "NORMAL";
   return {
     status: "success",
     is_phishing: Boolean(payload.is_phishing || risk >= 60),
@@ -1236,7 +1236,7 @@ function ClassProbabilities({ result }) {
 
   return (
     <section className="class-probs">
-      <h3>5-Class 확률</h3>
+      <h3>4-Class 확률</h3>
       {entries.map(([label, value]) => (
         <div className="prob-row" key={label}>
           <div>

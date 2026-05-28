@@ -15,7 +15,7 @@ def _warning_level(class_probs: dict) -> str:
     )
     if max_prob > 0.9:
         return "WARNING"
-    if max_prob > 0.7:
+    if max_prob > 0.8:
         return "CAUTION"
     return "NORMAL"
 
